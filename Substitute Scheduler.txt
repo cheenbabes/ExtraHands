@@ -1,0 +1,117 @@
+Substitute Scheduler
+
+============================
+Version 1.0
+============================
+
+Requirements:
+-Teachers must be able to register, login, and update their available time online
+-Clients must be able to register, login, and create events.
+-Clients must be able to see available teachers for a particular time period.
+-Clients must be able to select a specific teacher for an event.
+
+Stories:
+==Users==
+-Create User object
+-Extend User object for Clients
+-Extend User object for Teachers
+-Login page
+-Client login must redirect to client home page
+-Teacher login must redirect to teacher home page
+-Registration form for clients
+-Registration for for teachers
+-Clients can view different teacher's profiles if they are logged in
+-Clients are restricted from **/teachers/*
+-Teachers are restricted from **/clients/*
+
+
+==Teachers==
+-Teachers can schedule their availability in the future
+-Teachers can say whether they are immediately available
+-Teachers can view their previous events
+-(Teachers can edit their info)
+
+==Clients==
+-Clients can create events in the future
+-Clients can choose to hire a teacher immmediately
+-(Clients can edit their info)
+
+
+==Events==
+-Events can be added by only registered clients
+-Events can only be soft-deleted by the clients they belong to (copy remains in database)
+-Events must show up on some kind of calendar
+-Events can only have 1 teacher assigned to them
+
+
+==============
+Business Flow
+==============
+
+A client can log on and create event in the future or immediately hire a teacher. 
+If a client chooses immediate hire, a list of teachers on call are displayed. The client then selects all the teachers
+they are interested in and clicks submit. Those teachers receive emails which have a unique link in them. The teacher that clicks the
+link first will get the event, the event will close, and an email will be sent to the client confirming the event and attaching the teacher's
+details.
+If a client chooses future hire, a list of the teachers which have time slots of availability is displayed. The rest of the flow is the same.
+If a teacher has to cancel after agreeing to the event, they must contact the client personally. 
+If an event does not have a teacher within 12 hours of start_time, an email is sent to every teacher asking them to sign up.
+
+
+
+=======
+Models
+=======
+
+==User
+-default as provided by Django (check on this)
+
+==Client(User)
+first_name
+last_name
+organization
+street
+city
+state 
+zip
+phone_number
+email
+description
+
+
+==Teacher(User)
+first_name
+last_name
+street
+city
+state
+zip
+email
+phone_number
+ECT_qualified
+CPR_first_aid
+universal_precautions
+qualifications
+degree
+major
+is_available
+on_call
+
+
+==Event
+start_time
+end_time
+Client (ForeignKey)
+Teacher (ForeignKey)
+is_open
+in_progress
+
+==Available_Time
+start_time
+end_time
+Teacher (ForeignKey)
+
+
+==Email-list
+email
+
