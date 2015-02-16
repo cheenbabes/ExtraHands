@@ -52,7 +52,7 @@ class Teacher(models.Model):
         self.slug = slugify(self.user.get_full_name())
         super(Teacher, self).save(*args, **kwargs)
 
-class Event:
+class Event(models.Model):
     start_time = models.DateTimeField()
     end_time = models.DateTimeField()
     teacher = models.ForeignKey(Teacher)
@@ -64,13 +64,13 @@ class Event:
         return (self.start_time + ' ' + self.client.organization + ' ' + self.teacher.user.get_full_name())
 
 
-class Available_Time:
+class Available_Time(models.Model):
     start_time = models.DateTimeField()
     end_time = models.DateTimeField()
     teacher = models.ForeignKey(Teacher)
 
 
-class Email_List:
+class Email_List(models.Model):
     email = models.EmailField()
 
 
