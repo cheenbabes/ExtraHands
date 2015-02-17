@@ -3,7 +3,7 @@
 {% block content %}
 
         {% for teacher in teachers %}
-            <li>{{ teacher.street }}</li>
+            <li><a href="/teacher/{{ teacher.slug }}">{{ teacher.user.get_full_name }}</a></li>
         {% endfor %}
 
 {% endblock %}
