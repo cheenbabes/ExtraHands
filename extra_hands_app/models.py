@@ -9,7 +9,7 @@ from django.template.defaultfilters import slugify
 
 class Client(models.Model):
     user = models.OneToOneField(User)
-
+    ##
     organization = models.CharField(max_length=128)
     street = models.CharField(max_length=30)
     city = models.CharField(max_length=30)
@@ -19,18 +19,17 @@ class Client(models.Model):
     client_slug = models.SlugField(unique=True)
     campus = models.IntegerField()
 
-    def __unicode__(self):
-        return self.organization
-
     def save(self, *args, **kwargs):
         self.client_slug = slugify(self.organization)
         super(Client, self).save(*args, **kwargs)
 
+    def __unicode__(self):
+        return self.organization
 
 
 class Teacher(models.Model):
     user = models.OneToOneField(User)
-
+    ##
     street = models.CharField(max_length=30)
     city = models.CharField(max_length=30)
     state = models.CharField(max_length=2)
@@ -45,23 +44,24 @@ class Teacher(models.Model):
     on_call = models.BooleanField(default=False)
     slug = models.SlugField(unique=True)
 
-    def __unicode__(self):
-        return self.user.get_full_name()
-
     def save(self, *args, **kwargs):
         self.slug = slugify(self.user.get_full_name())
         super(Teacher, self).save(*args, **kwargs)
 
+    def __unicode__(self):
+        return self.user.get_full_name()
+
+
 class Event(models.Model):
     start_time = models.DateTimeField()
     end_time = models.DateTimeField()
-    teacher = models.ForeignKey(Teacher)
+    teacher = models.ForeignKey(Teacher, blank=True, null=True, default=None)
     client = models.ForeignKey(Client)
     is_open = models.BooleanField(default=False)
     in_progress = models.BooleanField(default=False)
 
     def __unicode__(self):
-        return (self.start_time + ' ' + self.client.organization + ' ' + self.teacher.user.get_full_name())
+        return str(self.start_time)
 
 
 class Available_Time(models.Model):
