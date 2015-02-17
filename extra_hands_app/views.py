@@ -4,4 +4,6 @@ from django.http import HttpResponse
 # Create your views here.
 
 def index(request):
-    return HttpResponse('You made this work')
+    context_dict = {'thing' : 'You made this work!'}
+    response = render(request, 'base.html', context_dict)
+    return response

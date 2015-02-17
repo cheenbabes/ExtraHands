@@ -37,6 +37,8 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'extra_hands_app',
+    'rolepermissions',
+    'bootstrap3',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -86,3 +88,5 @@ STATIC_URL = '/static/'
 TEMPLATE_DIRS = (
     os.path.join(BASE_DIR,  'templates'),
 )
+
+ROLEPERMISSIONS_MODULE = 'ExtraHands.roles'
