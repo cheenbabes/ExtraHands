@@ -1,0 +1,7 @@
+1. Forms
+    1. Event Form
+    2. Available Form
+
+2. Registration
+    1. Client registration
+    2. Teacher registration
