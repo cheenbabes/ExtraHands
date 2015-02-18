@@ -3,7 +3,7 @@
 {% block content %}
 
         {% for client in clients %}
-            <li><a href="/client/{{ client.client_slug }}">{{ client.organization }}</a></li>
+            <li><a href="{% url 'get_client' client.client_slug %}">{{ client.organization }}</a></li>
         {% endfor %}
 
 {% endblock %}

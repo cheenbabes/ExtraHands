@@ -12,6 +12,13 @@
     <hr>
 
 
+    <strong>Events</strong>
+    {% for event in events %}
+        <li>{{ event.start_time }} - {{ event.end_time }}</li>
+    {% endfor %}
+
+    <a href="{% url 'add_event' client.client_slug  %}">Add event</a>
+
 
 
 
