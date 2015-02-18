@@ -26,4 +26,20 @@ def get_all_teachers(request):
     response = render(request, 'teachers.html', context_dict)
     return response
 
+def get_client(request, client_slug):
+    context_dict = {}
+    try:
+        client = Client.objects.get(client_slug=client_slug)
+        context_dict['client'] = client
+    except Client.DoesNotExist:
+        pass
+
+    return render(request, 'client.html', context_dict)
+
+def get_all_clients(request):
+    clients = Client.objects.all()
+    context_dict = {'clients': clients}
+    return render(request, 'clients.html', context_dict)
+
+
 

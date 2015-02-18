@@ -2,8 +2,22 @@
 
 {% block content %}
 
+    <strong>{{ teacher.user.get_full_name }}</strong><br>
     {{ teacher.street }}<br>
-    {{ teacher.city }}<br>
-    {{ teacher.user.get_full_name }}
+    {{ teacher.city }}, {{ teacher.state }} <br>
+    {{ teacher.phone_number }}<br><br>
+    <i>Qualifications</i><br>
+    ECT Certified: {{ teacher.ect_qualified }}<br>
+    CPR & First Aid: {{ teacher.cpr_first_aid }}<br>
+    Universal Precautions: {{ teacher.universal_precautions }}<br><br>
+    <i>Background</i><br>
+    Education: {{ teacher.degree }}, {{ teacher.major }}<br>
+    <hr>
+
+
+
+
+
+
 
 {% endblock %}

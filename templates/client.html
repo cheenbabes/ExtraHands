@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <strong>{{ client.organization }}</strong><br>
+    Contact: {{ client.user.get_full_name }}
+    {{ client.street }}<br>
+    {{ client.city }}, {{ client.state }} <br>
+    {{ client.phone_number }}<br><br>
+    <i>Description</i><br>
+    <p>{{ client.description }}</p>
+    <hr>
+
+
+
+
+
+
+
+{% endblock %}
