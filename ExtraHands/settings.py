@@ -39,6 +39,7 @@ INSTALLED_APPS = (
     'extra_hands_app',
     'rolepermissions',
     'bootstrap3',
+    'datetimewidget',
 )
 
 MIDDLEWARE_CLASSES = (

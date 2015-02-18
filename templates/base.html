@@ -1,5 +1,5 @@
 {% load bootstrap3 %}
-{% bootstrap_css %}
+
 
 
 <!DOCTYPE html>
@@ -7,6 +7,10 @@
 <head lang="en">
     <meta charset="UTF-8">
     <title>Extra Hands Service | {% block title %}Qualified Teachers & Substitutes{% endblock %}</title>
+    {#    CSS#}
+    {% bootstrap_css %}
+
+    {#Javascript#}
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     {% bootstrap_javascript %}
 </head>

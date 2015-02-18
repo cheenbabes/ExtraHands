@@ -1,9 +1,14 @@
 from django import forms
 from models import Event, Available_Time
+from datetimewidget.widgets import DateTimeWidget
 
 class EventForm(forms.ModelForm):
-    start_time = forms.DateTimeField()
-    end_time = forms.DateTimeField()
+    dateTimeOptions={
+        'format': 'mm/dd/yyyy HH:ii'
+    }
+
+    start_time = forms.DateTimeField(widget=DateTimeWidget(bootstrap_version=3, options=dateTimeOptions))
+    end_time = forms.DateTimeField(widget=DateTimeWidget(bootstrap_version=3, options=dateTimeOptions))
     client = forms.CharField(widget=forms.HiddenInput(), required = False)
     teacher = forms.CharField(widget=forms.HiddenInput(), required = False)
     is_open = forms.BooleanField(widget=forms.HiddenInput(), required = False)
@@ -12,3 +17,4 @@ class EventForm(forms.ModelForm):
     class Meta:
         model = Event
         fields=('start_time', 'end_time', )
+
