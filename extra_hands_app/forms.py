@@ -1,5 +1,5 @@
 from django import forms
-from models import Event, Available_Time
+from models import Event, Available_Time, User, Teacher, Client
 from datetimewidget.widgets import DateTimeWidget
 
 class EventForm(forms.ModelForm):
@@ -17,4 +17,26 @@ class EventForm(forms.ModelForm):
     class Meta:
         model = Event
         fields=('start_time', 'end_time', )
+
+
+
+
+##User/Client/Teacher forms
+
+class UserForm(forms.ModelForm):
+    password = forms.CharField(widget=forms.PasswordInput())
+
+    class Meta:
+        model = User
+        fields = ('username', 'email', 'password', 'first_name', 'last_name')
+
+class TeacherForm(forms.ModelForm):
+    # is_available = forms.BooleanField(widget=forms.HiddenInput(), required=False)
+    # on_call = forms.BoooleanField(widget=forms.HiddenInput(), required=False)
+    # slug = forms.SlugField(widget=forms.HiddenInput(), required=False)
+
+    class Meta:
+        model = Teacher
+        exclude = ('on_call', 'is_available', 'slug', 'user')
+
 

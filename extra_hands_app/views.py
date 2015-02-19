@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from extra_hands_app.models import Teacher, Client, Available_Time, Event, Email_List
-from forms import EventForm
+from forms import EventForm, UserForm, TeacherForm
 from django.http import HttpResponseRedirect
 from django.core.urlresolvers import reverse
 
@@ -71,6 +71,42 @@ def add_event(request, client_slug):
     context_dict = {'form': form, 'client': client}
 
     return render(request, 'add_event.html', context_dict)
+
+def register_teacher(request):
+    registered = False
+
+    if request.method == 'POST':
+        user_form = UserForm(data=request.POST)
+        teacher_form = TeacherForm(data=request.POST)
+
+        if user_form.is_valid() and teacher_form.is_valid():
+            user= user_form.save()
+
+            #hash the password
+            user.set_password(user.password)
+            user.save()
+
+            teacher = teacher_form.save(commit=False)
+            #associate the correct user profile with the teacher information
+            teacher.user = user
+            #save the teacher
+            teacher.save()
+
+            registered = True
+        else:
+            print user_form.errors, teacher_form.errors
+
+    #GET Request
+    else:
+        user_form = UserForm()
+        teacher_form = TeacherForm()
+
+    context_dict = {'user_form': user_form, 'teacher_form': teacher_form, 'registered': registered}
+
+    return render(request, 'register_teacher.html', context_dict)
+
+
+
 
 
 

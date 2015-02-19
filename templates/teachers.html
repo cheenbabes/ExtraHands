@@ -2,6 +2,8 @@
 
 {% block content %}
 
+        <a href="{% url 'register_teacher' %}" class="btn btn-info">Register as a teacher here</a><br><br>
+
         {% for teacher in teachers %}
             <li><a href="{% url 'get_teacher' teacher.slug  %}">{{ teacher.user.get_full_name }}</a></li>
         {% endfor %}

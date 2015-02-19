@@ -17,7 +17,8 @@
         <li>{{ event.start_time }} - {{ event.end_time }}</li>
     {% endfor %}
 
-    <a href="{% url 'add_event' client.client_slug  %}">Add event</a>
+    <br>
+    <a href="{% url 'add_event' client.client_slug  %}" class="btn btn-primary">Add event</a>
 
 
 
