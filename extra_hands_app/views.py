@@ -4,6 +4,8 @@ from extra_hands_app.models import Teacher, Client, Available_Time, Event, Email
 from forms import EventForm, UserForm, TeacherForm, ClientForm
 from django.http import HttpResponseRedirect
 from django.core.urlresolvers import reverse
+from django.contrib.auth import authenticate, login, logout
+from django.contrib.auth.decorators import login_required
 
 # Create your views here.
 
@@ -142,8 +144,37 @@ def register_client(request):
 
     return render(request, 'register_client.html', context_dict)
 
+def user_login(request):
+
+    if request.method =='POST':
+        username = request.POST['username']
+        password = request.POST['password']
+
+        user= authenticate(username=username, password=password)
+
+        if user:
+            if user.is_active:
+                login(request, user)
+                #logic to see whether the user is a teacher or client
+                return HttpResponseRedirect('/')
+            else:
+                return HttpResponse("Your account is disabled")
+
+        else:
+            print "Invalid login details: {0}, {1}".format(username, password)
+            return HttpResponse("Invalid login details supplied")
 
 
+    else:
+        return render(request, 'login.html', {})
+
+@login_required
+def user_logout(request):
+    # Since we know the user is logged in, we can now just log them out.
+    logout(request)
+
+    # Take the user back to the homepage.
+    return HttpResponseRedirect('/')
 
 
 
