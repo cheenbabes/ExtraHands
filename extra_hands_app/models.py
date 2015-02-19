@@ -17,7 +17,7 @@ class Client(models.Model):
     phone_number = models.CharField(max_length=15)
     description = models.CharField(max_length=600)
     client_slug = models.SlugField(unique=True)
-    campus = models.IntegerField()
+    campus = models.IntegerField(default=1)
 
     def save(self, *args, **kwargs):
         self.client_slug = slugify(self.organization)

@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <h1>Register as a Client</h1>
+    {% if registered %}
+    <strong>Thank you for registering!</strong><br>
+        <a href="/myaccount">View your profile here</a>
+    {% else %}
+        <strong>Register as a client with Extra Hands</strong>
+        <form id="user_form" method="post" action="/register/client/">
+            {% csrf_token %}
+            {{ user_form.as_p }}
+            {{ client_form.as_p }}
+        <input type="submit" name="submit" value="Register" class="btn btn-primary"/>
+
+        </form>
+    {% endif %}
+
+
+
+
+{% endblock %}

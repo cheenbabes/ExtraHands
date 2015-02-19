@@ -2,6 +2,8 @@
 
 {% block content %}
 
+        <a href="{% url 'register_client' %}" class="btn btn-info">Register as a client here</a><br><br>
+
         {% for client in clients %}
             <li><a href="{% url 'get_client' client.client_slug %}">{{ client.organization }}</a></li>
         {% endfor %}

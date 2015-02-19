@@ -31,12 +31,14 @@ class UserForm(forms.ModelForm):
         fields = ('username', 'email', 'password', 'first_name', 'last_name')
 
 class TeacherForm(forms.ModelForm):
-    # is_available = forms.BooleanField(widget=forms.HiddenInput(), required=False)
-    # on_call = forms.BoooleanField(widget=forms.HiddenInput(), required=False)
-    # slug = forms.SlugField(widget=forms.HiddenInput(), required=False)
-
     class Meta:
         model = Teacher
         exclude = ('on_call', 'is_available', 'slug', 'user')
+
+
+class ClientForm(forms.ModelForm):
+    class Meta:
+        model= Client
+        exclude= ('user', 'client_slug', 'campus')
 
 

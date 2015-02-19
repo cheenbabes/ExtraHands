@@ -9,5 +9,6 @@ url(r'client/(?P<client_slug>[\w\-]+)/$', views.get_client, name ='get_client'),
 url(r'clients/$', views.get_all_clients, name="get_all_clients"),
 url(r'client/(?P<client_slug>[\w\-]+)/add_event/$', views.add_event, name='add_event'),
 url(r'register/teacher/$', views.register_teacher, name='register_teacher'),
+url(r'register/client/$', views.register_client, name='register_client')
 
 )

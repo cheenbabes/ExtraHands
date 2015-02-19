@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from extra_hands_app.models import Teacher, Client, Available_Time, Event, Email_List
-from forms import EventForm, UserForm, TeacherForm
+from forms import EventForm, UserForm, TeacherForm, ClientForm
 from django.http import HttpResponseRedirect
 from django.core.urlresolvers import reverse
 
@@ -80,7 +80,9 @@ def register_teacher(request):
         teacher_form = TeacherForm(data=request.POST)
 
         if user_form.is_valid() and teacher_form.is_valid():
-            user= user_form.save()
+            #Don't commit here because if the teacher info is bad it will
+            #create a user but not a teacher
+            user= user_form.save(commit=False)
 
             #hash the password
             user.set_password(user.password)
@@ -91,6 +93,7 @@ def register_teacher(request):
             teacher.user = user
             #save the teacher
             teacher.save()
+            user.save()
 
             registered = True
         else:
@@ -104,6 +107,40 @@ def register_teacher(request):
     context_dict = {'user_form': user_form, 'teacher_form': teacher_form, 'registered': registered}
 
     return render(request, 'register_teacher.html', context_dict)
+
+
+def register_client(request):
+    registered = False
+
+    if request.method =='POST':
+        user_form = UserForm(data=request.POST)
+        client_form = ClientForm(data=request.POST)
+
+        if user_form.is_valid() and client_form.is_valid():
+            user = user_form.save(commit=False)
+
+            #hash the password
+            user.set_password(user.password)
+            user.save()
+
+            client = client_form.save(commit=False)
+            client.user = user
+            client.save()
+            #now commit the user object that the client is saved
+            user.save()
+
+            registered = True
+        else:
+            print user_form.errors, client_form.errors
+
+    #GET request
+    else:
+        user_form = UserForm()
+        client_form = ClientForm()
+
+    context_dict = {'user_form': user_form, 'client_form': client_form, 'registered': registered}
+
+    return render(request, 'register_client.html', context_dict)
 
 
 
