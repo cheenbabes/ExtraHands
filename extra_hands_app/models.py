@@ -43,6 +43,7 @@ class Teacher(models.Model):
     is_available = models.BooleanField(default=False)
     on_call = models.BooleanField(default=False)
     slug = models.SlugField(unique=True)
+    clicks = models.IntegerField(default=0)
 
     def save(self, *args, **kwargs):
         self.slug = slugify(self.user.get_full_name())

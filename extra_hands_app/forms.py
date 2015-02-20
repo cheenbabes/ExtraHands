@@ -33,7 +33,7 @@ class UserForm(forms.ModelForm):
 class TeacherForm(forms.ModelForm):
     class Meta:
         model = Teacher
-        exclude = ('on_call', 'is_available', 'slug', 'user')
+        exclude = ('on_call', 'is_available', 'slug', 'user', 'clicks')
 
 
 class ClientForm(forms.ModelForm):
