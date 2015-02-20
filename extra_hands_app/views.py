@@ -155,26 +155,29 @@ def user_login(request):
         user= authenticate(username=username, password=password)
 
 
+
+
+
         #teacher flow
         if Teacher.objects.filter(user=user).exists():
             if user.is_active:
-                #template = 'teacher_account.html'
                 login(request, user)
-                # context_dict['user'] = user
                 return HttpResponseRedirect("/myaccount/")
             else:
                 return HttpResponse("Your account is disabled")
+
         #client flow
         if Client.objects.filter(user=user).exists():
             if user.is_active:
                 login(request, user)
-                # template = "client_account.html"
                 return HttpResponseRedirect("/myaccount/")
             else:
                 return HttpResponse("Your account is disabled")
 
         else:
             print "Invalid login details: {0}, {1}".format(username, password)
+            #probably want something better than just a blank http response page
+            #TODO create an error page with another login box
             return HttpResponse("Invalid login details supplied")
     #GET Request
     else:
@@ -198,6 +201,7 @@ def user_logout(request):
 def my_account(request):
     user = request.user
     context_dict={'user':user}
+
 
     return render(request, "myaccount.html", context_dict)
 
