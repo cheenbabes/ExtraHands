@@ -146,7 +146,6 @@ def register_client(request):
     return render(request, 'register_client.html', context_dict)
 
 def user_login(request):
-    context_dict ={}
 
     if request.method =='POST':
         username = request.POST['username']
@@ -154,32 +153,20 @@ def user_login(request):
 
         user= authenticate(username=username, password=password)
 
-
-
-
-
-        #teacher flow
-        if Teacher.objects.filter(user=user).exists():
+        if user:
             if user.is_active:
                 login(request, user)
                 return HttpResponseRedirect("/myaccount/")
             else:
+                #TODO make this another page with some kind of link to activate your account or something
                 return HttpResponse("Your account is disabled")
-
-        #client flow
-        if Client.objects.filter(user=user).exists():
-            if user.is_active:
-                login(request, user)
-                return HttpResponseRedirect("/myaccount/")
-            else:
-                return HttpResponse("Your account is disabled")
-
         else:
             print "Invalid login details: {0}, {1}".format(username, password)
             #probably want something better than just a blank http response page
             #TODO create an error page with another login box
             return HttpResponse("Invalid login details supplied")
-    #GET Request
+
+    #GET Request, show the form
     else:
         return render(request, 'login.html', {})
 
@@ -192,15 +179,23 @@ def user_logout(request):
     return HttpResponseRedirect('/')
 
 
-# def view_switcher(request, template, user):
-#     context_dict={'user': user}
-#     return render(request, template, context_dict)
-
-
 @login_required()
 def my_account(request):
     user = request.user
     context_dict={'user':user}
+
+    is_teacher = False
+    is_superuser = False
+
+    if Teacher.objects.filter(user=user).exists():
+        is_teacher = True
+
+    if user.is_superuser:
+        is_superuser = True
+
+
+    context_dict['is_teacher'] = is_teacher
+    context_dict['is_superuser'] = is_superuser
 
 
     return render(request, "myaccount.html", context_dict)
