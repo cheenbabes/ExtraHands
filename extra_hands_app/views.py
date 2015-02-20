@@ -64,8 +64,8 @@ def add_event(request, client_slug):
                 event = form.save(commit=False)
                 event.client = client
                 event.save()
-                url = reverse('get_client', kwargs={'client_slug': client_slug})
-                return HttpResponseRedirect(url)
+                #url = reverse('get_client', kwargs={'client_slug': client_slug})
+                return HttpResponseRedirect("/myaccount/")
         else:
             print form.errors
     else:
@@ -190,12 +190,15 @@ def my_account(request):
 
     if Teacher.objects.filter(user=user).exists():
         is_teacher = True
+        teacher = Teacher.objects.filter(user=user)
+        available_time = Available_Time.objects.filter(teacher=teacher)
+        context_dict['times'] = available_time
 
-    #The reason for the extra call here is that just because the user is not teacher
-    #does not mean that they're a client: they could be a superuser. I just want it to be explicit
-    #that the client object was found in the database
     if Client.objects.filter(user=user).exists():
         is_client=True
+        client = Client.objects.filter(user=user)
+        client_events = Event.objects.filter(client=client)
+        context_dict['events'] = client_events
 
     if user.is_superuser:
         is_superuser = True

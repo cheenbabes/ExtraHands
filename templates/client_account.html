@@ -1,4 +1,22 @@
 
 <h1> This is the client portal</h1><br>
 
-<p>Client organization: {{ user.client.organization }}</p>
+<p> <strong>{{user.client.organization }}</strong><br>
+    Contact: {{ user.client.user.get_full_name }}<br>
+    {{ user.client.street }}<br>
+    {{ user.client.city }}, {{ user.client.state }} <br>
+    {{ user.client.phone_number }}<br><br>
+    <i>Description</i><br>
+    <p>{{ user.client.description }}</p>
+    <hr>
+
+
+    <strong>Events</strong>
+    {% for event in events %}
+        <li>{{ event.start_time }} - {{ event.end_time }}</li>
+    {% endfor %}
+
+    <br>
+    <a href="{% url 'add_event' user.client.client_slug  %}" class="btn btn-primary">Add event</a>
+
+</p>
