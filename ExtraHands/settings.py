@@ -94,3 +94,5 @@ STATICFILES_DIRS =(
 )
 
 ROLEPERMISSIONS_MODULE = 'ExtraHands.roles'
+
+LOGoN_REDIRECT_URL = '/myaccount/'

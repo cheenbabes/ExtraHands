@@ -6,6 +6,7 @@ from django.http import HttpResponseRedirect
 from django.core.urlresolvers import reverse
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
+from django.contrib.auth.models import User
 
 # Create your views here.
 
@@ -153,22 +154,22 @@ def user_login(request):
 
         user= authenticate(username=username, password=password)
 
+
         #teacher flow
         if Teacher.objects.filter(user=user).exists():
             if user.is_active:
+                #template = 'teacher_account.html'
                 login(request, user)
-                template = 'teacher_account.html'
-                context_dict['teacher'] = user
-                return render(request, template, context_dict)
+                # context_dict['user'] = user
+                return HttpResponseRedirect("/myaccount/")
             else:
                 return HttpResponse("Your account is disabled")
         #client flow
         if Client.objects.filter(user=user).exists():
             if user.is_active:
                 login(request, user)
-                template = "client_account.html"
-                context_dict['client'] = user
-                return render(request, template, context_dict)
+                # template = "client_account.html"
+                return HttpResponseRedirect("/myaccount/")
             else:
                 return HttpResponse("Your account is disabled")
 
@@ -186,6 +187,20 @@ def user_logout(request):
 
     # Take the user back to the homepage.
     return HttpResponseRedirect('/')
+
+
+# def view_switcher(request, template, user):
+#     context_dict={'user': user}
+#     return render(request, template, context_dict)
+
+
+def my_account(request):
+    user = request.user
+    context_dict={'user':user}
+
+    return render(request, "myaccount.html", context_dict)
+
+
 
 
 
