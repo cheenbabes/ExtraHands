@@ -145,6 +145,7 @@ def register_client(request):
     return render(request, 'register_client.html', context_dict)
 
 def user_login(request):
+    context_dict ={}
 
     if request.method =='POST':
         username = request.POST['username']
@@ -152,19 +153,29 @@ def user_login(request):
 
         user= authenticate(username=username, password=password)
 
-        if user:
+        #teacher flow
+        if Teacher.objects.filter(user=user).exists():
             if user.is_active:
                 login(request, user)
-                #logic to see whether the user is a teacher or client
-                return HttpResponseRedirect('/')
+                template = 'teacher_account.html'
+                context_dict['teacher'] = user
+                return render(request, template, context_dict)
+            else:
+                return HttpResponse("Your account is disabled")
+        #client flow
+        if Client.objects.filter(user=user).exists():
+            if user.is_active:
+                login(request, user)
+                template = "client_account.html"
+                context_dict['client'] = user
+                return render(request, template, context_dict)
             else:
                 return HttpResponse("Your account is disabled")
 
         else:
             print "Invalid login details: {0}, {1}".format(username, password)
             return HttpResponse("Invalid login details supplied")
-
-
+    #GET Request
     else:
         return render(request, 'login.html', {})
 
