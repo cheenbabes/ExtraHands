@@ -185,10 +185,17 @@ def my_account(request):
     context_dict={'user':user}
 
     is_teacher = False
+    is_client = False
     is_superuser = False
 
     if Teacher.objects.filter(user=user).exists():
         is_teacher = True
+
+    #The reason for the extra call here is that just because the user is not teacher
+    #does not mean that they're a client: they could be a superuser. I just want it to be explicit
+    #that the client object was found in the database
+    if Client.objects.filter(user=user).exists():
+        is_client=True
 
     if user.is_superuser:
         is_superuser = True
@@ -196,6 +203,7 @@ def my_account(request):
 
     context_dict['is_teacher'] = is_teacher
     context_dict['is_superuser'] = is_superuser
+    context_dict['is_client'] = is_client
 
 
     return render(request, "myaccount.html", context_dict)

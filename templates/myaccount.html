@@ -3,16 +3,35 @@
 
 {% block content %}
 
-<h1>This is MyAccount.html</h1>
+{#This page will be the basis for the teacher, client, and admin dashboard#}
 
-<p>print some info on the user</p>
+{#<h1>This is MyAccount.html</h1>#}
 
-<p>{{ user.get_full_name }}</p>
 
-<p>Teacher: {{ is_teacher }}</p>
+{% if is_teacher %}
+    {% include 'teacher_account.html' %}
+{% endif %}
 
-<p>Superuser: {{ is_superuser }}</p>
+{% if is_client %}
+    {% include 'client_account.html' %}
+{% endif %}
 
+{% if is_superuser %}
+    {% include 'manage.html' %}
+{% endif %}
+
+
+
+{#<p>print some info on the user</p>#}
+{##}
+{#<p>{{ user.get_full_name }}</p>#}
+{##}
+{#<p>Teacher: {{ is_teacher }}</p>#}
+{##}
+{#<p>Superuser: {{ is_superuser }}</p>#}
 
 {% endblock %}
+
+
+
 
