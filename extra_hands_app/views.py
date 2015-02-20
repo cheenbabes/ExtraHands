@@ -6,7 +6,7 @@ from django.http import HttpResponseRedirect
 from django.core.urlresolvers import reverse
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
-from django.contrib.auth.models import User
+
 
 # Create your views here.
 
@@ -194,6 +194,7 @@ def user_logout(request):
 #     return render(request, template, context_dict)
 
 
+@login_required()
 def my_account(request):
     user = request.user
     context_dict={'user':user}

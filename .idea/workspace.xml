@@ -5,12 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c278ac50-8beb-47b3-8114-cdbe07f29a59" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/manage.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/myaccount.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/client_account.html" afterPath="$PROJECT_DIR$/templates/client_account.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ExtraHands/settings.py" afterPath="$PROJECT_DIR$/ExtraHands/settings.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/teacher_account.html" afterPath="$PROJECT_DIR$/templates/teacher_account.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/extra_hands_app/urls.py" afterPath="$PROJECT_DIR$/extra_hands_app/urls.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/extra_hands_app/views.py" afterPath="$PROJECT_DIR$/extra_hands_app/views.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -43,8 +37,8 @@
       <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/extra_hands_app/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.25083613" vertical-offset="2887" max-vertical-offset="3638">
-              <caret line="161" column="36" selection-start-line="161" selection-start-column="36" selection-end-line="161" selection-end-column="36" />
+            <state vertical-scroll-proportion="0.5602007" vertical-offset="2487" max-vertical-offset="3655">
+              <caret line="166" column="20" selection-start-line="166" selection-start-column="20" selection-end-line="166" selection-end-column="20" />
               <folding>
                 <element signature="e#0#35#0" expanded="true" />
               </folding>
@@ -95,8 +89,8 @@
       <file leaf-file-name="base.py" pinned="false" current-in-tab="false">
         <entry file="file://C:/Python27/Lib/site-packages/django/core/handlers/base.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="2946" max-vertical-offset="4148">
-              <caret line="200" column="0" selection-start-line="200" selection-start-column="0" selection-end-line="200" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="1637" max-vertical-offset="4148">
+              <caret line="130" column="0" selection-start-line="130" selection-start-column="0" selection-end-line="130" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -641,7 +635,13 @@
       <option name="project" value="LOCAL" />
       <updated>1424391023776</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="I do believe the HttpResponseRedirect with the helper myaccount method is working. It is routing and grabbing the correct user that is logged in.  I have not tried to put the @login_required decorator on yet">
+      <created>1424460521127</created>
+      <option name="number" value="00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1424460521127</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -670,6 +670,7 @@
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32953367" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32953367" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32953367" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -682,7 +683,6 @@
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.35129532" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -720,7 +720,8 @@
     <MESSAGE value="Registration for clients working. A couple tweaks to the flow to save the user only after committing the teacher or client to make sure that users do not get committed to the database if the form doesn't go through on the additional parts. Login is next" />
     <MESSAGE value="Basic login functionality is implemented. Still trying to figure out how to see what kind of whether the user is a teacher or client" />
     <MESSAGE value="User filtering based on role is working. Still trying to figure out how to direct them to one unified account page with different templates" />
-    <option name="LAST_COMMIT_MESSAGE" value="User filtering based on role is working. Still trying to figure out how to direct them to one unified account page with different templates" />
+    <MESSAGE value="I do believe the HttpResponseRedirect with the helper myaccount method is working. It is routing and grabbing the correct user that is logged in.  I have not tried to put the @login_required decorator on yet" />
+    <option name="LAST_COMMIT_MESSAGE" value="I do believe the HttpResponseRedirect with the helper myaccount method is working. It is routing and grabbing the correct user that is logged in.  I have not tried to put the @login_required decorator on yet" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -728,10 +729,10 @@
         <line-breakpoint enabled="true" type="python-line">
           <url>file://$PROJECT_DIR$/extra_hands_app/views.py</url>
           <line>154</line>
-          <option name="timeStamp" value="30" />
+          <option name="timeStamp" value="31" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="31" />
+      <option name="time" value="32" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1008,14 +1009,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://C:/Python27/Lib/site-packages/django/core/handlers/base.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="2946" max-vertical-offset="4148">
-          <caret line="200" column="0" selection-start-line="200" selection-start-column="0" selection-end-line="200" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/myaccount.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-5.8846154" vertical-offset="0" max-vertical-offset="323">
@@ -1024,10 +1017,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://C:/Python27/Lib/site-packages/django/core/handlers/base.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1637" max-vertical-offset="4148">
+          <caret line="130" column="0" selection-start-line="130" selection-start-column="0" selection-end-line="130" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/extra_hands_app/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.25083613" vertical-offset="2887" max-vertical-offset="3638">
-          <caret line="161" column="36" selection-start-line="161" selection-start-column="36" selection-end-line="161" selection-end-column="36" />
+        <state vertical-scroll-proportion="0.5602007" vertical-offset="2487" max-vertical-offset="3655">
+          <caret line="166" column="20" selection-start-line="166" selection-start-column="20" selection-end-line="166" selection-end-column="20" />
           <folding>
             <element signature="e#0#35#0" expanded="true" />
           </folding>
