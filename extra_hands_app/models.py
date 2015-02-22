@@ -1,5 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
+import random
 import datetime
 
 # Create your models here.
@@ -44,9 +45,11 @@ class Teacher(models.Model):
     on_call = models.BooleanField(default=False)
     slug = models.SlugField(unique=True)
     clicks = models.IntegerField(default=0)
+    token = models.IntegerField(default=0)
 
     def save(self, *args, **kwargs):
         self.slug = slugify(self.user.get_full_name())
+        self.token = random.randint(1,999999)
         super(Teacher, self).save(*args, **kwargs)
 
     def __unicode__(self):
