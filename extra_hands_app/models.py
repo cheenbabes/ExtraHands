@@ -19,9 +19,11 @@ class Client(models.Model):
     description = models.CharField(max_length=600)
     client_slug = models.SlugField(unique=True)
     campus = models.IntegerField(default=1)
+    token = models.IntegerField(default=0)
 
     def save(self, *args, **kwargs):
         self.client_slug = slugify(self.organization)
+        self.token = random.randint(1,999999)
         super(Client, self).save(*args, **kwargs)
 
     def __unicode__(self):
@@ -63,6 +65,11 @@ class Event(models.Model):
     client = models.ForeignKey(Client)
     is_open = models.BooleanField(default=False)
     in_progress = models.BooleanField(default=False)
+    token = models.IntegerField(default=0)
+
+    def save(self, *args, **kwargs):
+        self.token = random.randint(1,999999)
+        super(Event, self).save(*args, **kwargs)
 
     def __unicode__(self):
         return str(self.start_time)

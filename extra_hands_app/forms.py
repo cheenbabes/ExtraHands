@@ -39,6 +39,6 @@ class TeacherForm(forms.ModelForm):
 class ClientForm(forms.ModelForm):
     class Meta:
         model= Client
-        exclude= ('user', 'client_slug', 'campus')
+        exclude= ('user', 'client_slug', 'campus', 'token')
 
 
