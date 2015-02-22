@@ -13,10 +13,11 @@ class EventForm(forms.ModelForm):
     teacher = forms.CharField(widget=forms.HiddenInput(), required = False)
     is_open = forms.BooleanField(widget=forms.HiddenInput(), required = False)
     in_progress = forms.BooleanField(widget=forms.HiddenInput(), required = False)
+    comments = forms.CharField(widget=forms.Textarea())
 
     class Meta:
         model = Event
-        fields=('start_time', 'end_time', )
+        fields=('start_time', 'end_time', 'comments' )
 
 
 

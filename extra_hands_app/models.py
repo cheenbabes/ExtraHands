@@ -66,6 +66,7 @@ class Event(models.Model):
     is_open = models.BooleanField(default=False)
     in_progress = models.BooleanField(default=False)
     token = models.IntegerField(default=0)
+    comments = models.CharField(max_length=500, blank=True, default ='')
 
     def save(self, *args, **kwargs):
         self.token = random.randint(1,999999)
