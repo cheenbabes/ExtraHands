@@ -1,2 +1,19 @@
 
-<h1>You made it to the management portal</h1>
+<h1>Admin portal</h1>
+
+<h2>Clients</h2>
+{% for client in clients %}
+    <li><a href="{% url 'get_client' client.client_slug%}">{{ client.organization }}</a></li>
+{% endfor %}
+
+
+<h2>Teachers</h2>
+{% for teacher in teachers %}
+    <li><a href="{% url 'get_teacher' teacher.slug%}">{{ teacher.user.get_full_name }}</a></li>
+{% endfor %}
+
+
+<h2>Events</h2>
+{% for event in events %}
+    <li>{{ event.start_time }} - {{ event.end_time }} | Teacher : {{ event.teacher.user.get_full_name }} | Client: <a href="{% url 'get_client' event.client.client_slug%}">{{ event.client.organization }}</a></li>
+{% endfor %}

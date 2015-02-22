@@ -50,6 +50,7 @@ def get_all_clients(request):
     context_dict = {'clients': clients}
     return render(request, 'clients.html', context_dict)
 
+
 def add_event(request, client_slug):
     try:
         client = Client.objects.get(client_slug=client_slug)
@@ -202,6 +203,10 @@ def my_account(request):
 
     if user.is_superuser:
         is_superuser = True
+        context_dict['teachers'] = Teacher.objects.all()
+        context_dict['clients'] = Client.objects.all()
+        context_dict['events'] = Event.objects.all()
+
 
 
     context_dict['is_teacher'] = is_teacher
