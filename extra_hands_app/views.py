@@ -15,7 +15,7 @@ def index(request):
     response = render(request, 'base.html', context_dict)
     return response
 
-
+@login_required
 def get_teacher(request, teacher_slug):
     context_dict ={}
     try:
@@ -26,12 +26,14 @@ def get_teacher(request, teacher_slug):
 
     return render(request, 'teacher.html', context_dict)
 
+@login_required
 def get_all_teachers(request):
     teachers = Teacher.objects.all()
     context_dict ={'teachers':teachers}
     response = render(request, 'teachers.html', context_dict)
     return response
 
+@login_required
 def get_client(request, client_slug):
     context_dict = {}
     try:
@@ -45,12 +47,13 @@ def get_client(request, client_slug):
 
     return render(request, 'client.html', context_dict)
 
+@login_required
 def get_all_clients(request):
     clients = Client.objects.all()
     context_dict = {'clients': clients}
     return render(request, 'clients.html', context_dict)
 
-
+@login_required
 def add_event(request, client_slug):
     try:
         client = Client.objects.get(client_slug=client_slug)
