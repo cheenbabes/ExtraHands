@@ -1,7 +1,10 @@
-1. Forms
-    1. Event Form
-    2. Available Form
+editing an event
+ajax call for on-call button for teacher
+adapt add/edit event for available time
 
-2. Registration
-    1. Client registration
-    2. Teacher registration
+core business logic
+--after creating an event, show a list of teachers who are availble. submit another form to send out emails to the teachers.
+--first teacher who clicks will get the event, next teachers will just get click points.
+--send confirmation email to client
+
+
