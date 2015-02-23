@@ -1,6 +1,7 @@
 editing an event
 ajax call for on-call button for teacher
 adapt add/edit event for available time
+calendar solution (django-scheduler or django-bootstrap-calendar or
 
 core business logic
 --after creating an event, show a list of teachers who are availble. submit another form to send out emails to the teachers.
