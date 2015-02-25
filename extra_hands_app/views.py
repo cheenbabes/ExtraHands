@@ -2,7 +2,7 @@ from django.shortcuts import render
 from django.http import HttpResponse
 from extra_hands_app.models import Teacher, Client, Available_Time, Event, Email_List
 from forms import EventForm, UserForm, TeacherForm, ClientForm
-from django.http import HttpResponseRedirect
+from django.http import HttpResponseRedirect, HttpResponseNotAllowed
 from django.core.urlresolvers import reverse
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
@@ -218,6 +218,23 @@ def my_account(request):
     context_dict['message'] = "You have successfully logged in."
 
     return render(request, "myaccount.html", context_dict)
+
+@login_required
+def go_on_call(request):
+    if request.method == 'POST':
+        if Teacher.objects.filter(user=request.user).exists():
+            teacher = Teacher.objects.get(user = request.user)
+            #reverse whatever it is
+            teacher.on_call = not teacher.on_call
+            teacher.save()
+            return HttpResponseRedirect("/myaccount/")
+        else:
+            return HttpResponse("I have no idea how you got here")
+    else:
+        return HttpResponseRedirect("/myaccount/")
+
+
+
 
 
 

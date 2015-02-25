@@ -16,5 +16,24 @@
     <hr>
 </p>
 
+<p>
+    On call: {{ user.teacher.on_call }}<br>
+    Available: {{ user.teacher.is_available }}
+</p>
+    {% if user.teacher.on_call %}
+           <form method="post" action="/action/on-call/">
+        {% csrf_token %}
+        <button id="on-call" type="submit" class="btn btn-success">You're on Call!</button>
+    </form>
+    {% else %}
+        <form method="post" action="/action/on-call/">
+        {% csrf_token %}
+        <button id="on-call" type="submit" class="btn btn-danger">Go On Call</button>
+    </form>
 
-    <button id="on-call" class="btn btn-warning">Go On Call</button>
+    {% endif %}
+
+
+
+
+

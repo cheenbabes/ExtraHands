@@ -12,6 +12,7 @@ url(r'register/teacher/$', views.register_teacher, name='register_teacher'),
 url(r'register/client/$', views.register_client, name='register_client'),
 url(r'login/$', views.user_login, name='login'),
 url(r'logout/$', views.user_logout, name='logout'),
-url(r'myaccount/$', views.my_account, name='myaccount')
+url(r'myaccount/$', views.my_account, name='myaccount'),
+url(r'action/on-call/$', views.go_on_call, name='go_on_call')
 
 )
