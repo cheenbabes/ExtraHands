@@ -1,18 +1,20 @@
-{% load bootstrap3 %}
-
-
-
 <!DOCTYPE html>
+
+{% load staticfiles %}
+
 <html>
 <head lang="en">
     <meta charset="UTF-8">
     <title>Extra Hands Service | {% block title %}Qualified Teachers & Substitutes{% endblock %}</title>
     {#    CSS#}
-    {% bootstrap_css %}
+    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+
 
     {#Javascript#}
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    {% bootstrap_javascript %}
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'js/ajax.js' %}"></script>
+
 </head>
 <body>
 
@@ -67,7 +69,6 @@
         </div><!-- /.container-fluid -->
     </nav>
 
-    {% bootstrap_messages %}
 
     <div class="container">
         <div class="row">
