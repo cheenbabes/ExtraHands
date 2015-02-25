@@ -5,17 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c278ac50-8beb-47b3-8114-cdbe07f29a59" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/fonts/glyphicons-halflings-regular.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/fonts/glyphicons-halflings-regular.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/fonts/glyphicons-halflings-regular.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/js/ajax.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/css/bootstrap.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/js/bootstrap.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/fonts/glyphicons-halflings-regular.svg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/base.html" afterPath="$PROJECT_DIR$/templates/base.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/myaccount.html" afterPath="$PROJECT_DIR$/templates/myaccount.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ExtraHands/settings.py" afterPath="$PROJECT_DIR$/ExtraHands/settings.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/teacher_account.html" afterPath="$PROJECT_DIR$/templates/teacher_account.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ExtraHands/urls.py" afterPath="$PROJECT_DIR$/ExtraHands/urls.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/extra_hands_app/views.py" afterPath="$PROJECT_DIR$/extra_hands_app/views.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="ExtraHands.iws" />
@@ -47,8 +39,8 @@
       <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/extra_hands_app/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="816">
-              <caret line="54" column="0" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="491" max-vertical-offset="1377">
+              <caret line="206" column="25" selection-start-line="206" selection-start-column="25" selection-end-line="207" selection-end-column="27" />
               <folding>
                 <element signature="e#483#576#0" expanded="false" />
                 <element signature="e#638#866#0" expanded="false" />
@@ -60,7 +52,6 @@
                 <element signature="e#3563#4482#0" expanded="false" />
                 <element signature="e#4514#5422#0" expanded="false" />
                 <element signature="e#5470#5638#0" expanded="false" />
-                <element signature="e#5688#6707#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -88,11 +79,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="settings.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="settings.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ExtraHands/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.64276403" vertical-offset="0" max-vertical-offset="1989">
-              <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1989">
+              <caret line="77" column="0" selection-start-line="77" selection-start-column="0" selection-end-line="77" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="myaccount.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/myaccount.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-11.115385" vertical-offset="0" max-vertical-offset="850">
+              <caret line="17" column="19" selection-start-line="17" selection-start-column="19" selection-end-line="17" selection-end-column="19" />
               <folding />
             </state>
           </provider>
@@ -110,10 +111,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ajax.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="ajax.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/assets/js/ajax.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="187">
+            <state vertical-scroll-proportion="0.0886571" vertical-offset="0" max-vertical-offset="767">
               <caret line="4" column="7" selection-start-line="4" selection-start-column="7" selection-end-line="4" selection-end-column="7" />
               <folding />
             </state>
@@ -159,12 +160,10 @@
         <option value="$PROJECT_DIR$/templates/register_client.html" />
         <option value="$PROJECT_DIR$/templates/clients.html" />
         <option value="$PROJECT_DIR$/extra_hands_app/urls.py" />
-        <option value="$PROJECT_DIR$/templates/myaccount.html" />
         <option value="$PROJECT_DIR$/templates/teacher.html" />
         <option value="$PROJECT_DIR$/templates/client_account.html" />
         <option value="$PROJECT_DIR$/templates/login.html" />
         <option value="$PROJECT_DIR$/templates/manage.html" />
-        <option value="$PROJECT_DIR$/extra_hands_app/views.py" />
         <option value="$PROJECT_DIR$/extra_hands_app/forms.py" />
         <option value="$PROJECT_DIR$/extra_hands_app/models.py" />
         <option value="$PROJECT_DIR$/next_steps.txt" />
@@ -173,6 +172,8 @@
         <option value="$PROJECT_DIR$/static/js/ajax.js" />
         <option value="$PROJECT_DIR$/templates/base.html" />
         <option value="$PROJECT_DIR$/ExtraHands/settings.py" />
+        <option value="$PROJECT_DIR$/extra_hands_app/views.py" />
+        <option value="$PROJECT_DIR$/templates/myaccount.html" />
       </list>
     </option>
   </component>
@@ -228,6 +229,20 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="ExtraHands" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ExtraHands" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ExtraHands" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="templates" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -787,7 +802,13 @@
       <option name="project" value="LOCAL" />
       <updated>1424733893291</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="Fixed static file loading. The issue was bootstrap 3 plugin. Once I took that out, I was able to load the static files myself and then everything started working.">
+      <created>1424889841397</created>
+      <option name="number" value="00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1424889841397</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -812,23 +833,23 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="2040" y="-8" width="1936" height="1096" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32953367" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32953367" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3640923" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3282365" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32953367" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1761658" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.34760448" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20735608" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20735608" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.35105315" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -875,7 +896,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="roadmap&#10;" />
     <MESSAGE value="template and link cleanup&#10;" />
     <MESSAGE value="clients listing and individual client pages&#10;" />
     <MESSAGE value="creation of events that belong to each client! WORKING!" />
@@ -900,7 +920,8 @@
     <MESSAGE value="added comments field to event. Next step is to have the same form handle both edits and adds." />
     <MESSAGE value="story map for this week" />
     <MESSAGE value="thoughts" />
-    <option name="LAST_COMMIT_MESSAGE" value="thoughts" />
+    <MESSAGE value="Fixed static file loading. The issue was bootstrap 3 plugin. Once I took that out, I was able to load the static files myself and then everything started working." />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed static file loading. The issue was bootstrap 3 plugin. Once I took that out, I was able to load the static files myself and then everything started working." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1012,7 +1033,6 @@
             <element signature="e#3563#4482#0" expanded="false" />
             <element signature="e#4514#5422#0" expanded="false" />
             <element signature="e#5470#5638#0" expanded="false" />
-            <element signature="e#5688#6707#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1215,14 +1235,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/myaccount.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="204" max-vertical-offset="731">
-          <caret line="12" column="11" selection-start-line="12" selection-start-column="11" selection-end-line="12" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/manage.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.5275862" vertical-offset="0" max-vertical-offset="580">
@@ -1254,14 +1266,6 @@
           <folding>
             <element signature="e#0#51#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/js/ajax.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="187">
-          <caret line="4" column="7" selection-start-line="4" selection-start-column="7" selection-end-line="4" selection-end-column="7" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1299,26 +1303,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/extra_hands_app/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="816">
-          <caret line="54" column="0" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
-          <folding>
-            <element signature="e#483#576#0" expanded="false" />
-            <element signature="e#638#866#0" expanded="false" />
-            <element signature="e#919#1073#0" expanded="false" />
-            <element signature="e#1133#1464#0" expanded="false" />
-            <element signature="e#1516#1643#0" expanded="false" />
-            <element signature="e#1702#2396#0" expanded="false" />
-            <element signature="e#2433#3526#0" expanded="false" />
-            <element signature="e#3563#4482#0" expanded="false" />
-            <element signature="e#4514#5422#0" expanded="false" />
-            <element signature="e#5470#5638#0" expanded="false" />
-            <element signature="e#5688#6707#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/base.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-11.769231" vertical-offset="0" max-vertical-offset="1768">
@@ -1337,8 +1321,43 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ExtraHands/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.64276403" vertical-offset="0" max-vertical-offset="1989">
-          <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1989">
+          <caret line="77" column="0" selection-start-line="77" selection-start-column="0" selection-end-line="77" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/extra_hands_app/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="491" max-vertical-offset="1377">
+          <caret line="206" column="25" selection-start-line="206" selection-start-column="25" selection-end-line="207" selection-end-column="27" />
+          <folding>
+            <element signature="e#483#576#0" expanded="false" />
+            <element signature="e#638#866#0" expanded="false" />
+            <element signature="e#919#1073#0" expanded="false" />
+            <element signature="e#1133#1464#0" expanded="false" />
+            <element signature="e#1516#1643#0" expanded="false" />
+            <element signature="e#1702#2396#0" expanded="false" />
+            <element signature="e#2433#3526#0" expanded="false" />
+            <element signature="e#3563#4482#0" expanded="false" />
+            <element signature="e#4514#5422#0" expanded="false" />
+            <element signature="e#5470#5638#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/myaccount.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-11.115385" vertical-offset="0" max-vertical-offset="850">
+          <caret line="17" column="19" selection-start-line="17" selection-start-column="19" selection-end-line="17" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/js/ajax.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0886571" vertical-offset="0" max-vertical-offset="767">
+          <caret line="4" column="7" selection-start-line="4" selection-start-column="7" selection-end-line="4" selection-end-column="7" />
           <folding />
         </state>
       </provider>

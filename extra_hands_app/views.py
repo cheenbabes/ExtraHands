@@ -215,7 +215,7 @@ def my_account(request):
     context_dict['is_teacher'] = is_teacher
     context_dict['is_superuser'] = is_superuser
     context_dict['is_client'] = is_client
-
+    context_dict['message'] = "You have successfully logged in."
 
     return render(request, "myaccount.html", context_dict)
 
