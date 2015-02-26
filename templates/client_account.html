@@ -7,21 +7,27 @@
     {{ user.client.city }}, {{ user.client.state }} <br>
     {{ user.client.phone_number }}<br><br>
     <i>Description</i><br>
-    <p>{{ user.client.description }}</p>
+    {{ user.client.description }}
     <hr>
-
+</p>
 
     <strong>Events</strong>
     {% for event in events %}
-        <p>
-        <li>{{ event.start_time }} - {{ event.end_time }}</li>
-        <a href="{% url 'edit_event' event.token %}">Edit Event</a> <br>
-        Token: {{ event.token }}
+        <p class="date-block">
+            <strong>Start Time:</strong> {{ event.start_time }}<br>
+            <strong>End Time:</strong> {{ event.end_time }}<br>
+            On-call event: {{ event.is_on_call }}<br>
+            Comments: {{ event.comments }}<br>
+            Token: {{ event.token }} <br>
+            <a href="{% url 'edit_event' event.token %}" class="btn btn-info">Edit Event</a> <br></p>
         </p>
+
+
+
+
 
     {% endfor %}
 
     <br>
     <a href="{% url 'add_event' user.client.client_slug  %}" class="btn btn-primary">Add event</a>
 
-</p>

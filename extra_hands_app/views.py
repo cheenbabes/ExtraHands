@@ -88,6 +88,7 @@ def edit_event(request, event_token):
             event.start_time= form.cleaned_data['start_time']
             event.end_time = form.cleaned_data['end_time']
             event.comments = form.cleaned_data['comments']
+            event.is_on_call = form.cleaned_data['is_on_call']
             # other editable fields go here
             event.save()
             return HttpResponseRedirect("/myaccount/")

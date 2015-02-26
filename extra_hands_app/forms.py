@@ -15,7 +15,7 @@ class EventForm(forms.ModelForm):
     in_progress = forms.BooleanField(widget=forms.HiddenInput(), required = False)
     comments = forms.CharField(widget=forms.Textarea())
     token = forms.IntegerField(widget=forms.HiddenInput(), required=False)
-    is_on_call = forms.BooleanField()
+    is_on_call = forms.BooleanField(required=False)
 
     class Meta:
         model = Event
