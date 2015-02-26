@@ -79,6 +79,28 @@ def add_event(request, client_slug):
 
     return render(request, 'add_event.html', context_dict)
 
+def edit_event(request, event_token):
+    event = Event.objects.get(token=event_token)
+
+    if request.method == 'POST':
+        form = EventForm(request.POST)
+        if form.is_valid():
+            event.start_time= form.cleaned_data['start_time']
+            event.end_time = form.cleaned_data['end_time']
+            event.comments = form.cleaned_data['comments']
+            # other editable fields go here
+            event.save()
+            return HttpResponseRedirect("/myaccount/")
+        else:
+            print form.errors
+    else:
+        form =EventForm(instance=event)
+
+    context_dict ={'form': form, 'event': event}
+
+    return render(request, 'edit_event.html', context_dict)
+
+
 def register_teacher(request):
     registered = False
 

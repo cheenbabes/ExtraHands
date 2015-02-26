@@ -1,5 +1,4 @@
 editing an event
-ajax call for on-call button for teacher
 adapt add/edit event for available time
 calendar solution (django-scheduler or django-bootstrap-calendar or
 

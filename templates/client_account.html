@@ -13,7 +13,12 @@
 
     <strong>Events</strong>
     {% for event in events %}
+        <p>
         <li>{{ event.start_time }} - {{ event.end_time }}</li>
+        <a href="{% url 'edit_event' event.token %}">Edit Event</a> <br>
+        Token: {{ event.token }}
+        </p>
+
     {% endfor %}
 
     <br>

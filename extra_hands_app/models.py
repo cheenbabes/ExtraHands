@@ -23,8 +23,9 @@ class Client(models.Model):
 
     def save(self, *args, **kwargs):
         self.client_slug = slugify(self.organization)
-        self.token = random.randint(1,999999)
+        self.token = random.randint(100000,999999)
         super(Client, self).save(*args, **kwargs)
+
 
     def __unicode__(self):
         return self.organization
@@ -51,7 +52,7 @@ class Teacher(models.Model):
 
     def save(self, *args, **kwargs):
         self.slug = slugify(self.user.get_full_name())
-        self.token = random.randint(1,999999)
+        self.token = random.randint(100000,999999)
         super(Teacher, self).save(*args, **kwargs)
 
     def __unicode__(self):
@@ -69,7 +70,8 @@ class Event(models.Model):
     comments = models.CharField(max_length=500, blank=True, default ='')
 
     def save(self, *args, **kwargs):
-        self.token = random.randint(1,999999)
+        if self.token is None:
+            self.token = random.randint(100000,999999)
         super(Event, self).save(*args, **kwargs)
 
     def __unicode__(self):
