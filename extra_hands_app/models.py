@@ -70,6 +70,7 @@ class Event(models.Model):
     in_progress = models.BooleanField(default=False)
     token = models.IntegerField(default=0)
     comments = models.CharField(max_length=500, blank=True, default ='')
+    is_on_call = models.BooleanField(default=False)
 
     def save(self, *args, **kwargs):
         # if statement required to not overwrite token on editing

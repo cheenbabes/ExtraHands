@@ -217,20 +217,20 @@ def my_account(request):
     if Teacher.objects.filter(user=user).exists():
         is_teacher = True
         teacher = Teacher.objects.filter(user=user)
-        available_time = Available_Time.objects.filter(teacher=teacher)
+        available_time = Available_Time.objects.filter(teacher=teacher).order_by('start-time')
         context_dict['times'] = available_time
 
     if Client.objects.filter(user=user).exists():
         is_client=True
         client = Client.objects.filter(user=user)
-        client_events = Event.objects.filter(client=client)
+        client_events = Event.objects.filter(client=client).order_by('start_time')
         context_dict['events'] = client_events
 
     if user.is_superuser:
         is_superuser = True
         context_dict['teachers'] = Teacher.objects.all()
         context_dict['clients'] = Client.objects.all()
-        context_dict['events'] = Event.objects.all()
+        context_dict['events'] = Event.objects.all().order_by('start_time')
 
 
 

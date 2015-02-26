@@ -14,11 +14,12 @@ class EventForm(forms.ModelForm):
     is_open = forms.BooleanField(widget=forms.HiddenInput(), required = False)
     in_progress = forms.BooleanField(widget=forms.HiddenInput(), required = False)
     comments = forms.CharField(widget=forms.Textarea())
-    token = forms.IntegerField(widget=forms.HiddenInput())
+    token = forms.IntegerField(widget=forms.HiddenInput(), required=False)
+    is_on_call = forms.BooleanField()
 
     class Meta:
         model = Event
-        fields=('start_time', 'end_time', 'comments', 'token' )
+        fields=('start_time', 'end_time', 'is_on_call', 'comments', 'token' )
 
 
 
