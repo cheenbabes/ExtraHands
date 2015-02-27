@@ -14,6 +14,7 @@ url(r'register/client/$', views.register_client, name='register_client'),
 url(r'login/$', views.user_login, name='login'),
 url(r'logout/$', views.user_logout, name='logout'),
 url(r'myaccount/$', views.my_account, name='myaccount'),
-url(r'action/on-call/$', views.go_on_call, name='go_on_call')
+url(r'action/on-call/$', views.go_on_call, name='go_on_call'),
+url(r'teacher/(?P<teacher_slug>[\w\-]+)/add_time/$', views.add_time, name='add_time'),
 
 )

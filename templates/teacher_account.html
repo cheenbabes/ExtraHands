@@ -32,6 +32,24 @@
     </form>
 
     {% endif %}
+    <br>
+
+    <a href="{% url 'add_time' user.teacher.slug  %}" class="btn btn-warning">Add time</a>
+<hr>
+<strong>Times I am available</strong>
+    {% for time in times %}
+        <p class="date-block">
+            <strong>Start Time:</strong> {{ time.start_time }}<br>
+            <strong>End Time:</strong> {{ time.end_time }}<br>
+            <strong>Primary key:</strong> {{ time.pk }}
+        </p>
+
+
+
+
+
+    {% endfor %}
+
 
 
 

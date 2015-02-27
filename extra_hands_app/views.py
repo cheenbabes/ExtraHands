@@ -1,8 +1,8 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from extra_hands_app.models import Teacher, Client, Available_Time, Event, Email_List
-from forms import EventForm, UserForm, TeacherForm, ClientForm
-from django.http import HttpResponseRedirect, HttpResponseNotAllowed
+from forms import EventForm, UserForm, TeacherForm, ClientForm, AvailableTimeForm
+from django.http import HttpResponseRedirect, HttpResponseNotAllowed, Http404
 from django.core.urlresolvers import reverse
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
@@ -78,6 +78,32 @@ def add_event(request, client_slug):
     context_dict = {'form': form, 'client': client}
 
     return render(request, 'add_event.html', context_dict)
+
+def add_time(request, teacher_slug):
+    try:
+        teacher = Teacher.objects.get(slug = teacher_slug)
+    except Teacher.DoesNotExist:
+        teacher = None
+        return Http404("Teacher does not exist!")
+
+    if request.method == 'POST':
+        form = AvailableTimeForm(request.POST)
+        if form.is_valid():
+            if teacher:
+                time = form.save(commit=False)
+                time.teacher = teacher
+                time.save()
+                return HttpResponseRedirect("/myaccount/")
+        else:
+            print form.errors
+    else:
+        form = AvailableTimeForm()
+
+    context_dict = {'form': form, 'teacher': teacher}
+    return render(request, 'add_time.html', context_dict)
+
+
+
 
 def edit_event(request, event_token):
     event = Event.objects.get(token=event_token)
@@ -218,7 +244,7 @@ def my_account(request):
     if Teacher.objects.filter(user=user).exists():
         is_teacher = True
         teacher = Teacher.objects.filter(user=user)
-        available_time = Available_Time.objects.filter(teacher=teacher)#order_by('start_time')
+        available_time = Available_Time.objects.filter(teacher=teacher).order_by('start_time')
         context_dict['times'] = available_time
 
     if Client.objects.filter(user=user).exists():

@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    {{ form.media }}
+
+    <h1>Add a time that you're available</h1>
+    <form id="add_time" method="post" action="/teacher/{{ teacher.slug }}/add_time/">
+
+        {% csrf_token %}
+{#        {% for hidden in form.hidden_fields %}#}
+{#            {{ hidden }}#}
+{#        {% endfor %}#}
+{##}
+{##}
+{#        {% for field in form.visible_fields %}#}
+{#            {{ field.errors }}#}
+{#            {{ field.help_text }}#}
+{#            {{ field }}#}
+{#        {% endfor %}#}
+
+        {{ form.as_p }}
+
+
+        <input type="submit" name="submit" value="Submit Event">
+
+    </form>
+
+
+
+
+{% endblock %}

@@ -71,7 +71,7 @@ class Event(models.Model):
     token = models.IntegerField(default=0)
     comments = models.CharField(max_length=500, blank=True, default ='')
     is_on_call = models.BooleanField(default=False)
-    event_class = models.CharField(max_length=100, default='')
+    event_class = models.CharField(max_length=100, default='event-info')
 
     def save(self, *args, **kwargs):
         # if statement required to not overwrite token on editing
@@ -87,6 +87,9 @@ class Available_Time(models.Model):
     start_time = models.DateTimeField()
     end_time = models.DateTimeField()
     teacher = models.ForeignKey(Teacher)
+    event_class = models.CharField(max_length=100, default='event-warning')
+
+
 
 
 class Email_List(models.Model):

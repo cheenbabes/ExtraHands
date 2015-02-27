@@ -19,6 +19,7 @@ class EventForm(forms.ModelForm):
     event_class = forms.CharField(widget=forms.HiddenInput(), required=False)
 
     # My thought is to make all events one color by default and force the on-call event to be red or yellow
+    # Otherwise the different options may be a bit confusing to the users
     # event_class_choices = (
     #     ('event-important', 'important'),
     #     ('success', 'event-success'),
@@ -29,6 +30,20 @@ class EventForm(forms.ModelForm):
         model = Event
         fields=('start_time', 'end_time', 'is_on_call', 'comments', 'token' )
 
+
+class AvailableTimeForm(forms.ModelForm):
+    dateTimeOptions={
+        'format': 'mm/dd/yyyy HH:ii'
+    }
+
+    start_time = forms.DateTimeField(widget=DateTimeWidget(bootstrap_version=3, options=dateTimeOptions))
+    end_time = forms.DateTimeField(widget=DateTimeWidget(bootstrap_version=3, options=dateTimeOptions))
+    teacher = forms.CharField(widget=forms.HiddenInput(), required=False)
+    event_class = forms.CharField(widget=forms.HiddenInput(), required=False)
+
+    class Meta:
+        model = Available_Time
+        fields=('start_time', 'end_time', )
 
 
 
