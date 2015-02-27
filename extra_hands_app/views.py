@@ -218,7 +218,7 @@ def my_account(request):
     if Teacher.objects.filter(user=user).exists():
         is_teacher = True
         teacher = Teacher.objects.filter(user=user)
-        available_time = Available_Time.objects.filter(teacher=teacher).order_by('start-time')
+        available_time = Available_Time.objects.filter(teacher=teacher)#order_by('start_time')
         context_dict['times'] = available_time
 
     if Client.objects.filter(user=user).exists():

@@ -16,6 +16,14 @@ class EventForm(forms.ModelForm):
     comments = forms.CharField(widget=forms.Textarea())
     token = forms.IntegerField(widget=forms.HiddenInput(), required=False)
     is_on_call = forms.BooleanField(required=False)
+    event_class = forms.CharField(widget=forms.HiddenInput(), required=False)
+
+    # My thought is to make all events one color by default and force the on-call event to be red or yellow
+    # event_class_choices = (
+    #     ('event-important', 'important'),
+    #     ('success', 'event-success'),
+    #     ('warning', 'event')
+    # )
 
     class Meta:
         model = Event

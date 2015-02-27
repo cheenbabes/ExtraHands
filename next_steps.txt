@@ -5,6 +5,9 @@ calendar solution
         -create dict of events and then dump to json
         -make sure the json is correct (eg success= {1} at the beginning)
 
+teacher should be able to view a list of all events that do not have a sub assigned to them yet and commit to it right then. It should prompt the teacher
+whether they really want to accept the event or not.
+
 core business logic
 --after creating an event, show a list of teachers who are availble. submit another form to send out emails to the teachers.
 --first teacher who clicks will get the event, next teachers will just get click points.
