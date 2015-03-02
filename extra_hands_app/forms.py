@@ -4,7 +4,7 @@ from datetimewidget.widgets import DateTimeWidget
 
 class EventForm(forms.ModelForm):
     dateTimeOptions={
-        'format': 'mm/dd/yyyy HH:ii'
+        'format': 'mm/dd/yyyy hh:ii'
     }
 
     start_time = forms.DateTimeField(widget=DateTimeWidget(bootstrap_version=3, options=dateTimeOptions))
@@ -33,7 +33,7 @@ class EventForm(forms.ModelForm):
 
 class AvailableTimeForm(forms.ModelForm):
     dateTimeOptions={
-        'format': 'mm/dd/yyyy HH:ii'
+        'format': 'mm/dd/yyyy hh:ii'
     }
 
     start_time = forms.DateTimeField(widget=DateTimeWidget(bootstrap_version=3, options=dateTimeOptions))

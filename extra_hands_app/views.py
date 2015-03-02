@@ -102,7 +102,26 @@ def add_time(request, teacher_slug):
     context_dict = {'form': form, 'teacher': teacher}
     return render(request, 'add_time.html', context_dict)
 
+def edit_time(request, time_pk):
+    try:
+        time = Available_Time.objects.get(pk=time_pk)
+    except Available_Time.DoesNotExist:
+        time = None
+        return Http404("Your timed event does not exist!")
 
+    if request.method == 'POST':
+        form = AvailableTimeForm(request.POST)
+        if form.is_valid():
+            time.start_time = form.cleaned_data['start_time']
+            time.end_time = form.cleaned_data['end_time']
+            time.save()
+            return HttpResponseRedirect("/myaccount/")
+        else:
+            print form.errors
+    else:
+        form = AvailableTimeForm(instance=time)
+    context_dict = {'form': form, 'time':time}
+    return render(request, 'edit_time.html', context_dict)
 
 
 def edit_event(request, event_token):

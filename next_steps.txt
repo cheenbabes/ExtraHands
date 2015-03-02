@@ -1,4 +1,4 @@
-adapt add/edit event for available time
+edit available time
 calendar solution
     -bootstrap calendar
         -convert event times to milliseconds unix time
