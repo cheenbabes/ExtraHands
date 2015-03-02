@@ -41,8 +41,8 @@
         <p class="date-block">
             <strong>Start Time:</strong> {{ time.start_time }}<br>
             <strong>End Time:</strong> {{ time.end_time }}<br>
-            <strong>Primary key:</strong> {{ time.pk }}
-            <a href="{% url 'edit_time' time.pk %}">Edit</a>
+            <strong>Primary key:</strong> {{ time.pk }}<br>
+            <a href="{% url 'edit_time' time.pk %}" class="btn btn-info">Edit</a>
         </p>
 
 

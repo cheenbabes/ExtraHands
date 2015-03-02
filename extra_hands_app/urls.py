@@ -16,6 +16,7 @@ url(r'logout/$', views.user_logout, name='logout'),
 url(r'myaccount/$', views.my_account, name='myaccount'),
 url(r'action/on-call/$', views.go_on_call, name='go_on_call'),
 url(r'teacher/(?P<teacher_slug>[\w\-]+)/add_time/$', views.add_time, name='add_time'),
-url(r'time/(?P<time_pk>[\d]+)/edit_time/$', views.edit_time, name = 'edit_time')
+url(r'time/(?P<time_pk>[\d]+)/edit_time/$', views.edit_time, name = 'edit_time'),
+url(r'event/(?P<event_token>[\d]+)/select-teacher/$', views.show_available_teachers, name='select_teacher'),
 
 )

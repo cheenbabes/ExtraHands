@@ -6,6 +6,7 @@ from django.http import HttpResponseRedirect, HttpResponseNotAllowed, Http404
 from django.core.urlresolvers import reverse
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
+import datetime
 
 
 # Create your views here.
@@ -68,8 +69,8 @@ def add_event(request, client_slug):
                 event = form.save(commit=False)
                 event.client = client
                 event.save()
-                #url = reverse('get_client', kwargs={'client_slug': client_slug})
-                return HttpResponseRedirect("/myaccount/")
+                url = 'event/' + str(event.token) +'/select-teacher/'
+                return HttpResponseRedirect(url)
         else:
             print form.errors
     else:
@@ -270,7 +271,9 @@ def my_account(request):
         is_client=True
         client = Client.objects.filter(user=user)
         client_events = Event.objects.filter(client=client).order_by('start_time')
+        future_client_events = Event.objects.filter(start_time__gte=datetime.datetime.today() - datetime.timedelta(days=1))
         context_dict['events'] = client_events
+        context_dict['current_events'] = future_client_events
 
     if user.is_superuser:
         is_superuser = True
@@ -301,6 +304,29 @@ def go_on_call(request):
     else:
         return HttpResponseRedirect("/myaccount/")
 
+
+def show_available_teachers(request, event_token):
+    user = request.user
+    context_dict={'user':user}
+
+    event = Event.objects.get(token=event_token)
+
+    available_teachers = get_all_teachers_available_for_event(event)
+    context_dict['teachers'] = available_teachers
+
+    return render(request, 'select_teacher.html', context_dict)
+
+
+def get_all_teachers_available_for_event(event):
+    times = Available_Time.objects.all()
+    available_teachers = []
+
+    #This is the logic to only grab teachers that have available times that start before the beginning and end after the event
+    for time in times:
+        if time.start_time <= event.start_time and time.end_time >= event.end_time:
+            available_teachers.append(time.teacher)
+
+    return available_teachers
 
 
 
