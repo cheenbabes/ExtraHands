@@ -6,11 +6,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c278ac50-8beb-47b3-8114-cdbe07f29a59" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/select_teacher.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/client_account.html" afterPath="$PROJECT_DIR$/templates/client_account.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/teacher_account.html" afterPath="$PROJECT_DIR$/templates/teacher_account.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/extra_hands_app/urls.py" afterPath="$PROJECT_DIR$/extra_hands_app/urls.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/extra_hands_app/views.py" afterPath="$PROJECT_DIR$/extra_hands_app/views.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/next_steps.txt" afterPath="$PROJECT_DIR$/next_steps.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="ExtraHands.iws" />
@@ -87,11 +83,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="add_event.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/add_event.html">
+      <file leaf-file-name="next_steps.txt" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/next_steps.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-9.807693" vertical-offset="0" max-vertical-offset="612">
-              <caret line="15" column="33" selection-start-line="15" selection-start-column="33" selection-end-line="15" selection-end-column="33" />
+            <state vertical-scroll-proportion="0.5283364" vertical-offset="0" max-vertical-offset="547">
+              <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -139,11 +135,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="client_account.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="client_account.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/client_account.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5224719" vertical-offset="27" max-vertical-offset="663">
-              <caret line="18" column="53" selection-start-line="18" selection-start-column="53" selection-end-line="18" selection-end-column="53" />
+            <state vertical-scroll-proportion="-10.076923" vertical-offset="27" max-vertical-offset="663">
+              <caret line="17" column="56" selection-start-line="17" selection-start-column="56" selection-end-line="17" selection-end-column="56" />
               <folding />
             </state>
           </provider>
@@ -190,7 +186,6 @@
         <option value="$PROJECT_DIR$/assets/css/custom.css" />
         <option value="$PROJECT_DIR$/extra_hands_app/models.py" />
         <option value="$PROJECT_DIR$/templates/add_time.html" />
-        <option value="$PROJECT_DIR$/next_steps.txt" />
         <option value="$PROJECT_DIR$/templates/edit_time.html" />
         <option value="$PROJECT_DIR$/extra_hands_app/forms.py" />
         <option value="$PROJECT_DIR$/templates/teacher_account.html" />
@@ -198,6 +193,7 @@
         <option value="$PROJECT_DIR$/templates/select_teacher.html" />
         <option value="$PROJECT_DIR$/extra_hands_app/views.py" />
         <option value="$PROJECT_DIR$/templates/client_account.html" />
+        <option value="$PROJECT_DIR$/next_steps.txt" />
       </list>
     </option>
   </component>
@@ -870,7 +866,13 @@
       <option name="project" value="LOCAL" />
       <updated>1425333152099</updated>
     </task>
-    <option name="localTasksCounter" value="44" />
+    <task id="LOCAL-00044" summary=" a lot of different functionality unfortunately lumped together. The show all teachers available for this time slot is tenatively working, but it actually needs to show the time they are available (or maybe not? at least for testing, though). Also, now showing only the current day and future events for clients. Will need to implement a show all events page later">
+      <created>1425338314447</created>
+      <option name="number" value="00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1425338314447</updated>
+    </task>
+    <option name="localTasksCounter" value="45" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -958,7 +960,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="my account and redirection working. Pre refactoring into code that makes separates the user type logic out of the login view into the myaccount view" />
     <MESSAGE value="Code refactor. My account page now knows whether the user is a teacher, client, or superuser. A lot less code too!&#10;Awesome" />
     <MESSAGE value="myaccount.html now serves as the template for each portal option. teacher_account, client_account, and manage are included as part of the template control flow" />
     <MESSAGE value="Successfully seeing events and times related to the client on the myaccount page" />
@@ -983,7 +984,8 @@
     <MESSAGE value="Added an event class column to prepare to serialization to json on bootstrap calendar" />
     <MESSAGE value="Add available time now working" />
     <MESSAGE value="edit time form working. Also caught a bug where the time was not displaying correctly on either form because it was grabbing only 12 hr based times" />
-    <option name="LAST_COMMIT_MESSAGE" value="edit time form working. Also caught a bug where the time was not displaying correctly on either form because it was grabbing only 12 hr based times" />
+    <MESSAGE value=" a lot of different functionality unfortunately lumped together. The show all teachers available for this time slot is tenatively working, but it actually needs to show the time they are available (or maybe not? at least for testing, though). Also, now showing only the current day and future events for clients. Will need to implement a show all events page later" />
+    <option name="LAST_COMMIT_MESSAGE" value=" a lot of different functionality unfortunately lumped together. The show all teachers available for this time slot is tenatively working, but it actually needs to show the time they are available (or maybe not? at least for testing, though). Also, now showing only the current day and future events for clients. Will need to implement a show all events page later" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1281,14 +1283,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/next_steps.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="374">
-          <caret line="10" column="19" selection-start-line="10" selection-start-column="19" selection-end-line="10" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ExtraHands/urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.2681388" vertical-offset="0" max-vertical-offset="634">
@@ -1425,8 +1419,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/client_account.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5224719" vertical-offset="27" max-vertical-offset="663">
-          <caret line="18" column="53" selection-start-line="18" selection-start-column="53" selection-end-line="18" selection-end-column="53" />
+        <state vertical-scroll-proportion="-10.076923" vertical-offset="27" max-vertical-offset="663">
+          <caret line="17" column="56" selection-start-line="17" selection-start-column="56" selection-end-line="17" selection-end-column="56" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/next_steps.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5283364" vertical-offset="0" max-vertical-offset="547">
+          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
           <folding />
         </state>
       </provider>
