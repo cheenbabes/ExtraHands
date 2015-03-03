@@ -15,8 +15,24 @@
     <hr>
     </p>
 
-    {% for teacher in teachers %}
-        {{ teacher.user.get_full_name }}
+    {% for time in times %}
+        <form>
+            <div class="checkbox">
+                <p class="date-block">
+                    Name: {{ time.teacher.user.get_full_name }}<br>
+                    Start Time: {{ time.start_time }}<br>
+                    End Time: {{ time.end_time }}<br>
+                    <hr>
+                    Qualifications:
+                <p>
+                   ECT Qualified: {{ time.teacher.ect_qualified }} <br>
+                   CPR & First Aid: {{ time.teacher.cpr_first_aid }} <br>
+                   Universal Precautions: {{ time.teacher.universal_precautions }} <br>
+
+                </p>
+            </div>
+        </form>
+
 
     {% endfor %}
 

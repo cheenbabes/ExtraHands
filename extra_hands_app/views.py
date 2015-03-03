@@ -311,22 +311,24 @@ def show_available_teachers(request, event_token):
 
     event = Event.objects.get(token=event_token)
 
-    available_teachers = get_all_teachers_available_for_event(event)
-    context_dict['teachers'] = available_teachers
+    available_times = get_all_times_available_for_event(event)
+    context_dict['times'] = available_times
 
     return render(request, 'select_teacher.html', context_dict)
 
 
-def get_all_teachers_available_for_event(event):
+def get_all_times_available_for_event(event):
     times = Available_Time.objects.all()
-    available_teachers = []
+    available_times = []
 
-    #This is the logic to only grab teachers that have available times that start before the beginning and end after the event
+    #This is the logic to only grab the times that match the criteria for starting at or before the event time and ending at or after the event.
+    #The reason for grabbing the times and not the teachers is that each specific time has a teacher attached to it, but each teacher just has a list
+    #of all the total times they have entered (which could be a lot and have no relevance)
     for time in times:
         if time.start_time <= event.start_time and time.end_time >= event.end_time:
-            available_teachers.append(time.teacher)
+            available_times.append(time)
 
-    return available_teachers
+    return available_times
 
 
 
