@@ -15,26 +15,29 @@
     <hr>
     </p>
 
-    {% for time in times %}
+    {% if times %}
         <form>
+        {% for time in times %}
             <div class="checkbox">
-                <p class="date-block">
-                    Name: {{ time.teacher.user.get_full_name }}<br>
-                    Start Time: {{ time.start_time }}<br>
-                    End Time: {{ time.end_time }}<br>
-                    <hr>
-                    Qualifications:
-                <p>
-                   ECT Qualified: {{ time.teacher.ect_qualified }} <br>
-                   CPR & First Aid: {{ time.teacher.cpr_first_aid }} <br>
-                   Universal Precautions: {{ time.teacher.universal_precautions }} <br>
-
-                </p>
-            </div>
+                    <input type="checkbox" id="{{ time.teacher.token }}" value="{{ time.teacher.token }}">
+                    <p class="date-block">
+                        Name: {{ time.teacher.user.get_full_name }}<br>
+                        Start Time: {{ time.start_time }}<br>
+                        End Time: {{ time.end_time }}<br>
+                        <i>Qualifications</i><br>
+                       ECT Qualified: {{ time.teacher.ect_qualified }} <br>
+                       CPR & First Aid: {{ time.teacher.cpr_first_aid }} <br>
+                       Universal Precautions: {{ time.teacher.universal_precautions }} <br>
+                    </p>
+                </div>
+        {% endfor %}
         </form>
 
+    {% else %}
+        <p>Sorry, no teachers available at this time. Click here to let us know you've encountered this!</p>
 
-    {% endfor %}
+    {% endif %}
+
 
 
 
