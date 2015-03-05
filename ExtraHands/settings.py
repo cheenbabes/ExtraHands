@@ -41,7 +41,8 @@ INSTALLED_APPS = (
     'extra_hands_app',
     'rolepermissions',
     'datetimewidget',
-    'debug_toolbar'
+    'debug_toolbar',
+    'sendgrid'
 )
 
 MIDDLEWARE_CLASSES = (
@@ -108,4 +109,9 @@ STATICFILES_FINDERS = (
     'django.contrib.staticfiles.finders.AppDirectoriesFinder',
     # django.contrib.staticfiles.finders.DefaultStorageFinder',
 )
+
+SENDGRID_EMAIL_HOST = "smtp.sendgrid.net"
+SENDGRID_EMAIL_PORT = 587
+SENDGRID_EMAIL_USERNAME = "cheenbabes"
+SENDGRID_EMAIL_PASSWORD = "MCfhhPdJ2"
 

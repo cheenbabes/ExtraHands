@@ -19,5 +19,6 @@ url(r'teacher/(?P<teacher_slug>[\w\-]+)/add_time/$', views.add_time, name='add_t
 url(r'time/(?P<time_pk>[\d]+)/edit_time/$', views.edit_time, name = 'edit_time'),
 url(r'event/(?P<event_token>[\d]+)/select-teacher/$', views.show_available_teachers, name='select_teacher'),
 url(r'email-teachers/(?P<event_token>[\d]+)/$', views.send_emails_to_teachers, name="email_teachers"),
+url(r'confirm-event/(?P<event_token>[\d]+)/(?P<teacher_token>[\d]+)/$', views.confirm_teacher_part1, name='confirm_teacher1'),
 
 )
