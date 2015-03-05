@@ -81,6 +81,7 @@ def add_event(request, client_slug):
 
     return render(request, 'add_event.html', context_dict)
 
+@login_required
 def add_time(request, teacher_slug):
     try:
         teacher = Teacher.objects.get(slug = teacher_slug)
@@ -104,6 +105,7 @@ def add_time(request, teacher_slug):
     context_dict = {'form': form, 'teacher': teacher}
     return render(request, 'add_time.html', context_dict)
 
+@login_required
 def edit_time(request, time_pk):
     try:
         time = Available_Time.objects.get(pk=time_pk)
@@ -125,7 +127,7 @@ def edit_time(request, time_pk):
     context_dict = {'form': form, 'time':time}
     return render(request, 'edit_time.html', context_dict)
 
-
+@login_required
 def edit_event(request, event_token):
     event = Event.objects.get(token=event_token)
 
@@ -147,7 +149,6 @@ def edit_event(request, event_token):
     context_dict ={'form': form, 'event': event}
 
     return render(request, 'edit_event.html', context_dict)
-
 
 def register_teacher(request):
     registered = False
@@ -184,7 +185,6 @@ def register_teacher(request):
     context_dict = {'user_form': user_form, 'teacher_form': teacher_form, 'registered': registered}
 
     return render(request, 'register_teacher.html', context_dict)
-
 
 def register_client(request):
     registered = False
@@ -305,7 +305,7 @@ def go_on_call(request):
     else:
         return HttpResponseRedirect("/myaccount/")
 
-
+@login_required
 def show_available_teachers(request, event_token):
     user = request.user
     context_dict={'user':user}
@@ -318,7 +318,7 @@ def show_available_teachers(request, event_token):
 
     return render(request, 'select_teacher.html', context_dict)
 
-
+@login_required
 def get_all_times_available_for_event(event):
     times = Available_Time.objects.all()
     available_times = []
@@ -332,6 +332,7 @@ def get_all_times_available_for_event(event):
 
     return available_times
 
+@login_required
 def send_emails_to_teachers(request, event_token):
     event = Event.objects.get(token=event_token)
     subject = "{0} has just sent you an email about an event!".format(event.client.organization)
@@ -353,10 +354,18 @@ def send_emails_to_teachers(request, event_token):
     else:
         return HttpResponseNotAllowed("This method only accepts POST")
 
+@login_required
 def confirm_teacher_part1(request, event_token, teacher_token):
     user = request.user
     event = Event.objects.get(token = event_token)
     teacher = Teacher.objects.get(token = teacher_token)
+
+    #if the event already has a teacher
+    if event.teacher is not None:
+        #give the teacher a click - will have to figure out how to give them only one click a day or something
+        teacher.clicks += 1
+        return HttpResponseRedirect("/event-booked/")
+
 
     if user is not teacher.user:
         return HttpResponseForbidden
@@ -365,7 +374,28 @@ def confirm_teacher_part1(request, event_token, teacher_token):
 
     return render(request, 'confirm_event_participation.html', context_dict )
 
+@login_required
+def confirm_teacher_post(request, event_token, teacher_token):
+    event = Event.objects.get(token = event_token)
+    teacher = Teacher.objects.get(token = teacher_token)
 
+    #assign the event teacher to the teacher who clicked it.
+    event.teacher=teacher
+    event.save()
+
+    #give the teacher a click
+    teacher.clicks += 1
+    teacher.save()
+
+    context_dict = {'teacher': teacher, 'event': event}
+
+    return (request, 'event_sign_up_confirmed.html', context_dict)
+
+@login_required
+def event_booked(request):
+    message = "Sorry, but this event has already been taken!"
+    context_dict = {'message': message}
+    return(request, 'event_booked.html', context_dict)
 
 
 

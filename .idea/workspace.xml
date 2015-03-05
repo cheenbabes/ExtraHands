@@ -6,8 +6,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c278ac50-8beb-47b3-8114-cdbe07f29a59" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ExtraHands/settings.py" afterPath="$PROJECT_DIR$/ExtraHands/settings.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/extra_hands_app/urls.py" afterPath="$PROJECT_DIR$/extra_hands_app/urls.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/extra_hands_app/views.py" afterPath="$PROJECT_DIR$/extra_hands_app/views.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -50,8 +48,8 @@
       <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/extra_hands_app/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.7056277" vertical-offset="1490" max-vertical-offset="2414">
-              <caret line="365" column="75" selection-start-line="365" selection-start-column="75" selection-end-line="365" selection-end-column="75" />
+            <state vertical-scroll-proportion="0.9816017" vertical-offset="1949" max-vertical-offset="3128">
+              <caret line="395" column="61" selection-start-line="395" selection-start-column="61" selection-end-line="395" selection-end-column="61" />
               <folding>
                 <element signature="e#0#35#0" expanded="true" />
                 <element signature="e#624#717#0" expanded="false" />
@@ -60,15 +58,15 @@
                 <element signature="e#1274#1605#0" expanded="false" />
                 <element signature="e#1657#1784#0" expanded="false" />
                 <element signature="e#1843#2515#0" expanded="false" />
-                <element signature="e#2558#3235#0" expanded="false" />
-                <element signature="e#3274#3967#0" expanded="false" />
-                <element signature="e#4012#4729#0" expanded="false" />
-                <element signature="e#4767#5860#0" expanded="false" />
-                <element signature="e#5897#6816#0" expanded="false" />
-                <element signature="e#7804#7972#0" expanded="false" />
-                <element signature="e#8022#9360#0" expanded="false" />
-                <element signature="e#9407#9871#0" expanded="false" />
-                <element signature="e#10289#10913#0" expanded="false" />
+                <element signature="e#2574#3251#0" expanded="false" />
+                <element signature="e#3306#3999#0" expanded="false" />
+                <element signature="e#4059#4776#0" expanded="false" />
+                <element signature="e#4813#5906#0" expanded="false" />
+                <element signature="e#5942#6861#0" expanded="false" />
+                <element signature="e#6893#7801#0" expanded="false" />
+                <element signature="e#7849#8017#0" expanded="false" />
+                <element signature="e#9452#9916#0" expanded="false" />
+                <element signature="e#10364#10988#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -590,12 +588,6 @@
       <option name="number" value="Default" />
       <updated>1424125891592</updated>
     </task>
-    <task id="LOCAL-00002" summary="View working with url routing!">
-      <created>1424130422667</created>
-      <option name="number" value="00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1424130422667</updated>
-    </task>
     <task id="LOCAL-00003" summary="View working with url routing!">
       <created>1424135840977</created>
       <option name="number" value="00003" />
@@ -884,7 +876,13 @@
       <option name="project" value="LOCAL" />
       <updated>1425591378685</updated>
     </task>
-    <option name="localTasksCounter" value="51" />
+    <task id="LOCAL-00051" summary="a lot of code for sending out emails, and then having the teachers confirm their participation">
+      <created>1425596580793</created>
+      <option name="number" value="00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1425596580793</updated>
+    </task>
+    <option name="localTasksCounter" value="52" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -972,7 +970,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="inline navbar form&#10;" />
     <MESSAGE value="assigned the teacher a random 6 digit token for anonymity purposes" />
     <MESSAGE value="Assigned tokens to both events and teachers" />
     <MESSAGE value="ugly but functioning admin portal" />
@@ -997,7 +994,8 @@
     <MESSAGE value="working on the select teacher logic" />
     <MESSAGE value="notes" />
     <MESSAGE value="redirect teachers working" />
-    <option name="LAST_COMMIT_MESSAGE" value="redirect teachers working" />
+    <MESSAGE value="a lot of code for sending out emails, and then having the teachers confirm their participation" />
+    <option name="LAST_COMMIT_MESSAGE" value="a lot of code for sending out emails, and then having the teachers confirm their participation" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1051,15 +1049,15 @@
             <element signature="e#1274#1605#0" expanded="false" />
             <element signature="e#1657#1784#0" expanded="false" />
             <element signature="e#1843#2515#0" expanded="false" />
-            <element signature="e#2558#3235#0" expanded="false" />
-            <element signature="e#3274#3967#0" expanded="false" />
-            <element signature="e#4012#4729#0" expanded="false" />
-            <element signature="e#4767#5860#0" expanded="false" />
-            <element signature="e#5897#6816#0" expanded="false" />
-            <element signature="e#7804#7972#0" expanded="false" />
-            <element signature="e#8022#9360#0" expanded="false" />
-            <element signature="e#9407#9871#0" expanded="false" />
-            <element signature="e#10289#10913#0" expanded="false" />
+            <element signature="e#2574#3251#0" expanded="false" />
+            <element signature="e#3306#3999#0" expanded="false" />
+            <element signature="e#4059#4776#0" expanded="false" />
+            <element signature="e#4813#5906#0" expanded="false" />
+            <element signature="e#5942#6861#0" expanded="false" />
+            <element signature="e#6893#7801#0" expanded="false" />
+            <element signature="e#7849#8017#0" expanded="false" />
+            <element signature="e#9452#9916#0" expanded="false" />
+            <element signature="e#10364#10988#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1421,8 +1419,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/extra_hands_app/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7056277" vertical-offset="1490" max-vertical-offset="2414">
-          <caret line="365" column="75" selection-start-line="365" selection-start-column="75" selection-end-line="365" selection-end-column="75" />
+        <state vertical-scroll-proportion="0.9816017" vertical-offset="1949" max-vertical-offset="3128">
+          <caret line="395" column="61" selection-start-line="395" selection-start-column="61" selection-end-line="395" selection-end-column="61" />
           <folding>
             <element signature="e#0#35#0" expanded="true" />
             <element signature="e#624#717#0" expanded="false" />
@@ -1431,15 +1429,15 @@
             <element signature="e#1274#1605#0" expanded="false" />
             <element signature="e#1657#1784#0" expanded="false" />
             <element signature="e#1843#2515#0" expanded="false" />
-            <element signature="e#2558#3235#0" expanded="false" />
-            <element signature="e#3274#3967#0" expanded="false" />
-            <element signature="e#4012#4729#0" expanded="false" />
-            <element signature="e#4767#5860#0" expanded="false" />
-            <element signature="e#5897#6816#0" expanded="false" />
-            <element signature="e#7804#7972#0" expanded="false" />
-            <element signature="e#8022#9360#0" expanded="false" />
-            <element signature="e#9407#9871#0" expanded="false" />
-            <element signature="e#10289#10913#0" expanded="false" />
+            <element signature="e#2574#3251#0" expanded="false" />
+            <element signature="e#3306#3999#0" expanded="false" />
+            <element signature="e#4059#4776#0" expanded="false" />
+            <element signature="e#4813#5906#0" expanded="false" />
+            <element signature="e#5942#6861#0" expanded="false" />
+            <element signature="e#6893#7801#0" expanded="false" />
+            <element signature="e#7849#8017#0" expanded="false" />
+            <element signature="e#9452#9916#0" expanded="false" />
+            <element signature="e#10364#10988#0" expanded="false" />
           </folding>
         </state>
       </provider>
