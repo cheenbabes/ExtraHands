@@ -10,10 +10,11 @@ whether they really want to accept the event or not.
 
 core business logic
 --after creating an event, show a list of teachers who are available. submit another form to send out emails to the teachers.
+    --create a view and url pattern that takes a list of teacher tokens and emails each of them with a unique link
+    --another view and url pattern for the teachers to click on to confirm their participation in the event
 --first teacher who clicks will get the event, next teachers will just get click points.
 --send confirmation email to client
 
 
--create multiple teachers who are available during different times and then test the add_event functionality of showing the correct teachers and the times they are available
 
 
