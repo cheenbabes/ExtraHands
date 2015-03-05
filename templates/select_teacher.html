@@ -15,11 +15,17 @@
     <hr>
     </p>
 
+    <p><strong>How This Works</strong></p>
+    <p>Select as many teachers as you would like to invite to your event. If you have a specific teacher in mind, only check their box. All the teachers that you select will
+    receive an email with a unique link to register for your event. The first teacher that clicks on their link will be assigned to your event. We will notify you as
+    soon as that happens through email.
+    </p>
     {% if times %}
-        <form>
+        {#url for teacher logic goes in here#}
+        <form id="select_teacher_form" method="post" action="">
         {% for time in times %}
             <div class="checkbox">
-                    <input type="checkbox" id="{{ time.teacher.token }}" value="{{ time.teacher.token }}">
+                    <input type="checkbox" id="{{ time.teacher.token }}" value="{{ time.teacher.token }}" name="teachers">
                     <p class="date-block">
                         Name: {{ time.teacher.user.get_full_name }}<br>
                         Start Time: {{ time.start_time }}<br>
@@ -31,6 +37,7 @@
                     </p>
                 </div>
         {% endfor %}
+            <input type="submit" name="submit" id="teacher_submit" value="Email Teachers">
         </form>
 
     {% else %}
