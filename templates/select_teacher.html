@@ -22,7 +22,8 @@
     </p>
     {% if times %}
         {#url for teacher logic goes in here#}
-        <form id="select_teacher_form" method="post" action="">
+        <form id="select_teacher_form" method="post" action="{% url 'email_teachers' event.token %}">
+        {% csrf_token %}
         {% for time in times %}
             <div class="checkbox">
                     <input type="checkbox" id="{{ time.teacher.token }}" value="{{ time.teacher.token }}" name="teachers">

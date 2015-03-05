@@ -313,6 +313,7 @@ def show_available_teachers(request, event_token):
 
     available_times = get_all_times_available_for_event(event)
     context_dict['times'] = available_times
+    context_dict['event'] = event
 
     return render(request, 'select_teacher.html', context_dict)
 
@@ -329,6 +330,19 @@ def get_all_times_available_for_event(event):
             available_times.append(time)
 
     return available_times
+
+def send_emails_to_teachers(request, event_token):
+    event = Event.objects.get(token=event_token)
+    if request.method == 'POST':
+        teacher_tokens = request.POST.getlist('teachers')
+        for token in teacher_tokens:
+            teacher = Teacher.objects.get(token = token)
+            print "This teacher's name is {0}, the token number is {1}, and their email is {2}".format(teacher.user.get_full_name(), teacher.token, teacher.user.email)
+        return HttpResponseRedirect("/myaccount/")
+
+    else:
+        return HttpResponseNotAllowed("This method only accepts POST")
+
 
 
 
