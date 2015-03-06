@@ -36,7 +36,21 @@
 
     <a href="{% url 'add_time' user.teacher.slug  %}" class="btn btn-warning">Add time</a>
 <hr>
-<strong>Times I am available</strong>
+    <h2>My Scheduled Events</h2>
+    {% for event in events %}
+        <p class="date-block">
+            <strong>Start Time:</strong> {{ event.start_time }}<br>
+            <strong>End Time:</strong> {{ event.end_time }}<br>
+            On-call event: {{ event.is_on_call }}<br>
+            Comments: {{ event.comments }}<br>
+            Token: {{ event.token }} <br>
+        </p>
+
+    {% endfor %}
+
+
+<hr>
+<h2>Times I am available</h2>
     {% for time in times %}
         <p class="date-block">
             <strong>Start Time:</strong> {{ time.start_time }}<br>

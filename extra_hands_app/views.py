@@ -266,7 +266,9 @@ def my_account(request):
         is_teacher = True
         teacher = Teacher.objects.filter(user=user)
         available_time = Available_Time.objects.filter(teacher=teacher).order_by('start_time')
+        events = Event.objects.filter(teacher=teacher).order_by('start_time')
         context_dict['times'] = available_time
+        context_dict['events'] = events
 
     if Client.objects.filter(user=user).exists():
         is_client=True
@@ -359,9 +361,6 @@ def confirm_teacher_part1(request, event_token, teacher_token):
     event = Event.objects.get(token = event_token)
     teacher = Teacher.objects.get(token = teacher_token)
 
-    #find all the times that the teacher has that will be marked inactive
-
-
     #if the event already has a teacher
     if event.teacher is not None:
         #give the teacher a click - will have to figure out how to give them only one click a day or something
@@ -382,6 +381,11 @@ def confirm_teacher_post(request, event_token, teacher_token):
         event.teacher=teacher
         event.save()
 
+
+        #find all the times that the teacher has that will be marked inactive and mark them as inactive
+
+
+
         #give the teacher a click
         teacher.clicks += 1
         teacher.save()
@@ -398,7 +402,7 @@ def confirm_teacher_post(request, event_token, teacher_token):
 def event_booked(request):
     message = "Sorry, but this event has already been taken!"
     context_dict = {'message': message}
-    return(request, 'event_booked.html', context_dict)
+    return render(request, 'event_booked.html', context_dict)
 
 
 
