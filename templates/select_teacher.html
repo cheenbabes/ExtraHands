@@ -22,7 +22,7 @@
     </p>
     {% if times %}
         {#url for teacher logic goes in here#}
-        <form id="select_teacher_form" method="post" action="{% url 'email_teachers' event.token %}">
+        <form id="select_teacher_form" method="post" action="{% url 'email_teachers' event.token  %}">
         {% csrf_token %}
         {% for time in times %}
             <div class="checkbox">
@@ -35,6 +35,7 @@
                        ECT Qualified: {{ time.teacher.ect_qualified }} <br>
                        CPR & First Aid: {{ time.teacher.cpr_first_aid }} <br>
                        Universal Precautions: {{ time.teacher.universal_precautions }} <br>
+                        Time PK: {{ time.pk }}
                     </p>
                 </div>
         {% endfor %}

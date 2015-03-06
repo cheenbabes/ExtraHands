@@ -2,7 +2,7 @@
 
 {% block content %}
 
-<a href="{% url 'myaccount' %}" class="btn btn-primary">I don't want to confirm this event, take me to my account home page</a>
+<a href="{% url 'myaccount' %}" class="btn btn-primary">I don't want to confirm this event, take me to my account home page</a><br>
 
 <p>Please confirm your information:</p>
 <p>
@@ -10,6 +10,14 @@
     {{ teacher.street }}<br>
     {{ teacher.city }}, {{ teacher.state }} <br>
     {{ teacher.phone_number }}<br><br>
+</p>
+
+<p>This available Time will be marked as busy now</p>
+
+<p>
+Start Time: {{ time.start_time }}
+End Time: {{ time.end_time }}
+
 </p>
 
 <p>Please make sure the event information is correct</p>
@@ -23,7 +31,7 @@
     {{ event.client.phone_number }}<br>
 
 
-<form id="confirm-form" method="post" action="">
+<form id="confirm-form" method="post" action="{% url 'final_teacher_confirm' event.token teacher.token %}" onsubmit="return confirm('Clicking OK will officially assign you to this event! You will responsible for attending and it is your responsibility to let the client know if you cannot');">
     {% csrf_token %}
     <input type="submit" name="submit" id="teacher_submit" value="Confirm!" class="btn btn-success">
 

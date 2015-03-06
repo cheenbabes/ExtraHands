@@ -88,6 +88,7 @@ class Available_Time(models.Model):
     end_time = models.DateTimeField()
     teacher = models.ForeignKey(Teacher)
     event_class = models.CharField(max_length=100, default='event-warning')
+    active = models.BooleanField(default=True)
 
 
 

@@ -374,16 +374,14 @@ def confirm_teacher_post(request, event_token, teacher_token):
     event = Event.objects.get(token = event_token)
     teacher = Teacher.objects.get(token = teacher_token)
 
-    # if request.method == 'POST':
+    if request.method == 'POST':
+        #assign the event teacher to the teacher who clicked it.
+        event.teacher=teacher
+        event.save()
 
-
-    #assign the event teacher to the teacher who clicked it.
-    event.teacher=teacher
-    event.save()
-
-    #give the teacher a click
-    teacher.clicks += 1
-    teacher.save()
+        #give the teacher a click
+        teacher.clicks += 1
+        teacher.save()
 
     context_dict = {'teacher': teacher, 'event': event}
 
