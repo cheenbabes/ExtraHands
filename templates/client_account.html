@@ -17,6 +17,14 @@
             <strong>Start Time:</strong> {{ event.start_time }}<br>
             <strong>End Time:</strong> {{ event.end_time }}<br>
             On-call event: {{ event.is_on_call }}<br>
+            {% if event.teacher %}
+                Teacher: <a href="{% url 'get_teacher' event.teacher.slug %}">{{ event.teacher.user.get_full_name }}</a><br>
+
+            {% else %}
+                Teacher: No teacher assigned yet!<br>
+
+            {% endif %}
+
             Comments: {{ event.comments }}<br>
             Token: {{ event.token }} <br>
             <a href="{% url 'edit_event' event.token %}" class="btn btn-info">Edit Event</a> <a href="{% url 'select_teacher' event.token %}" class='btn btn-success'>View Available Teachers</a> <br>

@@ -6,11 +6,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c278ac50-8beb-47b3-8114-cdbe07f29a59" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/event_booked.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/client_account.html" afterPath="$PROJECT_DIR$/templates/client_account.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/teacher_account.html" afterPath="$PROJECT_DIR$/templates/teacher_account.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/extra_hands_app/urls.py" afterPath="$PROJECT_DIR$/extra_hands_app/urls.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/extra_hands_app/views.py" afterPath="$PROJECT_DIR$/extra_hands_app/views.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="ExtraHands.iws" />
@@ -70,21 +66,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="teacher_account.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="teacher_account.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/teacher_account.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.38202247" vertical-offset="561" max-vertical-offset="1326">
-              <caret line="45" column="41" selection-start-line="45" selection-start-column="41" selection-end-line="45" selection-end-column="41" />
+            <state vertical-scroll-proportion="-32.03846" vertical-offset="0" max-vertical-offset="1326">
+              <caret line="49" column="0" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="client_account.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="client_account.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/client_account.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-14.0" vertical-offset="27" max-vertical-offset="595">
-              <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.73220974" vertical-offset="0" max-vertical-offset="731">
+              <caret line="23" column="53" selection-start-line="23" selection-start-column="53" selection-end-line="23" selection-end-column="53" />
               <folding />
             </state>
           </provider>
@@ -113,8 +109,8 @@
       <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/extra_hands_app/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="1093" max-vertical-offset="1836">
-              <caret line="88" column="40" selection-start-line="88" selection-start-column="40" selection-end-line="88" selection-end-column="40" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="379" max-vertical-offset="1836">
+              <caret line="90" column="29" selection-start-line="90" selection-start-column="29" selection-end-line="90" selection-end-column="29" />
               <folding>
                 <element signature="e#0#28#0" expanded="true" />
               </folding>
@@ -204,8 +200,8 @@
         <option value="$PROJECT_DIR$/templates/event_booked.html" />
         <option value="$PROJECT_DIR$/extra_hands_app/urls.py" />
         <option value="$PROJECT_DIR$/extra_hands_app/views.py" />
-        <option value="$PROJECT_DIR$/templates/client_account.html" />
         <option value="$PROJECT_DIR$/templates/teacher_account.html" />
+        <option value="$PROJECT_DIR$/templates/client_account.html" />
       </list>
     </option>
   </component>
@@ -588,12 +584,6 @@
       <option name="number" value="Default" />
       <updated>1424125891592</updated>
     </task>
-    <task id="LOCAL-00008" summary="template and link cleanup&#10;">
-      <created>1424282549197</created>
-      <option name="number" value="00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1424282549197</updated>
-    </task>
     <task id="LOCAL-00009" summary="clients listing and individual client pages&#10;">
       <created>1424283800684</created>
       <option name="number" value="00009" />
@@ -882,7 +872,13 @@
       <option name="project" value="LOCAL" />
       <updated>1425676812300</updated>
     </task>
-    <option name="localTasksCounter" value="57" />
+    <task id="LOCAL-00057" summary="Booked event rejects a teacher trying to click on it. Also seeing added the events each teacher has coming up in the teacher_account page">
+      <created>1425677595493</created>
+      <option name="number" value="00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1425677595493</updated>
+    </task>
+    <option name="localTasksCounter" value="58" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -970,7 +966,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="story map for this week" />
     <MESSAGE value="thoughts" />
     <MESSAGE value="Fixed static file loading. The issue was bootstrap 3 plugin. Once I took that out, I was able to load the static files myself and then everything started working." />
     <MESSAGE value="Dismissible alert messages working" />
@@ -995,7 +990,8 @@
     <MESSAGE value="lol...forgot to add block content. Confirm event part 1 template is now working" />
     <MESSAGE value="More changes with the event sign up flow" />
     <MESSAGE value="successfully signed up a teacher for an event" />
-    <option name="LAST_COMMIT_MESSAGE" value="successfully signed up a teacher for an event" />
+    <MESSAGE value="Booked event rejects a teacher trying to click on it. Also seeing added the events each teacher has coming up in the teacher_account page" />
+    <option name="LAST_COMMIT_MESSAGE" value="Booked event rejects a teacher trying to click on it. Also seeing added the events each teacher has coming up in the teacher_account page" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1120,6 +1116,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="754">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1327,16 +1324,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/extra_hands_app/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="736" max-vertical-offset="1836">
-          <caret line="88" column="40" selection-start-line="88" selection-start-column="40" selection-end-line="88" selection-end-column="40" />
-          <folding>
-            <element signature="e#0#28#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/teacher_event_confirm.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-16.038462" vertical-offset="229" max-vertical-offset="782">
@@ -1406,18 +1393,28 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/client_account.html">
+    <entry file="file://$PROJECT_DIR$/templates/teacher_account.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-14.0" vertical-offset="27" max-vertical-offset="663">
-          <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+        <state vertical-scroll-proportion="-32.03846" vertical-offset="0" max-vertical-offset="1326">
+          <caret line="49" column="0" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/teacher_account.html">
+    <entry file="file://$PROJECT_DIR$/extra_hands_app/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.38202247" vertical-offset="561" max-vertical-offset="1326">
-          <caret line="45" column="41" selection-start-line="45" selection-start-column="41" selection-end-line="45" selection-end-column="41" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="379" max-vertical-offset="1836">
+          <caret line="90" column="29" selection-start-line="90" selection-start-column="29" selection-end-line="90" selection-end-column="29" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/client_account.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.73220974" vertical-offset="0" max-vertical-offset="731">
+          <caret line="23" column="53" selection-start-line="23" selection-start-column="53" selection-end-line="23" selection-end-column="53" />
           <folding />
         </state>
       </provider>
