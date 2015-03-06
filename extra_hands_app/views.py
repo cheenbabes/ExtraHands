@@ -273,9 +273,11 @@ def my_account(request):
     if Client.objects.filter(user=user).exists():
         is_client=True
         client = Client.objects.filter(user=user)
-        client_events = Event.objects.filter(client=client).order_by('start_time')
-        future_client_events = Event.objects.filter(start_time__gte=datetime.datetime.today() - datetime.timedelta(days=1))
-        context_dict['events'] = client_events
+        client_events_confirmed = Event.objects.filter(client=client).filter(start_time__gte=datetime.datetime.today() - datetime.timedelta(days=1)).order_by('start_time')
+        client_events_unconfirmed = Event.objects.filter(client=client).filter(teacher=None).filter(start_time__gte=datetime.datetime.today() - datetime.timedelta(days=1)).order_by('start_time')
+        future_client_events = Event.objects.filter(start_time__gte=datetime.datetime.today() - datetime.timedelta(days=1)).exclude(teacher__isnull=True)
+        context_dict['events'] = client_events_confirmed
+        context_dict['unconfirmed_events'] = client_events_unconfirmed
         context_dict['current_events'] = future_client_events
 
     if user.is_superuser:
