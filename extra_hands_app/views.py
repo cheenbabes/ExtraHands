@@ -359,6 +359,9 @@ def confirm_teacher_part1(request, event_token, teacher_token):
     event = Event.objects.get(token = event_token)
     teacher = Teacher.objects.get(token = teacher_token)
 
+    #find all the times that the teacher has that will be marked inactive
+
+
     #if the event already has a teacher
     if event.teacher is not None:
         #give the teacher a click - will have to figure out how to give them only one click a day or something
@@ -383,9 +386,13 @@ def confirm_teacher_post(request, event_token, teacher_token):
         teacher.clicks += 1
         teacher.save()
 
-    context_dict = {'teacher': teacher, 'event': event}
+        context_dict = {'teacher': teacher, 'event': event}
+        return render(request, 'event_sign_up_confirmed.html', context_dict)
 
-    return (request, 'event_sign_up_confirmed.html', context_dict)
+    else:
+        return HttpResponseNotAllowed("This method only accepts POST")
+
+
 
 @login_required
 def event_booked(request):

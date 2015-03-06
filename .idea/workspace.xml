@@ -6,11 +6,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c278ac50-8beb-47b3-8114-cdbe07f29a59" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/event_sign_up_confirmed.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/extra_hands_app/models.py" afterPath="$PROJECT_DIR$/extra_hands_app/models.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/select_teacher.html" afterPath="$PROJECT_DIR$/templates/select_teacher.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/teacher_event_confirm.html" afterPath="$PROJECT_DIR$/templates/teacher_event_confirm.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/extra_hands_app/urls.py" afterPath="$PROJECT_DIR$/extra_hands_app/urls.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/event_sign_up_confirmed.html" afterPath="$PROJECT_DIR$/templates/event_sign_up_confirmed.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/extra_hands_app/views.py" afterPath="$PROJECT_DIR$/extra_hands_app/views.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -43,8 +39,8 @@
       <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/extra_hands_app/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.42036554" vertical-offset="1505" max-vertical-offset="2465">
-              <caret line="360" column="0" selection-start-line="360" selection-start-column="0" selection-end-line="360" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.39205527" vertical-offset="1830" max-vertical-offset="2584">
+              <caret line="383" column="0" selection-start-line="383" selection-start-column="0" selection-end-line="383" selection-end-column="0" />
               <folding>
                 <element signature="e#0#35#0" expanded="true" />
                 <element signature="e#624#717#0" expanded="false" />
@@ -103,8 +99,8 @@
       <file leaf-file-name="event_sign_up_confirmed.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/event_sign_up_confirmed.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-3.9230769" vertical-offset="0" max-vertical-offset="204">
-              <caret line="6" column="14" selection-start-line="6" selection-start-column="14" selection-end-line="6" selection-end-column="14" />
+            <state vertical-scroll-proportion="-5.230769" vertical-offset="0" max-vertical-offset="238">
+              <caret line="8" column="14" selection-start-line="8" selection-start-column="14" selection-end-line="8" selection-end-column="14" />
               <folding />
             </state>
           </provider>
@@ -114,7 +110,7 @@
         <entry file="file://$PROJECT_DIR$/extra_hands_app/urls.py">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="493">
-              <caret line="20" column="78" selection-start-line="20" selection-start-column="78" selection-end-line="20" selection-end-column="78" />
+              <caret line="22" column="86" selection-start-line="22" selection-start-column="86" selection-end-line="22" selection-end-column="86" />
               <folding />
             </state>
           </provider>
@@ -123,8 +119,8 @@
       <file leaf-file-name="teacher_event_confirm.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/teacher_event_confirm.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-7.8461537" vertical-offset="0" max-vertical-offset="782">
-              <caret line="12" column="4" selection-start-line="12" selection-start-column="4" selection-end-line="12" selection-end-column="4" />
+            <state vertical-scroll-proportion="-16.038462" vertical-offset="229" max-vertical-offset="782">
+              <caret line="38" column="0" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -177,12 +173,12 @@
         <option value="$PROJECT_DIR$/ExtraHands/settings.py" />
         <option value="$PROJECT_DIR$/templates/confirm_event_participation.html" />
         <option value="$PROJECT_DIR$/next_steps.txt" />
-        <option value="$PROJECT_DIR$/templates/event_sign_up_confirmed.html" />
         <option value="$PROJECT_DIR$/extra_hands_app/models.py" />
         <option value="$PROJECT_DIR$/templates/teacher_event_confirm.html" />
-        <option value="$PROJECT_DIR$/extra_hands_app/views.py" />
         <option value="$PROJECT_DIR$/templates/select_teacher.html" />
         <option value="$PROJECT_DIR$/extra_hands_app/urls.py" />
+        <option value="$PROJECT_DIR$/templates/event_sign_up_confirmed.html" />
+        <option value="$PROJECT_DIR$/extra_hands_app/views.py" />
       </list>
     </option>
   </component>
@@ -565,12 +561,6 @@
       <option name="number" value="Default" />
       <updated>1424125891592</updated>
     </task>
-    <task id="LOCAL-00006" summary="Linked teacher urls working now">
-      <created>1424214849477</created>
-      <option name="number" value="00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1424214849477</updated>
-    </task>
     <task id="LOCAL-00007" summary="roadmap&#10;">
       <created>1424215645386</created>
       <option name="number" value="00007" />
@@ -859,7 +849,13 @@
       <option name="project" value="LOCAL" />
       <updated>1425663350151</updated>
     </task>
-    <option name="localTasksCounter" value="55" />
+    <task id="LOCAL-00055" summary="More changes with the event sign up flow">
+      <created>1425672915883</created>
+      <option name="number" value="00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1425672915883</updated>
+    </task>
+    <option name="localTasksCounter" value="56" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -899,7 +895,7 @@
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.56062174" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.35751295" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -947,7 +943,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="added login_required functionality to a lot of methods to start locking down the application" />
     <MESSAGE value="added comments field to event. Next step is to have the same form handle both edits and adds." />
     <MESSAGE value="story map for this week" />
     <MESSAGE value="thoughts" />
@@ -972,17 +967,11 @@
     <MESSAGE value="lots of logic coding for views.py&#10;" />
     <MESSAGE value="confirm_part_1 is not working -- returning the home page for some reason.&#10;To be determined" />
     <MESSAGE value="lol...forgot to add block content. Confirm event part 1 template is now working" />
-    <option name="LAST_COMMIT_MESSAGE" value="lol...forgot to add block content. Confirm event part 1 template is now working" />
+    <MESSAGE value="More changes with the event sign up flow" />
+    <option name="LAST_COMMIT_MESSAGE" value="More changes with the event sign up flow" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="python-line">
-          <url>file://$PROJECT_DIR$/extra_hands_app/views.py</url>
-          <line>358</line>
-          <option name="timeStamp" value="60" />
-        </line-breakpoint>
-      </breakpoints>
       <default-breakpoints>
         <breakpoint type="python-exception">
           <properties notifyOnTerminate="true" exception="BaseException">
@@ -1326,14 +1315,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/event_sign_up_confirmed.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.9230769" vertical-offset="0" max-vertical-offset="204">
-          <caret line="6" column="14" selection-start-line="6" selection-start-column="14" selection-end-line="6" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/extra_hands_app/forms.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="321" max-vertical-offset="1258">
@@ -1354,8 +1335,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/teacher_event_confirm.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.8461537" vertical-offset="0" max-vertical-offset="782">
-          <caret line="12" column="4" selection-start-line="12" selection-start-column="4" selection-end-line="12" selection-end-column="4" />
+        <state vertical-scroll-proportion="-16.038462" vertical-offset="229" max-vertical-offset="782">
+          <caret line="38" column="0" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/extra_hands_app/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="493">
+          <caret line="22" column="86" selection-start-line="22" selection-start-column="86" selection-end-line="22" selection-end-column="86" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/event_sign_up_confirmed.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-5.230769" vertical-offset="0" max-vertical-offset="238">
+          <caret line="8" column="14" selection-start-line="8" selection-start-column="14" selection-end-line="8" selection-end-column="14" />
           <folding />
         </state>
       </provider>
@@ -1368,18 +1365,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/extra_hands_app/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="493">
-          <caret line="20" column="78" selection-start-line="20" selection-start-column="78" selection-end-line="20" selection-end-column="78" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/extra_hands_app/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.42036554" vertical-offset="1505" max-vertical-offset="2465">
-          <caret line="360" column="0" selection-start-line="360" selection-start-column="0" selection-end-line="360" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.39205527" vertical-offset="1830" max-vertical-offset="2584">
+          <caret line="383" column="0" selection-start-line="383" selection-start-column="0" selection-end-line="383" selection-end-column="0" />
           <folding>
             <element signature="e#0#35#0" expanded="true" />
             <element signature="e#624#717#0" expanded="false" />
