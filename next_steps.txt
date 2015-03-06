@@ -16,5 +16,7 @@ core business logic
 --send confirmation email to client
 
 
+clicks for teacher should be it's own separate object with 2 fields, teacher.token and event.token that form a composite primary key. That way it can only be triggered once
+
 
 

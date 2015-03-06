@@ -354,7 +354,7 @@ def send_emails_to_teachers(request, event_token):
     else:
         return HttpResponseNotAllowed("This method only accepts POST")
 
-@login_required
+
 def confirm_teacher_part1(request, event_token, teacher_token):
     event = Event.objects.get(token = event_token)
     teacher = Teacher.objects.get(token = teacher_token)
@@ -365,9 +365,9 @@ def confirm_teacher_part1(request, event_token, teacher_token):
         teacher.clicks += 1
         return HttpResponseRedirect("/event-booked/")
 
-    context_dict = {'teacher': teacher, 'event': event,}
+    context_dict = {'teacher': teacher, 'event': event}
 
-    return render(request, 'confirm_event_participation.html', context_dict )
+    return render(request, 'teacher_event_confirm.html', context_dict)
 
 @login_required
 def confirm_teacher_post(request, event_token, teacher_token):

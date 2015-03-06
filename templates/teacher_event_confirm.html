@@ -1,5 +1,7 @@
 {%  extends 'base.html' %}
 
+{% block content %}
+
 <a href="{% url 'myaccount' %}" class="btn btn-primary">I don't want to confirm this event, take me to my account home page</a>
 
 <p>Please confirm your information:</p>
@@ -14,11 +16,11 @@
     Start Time: {{ event.start_time }}<br>
     End Time: {{ event.end_time }}<br>
     Description: {{ event.description }}
-    <strong>{{ client.organization }}</strong><br>
-    Contact: {{ client.user.get_full_name }}<br>
-    {{ client.street }}<br>
-    {{ client.city }}, {{ client.state }} <br>
-    {{ client.phone_number }}<br>
+    <strong>{{ event.client.organization }}</strong><br>
+    Contact: {{ event.client.user.get_full_name }}<br>
+    {{ event.client.street }}<br>
+    {{ event.client.city }}, {{ client.state }} <br>
+    {{ event.client.phone_number }}<br>
 
 
 <form id="confirm-form" method="post" action="">
@@ -26,3 +28,6 @@
     <input type="submit" name="submit" id="teacher_submit" value="Confirm!" class="btn btn-success">
 
 </form>
+
+
+{% endblock %}
