@@ -336,6 +336,29 @@ def get_all_times_available_for_event(event):
 
     return available_times
 
+def get_times_to_deactivate(event, teacher):
+    times = Available_Time.objects.filter(teacher=teacher)
+    for time in times:
+        #exact match
+        if time.start_time == event.start_time and time.start_time == event.start_time:
+            #set it to false and call it good
+            time.active = False
+            time.save()
+        #available time start before event time and end time is the same
+        if time.start_time < event.start_time and time.end_time == event.end_time:
+            #check for the time delta and create new available time event
+            time.save()
+        #available time start is the same as event start time and end is after
+        if time.start_time == event.start_time and time.end_time > event.end_time:
+            #check for time delta
+            time.save()
+        #available time starts before event and ends after event
+        if time.start_time < event.start_time and time.end_time > event.end_time:
+            #check for time delta
+            time.save()
+
+
+
 @login_required
 def send_emails_to_teachers(request, event_token):
     event = Event.objects.get(token=event_token)
@@ -385,10 +408,11 @@ def confirm_teacher_post(request, event_token, teacher_token):
 
 
         #find all the times that the teacher has that will be marked inactive and mark them as inactive
-
+        #run the method for splitting the times into new times and setting to false
 
 
         #give the teacher a click
+        #IMPLEMENT NEW CLICK MODEL!
         teacher.clicks += 1
         teacher.save()
 
