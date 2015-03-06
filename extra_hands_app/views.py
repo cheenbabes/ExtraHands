@@ -305,7 +305,7 @@ def go_on_call(request):
     else:
         return HttpResponseRedirect("/myaccount/")
 
-@login_required
+
 def show_available_teachers(request, event_token):
     user = request.user
     context_dict={'user':user}
@@ -318,7 +318,7 @@ def show_available_teachers(request, event_token):
 
     return render(request, 'select_teacher.html', context_dict)
 
-@login_required
+#no login_required here because it's basically a private helper method
 def get_all_times_available_for_event(event):
     times = Available_Time.objects.all()
     available_times = []
@@ -356,7 +356,6 @@ def send_emails_to_teachers(request, event_token):
 
 @login_required
 def confirm_teacher_part1(request, event_token, teacher_token):
-    user = request.user
     event = Event.objects.get(token = event_token)
     teacher = Teacher.objects.get(token = teacher_token)
 
@@ -366,11 +365,7 @@ def confirm_teacher_part1(request, event_token, teacher_token):
         teacher.clicks += 1
         return HttpResponseRedirect("/event-booked/")
 
-
-    if user is not teacher.user:
-        return HttpResponseForbidden
-
-    context_dict = {'teacher': teacher, 'event': event, 'user': user}
+    context_dict = {'teacher': teacher, 'event': event,}
 
     return render(request, 'confirm_event_participation.html', context_dict )
 
@@ -378,6 +373,9 @@ def confirm_teacher_part1(request, event_token, teacher_token):
 def confirm_teacher_post(request, event_token, teacher_token):
     event = Event.objects.get(token = event_token)
     teacher = Teacher.objects.get(token = teacher_token)
+
+    # if request.method == 'POST':
+
 
     #assign the event teacher to the teacher who clicked it.
     event.teacher=teacher

@@ -1,0 +1,28 @@
+{%  extends 'base.html' %}
+
+<a href="{% url 'myaccount' %}" class="btn btn-primary">I don't want to confirm this event, take me to my account home page</a>
+
+<p>Please confirm your information:</p>
+<p>
+    <strong>{{ teacher.user.get_full_name }}</strong><br>
+    {{ teacher.street }}<br>
+    {{ teacher.city }}, {{ teacher.state }} <br>
+    {{ teacher.phone_number }}<br><br>
+</p>
+
+<p>Please make sure the event information is correct</p>
+    Start Time: {{ event.start_time }}<br>
+    End Time: {{ event.end_time }}<br>
+    Description: {{ event.description }}
+    <strong>{{ client.organization }}</strong><br>
+    Contact: {{ client.user.get_full_name }}<br>
+    {{ client.street }}<br>
+    {{ client.city }}, {{ client.state }} <br>
+    {{ client.phone_number }}<br>
+
+
+<form id="confirm-form" method="post" action="">
+    {% csrf_token %}
+    <input type="submit" name="submit" id="teacher_submit" value="Confirm!" class="btn btn-success">
+
+</form>
