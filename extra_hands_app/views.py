@@ -337,26 +337,59 @@ def get_all_times_available_for_event(event):
     return available_times
 
 def get_times_to_deactivate(event, teacher):
+    #all this code needs serious testing
     times = Available_Time.objects.filter(teacher=teacher)
     for time in times:
         #exact match
-        if time.start_time == event.start_time and time.start_time == event.start_time:
+        if time.start_time == event.start_time and time.end_time == event.end_time:
             #set it to false and call it good
             time.active = False
             time.save()
         #available time start before event time and end time is the same
         if time.start_time < event.start_time and time.end_time == event.end_time:
             #check for the time delta and create new available time event
+            delta = event.start_time - time.start_time
+            time.active = False
             time.save()
+            if(delta.hours > 1):
+                new_time = Available_Time()
+                new_time.start_time = time.start_time
+                new_time.end_time = event.start_time - datetime.timedelta(hours=1)
+                new_time.teacher = teacher
+                new_time.save()
         #available time start is the same as event start time and end is after
         if time.start_time == event.start_time and time.end_time > event.end_time:
             #check for time delta
+            delta = time.end_time - event.end_time
+            time.active = False
             time.save()
+            if(delta.hours > 1):
+                new_time = Available_Time()
+                new_time.start_time = event.end_time + datetime.timedelta(hours=1)
+                new_time.end_time = time.end_time
+                new_time.teacher = teacher
+                new_time.save()
         #available time starts before event and ends after event
         if time.start_time < event.start_time and time.end_time > event.end_time:
             #check for time delta
+            time.active= False
             time.save()
+            delta_start = event.start_time - time.start_time
+            delta_end = time.end_time - event.end_time
 
+            if(delta_start.hours > 1):
+                new_time = Available_Time()
+                new_time.start_time = time.start_time
+                new_time.end_time = event.start_time - datetime.timedelta(hours=1)
+                new_time.teacher = teacher
+                new_time.save()
+
+            if(delta_end.hours > 1):
+                new_time = Available_Time()
+                new_time.start_time = event.end_time + datetime.timedelta(hours=1)
+                new_time.end_time = time.end_time
+                new_time.teacher = teacher
+                new_time.save()
 
 
 @login_required
