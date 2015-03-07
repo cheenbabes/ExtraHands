@@ -449,7 +449,7 @@ def confirm_teacher_post(request, event_token, teacher_token):
 
         #find all the times that the teacher has that will be marked inactive and mark them as inactive
         #run the method for splitting the times into new times and setting to false
-
+        #get_times_to_deactivate(event,teacher)
 
         #give the teacher a click
         #IMPLEMENT NEW CLICK MODEL!
