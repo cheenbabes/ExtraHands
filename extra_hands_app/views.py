@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse
-from extra_hands_app.models import Teacher, Client, Available_Time, Event, Email_List
+from extra_hands_app.models import Teacher, Client, Available_Time, Event, Email_List, Click
 from forms import EventForm, UserForm, TeacherForm, ClientForm, AvailableTimeForm
 from django.http import HttpResponseRedirect, HttpResponseNotAllowed, Http404, HttpResponseForbidden
 from django.core.urlresolvers import reverse
@@ -388,8 +388,15 @@ def confirm_teacher_part1(request, event_token, teacher_token):
 
     #if the event already has a teacher
     if event.teacher is not None:
-        #give the teacher a click - will have to figure out how to give them only one click a day or something
-        teacher.clicks += 1
+        #django won't do composite primary keys without fussing so I need to make sure that wrong doesn't exist
+        if Click.objects.get(teacher = teacher.token).exists() and Click.objects.get(event=event.token).exists():
+            return HttpResponseNotAllowed("You have already clicked on this event")
+        else:
+            #make a new click object
+            click = Click()
+            click.event = event.token
+            click.teacher = teacher.token
+            click.save()
         return HttpResponseRedirect("/event-booked/")
 
     context_dict = {'teacher': teacher, 'event': event}
@@ -413,8 +420,10 @@ def confirm_teacher_post(request, event_token, teacher_token):
 
         #give the teacher a click
         #IMPLEMENT NEW CLICK MODEL!
-        teacher.clicks += 1
-        teacher.save()
+        click = Click()
+        click.teacher = teacher.token
+        click.event = event.token()
+        click.save()
 
         context_dict = {'teacher': teacher, 'event': event}
         return render(request, 'event_sign_up_confirmed.html', context_dict)

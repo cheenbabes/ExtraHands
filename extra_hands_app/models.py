@@ -97,6 +97,11 @@ class Email_List(models.Model):
     email = models.EmailField()
 
 
+class Click(models.Model):
+    event = models.IntegerField()
+    teacher = models.IntegerField()
+
+
 
 
 
