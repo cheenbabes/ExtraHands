@@ -455,7 +455,7 @@ def confirm_teacher_post(request, event_token, teacher_token):
         #IMPLEMENT NEW CLICK MODEL!
         click = Click()
         click.teacher = teacher.token
-        click.event = event.token()
+        click.event = event.token
         click.save()
 
         context_dict = {'teacher': teacher, 'event': event}
