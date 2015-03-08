@@ -1,0 +1,12 @@
+glob
+os
+sys
+pytest
+easy_install
+easy_install_pkg
+Distribution
+urlopen
+setup_module
+_install_one
+test_stevedore
+test_pbr

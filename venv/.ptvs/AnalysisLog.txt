@@ -1,0 +1,990 @@
+﻿
+2015-03-06T16:05:38: Start analysis
+2015-03-06T16:07:56: IncludeModulesFromModulePath = win32com
+2015-03-06T16:07:56: Deleting 0 files
+2015-03-06T16:07:56: Scraping builtin modules
+2015-03-06T16:07:56: Command: c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Scripts\python.exe "C:\Program Files (x86)\Microsoft Visual Studio 12.0\Common7\IDE\Extensions\Microsoft\Python Tools for Visual Studio\2.1\PythonScraper.py" c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\.ptvs "C:\Program Files (x86)\Microsoft Visual Studio 12.0\Common7\IDE\Extensions\Microsoft\Python Tools for Visual Studio\2.1\CompletionDB"
+2015-03-06T16:07:57: Output
+C:\Program Files (x86)\Microsoft Visual Studio 12.0\Common7\IDE\Extensions\Microsoft\Python Tools for Visual Studio\2.1\CompletionDB\__builtin__.idb
+C:\Program Files (x86)\Microsoft Visual Studio 12.0\Common7\IDE\Extensions\Microsoft\Python Tools for Visual Studio\2.1\CompletionDB\_codecs.idb
+C:\Program Files (x86)\Microsoft Visual Studio 12.0\Common7\IDE\Extensions\Microsoft\Python Tools for Visual Studio\2.1\CompletionDB\_collections.idb
+C:\Program Files (x86)\Microsoft Visual Studio 12.0\Common7\IDE\Extensions\Microsoft\Python Tools for Visual Studio\2.1\CompletionDB\_functools.idb
+C:\Program Files (x86)\Microsoft Visual Studio 12.0\Common7\IDE\Extensions\Microsoft\Python Tools for Visual Studio\2.1\CompletionDB\_heapq.idb
+C:\Program Files (x86)\Microsoft Visual Studio 12.0\Common7\IDE\Extensions\Microsoft\Python Tools for Visual Studio\2.1\CompletionDB\_io.idb
+C:\Program Files (x86)\Microsoft Visual Studio 12.0\Common7\IDE\Extensions\Microsoft\Python Tools for Visual Studio\2.1\CompletionDB\_locale.idb
+C:\Program Files (x86)\Microsoft Visual Studio 12.0\Common7\IDE\Extensions\Microsoft\Python Tools for Visual Studio\2.1\CompletionDB\_md5.idb
+C:\Program Files (x86)\Microsoft Visual Studio 12.0\Common7\IDE\Extensions\Microsoft\Python Tools for Visual Studio\2.1\CompletionDB\_random.idb
+C:\Program Files (x86)\Microsoft Visual Studio 12.0\Common7\IDE\Extensions\Microsoft\Python Tools for Visual Studio\2.1\CompletionDB\_sha.idb
+C:\Program Files (x86)\Microsoft Visual Studio 12.0\Common7\IDE\Extensions\Microsoft\Python Tools for Visual Studio\2.1\CompletionDB\_sha256.idb
+C:\Program Files (x86)\Microsoft Visual Studio 12.0\Common7\IDE\Extensions\Microsoft\Python Tools for Visual Studio\2.1\CompletionDB\_sha512.idb
+C:\Program Files (x86)\Microsoft Visual Studio 12.0\Common7\IDE\Extensions\Microsoft\Python Tools for Visual Studio\2.1\CompletionDB\_sre.idb
+C:\Program Files (x86)\Microsoft Visual Studio 12.0\Common7\IDE\Extensions\Microsoft\Python Tools for Visual Studio\2.1\CompletionDB\_struct.idb
+C:\Program Files (x86)\Microsoft Visual Studio 12.0\Common7\IDE\Extensions\Microsoft\Python Tools for Visual Studio\2.1\CompletionDB\_subprocess.idb
+C:\Program Files (x86)\Microsoft Visual Studio 12.0\Common7\IDE\Extensions\Microsoft\Python Tools for Visual Studio\2.1\CompletionDB\_warnings.idb
+C:\Program Files (x86)\Microsoft Visual Studio 12.0\Common7\IDE\Extensions\Microsoft\Python Tools for Visual Studio\2.1\CompletionDB\_weakref.idb
+C:\Program Files (x86)\Microsoft Visual Studio 12.0\Common7\IDE\Extensions\Microsoft\Python Tools for Visual Studio\2.1\CompletionDB\_winreg.idb
+C:\Program Files (x86)\Microsoft Visual Studio 12.0\Common7\IDE\Extensions\Microsoft\Python Tools for Visual Studio\2.1\CompletionDB\array.idb
+C:\Program Files (x86)\Microsoft Visual Studio 12.0\Common7\IDE\Extensions\Microsoft\Python Tools for Visual Studio\2.1\CompletionDB\binascii.idb
+C:\Program Files (x86)\Microsoft Visual Studio 12.0\Common7\IDE\Extensions\Microsoft\Python Tools for Visual Studio\2.1\CompletionDB\cPickle.idb
+C:\Program Files (x86)\Microsoft Visual Studio 12.0\Common7\IDE\Extensions\Microsoft\Python Tools for Visual Studio\2.1\CompletionDB\cStringIO.idb
+C:\Program Files (x86)\Microsoft Visual Studio 12.0\Common7\IDE\Extensions\Microsoft\Python Tools for Visual Studio\2.1\CompletionDB\cmath.idb
+C:\Program Files (x86)\Microsoft Visual Studio 12.0\Common7\IDE\Extensions\Microsoft\Python Tools for Visual Studio\2.1\CompletionDB\datetime.idb
+C:\Program Files (x86)\Microsoft Visual Studio 12.0\Common7\IDE\Extensions\Microsoft\Python Tools for Visual Studio\2.1\CompletionDB\errno.idb
+C:\Program Files (x86)\Microsoft Visual Studio 12.0\Common7\IDE\Extensions\Microsoft\Python Tools for Visual Studio\2.1\CompletionDB\exceptions.idb
+C:\Program Files (x86)\Microsoft Visual Studio 12.0\Common7\IDE\Extensions\Microsoft\Python Tools for Visual Studio\2.1\CompletionDB\future_builtins.idb
+C:\Program Files (x86)\Microsoft Visual Studio 12.0\Common7\IDE\Extensions\Microsoft\Python Tools for Visual Studio\2.1\CompletionDB\gc.idb
+C:\Program Files (x86)\Microsoft Visual Studio 12.0\Common7\IDE\Extensions\Microsoft\Python Tools for Visual Studio\2.1\CompletionDB\imp.idb
+C:\Program Files (x86)\Microsoft Visual Studio 12.0\Common7\IDE\Extensions\Microsoft\Python Tools for Visual Studio\2.1\CompletionDB\itertools.idb
+C:\Program Files (x86)\Microsoft Visual Studio 12.0\Common7\IDE\Extensions\Microsoft\Python Tools for Visual Studio\2.1\CompletionDB\marshal.idb
+C:\Program Files (x86)\Microsoft Visual Studio 12.0\Common7\IDE\Extensions\Microsoft\Python Tools for Visual Studio\2.1\CompletionDB\math.idb
+C:\Program Files (x86)\Microsoft Visual Studio 12.0\Common7\IDE\Extensions\Microsoft\Python Tools for Visual Studio\2.1\CompletionDB\mmap.idb
+C:\Program Files (x86)\Microsoft Visual Studio 12.0\Common7\IDE\Extensions\Microsoft\Python Tools for Visual Studio\2.1\CompletionDB\msvcrt.idb
+C:\Program Files (x86)\Microsoft Visual Studio 12.0\Common7\IDE\Extensions\Microsoft\Python Tools for Visual Studio\2.1\CompletionDB\nt.idb
+C:\Program Files (x86)\Microsoft Visual Studio 12.0\Common7\IDE\Extensions\Microsoft\Python Tools for Visual Studio\2.1\CompletionDB\operator.idb
+C:\Program Files (x86)\Microsoft Visual Studio 12.0\Common7\IDE\Extensions\Microsoft\Python Tools for Visual Studio\2.1\CompletionDB\signal.idb
+C:\Program Files (x86)\Microsoft Visual Studio 12.0\Common7\IDE\Extensions\Microsoft\Python Tools for Visual Studio\2.1\CompletionDB\sys.idb
+C:\Program Files (x86)\Microsoft Visual Studio 12.0\Common7\IDE\Extensions\Microsoft\Python Tools for Visual Studio\2.1\CompletionDB\thread.idb
+C:\Program Files (x86)\Microsoft Visual Studio 12.0\Common7\IDE\Extensions\Microsoft\Python Tools for Visual Studio\2.1\CompletionDB\time.idb
+C:\Program Files (x86)\Microsoft Visual Studio 12.0\Common7\IDE\Extensions\Microsoft\Python Tools for Visual Studio\2.1\CompletionDB\xxsubtype.idb
+2015-03-06T16:07:57: Scraped builtin modules
+2015-03-06T16:07:57: astropy.CallDepth = 0
+2015-03-06T16:07:57: matplotlib.CallDepth = 3
+2015-03-06T16:07:57: pandas.CallDepth = 0
+2015-03-06T16:07:57: sympy.CallDepth = 0
+2015-03-06T16:07:57: Start group "c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\" with 143 files
+2015-03-06T16:07:58: Parsing "abc" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\abc.py")
+2015-03-06T16:07:58: Parsing "codecs" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\codecs.py")
+2015-03-06T16:07:58: Parsing "copy_reg" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\copy_reg.py")
+2015-03-06T16:07:58: Parsing "fnmatch" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\fnmatch.py")
+2015-03-06T16:07:58: Parsing "genericpath" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\genericpath.py")
+2015-03-06T16:07:58: Parsing "linecache" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\linecache.py")
+2015-03-06T16:07:58: Parsing "locale" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\locale.py")
+2015-03-06T16:07:58: Parsing "ntpath" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\ntpath.py")
+2015-03-06T16:07:58: Parsing "os" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\os.py")
+2015-03-06T16:07:58: Parsing "posixpath" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\posixpath.py")
+2015-03-06T16:07:58: Parsing "re" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\re.py")
+2015-03-06T16:07:58: Parsing "site" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site.py")
+2015-03-06T16:07:58: Parsing "sre" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\sre.py")
+2015-03-06T16:07:58: Parsing "sre_compile" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\sre_compile.py")
+2015-03-06T16:07:58: Parsing "sre_constants" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\sre_constants.py")
+2015-03-06T16:07:58: Parsing "sre_parse" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\sre_parse.py")
+2015-03-06T16:07:58: Parsing "stat" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\stat.py")
+2015-03-06T16:07:58: Parsing "types" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\types.py")
+2015-03-06T16:07:58: Parsing "UserDict" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\UserDict.py")
+2015-03-06T16:07:58: Parsing "warnings" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\warnings.py")
+2015-03-06T16:07:58: Parsing "_abcoll" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\_abcoll.py")
+2015-03-06T16:07:58: Parsing "_weakrefset" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\_weakrefset.py")
+2015-03-06T16:07:58: Parsing "distutils" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\distutils\__init__.py")
+2015-03-06T16:07:58: Parsing "encodings.aliases" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\encodings\aliases.py")
+2015-03-06T16:07:58: Parsing "encodings.ascii" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\encodings\ascii.py")
+2015-03-06T16:07:58: Parsing "encodings.base64_codec" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\encodings\base64_codec.py")
+2015-03-06T16:07:58: Parsing "encodings.big5" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\encodings\big5.py")
+2015-03-06T16:07:58: Parsing "encodings.big5hkscs" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\encodings\big5hkscs.py")
+2015-03-06T16:07:58: Parsing "encodings.bz2_codec" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\encodings\bz2_codec.py")
+2015-03-06T16:07:58: Parsing "encodings.charmap" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\encodings\charmap.py")
+2015-03-06T16:07:58: Parsing "encodings.cp037" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\encodings\cp037.py")
+2015-03-06T16:07:58: Parsing "encodings.cp1006" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\encodings\cp1006.py")
+2015-03-06T16:07:58: Parsing "encodings.cp1026" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\encodings\cp1026.py")
+2015-03-06T16:07:58: Parsing "encodings.cp1140" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\encodings\cp1140.py")
+2015-03-06T16:07:58: Parsing "encodings.cp1250" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\encodings\cp1250.py")
+2015-03-06T16:07:58: Parsing "encodings.cp1251" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\encodings\cp1251.py")
+2015-03-06T16:07:58: Parsing "encodings.cp1252" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\encodings\cp1252.py")
+2015-03-06T16:07:58: Parsing "encodings.cp1253" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\encodings\cp1253.py")
+2015-03-06T16:07:58: Parsing "encodings.cp1254" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\encodings\cp1254.py")
+2015-03-06T16:07:58: Parsing "encodings.cp1255" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\encodings\cp1255.py")
+2015-03-06T16:07:58: Parsing "encodings.cp1256" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\encodings\cp1256.py")
+2015-03-06T16:07:58: Parsing "encodings.cp1257" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\encodings\cp1257.py")
+2015-03-06T16:07:58: Parsing "encodings.cp1258" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\encodings\cp1258.py")
+2015-03-06T16:07:58: Parsing "encodings.cp424" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\encodings\cp424.py")
+2015-03-06T16:07:58: Parsing "encodings.cp437" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\encodings\cp437.py")
+2015-03-06T16:07:58: Parsing "encodings.cp500" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\encodings\cp500.py")
+2015-03-06T16:07:58: Parsing "encodings.cp720" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\encodings\cp720.py")
+2015-03-06T16:07:58: Parsing "encodings.cp737" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\encodings\cp737.py")
+2015-03-06T16:07:58: Parsing "encodings.cp775" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\encodings\cp775.py")
+2015-03-06T16:07:58: Parsing "encodings.cp850" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\encodings\cp850.py")
+2015-03-06T16:07:58: Parsing "encodings.cp852" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\encodings\cp852.py")
+2015-03-06T16:07:58: Parsing "encodings.cp855" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\encodings\cp855.py")
+2015-03-06T16:07:58: Parsing "encodings.cp856" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\encodings\cp856.py")
+2015-03-06T16:07:58: Parsing "encodings.cp857" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\encodings\cp857.py")
+2015-03-06T16:07:58: Parsing "encodings.cp858" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\encodings\cp858.py")
+2015-03-06T16:07:58: Parsing "encodings.cp860" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\encodings\cp860.py")
+2015-03-06T16:07:58: Parsing "encodings.cp861" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\encodings\cp861.py")
+2015-03-06T16:07:58: Parsing "encodings.cp862" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\encodings\cp862.py")
+2015-03-06T16:07:58: Parsing "encodings.cp863" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\encodings\cp863.py")
+2015-03-06T16:07:58: Parsing "encodings.cp864" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\encodings\cp864.py")
+2015-03-06T16:07:58: Parsing "encodings.cp865" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\encodings\cp865.py")
+2015-03-06T16:07:58: Parsing "encodings.cp866" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\encodings\cp866.py")
+2015-03-06T16:07:58: Parsing "encodings.cp869" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\encodings\cp869.py")
+2015-03-06T16:07:58: Parsing "encodings.cp874" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\encodings\cp874.py")
+2015-03-06T16:07:58: Parsing "encodings.cp875" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\encodings\cp875.py")
+2015-03-06T16:07:58: Parsing "encodings.cp932" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\encodings\cp932.py")
+2015-03-06T16:07:58: Parsing "encodings.cp949" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\encodings\cp949.py")
+2015-03-06T16:07:58: Parsing "encodings.cp950" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\encodings\cp950.py")
+2015-03-06T16:07:58: Parsing "encodings.euc_jisx0213" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\encodings\euc_jisx0213.py")
+2015-03-06T16:07:58: Parsing "encodings.euc_jis_2004" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\encodings\euc_jis_2004.py")
+2015-03-06T16:07:58: Parsing "encodings.euc_jp" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\encodings\euc_jp.py")
+2015-03-06T16:07:58: Parsing "encodings.euc_kr" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\encodings\euc_kr.py")
+2015-03-06T16:07:58: Parsing "encodings.gb18030" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\encodings\gb18030.py")
+2015-03-06T16:07:58: Parsing "encodings.gb2312" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\encodings\gb2312.py")
+2015-03-06T16:07:58: Parsing "encodings.gbk" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\encodings\gbk.py")
+2015-03-06T16:07:58: Parsing "encodings.hex_codec" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\encodings\hex_codec.py")
+2015-03-06T16:07:58: Parsing "encodings.hp_roman8" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\encodings\hp_roman8.py")
+2015-03-06T16:07:58: Parsing "encodings.hz" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\encodings\hz.py")
+2015-03-06T16:07:58: Parsing "encodings.idna" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\encodings\idna.py")
+2015-03-06T16:07:58: Parsing "encodings.iso2022_jp" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\encodings\iso2022_jp.py")
+2015-03-06T16:07:58: Parsing "encodings.iso2022_jp_1" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\encodings\iso2022_jp_1.py")
+2015-03-06T16:07:58: Parsing "encodings.iso2022_jp_2" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\encodings\iso2022_jp_2.py")
+2015-03-06T16:07:58: Parsing "encodings.iso2022_jp_2004" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\encodings\iso2022_jp_2004.py")
+2015-03-06T16:07:58: Parsing "encodings.iso2022_jp_3" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\encodings\iso2022_jp_3.py")
+2015-03-06T16:07:58: Parsing "encodings.iso2022_jp_ext" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\encodings\iso2022_jp_ext.py")
+2015-03-06T16:07:58: Parsing "encodings.iso2022_kr" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\encodings\iso2022_kr.py")
+2015-03-06T16:07:58: Parsing "encodings.iso8859_1" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\encodings\iso8859_1.py")
+2015-03-06T16:07:58: Parsing "encodings.iso8859_10" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\encodings\iso8859_10.py")
+2015-03-06T16:07:58: Parsing "encodings.iso8859_11" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\encodings\iso8859_11.py")
+2015-03-06T16:07:58: Parsing "encodings.iso8859_13" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\encodings\iso8859_13.py")
+2015-03-06T16:07:58: Parsing "encodings.iso8859_14" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\encodings\iso8859_14.py")
+2015-03-06T16:07:58: Parsing "encodings.iso8859_15" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\encodings\iso8859_15.py")
+2015-03-06T16:07:58: Parsing "encodings.iso8859_16" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\encodings\iso8859_16.py")
+2015-03-06T16:07:58: Parsing "encodings.iso8859_2" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\encodings\iso8859_2.py")
+2015-03-06T16:07:58: Parsing "encodings.iso8859_3" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\encodings\iso8859_3.py")
+2015-03-06T16:07:58: Parsing "encodings.iso8859_4" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\encodings\iso8859_4.py")
+2015-03-06T16:07:58: Parsing "encodings.iso8859_5" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\encodings\iso8859_5.py")
+2015-03-06T16:07:58: Parsing "encodings.iso8859_6" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\encodings\iso8859_6.py")
+2015-03-06T16:07:58: Parsing "encodings.iso8859_7" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\encodings\iso8859_7.py")
+2015-03-06T16:07:58: Parsing "encodings.iso8859_8" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\encodings\iso8859_8.py")
+2015-03-06T16:07:58: Parsing "encodings.iso8859_9" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\encodings\iso8859_9.py")
+2015-03-06T16:07:58: Parsing "encodings.johab" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\encodings\johab.py")
+2015-03-06T16:07:58: Parsing "encodings.koi8_r" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\encodings\koi8_r.py")
+2015-03-06T16:07:58: Parsing "encodings.koi8_u" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\encodings\koi8_u.py")
+2015-03-06T16:07:58: Parsing "encodings.latin_1" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\encodings\latin_1.py")
+2015-03-06T16:07:58: Parsing "encodings.mac_arabic" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\encodings\mac_arabic.py")
+2015-03-06T16:07:58: Parsing "encodings.mac_centeuro" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\encodings\mac_centeuro.py")
+2015-03-06T16:07:58: Parsing "encodings.mac_croatian" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\encodings\mac_croatian.py")
+2015-03-06T16:07:58: Parsing "encodings.mac_cyrillic" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\encodings\mac_cyrillic.py")
+2015-03-06T16:07:58: Parsing "encodings.mac_farsi" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\encodings\mac_farsi.py")
+2015-03-06T16:07:58: Parsing "encodings.mac_greek" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\encodings\mac_greek.py")
+2015-03-06T16:07:58: Parsing "encodings.mac_iceland" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\encodings\mac_iceland.py")
+2015-03-06T16:07:58: Parsing "encodings.mac_latin2" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\encodings\mac_latin2.py")
+2015-03-06T16:07:58: Parsing "encodings.mac_roman" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\encodings\mac_roman.py")
+2015-03-06T16:07:58: Parsing "encodings.mac_romanian" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\encodings\mac_romanian.py")
+2015-03-06T16:07:58: Parsing "encodings.mac_turkish" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\encodings\mac_turkish.py")
+2015-03-06T16:07:58: Parsing "encodings.mbcs" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\encodings\mbcs.py")
+2015-03-06T16:07:58: Parsing "encodings.palmos" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\encodings\palmos.py")
+2015-03-06T16:07:58: Parsing "encodings.ptcp154" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\encodings\ptcp154.py")
+2015-03-06T16:07:58: Parsing "encodings.punycode" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\encodings\punycode.py")
+2015-03-06T16:07:58: Parsing "encodings.quopri_codec" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\encodings\quopri_codec.py")
+2015-03-06T16:07:58: Parsing "encodings.raw_unicode_escape" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\encodings\raw_unicode_escape.py")
+2015-03-06T16:07:58: Parsing "encodings.rot_13" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\encodings\rot_13.py")
+2015-03-06T16:07:58: Parsing "encodings.shift_jis" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\encodings\shift_jis.py")
+2015-03-06T16:07:58: Parsing "encodings.shift_jisx0213" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\encodings\shift_jisx0213.py")
+2015-03-06T16:07:58: Parsing "encodings.shift_jis_2004" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\encodings\shift_jis_2004.py")
+2015-03-06T16:07:58: Parsing "encodings.string_escape" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\encodings\string_escape.py")
+2015-03-06T16:07:58: Parsing "encodings.tis_620" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\encodings\tis_620.py")
+2015-03-06T16:07:58: Parsing "encodings.undefined" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\encodings\undefined.py")
+2015-03-06T16:07:58: Parsing "encodings.unicode_escape" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\encodings\unicode_escape.py")
+2015-03-06T16:07:58: Parsing "encodings.unicode_internal" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\encodings\unicode_internal.py")
+2015-03-06T16:07:58: Parsing "encodings.utf_16" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\encodings\utf_16.py")
+2015-03-06T16:07:58: Parsing "encodings.utf_16_be" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\encodings\utf_16_be.py")
+2015-03-06T16:07:58: Parsing "encodings.utf_16_le" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\encodings\utf_16_le.py")
+2015-03-06T16:07:58: Parsing "encodings.utf_32" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\encodings\utf_32.py")
+2015-03-06T16:07:58: Parsing "encodings.utf_32_be" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\encodings\utf_32_be.py")
+2015-03-06T16:07:58: Parsing "encodings.utf_32_le" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\encodings\utf_32_le.py")
+2015-03-06T16:07:58: Parsing "encodings.utf_7" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\encodings\utf_7.py")
+2015-03-06T16:07:58: Parsing "encodings.utf_8" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\encodings\utf_8.py")
+2015-03-06T16:07:58: Parsing "encodings.utf_8_sig" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\encodings\utf_8_sig.py")
+2015-03-06T16:07:58: Parsing "encodings.uu_codec" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\encodings\uu_codec.py")
+2015-03-06T16:07:58: Parsing "encodings.zlib_codec" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\encodings\zlib_codec.py")
+2015-03-06T16:07:58: Parsing "encodings" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\encodings\__init__.py")
+2015-03-06T16:07:58: Parsing complete
+2015-03-06T16:07:58: Analyzing "abc"
+2015-03-06T16:07:58: Analyzing "codecs"
+2015-03-06T16:07:58: Analyzing "copy_reg"
+2015-03-06T16:07:58: Analyzing "fnmatch"
+2015-03-06T16:07:58: Analyzing "genericpath"
+2015-03-06T16:07:58: Analyzing "linecache"
+2015-03-06T16:07:58: Analyzing "locale"
+2015-03-06T16:07:58: Analyzing "ntpath"
+2015-03-06T16:07:58: Analyzing "os"
+2015-03-06T16:07:58: Analyzing "posixpath"
+2015-03-06T16:07:58: Analyzing "re"
+2015-03-06T16:07:58: Analyzing "site"
+2015-03-06T16:07:58: Analyzing "sre"
+2015-03-06T16:07:58: Analyzing "sre_compile"
+2015-03-06T16:07:58: Analyzing "sre_constants"
+2015-03-06T16:07:58: Analyzing "sre_parse"
+2015-03-06T16:07:58: Analyzing "stat"
+2015-03-06T16:07:58: Analyzing "types"
+2015-03-06T16:07:58: Analyzing "UserDict"
+2015-03-06T16:07:58: Analyzing "warnings"
+2015-03-06T16:07:58: Analyzing "_abcoll"
+2015-03-06T16:07:58: Analyzing "_weakrefset"
+2015-03-06T16:07:58: Analyzing "distutils"
+2015-03-06T16:07:58: Analyzing "encodings.aliases"
+2015-03-06T16:07:58: Analyzing "encodings.ascii"
+2015-03-06T16:07:58: Analyzing "encodings.base64_codec"
+2015-03-06T16:07:58: Analyzing "encodings.big5"
+2015-03-06T16:07:58: Analyzing "encodings.big5hkscs"
+2015-03-06T16:07:58: Analyzing "encodings.bz2_codec"
+2015-03-06T16:07:58: Analyzing "encodings.charmap"
+2015-03-06T16:07:58: Analyzing "encodings.cp037"
+2015-03-06T16:07:58: Analyzing "encodings.cp1006"
+2015-03-06T16:07:58: Analyzing "encodings.cp1026"
+2015-03-06T16:07:58: Analyzing "encodings.cp1140"
+2015-03-06T16:07:58: Analyzing "encodings.cp1250"
+2015-03-06T16:07:58: Analyzing "encodings.cp1251"
+2015-03-06T16:07:58: Analyzing "encodings.cp1252"
+2015-03-06T16:07:58: Analyzing "encodings.cp1253"
+2015-03-06T16:07:58: Analyzing "encodings.cp1254"
+2015-03-06T16:07:58: Analyzing "encodings.cp1255"
+2015-03-06T16:07:58: Analyzing "encodings.cp1256"
+2015-03-06T16:07:58: Analyzing "encodings.cp1257"
+2015-03-06T16:07:58: Analyzing "encodings.cp1258"
+2015-03-06T16:07:58: Analyzing "encodings.cp424"
+2015-03-06T16:07:58: Analyzing "encodings.cp437"
+2015-03-06T16:07:58: Analyzing "encodings.cp500"
+2015-03-06T16:07:58: Analyzing "encodings.cp720"
+2015-03-06T16:07:58: Analyzing "encodings.cp737"
+2015-03-06T16:07:58: Analyzing "encodings.cp775"
+2015-03-06T16:07:58: Analyzing "encodings.cp850"
+2015-03-06T16:07:58: Analyzing "encodings.cp852"
+2015-03-06T16:07:58: Analyzing "encodings.cp855"
+2015-03-06T16:07:58: Analyzing "encodings.cp856"
+2015-03-06T16:07:58: Analyzing "encodings.cp857"
+2015-03-06T16:07:58: Analyzing "encodings.cp858"
+2015-03-06T16:07:58: Analyzing "encodings.cp860"
+2015-03-06T16:07:58: Analyzing "encodings.cp861"
+2015-03-06T16:07:58: Analyzing "encodings.cp862"
+2015-03-06T16:07:58: Analyzing "encodings.cp863"
+2015-03-06T16:07:58: Analyzing "encodings.cp864"
+2015-03-06T16:07:58: Analyzing "encodings.cp865"
+2015-03-06T16:07:58: Analyzing "encodings.cp866"
+2015-03-06T16:07:58: Analyzing "encodings.cp869"
+2015-03-06T16:07:58: Analyzing "encodings.cp874"
+2015-03-06T16:07:58: Analyzing "encodings.cp875"
+2015-03-06T16:07:58: Analyzing "encodings.cp932"
+2015-03-06T16:07:58: Analyzing "encodings.cp949"
+2015-03-06T16:07:58: Analyzing "encodings.cp950"
+2015-03-06T16:07:58: Analyzing "encodings.euc_jisx0213"
+2015-03-06T16:07:58: Analyzing "encodings.euc_jis_2004"
+2015-03-06T16:07:58: Analyzing "encodings.euc_jp"
+2015-03-06T16:07:58: Analyzing "encodings.euc_kr"
+2015-03-06T16:07:58: Analyzing "encodings.gb18030"
+2015-03-06T16:07:58: Analyzing "encodings.gb2312"
+2015-03-06T16:07:58: Analyzing "encodings.gbk"
+2015-03-06T16:07:58: Analyzing "encodings.hex_codec"
+2015-03-06T16:07:58: Analyzing "encodings.hp_roman8"
+2015-03-06T16:07:58: Analyzing "encodings.hz"
+2015-03-06T16:07:58: Analyzing "encodings.idna"
+2015-03-06T16:07:58: Analyzing "encodings.iso2022_jp"
+2015-03-06T16:07:58: Analyzing "encodings.iso2022_jp_1"
+2015-03-06T16:07:58: Analyzing "encodings.iso2022_jp_2"
+2015-03-06T16:07:58: Analyzing "encodings.iso2022_jp_2004"
+2015-03-06T16:07:58: Analyzing "encodings.iso2022_jp_3"
+2015-03-06T16:07:58: Analyzing "encodings.iso2022_jp_ext"
+2015-03-06T16:07:58: Analyzing "encodings.iso2022_kr"
+2015-03-06T16:07:58: Analyzing "encodings.iso8859_1"
+2015-03-06T16:07:58: Analyzing "encodings.iso8859_10"
+2015-03-06T16:07:58: Analyzing "encodings.iso8859_11"
+2015-03-06T16:07:58: Analyzing "encodings.iso8859_13"
+2015-03-06T16:07:58: Analyzing "encodings.iso8859_14"
+2015-03-06T16:07:58: Analyzing "encodings.iso8859_15"
+2015-03-06T16:07:58: Analyzing "encodings.iso8859_16"
+2015-03-06T16:07:58: Analyzing "encodings.iso8859_2"
+2015-03-06T16:07:58: Analyzing "encodings.iso8859_3"
+2015-03-06T16:07:58: Analyzing "encodings.iso8859_4"
+2015-03-06T16:07:58: Analyzing "encodings.iso8859_5"
+2015-03-06T16:07:58: Analyzing "encodings.iso8859_6"
+2015-03-06T16:07:58: Analyzing "encodings.iso8859_7"
+2015-03-06T16:07:58: Analyzing "encodings.iso8859_8"
+2015-03-06T16:07:58: Analyzing "encodings.iso8859_9"
+2015-03-06T16:07:58: Analyzing "encodings.johab"
+2015-03-06T16:07:58: Analyzing "encodings.koi8_r"
+2015-03-06T16:07:58: Analyzing "encodings.koi8_u"
+2015-03-06T16:07:58: Analyzing "encodings.latin_1"
+2015-03-06T16:07:58: Analyzing "encodings.mac_arabic"
+2015-03-06T16:07:58: Analyzing "encodings.mac_centeuro"
+2015-03-06T16:07:58: Analyzing "encodings.mac_croatian"
+2015-03-06T16:07:58: Analyzing "encodings.mac_cyrillic"
+2015-03-06T16:07:58: Analyzing "encodings.mac_farsi"
+2015-03-06T16:07:58: Analyzing "encodings.mac_greek"
+2015-03-06T16:07:58: Analyzing "encodings.mac_iceland"
+2015-03-06T16:07:58: Analyzing "encodings.mac_latin2"
+2015-03-06T16:07:58: Analyzing "encodings.mac_roman"
+2015-03-06T16:07:58: Analyzing "encodings.mac_romanian"
+2015-03-06T16:07:58: Analyzing "encodings.mac_turkish"
+2015-03-06T16:07:58: Analyzing "encodings.mbcs"
+2015-03-06T16:07:58: Analyzing "encodings.palmos"
+2015-03-06T16:07:58: Analyzing "encodings.ptcp154"
+2015-03-06T16:07:58: Analyzing "encodings.punycode"
+2015-03-06T16:07:58: Analyzing "encodings.quopri_codec"
+2015-03-06T16:07:58: Analyzing "encodings.raw_unicode_escape"
+2015-03-06T16:07:58: Analyzing "encodings.rot_13"
+2015-03-06T16:07:58: Analyzing "encodings.shift_jis"
+2015-03-06T16:07:58: Analyzing "encodings.shift_jisx0213"
+2015-03-06T16:07:58: Analyzing "encodings.shift_jis_2004"
+2015-03-06T16:07:58: Analyzing "encodings.string_escape"
+2015-03-06T16:07:58: Analyzing "encodings.tis_620"
+2015-03-06T16:07:58: Analyzing "encodings.undefined"
+2015-03-06T16:07:58: Analyzing "encodings.unicode_escape"
+2015-03-06T16:07:58: Analyzing "encodings.unicode_internal"
+2015-03-06T16:07:58: Analyzing "encodings.utf_16"
+2015-03-06T16:07:58: Analyzing "encodings.utf_16_be"
+2015-03-06T16:07:58: Analyzing "encodings.utf_16_le"
+2015-03-06T16:07:58: Analyzing "encodings.utf_32"
+2015-03-06T16:07:58: Analyzing "encodings.utf_32_be"
+2015-03-06T16:07:58: Analyzing "encodings.utf_32_le"
+2015-03-06T16:07:58: Analyzing "encodings.utf_7"
+2015-03-06T16:07:58: Analyzing "encodings.utf_8"
+2015-03-06T16:07:58: Analyzing "encodings.utf_8_sig"
+2015-03-06T16:07:58: Analyzing "encodings.uu_codec"
+2015-03-06T16:07:58: Analyzing "encodings.zlib_codec"
+2015-03-06T16:07:58: Analyzing "encodings"
+2015-03-06T16:07:58: Starting analysis of 143 modules
+2015-03-06T16:07:59: Analysis complete
+2015-03-06T16:07:59: Saving group "c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\"
+2015-03-06T16:07:59: End of group "c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\"
+2015-03-06T16:07:59: Start group "c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages" with 1 files
+2015-03-06T16:08:00: Parsing "easy_install" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\easy_install.py")
+2015-03-06T16:08:00: Parsing complete
+2015-03-06T16:08:00: Analyzing "easy_install"
+2015-03-06T16:08:00: Starting analysis of 1 modules
+2015-03-06T16:08:00: Analysis complete
+2015-03-06T16:08:00: Saving group "c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages"
+2015-03-06T16:08:00: End of group "c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages"
+2015-03-06T16:08:00: Start group "c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Scripts" with 1 files
+2015-03-06T16:08:02: Parsing "activate_this" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Scripts\activate_this.py")
+2015-03-06T16:08:02: Parsing complete
+2015-03-06T16:08:02: Analyzing "activate_this"
+2015-03-06T16:08:02: Starting analysis of 1 modules
+2015-03-06T16:08:02: Analysis complete
+2015-03-06T16:08:02: Saving group "c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Scripts"
+2015-03-06T16:08:02: End of group "c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Scripts"
+2015-03-06T16:08:02: Start group "c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\pip" with 227 files
+2015-03-06T16:08:03: Parsing "pip.basecommand" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\pip\basecommand.py")
+2015-03-06T16:08:03: Parsing "pip.baseparser" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\pip\baseparser.py")
+2015-03-06T16:08:03: Parsing "pip.cmdoptions" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\pip\cmdoptions.py")
+2015-03-06T16:08:03: Parsing "pip.download" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\pip\download.py")
+2015-03-06T16:08:03: Parsing "pip.exceptions" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\pip\exceptions.py")
+2015-03-06T16:08:03: Parsing "pip.index" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\pip\index.py")
+2015-03-06T16:08:03: Parsing "pip.locations" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\pip\locations.py")
+2015-03-06T16:08:03: Parsing "pip.pep425tags" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\pip\pep425tags.py")
+2015-03-06T16:08:03: Parsing "pip.status_codes" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\pip\status_codes.py")
+2015-03-06T16:08:03: Parsing "pip.wheel" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\pip\wheel.py")
+2015-03-06T16:08:03: Parsing "pip" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\pip\__init__.py")
+2015-03-06T16:08:03: Parsing "pip.__main__" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\pip\__main__.py")
+2015-03-06T16:08:03: Parsing "pip.commands.completion" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\pip\commands\completion.py")
+2015-03-06T16:08:03: Parsing "pip.commands.freeze" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\pip\commands\freeze.py")
+2015-03-06T16:08:03: Parsing "pip.commands.help" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\pip\commands\help.py")
+2015-03-06T16:08:03: Parsing "pip.commands.install" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\pip\commands\install.py")
+2015-03-06T16:08:03: Parsing "pip.commands.list" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\pip\commands\list.py")
+2015-03-06T16:08:03: Parsing "pip.commands.search" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\pip\commands\search.py")
+2015-03-06T16:08:03: Parsing "pip.commands.show" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\pip\commands\show.py")
+2015-03-06T16:08:03: Parsing "pip.commands.uninstall" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\pip\commands\uninstall.py")
+2015-03-06T16:08:03: Parsing "pip.commands.unzip" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\pip\commands\unzip.py")
+2015-03-06T16:08:03: Parsing "pip.commands.wheel" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\pip\commands\wheel.py")
+2015-03-06T16:08:03: Parsing "pip.commands.zip" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\pip\commands\zip.py")
+2015-03-06T16:08:03: Parsing "pip.commands" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\pip\commands\__init__.py")
+2015-03-06T16:08:03: Parsing "pip.compat.dictconfig" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\pip\compat\dictconfig.py")
+2015-03-06T16:08:03: Parsing "pip.compat" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\pip\compat\__init__.py")
+2015-03-06T16:08:03: Parsing "pip.models.index" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\pip\models\index.py")
+2015-03-06T16:08:03: Parsing "pip.models" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\pip\models\__init__.py")
+2015-03-06T16:08:03: Parsing "pip.operations.freeze" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\pip\operations\freeze.py")
+2015-03-06T16:08:03: Parsing "pip.operations" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\pip\operations\__init__.py")
+2015-03-06T16:08:03: Parsing "pip.req.req_file" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\pip\req\req_file.py")
+2015-03-06T16:08:03: Parsing "pip.req.req_install" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\pip\req\req_install.py")
+2015-03-06T16:08:03: Parsing "pip.req.req_requirement" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\pip\req\req_requirement.py")
+2015-03-06T16:08:03: Parsing "pip.req.req_set" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\pip\req\req_set.py")
+2015-03-06T16:08:03: Parsing "pip.req.req_uninstall" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\pip\req\req_uninstall.py")
+2015-03-06T16:08:03: Parsing "pip.req" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\pip\req\__init__.py")
+2015-03-06T16:08:03: Parsing "pip.utils.appdirs" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\pip\utils\appdirs.py")
+2015-03-06T16:08:03: Parsing "pip.utils.build" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\pip\utils\build.py")
+2015-03-06T16:08:03: Parsing "pip.utils.deprecation" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\pip\utils\deprecation.py")
+2015-03-06T16:08:03: Parsing "pip.utils.filesystem" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\pip\utils\filesystem.py")
+2015-03-06T16:08:03: Parsing "pip.utils.logging" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\pip\utils\logging.py")
+2015-03-06T16:08:03: Parsing "pip.utils.outdated" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\pip\utils\outdated.py")
+2015-03-06T16:08:03: Parsing "pip.utils.ui" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\pip\utils\ui.py")
+2015-03-06T16:08:03: Parsing "pip.utils" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\pip\utils\__init__.py")
+2015-03-06T16:08:03: Parsing "pip.vcs.bazaar" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\pip\vcs\bazaar.py")
+2015-03-06T16:08:03: Parsing "pip.vcs.git" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\pip\vcs\git.py")
+2015-03-06T16:08:03: Parsing "pip.vcs.mercurial" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\pip\vcs\mercurial.py")
+2015-03-06T16:08:03: Parsing "pip.vcs.subversion" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\pip\vcs\subversion.py")
+2015-03-06T16:08:03: Parsing "pip.vcs" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\pip\vcs\__init__.py")
+2015-03-06T16:08:03: Parsing "pip._vendor.ipaddress" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\pip\_vendor\ipaddress.py")
+2015-03-06T16:08:03: Parsing "pip._vendor.retrying" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\pip\_vendor\retrying.py")
+2015-03-06T16:08:03: Parsing "pip._vendor.six" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\pip\_vendor\six.py")
+2015-03-06T16:08:03: Parsing "pip._vendor" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\pip\_vendor\__init__.py")
+2015-03-06T16:08:03: Parsing "pip._vendor.cachecontrol.adapter" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\pip\_vendor\cachecontrol\adapter.py")
+2015-03-06T16:08:03: Parsing "pip._vendor.cachecontrol.cache" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\pip\_vendor\cachecontrol\cache.py")
+2015-03-06T16:08:03: Parsing "pip._vendor.cachecontrol.compat" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\pip\_vendor\cachecontrol\compat.py")
+2015-03-06T16:08:03: Parsing "pip._vendor.cachecontrol.controller" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\pip\_vendor\cachecontrol\controller.py")
+2015-03-06T16:08:03: Parsing "pip._vendor.cachecontrol.filewrapper" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\pip\_vendor\cachecontrol\filewrapper.py")
+2015-03-06T16:08:03: Parsing "pip._vendor.cachecontrol.heuristics" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\pip\_vendor\cachecontrol\heuristics.py")
+2015-03-06T16:08:03: Parsing "pip._vendor.cachecontrol.serialize" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\pip\_vendor\cachecontrol\serialize.py")
+2015-03-06T16:08:03: Parsing "pip._vendor.cachecontrol.wrapper" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\pip\_vendor\cachecontrol\wrapper.py")
+2015-03-06T16:08:03: Parsing "pip._vendor.cachecontrol" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\pip\_vendor\cachecontrol\__init__.py")
+2015-03-06T16:08:03: Parsing "pip._vendor.cachecontrol.caches.file_cache" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\pip\_vendor\cachecontrol\caches\file_cache.py")
+2015-03-06T16:08:03: Parsing "pip._vendor.cachecontrol.caches.redis_cache" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\pip\_vendor\cachecontrol\caches\redis_cache.py")
+2015-03-06T16:08:03: Parsing "pip._vendor.cachecontrol.caches" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\pip\_vendor\cachecontrol\caches\__init__.py")
+2015-03-06T16:08:03: Parsing "pip._vendor.certifi.core" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\pip\_vendor\certifi\core.py")
+2015-03-06T16:08:03: Parsing "pip._vendor.certifi" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\pip\_vendor\certifi\__init__.py")
+2015-03-06T16:08:03: Parsing "pip._vendor.certifi.__main__" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\pip\_vendor\certifi\__main__.py")
+2015-03-06T16:08:03: Parsing "pip._vendor.colorama.ansi" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\pip\_vendor\colorama\ansi.py")
+2015-03-06T16:08:03: Parsing "pip._vendor.colorama.ansitowin32" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\pip\_vendor\colorama\ansitowin32.py")
+2015-03-06T16:08:03: Parsing "pip._vendor.colorama.initialise" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\pip\_vendor\colorama\initialise.py")
+2015-03-06T16:08:03: Parsing "pip._vendor.colorama.win32" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\pip\_vendor\colorama\win32.py")
+2015-03-06T16:08:03: Parsing "pip._vendor.colorama.winterm" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\pip\_vendor\colorama\winterm.py")
+2015-03-06T16:08:03: Parsing "pip._vendor.colorama" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\pip\_vendor\colorama\__init__.py")
+2015-03-06T16:08:03: Parsing "pip._vendor.distlib.compat" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\pip\_vendor\distlib\compat.py")
+2015-03-06T16:08:03: Parsing "pip._vendor.distlib.database" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\pip\_vendor\distlib\database.py")
+2015-03-06T16:08:03: Parsing "pip._vendor.distlib.index" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\pip\_vendor\distlib\index.py")
+2015-03-06T16:08:03: Parsing "pip._vendor.distlib.locators" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\pip\_vendor\distlib\locators.py")
+2015-03-06T16:08:03: Parsing "pip._vendor.distlib.manifest" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\pip\_vendor\distlib\manifest.py")
+2015-03-06T16:08:03: Parsing "pip._vendor.distlib.markers" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\pip\_vendor\distlib\markers.py")
+2015-03-06T16:08:03: Parsing "pip._vendor.distlib.metadata" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\pip\_vendor\distlib\metadata.py")
+2015-03-06T16:08:03: Parsing "pip._vendor.distlib.resources" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\pip\_vendor\distlib\resources.py")
+2015-03-06T16:08:03: Parsing "pip._vendor.distlib.scripts" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\pip\_vendor\distlib\scripts.py")
+2015-03-06T16:08:03: Parsing "pip._vendor.distlib.util" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\pip\_vendor\distlib\util.py")
+2015-03-06T16:08:03: Parsing "pip._vendor.distlib.version" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\pip\_vendor\distlib\version.py")
+2015-03-06T16:08:03: Parsing "pip._vendor.distlib.wheel" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\pip\_vendor\distlib\wheel.py")
+2015-03-06T16:08:03: Parsing "pip._vendor.distlib" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\pip\_vendor\distlib\__init__.py")
+2015-03-06T16:08:03: Parsing "pip._vendor.distlib._backport.misc" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\pip\_vendor\distlib\_backport\misc.py")
+2015-03-06T16:08:03: Parsing "pip._vendor.distlib._backport.shutil" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\pip\_vendor\distlib\_backport\shutil.py")
+2015-03-06T16:08:03: Parsing "pip._vendor.distlib._backport.sysconfig" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\pip\_vendor\distlib\_backport\sysconfig.py")
+2015-03-06T16:08:03: Parsing "pip._vendor.distlib._backport.tarfile" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\pip\_vendor\distlib\_backport\tarfile.py")
+2015-03-06T16:08:03: Parsing "pip._vendor.distlib._backport" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\pip\_vendor\distlib\_backport\__init__.py")
+2015-03-06T16:08:03: Parsing "pip._vendor.html5lib.constants" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\pip\_vendor\html5lib\constants.py")
+2015-03-06T16:08:03: Parsing "pip._vendor.html5lib.html5parser" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\pip\_vendor\html5lib\html5parser.py")
+2015-03-06T16:08:03: Parsing "pip._vendor.html5lib.ihatexml" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\pip\_vendor\html5lib\ihatexml.py")
+2015-03-06T16:08:03: Parsing "pip._vendor.html5lib.inputstream" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\pip\_vendor\html5lib\inputstream.py")
+2015-03-06T16:08:03: Parsing "pip._vendor.html5lib.sanitizer" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\pip\_vendor\html5lib\sanitizer.py")
+2015-03-06T16:08:03: Parsing "pip._vendor.html5lib.tokenizer" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\pip\_vendor\html5lib\tokenizer.py")
+2015-03-06T16:08:03: Parsing "pip._vendor.html5lib.utils" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\pip\_vendor\html5lib\utils.py")
+2015-03-06T16:08:03: Parsing "pip._vendor.html5lib" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\pip\_vendor\html5lib\__init__.py")
+2015-03-06T16:08:03: Parsing "pip._vendor.html5lib.filters.alphabeticalattributes" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\pip\_vendor\html5lib\filters\alphabeticalattributes.py")
+2015-03-06T16:08:03: Parsing "pip._vendor.html5lib.filters.inject_meta_charset" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\pip\_vendor\html5lib\filters\inject_meta_charset.py")
+2015-03-06T16:08:03: Parsing "pip._vendor.html5lib.filters.lint" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\pip\_vendor\html5lib\filters\lint.py")
+2015-03-06T16:08:03: Parsing "pip._vendor.html5lib.filters.optionaltags" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\pip\_vendor\html5lib\filters\optionaltags.py")
+2015-03-06T16:08:03: Parsing "pip._vendor.html5lib.filters.sanitizer" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\pip\_vendor\html5lib\filters\sanitizer.py")
+2015-03-06T16:08:03: Parsing "pip._vendor.html5lib.filters.whitespace" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\pip\_vendor\html5lib\filters\whitespace.py")
+2015-03-06T16:08:03: Parsing "pip._vendor.html5lib.filters._base" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\pip\_vendor\html5lib\filters\_base.py")
+2015-03-06T16:08:03: Parsing "pip._vendor.html5lib.filters" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\pip\_vendor\html5lib\filters\__init__.py")
+2015-03-06T16:08:03: Parsing "pip._vendor.html5lib.serializer.htmlserializer" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\pip\_vendor\html5lib\serializer\htmlserializer.py")
+2015-03-06T16:08:03: Parsing "pip._vendor.html5lib.serializer" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\pip\_vendor\html5lib\serializer\__init__.py")
+2015-03-06T16:08:03: Parsing "pip._vendor.html5lib.treeadapters.sax" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\pip\_vendor\html5lib\treeadapters\sax.py")
+2015-03-06T16:08:03: Parsing "pip._vendor.html5lib.treeadapters" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\pip\_vendor\html5lib\treeadapters\__init__.py")
+2015-03-06T16:08:03: Parsing "pip._vendor.html5lib.treebuilders.dom" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\pip\_vendor\html5lib\treebuilders\dom.py")
+2015-03-06T16:08:03: Parsing "pip._vendor.html5lib.treebuilders.etree" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\pip\_vendor\html5lib\treebuilders\etree.py")
+2015-03-06T16:08:03: Parsing "pip._vendor.html5lib.treebuilders.etree_lxml" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\pip\_vendor\html5lib\treebuilders\etree_lxml.py")
+2015-03-06T16:08:03: Parsing "pip._vendor.html5lib.treebuilders._base" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\pip\_vendor\html5lib\treebuilders\_base.py")
+2015-03-06T16:08:03: Parsing "pip._vendor.html5lib.treebuilders" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\pip\_vendor\html5lib\treebuilders\__init__.py")
+2015-03-06T16:08:03: Parsing "pip._vendor.html5lib.treewalkers.dom" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\pip\_vendor\html5lib\treewalkers\dom.py")
+2015-03-06T16:08:03: Parsing "pip._vendor.html5lib.treewalkers.etree" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\pip\_vendor\html5lib\treewalkers\etree.py")
+2015-03-06T16:08:03: Parsing "pip._vendor.html5lib.treewalkers.genshistream" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\pip\_vendor\html5lib\treewalkers\genshistream.py")
+2015-03-06T16:08:03: Parsing "pip._vendor.html5lib.treewalkers.lxmletree" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\pip\_vendor\html5lib\treewalkers\lxmletree.py")
+2015-03-06T16:08:03: Parsing "pip._vendor.html5lib.treewalkers.pulldom" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\pip\_vendor\html5lib\treewalkers\pulldom.py")
+2015-03-06T16:08:03: Parsing "pip._vendor.html5lib.treewalkers._base" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\pip\_vendor\html5lib\treewalkers\_base.py")
+2015-03-06T16:08:03: Parsing "pip._vendor.html5lib.treewalkers" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\pip\_vendor\html5lib\treewalkers\__init__.py")
+2015-03-06T16:08:03: Parsing "pip._vendor.html5lib.trie.datrie" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\pip\_vendor\html5lib\trie\datrie.py")
+2015-03-06T16:08:03: Parsing "pip._vendor.html5lib.trie.py" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\pip\_vendor\html5lib\trie\py.py")
+2015-03-06T16:08:03: Parsing "pip._vendor.html5lib.trie._base" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\pip\_vendor\html5lib\trie\_base.py")
+2015-03-06T16:08:03: Parsing "pip._vendor.html5lib.trie" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\pip\_vendor\html5lib\trie\__init__.py")
+2015-03-06T16:08:03: Parsing "pip._vendor.lockfile.linklockfile" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\pip\_vendor\lockfile\linklockfile.py")
+2015-03-06T16:08:03: Parsing "pip._vendor.lockfile.mkdirlockfile" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\pip\_vendor\lockfile\mkdirlockfile.py")
+2015-03-06T16:08:03: Parsing "pip._vendor.lockfile.pidlockfile" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\pip\_vendor\lockfile\pidlockfile.py")
+2015-03-06T16:08:03: Parsing "pip._vendor.lockfile.sqlitelockfile" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\pip\_vendor\lockfile\sqlitelockfile.py")
+2015-03-06T16:08:03: Parsing "pip._vendor.lockfile.symlinklockfile" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\pip\_vendor\lockfile\symlinklockfile.py")
+2015-03-06T16:08:03: Parsing "pip._vendor.lockfile" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\pip\_vendor\lockfile\__init__.py")
+2015-03-06T16:08:03: Parsing "pip._vendor.packaging.specifiers" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\pip\_vendor\packaging\specifiers.py")
+2015-03-06T16:08:03: Parsing "pip._vendor.packaging.version" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\pip\_vendor\packaging\version.py")
+2015-03-06T16:08:03: Parsing "pip._vendor.packaging._compat" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\pip\_vendor\packaging\_compat.py")
+2015-03-06T16:08:03: Parsing "pip._vendor.packaging._structures" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\pip\_vendor\packaging\_structures.py")
+2015-03-06T16:08:03: Parsing "pip._vendor.packaging.__about__" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\pip\_vendor\packaging\__about__.py")
+2015-03-06T16:08:03: Parsing "pip._vendor.packaging" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\pip\_vendor\packaging\__init__.py")
+2015-03-06T16:08:03: Parsing "pip._vendor.pkg_resources" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\pip\_vendor\pkg_resources\__init__.py")
+2015-03-06T16:08:03: Parsing "pip._vendor.progress.bar" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\pip\_vendor\progress\bar.py")
+2015-03-06T16:08:03: Parsing "pip._vendor.progress.counter" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\pip\_vendor\progress\counter.py")
+2015-03-06T16:08:03: Parsing "pip._vendor.progress.helpers" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\pip\_vendor\progress\helpers.py")
+2015-03-06T16:08:03: Parsing "pip._vendor.progress.spinner" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\pip\_vendor\progress\spinner.py")
+2015-03-06T16:08:03: Parsing "pip._vendor.progress" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\pip\_vendor\progress\__init__.py")
+2015-03-06T16:08:03: Parsing "pip._vendor.requests.adapters" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\pip\_vendor\requests\adapters.py")
+2015-03-06T16:08:03: Parsing "pip._vendor.requests.api" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\pip\_vendor\requests\api.py")
+2015-03-06T16:08:03: Parsing "pip._vendor.requests.auth" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\pip\_vendor\requests\auth.py")
+2015-03-06T16:08:03: Parsing "pip._vendor.requests.certs" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\pip\_vendor\requests\certs.py")
+2015-03-06T16:08:03: Parsing "pip._vendor.requests.compat" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\pip\_vendor\requests\compat.py")
+2015-03-06T16:08:03: Parsing "pip._vendor.requests.cookies" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\pip\_vendor\requests\cookies.py")
+2015-03-06T16:08:03: Parsing "pip._vendor.requests.exceptions" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\pip\_vendor\requests\exceptions.py")
+2015-03-06T16:08:03: Parsing "pip._vendor.requests.hooks" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\pip\_vendor\requests\hooks.py")
+2015-03-06T16:08:03: Parsing "pip._vendor.requests.models" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\pip\_vendor\requests\models.py")
+2015-03-06T16:08:03: Parsing "pip._vendor.requests.sessions" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\pip\_vendor\requests\sessions.py")
+2015-03-06T16:08:03: Parsing "pip._vendor.requests.status_codes" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\pip\_vendor\requests\status_codes.py")
+2015-03-06T16:08:03: Parsing "pip._vendor.requests.structures" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\pip\_vendor\requests\structures.py")
+2015-03-06T16:08:03: Parsing "pip._vendor.requests.utils" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\pip\_vendor\requests\utils.py")
+2015-03-06T16:08:03: Parsing "pip._vendor.requests" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\pip\_vendor\requests\__init__.py")
+2015-03-06T16:08:03: Parsing "pip._vendor.requests.packages" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\pip\_vendor\requests\packages\__init__.py")
+2015-03-06T16:08:03: Parsing "pip._vendor.requests.packages.chardet.big5freq" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\pip\_vendor\requests\packages\chardet\big5freq.py")
+2015-03-06T16:08:03: Parsing "pip._vendor.requests.packages.chardet.big5prober" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\pip\_vendor\requests\packages\chardet\big5prober.py")
+2015-03-06T16:08:03: Parsing "pip._vendor.requests.packages.chardet.chardetect" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\pip\_vendor\requests\packages\chardet\chardetect.py")
+2015-03-06T16:08:03: Parsing "pip._vendor.requests.packages.chardet.chardistribution" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\pip\_vendor\requests\packages\chardet\chardistribution.py")
+2015-03-06T16:08:03: Parsing "pip._vendor.requests.packages.chardet.charsetgroupprober" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\pip\_vendor\requests\packages\chardet\charsetgroupprober.py")
+2015-03-06T16:08:03: Parsing "pip._vendor.requests.packages.chardet.charsetprober" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\pip\_vendor\requests\packages\chardet\charsetprober.py")
+2015-03-06T16:08:03: Parsing "pip._vendor.requests.packages.chardet.codingstatemachine" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\pip\_vendor\requests\packages\chardet\codingstatemachine.py")
+2015-03-06T16:08:03: Parsing "pip._vendor.requests.packages.chardet.compat" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\pip\_vendor\requests\packages\chardet\compat.py")
+2015-03-06T16:08:03: Parsing "pip._vendor.requests.packages.chardet.constants" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\pip\_vendor\requests\packages\chardet\constants.py")
+2015-03-06T16:08:03: Parsing "pip._vendor.requests.packages.chardet.cp949prober" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\pip\_vendor\requests\packages\chardet\cp949prober.py")
+2015-03-06T16:08:03: Parsing "pip._vendor.requests.packages.chardet.escprober" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\pip\_vendor\requests\packages\chardet\escprober.py")
+2015-03-06T16:08:03: Parsing "pip._vendor.requests.packages.chardet.escsm" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\pip\_vendor\requests\packages\chardet\escsm.py")
+2015-03-06T16:08:03: Parsing "pip._vendor.requests.packages.chardet.eucjpprober" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\pip\_vendor\requests\packages\chardet\eucjpprober.py")
+2015-03-06T16:08:03: Parsing "pip._vendor.requests.packages.chardet.euckrfreq" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\pip\_vendor\requests\packages\chardet\euckrfreq.py")
+2015-03-06T16:08:03: Parsing "pip._vendor.requests.packages.chardet.euckrprober" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\pip\_vendor\requests\packages\chardet\euckrprober.py")
+2015-03-06T16:08:03: Parsing "pip._vendor.requests.packages.chardet.euctwfreq" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\pip\_vendor\requests\packages\chardet\euctwfreq.py")
+2015-03-06T16:08:03: Parsing "pip._vendor.requests.packages.chardet.euctwprober" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\pip\_vendor\requests\packages\chardet\euctwprober.py")
+2015-03-06T16:08:03: Parsing "pip._vendor.requests.packages.chardet.gb2312freq" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\pip\_vendor\requests\packages\chardet\gb2312freq.py")
+2015-03-06T16:08:03: Parsing "pip._vendor.requests.packages.chardet.gb2312prober" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\pip\_vendor\requests\packages\chardet\gb2312prober.py")
+2015-03-06T16:08:03: Parsing "pip._vendor.requests.packages.chardet.hebrewprober" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\pip\_vendor\requests\packages\chardet\hebrewprober.py")
+2015-03-06T16:08:03: Parsing "pip._vendor.requests.packages.chardet.jisfreq" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\pip\_vendor\requests\packages\chardet\jisfreq.py")
+2015-03-06T16:08:03: Parsing "pip._vendor.requests.packages.chardet.jpcntx" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\pip\_vendor\requests\packages\chardet\jpcntx.py")
+2015-03-06T16:08:03: Parsing "pip._vendor.requests.packages.chardet.langbulgarianmodel" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\pip\_vendor\requests\packages\chardet\langbulgarianmodel.py")
+2015-03-06T16:08:04: Parsing "pip._vendor.requests.packages.chardet.langcyrillicmodel" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\pip\_vendor\requests\packages\chardet\langcyrillicmodel.py")
+2015-03-06T16:08:04: Parsing "pip._vendor.requests.packages.chardet.langgreekmodel" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\pip\_vendor\requests\packages\chardet\langgreekmodel.py")
+2015-03-06T16:08:04: Parsing "pip._vendor.requests.packages.chardet.langhebrewmodel" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\pip\_vendor\requests\packages\chardet\langhebrewmodel.py")
+2015-03-06T16:08:04: Parsing "pip._vendor.requests.packages.chardet.langhungarianmodel" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\pip\_vendor\requests\packages\chardet\langhungarianmodel.py")
+2015-03-06T16:08:04: Parsing "pip._vendor.requests.packages.chardet.langthaimodel" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\pip\_vendor\requests\packages\chardet\langthaimodel.py")
+2015-03-06T16:08:04: Parsing "pip._vendor.requests.packages.chardet.latin1prober" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\pip\_vendor\requests\packages\chardet\latin1prober.py")
+2015-03-06T16:08:04: Parsing "pip._vendor.requests.packages.chardet.mbcharsetprober" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\pip\_vendor\requests\packages\chardet\mbcharsetprober.py")
+2015-03-06T16:08:04: Parsing "pip._vendor.requests.packages.chardet.mbcsgroupprober" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\pip\_vendor\requests\packages\chardet\mbcsgroupprober.py")
+2015-03-06T16:08:04: Parsing "pip._vendor.requests.packages.chardet.mbcssm" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\pip\_vendor\requests\packages\chardet\mbcssm.py")
+2015-03-06T16:08:04: Parsing "pip._vendor.requests.packages.chardet.sbcharsetprober" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\pip\_vendor\requests\packages\chardet\sbcharsetprober.py")
+2015-03-06T16:08:04: Parsing "pip._vendor.requests.packages.chardet.sbcsgroupprober" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\pip\_vendor\requests\packages\chardet\sbcsgroupprober.py")
+2015-03-06T16:08:04: Parsing "pip._vendor.requests.packages.chardet.sjisprober" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\pip\_vendor\requests\packages\chardet\sjisprober.py")
+2015-03-06T16:08:04: Parsing "pip._vendor.requests.packages.chardet.universaldetector" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\pip\_vendor\requests\packages\chardet\universaldetector.py")
+2015-03-06T16:08:04: Parsing "pip._vendor.requests.packages.chardet.utf8prober" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\pip\_vendor\requests\packages\chardet\utf8prober.py")
+2015-03-06T16:08:04: Parsing "pip._vendor.requests.packages.chardet" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\pip\_vendor\requests\packages\chardet\__init__.py")
+2015-03-06T16:08:04: Parsing "pip._vendor.requests.packages.urllib3.connection" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\pip\_vendor\requests\packages\urllib3\connection.py")
+2015-03-06T16:08:04: Parsing "pip._vendor.requests.packages.urllib3.connectionpool" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\pip\_vendor\requests\packages\urllib3\connectionpool.py")
+2015-03-06T16:08:04: Parsing "pip._vendor.requests.packages.urllib3.exceptions" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\pip\_vendor\requests\packages\urllib3\exceptions.py")
+2015-03-06T16:08:04: Parsing "pip._vendor.requests.packages.urllib3.fields" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\pip\_vendor\requests\packages\urllib3\fields.py")
+2015-03-06T16:08:04: Parsing "pip._vendor.requests.packages.urllib3.filepost" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\pip\_vendor\requests\packages\urllib3\filepost.py")
+2015-03-06T16:08:04: Parsing "pip._vendor.requests.packages.urllib3.poolmanager" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\pip\_vendor\requests\packages\urllib3\poolmanager.py")
+2015-03-06T16:08:04: Parsing "pip._vendor.requests.packages.urllib3.request" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\pip\_vendor\requests\packages\urllib3\request.py")
+2015-03-06T16:08:04: Parsing "pip._vendor.requests.packages.urllib3.response" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\pip\_vendor\requests\packages\urllib3\response.py")
+2015-03-06T16:08:04: Parsing "pip._vendor.requests.packages.urllib3._collections" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\pip\_vendor\requests\packages\urllib3\_collections.py")
+2015-03-06T16:08:04: Parsing "pip._vendor.requests.packages.urllib3" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\pip\_vendor\requests\packages\urllib3\__init__.py")
+2015-03-06T16:08:04: Parsing "pip._vendor.requests.packages.urllib3.contrib.ntlmpool" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\pip\_vendor\requests\packages\urllib3\contrib\ntlmpool.py")
+2015-03-06T16:08:04: Parsing "pip._vendor.requests.packages.urllib3.contrib.pyopenssl" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\pip\_vendor\requests\packages\urllib3\contrib\pyopenssl.py")
+2015-03-06T16:08:04: Parsing "pip._vendor.requests.packages.urllib3.contrib" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\pip\_vendor\requests\packages\urllib3\contrib\__init__.py")
+2015-03-06T16:08:04: Parsing "pip._vendor.requests.packages.urllib3.packages.ordered_dict" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\pip\_vendor\requests\packages\urllib3\packages\ordered_dict.py")
+2015-03-06T16:08:04: Parsing "pip._vendor.requests.packages.urllib3.packages.six" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\pip\_vendor\requests\packages\urllib3\packages\six.py")
+2015-03-06T16:08:04: Parsing "pip._vendor.requests.packages.urllib3.packages" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\pip\_vendor\requests\packages\urllib3\packages\__init__.py")
+2015-03-06T16:08:04: Parsing "pip._vendor.requests.packages.urllib3.packages.ssl_match_hostname._implementation" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\pip\_vendor\requests\packages\urllib3\packages\ssl_match_hostname\_implementation.py")
+2015-03-06T16:08:04: Parsing "pip._vendor.requests.packages.urllib3.packages.ssl_match_hostname" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\pip\_vendor\requests\packages\urllib3\packages\ssl_match_hostname\__init__.py")
+2015-03-06T16:08:04: Parsing "pip._vendor.requests.packages.urllib3.util.connection" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\pip\_vendor\requests\packages\urllib3\util\connection.py")
+2015-03-06T16:08:04: Parsing "pip._vendor.requests.packages.urllib3.util.request" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\pip\_vendor\requests\packages\urllib3\util\request.py")
+2015-03-06T16:08:04: Parsing "pip._vendor.requests.packages.urllib3.util.response" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\pip\_vendor\requests\packages\urllib3\util\response.py")
+2015-03-06T16:08:04: Parsing "pip._vendor.requests.packages.urllib3.util.retry" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\pip\_vendor\requests\packages\urllib3\util\retry.py")
+2015-03-06T16:08:04: Parsing "pip._vendor.requests.packages.urllib3.util.ssl_" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\pip\_vendor\requests\packages\urllib3\util\ssl_.py")
+2015-03-06T16:08:04: Parsing "pip._vendor.requests.packages.urllib3.util.timeout" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\pip\_vendor\requests\packages\urllib3\util\timeout.py")
+2015-03-06T16:08:04: Parsing "pip._vendor.requests.packages.urllib3.util.url" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\pip\_vendor\requests\packages\urllib3\util\url.py")
+2015-03-06T16:08:04: Parsing "pip._vendor.requests.packages.urllib3.util" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\pip\_vendor\requests\packages\urllib3\util\__init__.py")
+2015-03-06T16:08:04: Parsing "pip._vendor._markerlib.markers" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\pip\_vendor\_markerlib\markers.py")
+2015-03-06T16:08:04: Parsing "pip._vendor._markerlib" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\pip\_vendor\_markerlib\__init__.py")
+2015-03-06T16:08:04: Parsing complete
+2015-03-06T16:08:04: Analyzing "pip.basecommand"
+2015-03-06T16:08:04: Analyzing "pip.baseparser"
+2015-03-06T16:08:04: Analyzing "pip.cmdoptions"
+2015-03-06T16:08:04: Analyzing "pip.download"
+2015-03-06T16:08:04: Analyzing "pip.exceptions"
+2015-03-06T16:08:04: Analyzing "pip.index"
+2015-03-06T16:08:04: Analyzing "pip.locations"
+2015-03-06T16:08:04: Analyzing "pip.pep425tags"
+2015-03-06T16:08:04: Analyzing "pip.status_codes"
+2015-03-06T16:08:04: Analyzing "pip.wheel"
+2015-03-06T16:08:04: Analyzing "pip"
+2015-03-06T16:08:04: Analyzing "pip.__main__"
+2015-03-06T16:08:04: Analyzing "pip.commands.completion"
+2015-03-06T16:08:04: Analyzing "pip.commands.freeze"
+2015-03-06T16:08:04: Analyzing "pip.commands.help"
+2015-03-06T16:08:04: Analyzing "pip.commands.install"
+2015-03-06T16:08:04: Analyzing "pip.commands.list"
+2015-03-06T16:08:04: Analyzing "pip.commands.search"
+2015-03-06T16:08:04: Analyzing "pip.commands.show"
+2015-03-06T16:08:04: Analyzing "pip.commands.uninstall"
+2015-03-06T16:08:04: Analyzing "pip.commands.unzip"
+2015-03-06T16:08:04: Analyzing "pip.commands.wheel"
+2015-03-06T16:08:04: Analyzing "pip.commands.zip"
+2015-03-06T16:08:04: Analyzing "pip.commands"
+2015-03-06T16:08:04: Analyzing "pip.compat.dictconfig"
+2015-03-06T16:08:04: Analyzing "pip.compat"
+2015-03-06T16:08:04: Analyzing "pip.models.index"
+2015-03-06T16:08:04: Analyzing "pip.models"
+2015-03-06T16:08:04: Analyzing "pip.operations.freeze"
+2015-03-06T16:08:04: Analyzing "pip.operations"
+2015-03-06T16:08:04: Analyzing "pip.req.req_file"
+2015-03-06T16:08:04: Analyzing "pip.req.req_install"
+2015-03-06T16:08:04: Analyzing "pip.req.req_requirement"
+2015-03-06T16:08:04: Analyzing "pip.req.req_set"
+2015-03-06T16:08:04: Analyzing "pip.req.req_uninstall"
+2015-03-06T16:08:04: Analyzing "pip.req"
+2015-03-06T16:08:04: Analyzing "pip.utils.appdirs"
+2015-03-06T16:08:04: Analyzing "pip.utils.build"
+2015-03-06T16:08:04: Analyzing "pip.utils.deprecation"
+2015-03-06T16:08:04: Analyzing "pip.utils.filesystem"
+2015-03-06T16:08:04: Analyzing "pip.utils.logging"
+2015-03-06T16:08:04: Analyzing "pip.utils.outdated"
+2015-03-06T16:08:04: Analyzing "pip.utils.ui"
+2015-03-06T16:08:04: Analyzing "pip.utils"
+2015-03-06T16:08:04: Analyzing "pip.vcs.bazaar"
+2015-03-06T16:08:04: Analyzing "pip.vcs.git"
+2015-03-06T16:08:04: Analyzing "pip.vcs.mercurial"
+2015-03-06T16:08:04: Analyzing "pip.vcs.subversion"
+2015-03-06T16:08:04: Analyzing "pip.vcs"
+2015-03-06T16:08:04: Analyzing "pip._vendor.ipaddress"
+2015-03-06T16:08:04: Analyzing "pip._vendor.retrying"
+2015-03-06T16:08:04: Analyzing "pip._vendor.six"
+2015-03-06T16:08:04: Analyzing "pip._vendor"
+2015-03-06T16:08:04: Analyzing "pip._vendor.cachecontrol.adapter"
+2015-03-06T16:08:04: Analyzing "pip._vendor.cachecontrol.cache"
+2015-03-06T16:08:04: Analyzing "pip._vendor.cachecontrol.compat"
+2015-03-06T16:08:04: Analyzing "pip._vendor.cachecontrol.controller"
+2015-03-06T16:08:04: Analyzing "pip._vendor.cachecontrol.filewrapper"
+2015-03-06T16:08:04: Analyzing "pip._vendor.cachecontrol.heuristics"
+2015-03-06T16:08:04: Analyzing "pip._vendor.cachecontrol.serialize"
+2015-03-06T16:08:04: Analyzing "pip._vendor.cachecontrol.wrapper"
+2015-03-06T16:08:04: Analyzing "pip._vendor.cachecontrol"
+2015-03-06T16:08:04: Analyzing "pip._vendor.cachecontrol.caches.file_cache"
+2015-03-06T16:08:04: Analyzing "pip._vendor.cachecontrol.caches.redis_cache"
+2015-03-06T16:08:04: Analyzing "pip._vendor.cachecontrol.caches"
+2015-03-06T16:08:04: Analyzing "pip._vendor.certifi.core"
+2015-03-06T16:08:04: Analyzing "pip._vendor.certifi"
+2015-03-06T16:08:04: Analyzing "pip._vendor.certifi.__main__"
+2015-03-06T16:08:04: Analyzing "pip._vendor.colorama.ansi"
+2015-03-06T16:08:04: Analyzing "pip._vendor.colorama.ansitowin32"
+2015-03-06T16:08:04: Analyzing "pip._vendor.colorama.initialise"
+2015-03-06T16:08:04: Analyzing "pip._vendor.colorama.win32"
+2015-03-06T16:08:04: Analyzing "pip._vendor.colorama.winterm"
+2015-03-06T16:08:04: Analyzing "pip._vendor.colorama"
+2015-03-06T16:08:04: Analyzing "pip._vendor.distlib.compat"
+2015-03-06T16:08:04: Analyzing "pip._vendor.distlib.database"
+2015-03-06T16:08:04: Analyzing "pip._vendor.distlib.index"
+2015-03-06T16:08:04: Analyzing "pip._vendor.distlib.locators"
+2015-03-06T16:08:04: Analyzing "pip._vendor.distlib.manifest"
+2015-03-06T16:08:04: Analyzing "pip._vendor.distlib.markers"
+2015-03-06T16:08:04: Analyzing "pip._vendor.distlib.metadata"
+2015-03-06T16:08:04: Analyzing "pip._vendor.distlib.resources"
+2015-03-06T16:08:04: Analyzing "pip._vendor.distlib.scripts"
+2015-03-06T16:08:04: Analyzing "pip._vendor.distlib.util"
+2015-03-06T16:08:04: Analyzing "pip._vendor.distlib.version"
+2015-03-06T16:08:04: Analyzing "pip._vendor.distlib.wheel"
+2015-03-06T16:08:04: Analyzing "pip._vendor.distlib"
+2015-03-06T16:08:04: Analyzing "pip._vendor.distlib._backport.misc"
+2015-03-06T16:08:04: Analyzing "pip._vendor.distlib._backport.shutil"
+2015-03-06T16:08:04: Analyzing "pip._vendor.distlib._backport.sysconfig"
+2015-03-06T16:08:04: Analyzing "pip._vendor.distlib._backport.tarfile"
+2015-03-06T16:08:04: Analyzing "pip._vendor.distlib._backport"
+2015-03-06T16:08:04: Analyzing "pip._vendor.html5lib.constants"
+2015-03-06T16:08:04: Analyzing "pip._vendor.html5lib.html5parser"
+2015-03-06T16:08:04: Analyzing "pip._vendor.html5lib.ihatexml"
+2015-03-06T16:08:04: Analyzing "pip._vendor.html5lib.inputstream"
+2015-03-06T16:08:04: Analyzing "pip._vendor.html5lib.sanitizer"
+2015-03-06T16:08:04: Analyzing "pip._vendor.html5lib.tokenizer"
+2015-03-06T16:08:04: Analyzing "pip._vendor.html5lib.utils"
+2015-03-06T16:08:04: Analyzing "pip._vendor.html5lib"
+2015-03-06T16:08:04: Analyzing "pip._vendor.html5lib.filters.alphabeticalattributes"
+2015-03-06T16:08:04: Analyzing "pip._vendor.html5lib.filters.inject_meta_charset"
+2015-03-06T16:08:04: Analyzing "pip._vendor.html5lib.filters.lint"
+2015-03-06T16:08:04: Analyzing "pip._vendor.html5lib.filters.optionaltags"
+2015-03-06T16:08:04: Analyzing "pip._vendor.html5lib.filters.sanitizer"
+2015-03-06T16:08:04: Analyzing "pip._vendor.html5lib.filters.whitespace"
+2015-03-06T16:08:04: Analyzing "pip._vendor.html5lib.filters._base"
+2015-03-06T16:08:04: Analyzing "pip._vendor.html5lib.filters"
+2015-03-06T16:08:04: Analyzing "pip._vendor.html5lib.serializer.htmlserializer"
+2015-03-06T16:08:04: Analyzing "pip._vendor.html5lib.serializer"
+2015-03-06T16:08:04: Analyzing "pip._vendor.html5lib.treeadapters.sax"
+2015-03-06T16:08:04: Analyzing "pip._vendor.html5lib.treeadapters"
+2015-03-06T16:08:04: Analyzing "pip._vendor.html5lib.treebuilders.dom"
+2015-03-06T16:08:04: Analyzing "pip._vendor.html5lib.treebuilders.etree"
+2015-03-06T16:08:04: Analyzing "pip._vendor.html5lib.treebuilders.etree_lxml"
+2015-03-06T16:08:04: Analyzing "pip._vendor.html5lib.treebuilders._base"
+2015-03-06T16:08:04: Analyzing "pip._vendor.html5lib.treebuilders"
+2015-03-06T16:08:04: Analyzing "pip._vendor.html5lib.treewalkers.dom"
+2015-03-06T16:08:04: Analyzing "pip._vendor.html5lib.treewalkers.etree"
+2015-03-06T16:08:04: Analyzing "pip._vendor.html5lib.treewalkers.genshistream"
+2015-03-06T16:08:04: Analyzing "pip._vendor.html5lib.treewalkers.lxmletree"
+2015-03-06T16:08:04: Analyzing "pip._vendor.html5lib.treewalkers.pulldom"
+2015-03-06T16:08:04: Analyzing "pip._vendor.html5lib.treewalkers._base"
+2015-03-06T16:08:04: Analyzing "pip._vendor.html5lib.treewalkers"
+2015-03-06T16:08:04: Analyzing "pip._vendor.html5lib.trie.datrie"
+2015-03-06T16:08:04: Analyzing "pip._vendor.html5lib.trie.py"
+2015-03-06T16:08:04: Analyzing "pip._vendor.html5lib.trie._base"
+2015-03-06T16:08:04: Analyzing "pip._vendor.html5lib.trie"
+2015-03-06T16:08:04: Analyzing "pip._vendor.lockfile.linklockfile"
+2015-03-06T16:08:04: Analyzing "pip._vendor.lockfile.mkdirlockfile"
+2015-03-06T16:08:04: Analyzing "pip._vendor.lockfile.pidlockfile"
+2015-03-06T16:08:04: Analyzing "pip._vendor.lockfile.sqlitelockfile"
+2015-03-06T16:08:04: Analyzing "pip._vendor.lockfile.symlinklockfile"
+2015-03-06T16:08:04: Analyzing "pip._vendor.lockfile"
+2015-03-06T16:08:04: Analyzing "pip._vendor.packaging.specifiers"
+2015-03-06T16:08:04: Analyzing "pip._vendor.packaging.version"
+2015-03-06T16:08:04: Analyzing "pip._vendor.packaging._compat"
+2015-03-06T16:08:04: Analyzing "pip._vendor.packaging._structures"
+2015-03-06T16:08:04: Analyzing "pip._vendor.packaging.__about__"
+2015-03-06T16:08:04: Analyzing "pip._vendor.packaging"
+2015-03-06T16:08:04: Analyzing "pip._vendor.pkg_resources"
+2015-03-06T16:08:04: Analyzing "pip._vendor.progress.bar"
+2015-03-06T16:08:04: Analyzing "pip._vendor.progress.counter"
+2015-03-06T16:08:04: Analyzing "pip._vendor.progress.helpers"
+2015-03-06T16:08:04: Analyzing "pip._vendor.progress.spinner"
+2015-03-06T16:08:04: Analyzing "pip._vendor.progress"
+2015-03-06T16:08:04: Analyzing "pip._vendor.requests.adapters"
+2015-03-06T16:08:04: Analyzing "pip._vendor.requests.api"
+2015-03-06T16:08:04: Analyzing "pip._vendor.requests.auth"
+2015-03-06T16:08:04: Analyzing "pip._vendor.requests.certs"
+2015-03-06T16:08:04: Analyzing "pip._vendor.requests.compat"
+2015-03-06T16:08:04: Analyzing "pip._vendor.requests.cookies"
+2015-03-06T16:08:04: Analyzing "pip._vendor.requests.exceptions"
+2015-03-06T16:08:04: Analyzing "pip._vendor.requests.hooks"
+2015-03-06T16:08:04: Analyzing "pip._vendor.requests.models"
+2015-03-06T16:08:04: Analyzing "pip._vendor.requests.sessions"
+2015-03-06T16:08:04: Analyzing "pip._vendor.requests.status_codes"
+2015-03-06T16:08:04: Analyzing "pip._vendor.requests.structures"
+2015-03-06T16:08:04: Analyzing "pip._vendor.requests.utils"
+2015-03-06T16:08:04: Analyzing "pip._vendor.requests"
+2015-03-06T16:08:04: Analyzing "pip._vendor.requests.packages"
+2015-03-06T16:08:04: Analyzing "pip._vendor.requests.packages.chardet.big5freq"
+2015-03-06T16:08:04: Analyzing "pip._vendor.requests.packages.chardet.big5prober"
+2015-03-06T16:08:04: Analyzing "pip._vendor.requests.packages.chardet.chardetect"
+2015-03-06T16:08:04: Analyzing "pip._vendor.requests.packages.chardet.chardistribution"
+2015-03-06T16:08:04: Analyzing "pip._vendor.requests.packages.chardet.charsetgroupprober"
+2015-03-06T16:08:04: Analyzing "pip._vendor.requests.packages.chardet.charsetprober"
+2015-03-06T16:08:04: Analyzing "pip._vendor.requests.packages.chardet.codingstatemachine"
+2015-03-06T16:08:04: Analyzing "pip._vendor.requests.packages.chardet.compat"
+2015-03-06T16:08:04: Analyzing "pip._vendor.requests.packages.chardet.constants"
+2015-03-06T16:08:04: Analyzing "pip._vendor.requests.packages.chardet.cp949prober"
+2015-03-06T16:08:04: Analyzing "pip._vendor.requests.packages.chardet.escprober"
+2015-03-06T16:08:04: Analyzing "pip._vendor.requests.packages.chardet.escsm"
+2015-03-06T16:08:04: Analyzing "pip._vendor.requests.packages.chardet.eucjpprober"
+2015-03-06T16:08:04: Analyzing "pip._vendor.requests.packages.chardet.euckrfreq"
+2015-03-06T16:08:04: Analyzing "pip._vendor.requests.packages.chardet.euckrprober"
+2015-03-06T16:08:04: Analyzing "pip._vendor.requests.packages.chardet.euctwfreq"
+2015-03-06T16:08:04: Analyzing "pip._vendor.requests.packages.chardet.euctwprober"
+2015-03-06T16:08:04: Analyzing "pip._vendor.requests.packages.chardet.gb2312freq"
+2015-03-06T16:08:04: Analyzing "pip._vendor.requests.packages.chardet.gb2312prober"
+2015-03-06T16:08:04: Analyzing "pip._vendor.requests.packages.chardet.hebrewprober"
+2015-03-06T16:08:04: Analyzing "pip._vendor.requests.packages.chardet.jisfreq"
+2015-03-06T16:08:04: Analyzing "pip._vendor.requests.packages.chardet.jpcntx"
+2015-03-06T16:08:04: Analyzing "pip._vendor.requests.packages.chardet.langbulgarianmodel"
+2015-03-06T16:08:04: Analyzing "pip._vendor.requests.packages.chardet.langcyrillicmodel"
+2015-03-06T16:08:04: Analyzing "pip._vendor.requests.packages.chardet.langgreekmodel"
+2015-03-06T16:08:04: Analyzing "pip._vendor.requests.packages.chardet.langhebrewmodel"
+2015-03-06T16:08:04: Analyzing "pip._vendor.requests.packages.chardet.langhungarianmodel"
+2015-03-06T16:08:04: Analyzing "pip._vendor.requests.packages.chardet.langthaimodel"
+2015-03-06T16:08:04: Analyzing "pip._vendor.requests.packages.chardet.latin1prober"
+2015-03-06T16:08:04: Analyzing "pip._vendor.requests.packages.chardet.mbcharsetprober"
+2015-03-06T16:08:04: Analyzing "pip._vendor.requests.packages.chardet.mbcsgroupprober"
+2015-03-06T16:08:04: Analyzing "pip._vendor.requests.packages.chardet.mbcssm"
+2015-03-06T16:08:04: Analyzing "pip._vendor.requests.packages.chardet.sbcharsetprober"
+2015-03-06T16:08:04: Analyzing "pip._vendor.requests.packages.chardet.sbcsgroupprober"
+2015-03-06T16:08:04: Analyzing "pip._vendor.requests.packages.chardet.sjisprober"
+2015-03-06T16:08:04: Analyzing "pip._vendor.requests.packages.chardet.universaldetector"
+2015-03-06T16:08:04: Analyzing "pip._vendor.requests.packages.chardet.utf8prober"
+2015-03-06T16:08:04: Analyzing "pip._vendor.requests.packages.chardet"
+2015-03-06T16:08:04: Analyzing "pip._vendor.requests.packages.urllib3.connection"
+2015-03-06T16:08:04: Analyzing "pip._vendor.requests.packages.urllib3.connectionpool"
+2015-03-06T16:08:04: Analyzing "pip._vendor.requests.packages.urllib3.exceptions"
+2015-03-06T16:08:04: Analyzing "pip._vendor.requests.packages.urllib3.fields"
+2015-03-06T16:08:04: Analyzing "pip._vendor.requests.packages.urllib3.filepost"
+2015-03-06T16:08:04: Analyzing "pip._vendor.requests.packages.urllib3.poolmanager"
+2015-03-06T16:08:04: Analyzing "pip._vendor.requests.packages.urllib3.request"
+2015-03-06T16:08:04: Analyzing "pip._vendor.requests.packages.urllib3.response"
+2015-03-06T16:08:04: Analyzing "pip._vendor.requests.packages.urllib3._collections"
+2015-03-06T16:08:04: Analyzing "pip._vendor.requests.packages.urllib3"
+2015-03-06T16:08:04: Analyzing "pip._vendor.requests.packages.urllib3.contrib.ntlmpool"
+2015-03-06T16:08:04: Analyzing "pip._vendor.requests.packages.urllib3.contrib.pyopenssl"
+2015-03-06T16:08:04: Analyzing "pip._vendor.requests.packages.urllib3.contrib"
+2015-03-06T16:08:04: Analyzing "pip._vendor.requests.packages.urllib3.packages.ordered_dict"
+2015-03-06T16:08:04: Analyzing "pip._vendor.requests.packages.urllib3.packages.six"
+2015-03-06T16:08:04: Analyzing "pip._vendor.requests.packages.urllib3.packages"
+2015-03-06T16:08:04: Analyzing "pip._vendor.requests.packages.urllib3.packages.ssl_match_hostname._implementation"
+2015-03-06T16:08:04: Analyzing "pip._vendor.requests.packages.urllib3.packages.ssl_match_hostname"
+2015-03-06T16:08:04: Analyzing "pip._vendor.requests.packages.urllib3.util.connection"
+2015-03-06T16:08:04: Analyzing "pip._vendor.requests.packages.urllib3.util.request"
+2015-03-06T16:08:04: Analyzing "pip._vendor.requests.packages.urllib3.util.response"
+2015-03-06T16:08:04: Analyzing "pip._vendor.requests.packages.urllib3.util.retry"
+2015-03-06T16:08:04: Analyzing "pip._vendor.requests.packages.urllib3.util.ssl_"
+2015-03-06T16:08:04: Analyzing "pip._vendor.requests.packages.urllib3.util.timeout"
+2015-03-06T16:08:04: Analyzing "pip._vendor.requests.packages.urllib3.util.url"
+2015-03-06T16:08:04: Analyzing "pip._vendor.requests.packages.urllib3.util"
+2015-03-06T16:08:04: Analyzing "pip._vendor._markerlib.markers"
+2015-03-06T16:08:04: Analyzing "pip._vendor._markerlib"
+2015-03-06T16:08:04: Starting analysis of 227 modules
+2015-03-06T16:08:08: Analysis complete
+2015-03-06T16:08:08: Saving group "c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\pip"
+2015-03-06T16:08:09: End of group "c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\pip"
+2015-03-06T16:08:09: Start group "c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\pkg_resources" with 11 files
+2015-03-06T16:08:10: Parsing "pkg_resources" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\pkg_resources\__init__.py")
+2015-03-06T16:08:10: Parsing "pkg_resources.tests.test_pkg_resources" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\pkg_resources\tests\test_pkg_resources.py")
+2015-03-06T16:08:10: Parsing "pkg_resources.tests.test_resources" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\pkg_resources\tests\test_resources.py")
+2015-03-06T16:08:10: Parsing "pkg_resources.tests" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\pkg_resources\tests\__init__.py")
+2015-03-06T16:08:10: Parsing "pkg_resources._vendor" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\pkg_resources\_vendor\__init__.py")
+2015-03-06T16:08:10: Parsing "pkg_resources._vendor.packaging.specifiers" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\pkg_resources\_vendor\packaging\specifiers.py")
+2015-03-06T16:08:10: Parsing "pkg_resources._vendor.packaging.version" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\pkg_resources\_vendor\packaging\version.py")
+2015-03-06T16:08:10: Parsing "pkg_resources._vendor.packaging._compat" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\pkg_resources\_vendor\packaging\_compat.py")
+2015-03-06T16:08:10: Parsing "pkg_resources._vendor.packaging._structures" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\pkg_resources\_vendor\packaging\_structures.py")
+2015-03-06T16:08:10: Parsing "pkg_resources._vendor.packaging.__about__" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\pkg_resources\_vendor\packaging\__about__.py")
+2015-03-06T16:08:10: Parsing "pkg_resources._vendor.packaging" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\pkg_resources\_vendor\packaging\__init__.py")
+2015-03-06T16:08:10: Parsing complete
+2015-03-06T16:08:10: Analyzing "pkg_resources"
+2015-03-06T16:08:10: Analyzing "pkg_resources.tests.test_pkg_resources"
+2015-03-06T16:08:10: Analyzing "pkg_resources.tests.test_resources"
+2015-03-06T16:08:10: Analyzing "pkg_resources.tests"
+2015-03-06T16:08:10: Analyzing "pkg_resources._vendor"
+2015-03-06T16:08:10: Analyzing "pkg_resources._vendor.packaging.specifiers"
+2015-03-06T16:08:10: Analyzing "pkg_resources._vendor.packaging.version"
+2015-03-06T16:08:10: Analyzing "pkg_resources._vendor.packaging._compat"
+2015-03-06T16:08:10: Analyzing "pkg_resources._vendor.packaging._structures"
+2015-03-06T16:08:10: Analyzing "pkg_resources._vendor.packaging.__about__"
+2015-03-06T16:08:10: Analyzing "pkg_resources._vendor.packaging"
+2015-03-06T16:08:10: Starting analysis of 11 modules
+2015-03-06T16:08:10: Analysis complete
+2015-03-06T16:08:10: Saving group "c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\pkg_resources"
+2015-03-06T16:08:10: End of group "c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\pkg_resources"
+2015-03-06T16:08:10: Start group "c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\setuptools" with 62 files
+2015-03-06T16:08:11: Parsing "setuptools.archive_util" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\setuptools\archive_util.py")
+2015-03-06T16:08:11: Parsing "setuptools.compat" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\setuptools\compat.py")
+2015-03-06T16:08:11: Parsing "setuptools.depends" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\setuptools\depends.py")
+2015-03-06T16:08:11: Parsing "setuptools.dist" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\setuptools\dist.py")
+2015-03-06T16:08:12: Parsing "setuptools.extension" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\setuptools\extension.py")
+2015-03-06T16:08:12: Parsing "setuptools.lib2to3_ex" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\setuptools\lib2to3_ex.py")
+2015-03-06T16:08:12: Parsing "setuptools.msvc9_support" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\setuptools\msvc9_support.py")
+2015-03-06T16:08:12: Parsing "setuptools.package_index" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\setuptools\package_index.py")
+2015-03-06T16:08:12: Parsing "setuptools.py26compat" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\setuptools\py26compat.py")
+2015-03-06T16:08:12: Parsing "setuptools.py27compat" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\setuptools\py27compat.py")
+2015-03-06T16:08:12: Parsing "setuptools.py31compat" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\setuptools\py31compat.py")
+2015-03-06T16:08:12: Parsing "setuptools.sandbox" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\setuptools\sandbox.py")
+2015-03-06T16:08:12: Parsing "setuptools.ssl_support" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\setuptools\ssl_support.py")
+2015-03-06T16:08:12: Parsing "setuptools.unicode_utils" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\setuptools\unicode_utils.py")
+2015-03-06T16:08:12: Parsing "setuptools.utils" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\setuptools\utils.py")
+2015-03-06T16:08:12: Parsing "setuptools.version" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\setuptools\version.py")
+2015-03-06T16:08:12: Parsing "setuptools.windows_support" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\setuptools\windows_support.py")
+2015-03-06T16:08:12: Parsing "setuptools" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\setuptools\__init__.py")
+2015-03-06T16:08:12: Parsing "setuptools.command.alias" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\setuptools\command\alias.py")
+2015-03-06T16:08:12: Parsing "setuptools.command.bdist_egg" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\setuptools\command\bdist_egg.py")
+2015-03-06T16:08:12: Parsing "setuptools.command.bdist_rpm" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\setuptools\command\bdist_rpm.py")
+2015-03-06T16:08:12: Parsing "setuptools.command.bdist_wininst" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\setuptools\command\bdist_wininst.py")
+2015-03-06T16:08:12: Parsing "setuptools.command.build_ext" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\setuptools\command\build_ext.py")
+2015-03-06T16:08:12: Parsing "setuptools.command.build_py" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\setuptools\command\build_py.py")
+2015-03-06T16:08:12: Parsing "setuptools.command.develop" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\setuptools\command\develop.py")
+2015-03-06T16:08:12: Parsing "setuptools.command.easy_install" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\setuptools\command\easy_install.py")
+2015-03-06T16:08:12: Parsing "setuptools.command.egg_info" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\setuptools\command\egg_info.py")
+2015-03-06T16:08:12: Parsing "setuptools.command.install" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\setuptools\command\install.py")
+2015-03-06T16:08:12: Parsing "setuptools.command.install_egg_info" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\setuptools\command\install_egg_info.py")
+2015-03-06T16:08:12: Parsing "setuptools.command.install_lib" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\setuptools\command\install_lib.py")
+2015-03-06T16:08:12: Parsing "setuptools.command.install_scripts" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\setuptools\command\install_scripts.py")
+2015-03-06T16:08:12: Parsing "setuptools.command.register" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\setuptools\command\register.py")
+2015-03-06T16:08:12: Parsing "setuptools.command.rotate" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\setuptools\command\rotate.py")
+2015-03-06T16:08:12: Parsing "setuptools.command.saveopts" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\setuptools\command\saveopts.py")
+2015-03-06T16:08:12: Parsing "setuptools.command.sdist" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\setuptools\command\sdist.py")
+2015-03-06T16:08:12: Parsing "setuptools.command.setopt" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\setuptools\command\setopt.py")
+2015-03-06T16:08:12: Parsing "setuptools.command.test" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\setuptools\command\test.py")
+2015-03-06T16:08:12: Parsing "setuptools.command.upload_docs" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\setuptools\command\upload_docs.py")
+2015-03-06T16:08:12: Parsing "setuptools.command" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\setuptools\command\__init__.py")
+2015-03-06T16:08:12: Parsing "setuptools.tests.contexts" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\setuptools\tests\contexts.py")
+2015-03-06T16:08:12: Parsing "setuptools.tests.environment" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\setuptools\tests\environment.py")
+2015-03-06T16:08:12: Parsing "setuptools.tests.fixtures" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\setuptools\tests\fixtures.py")
+2015-03-06T16:08:12: Parsing "setuptools.tests.py26compat" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\setuptools\tests\py26compat.py")
+2015-03-06T16:08:12: Parsing "setuptools.tests.server" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\setuptools\tests\server.py")
+2015-03-06T16:08:12: Parsing "setuptools.tests.test_bdist_egg" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\setuptools\tests\test_bdist_egg.py")
+2015-03-06T16:08:12: Parsing "setuptools.tests.test_build_ext" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\setuptools\tests\test_build_ext.py")
+2015-03-06T16:08:12: Parsing "setuptools.tests.test_develop" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\setuptools\tests\test_develop.py")
+2015-03-06T16:08:12: Parsing "setuptools.tests.test_dist_info" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\setuptools\tests\test_dist_info.py")
+2015-03-06T16:08:12: Parsing "setuptools.tests.test_easy_install" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\setuptools\tests\test_easy_install.py")
+2015-03-06T16:08:12: Parsing "setuptools.tests.test_egg_info" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\setuptools\tests\test_egg_info.py")
+2015-03-06T16:08:12: Parsing "setuptools.tests.test_find_packages" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\setuptools\tests\test_find_packages.py")
+2015-03-06T16:08:12: Parsing "setuptools.tests.test_integration" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\setuptools\tests\test_integration.py")
+2015-03-06T16:08:12: Parsing "setuptools.tests.test_markerlib" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\setuptools\tests\test_markerlib.py")
+2015-03-06T16:08:12: Parsing "setuptools.tests.test_msvc9compiler" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\setuptools\tests\test_msvc9compiler.py")
+2015-03-06T16:08:12: Parsing "setuptools.tests.test_packageindex" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\setuptools\tests\test_packageindex.py")
+2015-03-06T16:08:12: Parsing "setuptools.tests.test_sandbox" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\setuptools\tests\test_sandbox.py")
+2015-03-06T16:08:12: Parsing "setuptools.tests.test_sdist" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\setuptools\tests\test_sdist.py")
+2015-03-06T16:08:12: Parsing "setuptools.tests.test_test" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\setuptools\tests\test_test.py")
+2015-03-06T16:08:12: Parsing "setuptools.tests.test_upload_docs" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\setuptools\tests\test_upload_docs.py")
+2015-03-06T16:08:12: Parsing "setuptools.tests.test_windows_wrappers" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\setuptools\tests\test_windows_wrappers.py")
+2015-03-06T16:08:12: Parsing "setuptools.tests.textwrap" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\setuptools\tests\textwrap.py")
+2015-03-06T16:08:12: Parsing "setuptools.tests" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\setuptools\tests\__init__.py")
+2015-03-06T16:08:12: Parsing complete
+2015-03-06T16:08:12: Analyzing "setuptools.archive_util"
+2015-03-06T16:08:12: Analyzing "setuptools.compat"
+2015-03-06T16:08:12: Analyzing "setuptools.depends"
+2015-03-06T16:08:12: Analyzing "setuptools.dist"
+2015-03-06T16:08:12: Analyzing "setuptools.extension"
+2015-03-06T16:08:12: Analyzing "setuptools.lib2to3_ex"
+2015-03-06T16:08:12: Analyzing "setuptools.msvc9_support"
+2015-03-06T16:08:12: Analyzing "setuptools.package_index"
+2015-03-06T16:08:12: Analyzing "setuptools.py26compat"
+2015-03-06T16:08:12: Analyzing "setuptools.py27compat"
+2015-03-06T16:08:12: Analyzing "setuptools.py31compat"
+2015-03-06T16:08:12: Analyzing "setuptools.sandbox"
+2015-03-06T16:08:12: Analyzing "setuptools.ssl_support"
+2015-03-06T16:08:12: Analyzing "setuptools.unicode_utils"
+2015-03-06T16:08:12: Analyzing "setuptools.utils"
+2015-03-06T16:08:12: Analyzing "setuptools.version"
+2015-03-06T16:08:12: Analyzing "setuptools.windows_support"
+2015-03-06T16:08:12: Analyzing "setuptools"
+2015-03-06T16:08:12: Analyzing "setuptools.command.alias"
+2015-03-06T16:08:12: Analyzing "setuptools.command.bdist_egg"
+2015-03-06T16:08:12: Analyzing "setuptools.command.bdist_rpm"
+2015-03-06T16:08:12: Analyzing "setuptools.command.bdist_wininst"
+2015-03-06T16:08:12: Analyzing "setuptools.command.build_ext"
+2015-03-06T16:08:12: Analyzing "setuptools.command.build_py"
+2015-03-06T16:08:12: Analyzing "setuptools.command.develop"
+2015-03-06T16:08:12: Analyzing "setuptools.command.easy_install"
+2015-03-06T16:08:12: Analyzing "setuptools.command.egg_info"
+2015-03-06T16:08:12: Analyzing "setuptools.command.install"
+2015-03-06T16:08:12: Analyzing "setuptools.command.install_egg_info"
+2015-03-06T16:08:12: Analyzing "setuptools.command.install_lib"
+2015-03-06T16:08:12: Analyzing "setuptools.command.install_scripts"
+2015-03-06T16:08:12: Analyzing "setuptools.command.register"
+2015-03-06T16:08:12: Analyzing "setuptools.command.rotate"
+2015-03-06T16:08:12: Analyzing "setuptools.command.saveopts"
+2015-03-06T16:08:12: Analyzing "setuptools.command.sdist"
+2015-03-06T16:08:12: Analyzing "setuptools.command.setopt"
+2015-03-06T16:08:12: Analyzing "setuptools.command.test"
+2015-03-06T16:08:12: Analyzing "setuptools.command.upload_docs"
+2015-03-06T16:08:12: Analyzing "setuptools.command"
+2015-03-06T16:08:12: Analyzing "setuptools.tests.contexts"
+2015-03-06T16:08:12: Analyzing "setuptools.tests.environment"
+2015-03-06T16:08:12: Analyzing "setuptools.tests.fixtures"
+2015-03-06T16:08:12: Analyzing "setuptools.tests.py26compat"
+2015-03-06T16:08:12: Analyzing "setuptools.tests.server"
+2015-03-06T16:08:12: Analyzing "setuptools.tests.test_bdist_egg"
+2015-03-06T16:08:12: Analyzing "setuptools.tests.test_build_ext"
+2015-03-06T16:08:12: Analyzing "setuptools.tests.test_develop"
+2015-03-06T16:08:12: Analyzing "setuptools.tests.test_dist_info"
+2015-03-06T16:08:12: Analyzing "setuptools.tests.test_easy_install"
+2015-03-06T16:08:12: Analyzing "setuptools.tests.test_egg_info"
+2015-03-06T16:08:12: Analyzing "setuptools.tests.test_find_packages"
+2015-03-06T16:08:12: Analyzing "setuptools.tests.test_integration"
+2015-03-06T16:08:12: Analyzing "setuptools.tests.test_markerlib"
+2015-03-06T16:08:12: Analyzing "setuptools.tests.test_msvc9compiler"
+2015-03-06T16:08:12: Analyzing "setuptools.tests.test_packageindex"
+2015-03-06T16:08:12: Analyzing "setuptools.tests.test_sandbox"
+2015-03-06T16:08:12: Analyzing "setuptools.tests.test_sdist"
+2015-03-06T16:08:12: Analyzing "setuptools.tests.test_test"
+2015-03-06T16:08:12: Analyzing "setuptools.tests.test_upload_docs"
+2015-03-06T16:08:12: Analyzing "setuptools.tests.test_windows_wrappers"
+2015-03-06T16:08:12: Analyzing "setuptools.tests.textwrap"
+2015-03-06T16:08:12: Analyzing "setuptools.tests"
+2015-03-06T16:08:12: Starting analysis of 62 modules
+2015-03-06T16:08:12: Analysis complete
+2015-03-06T16:08:12: Saving group "c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\setuptools"
+2015-03-06T16:08:12: End of group "c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\setuptools"
+2015-03-06T16:08:12: Start group "c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\_markerlib" with 2 files
+2015-03-06T16:08:13: Parsing "_markerlib.markers" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\_markerlib\markers.py")
+2015-03-06T16:08:13: Parsing "_markerlib" ("c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\_markerlib\__init__.py")
+2015-03-06T16:08:13: Parsing complete
+2015-03-06T16:08:13: Analyzing "_markerlib.markers"
+2015-03-06T16:08:13: Analyzing "_markerlib"
+2015-03-06T16:08:13: Starting analysis of 2 modules
+2015-03-06T16:08:13: Analysis complete
+2015-03-06T16:08:13: Saving group "c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\_markerlib"
+2015-03-06T16:08:13: End of group "c:\users\ebaibourine\documents\Personal\Github\ExtraHands\venv\Lib\site-packages\_markerlib"
+2015-03-06T16:08:14: Deleting 0 files
