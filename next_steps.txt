@@ -2,7 +2,7 @@
 calendar solution
     -bootstrap calendar
         -convert event times to milliseconds unix time
-        -create dict of events and then dump to json
+        -create dict of events and then dump to json (or a list because they're ordered)
         -make sure the json is correct (eg success= {1} at the beginning)
 
 teacher should be able to view a list of all events that do not have a sub assigned to them yet and commit to it right then. It should prompt the teacher
@@ -15,8 +15,14 @@ core business logic
 --first teacher who clicks will get the event, next teachers will just get click points.
 --send confirmation email to client
 
+--add if blocks to the views to check if request.user = teacher.user or event.teacher.user or event.client.user or client.user, that way they can only reach the correct pages
+but it doesnt require permissions
 
-clicks for teacher should be it's own separate object with 2 fields, teacher.token and event.token that form a composite primary key. That way it can only be triggered once
+
+
+
+
+
 
 
 
