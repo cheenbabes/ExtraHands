@@ -6,6 +6,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c278ac50-8beb-47b3-8114-cdbe07f29a59" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/teacher_account.html" afterPath="$PROJECT_DIR$/templates/teacher_account.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/extra_hands_app/views.py" afterPath="$PROJECT_DIR$/extra_hands_app/views.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -35,11 +36,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/extra_hands_app/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.7866667" vertical-offset="3251" max-vertical-offset="4097">
-              <caret line="464" column="70" selection-start-line="464" selection-start-column="70" selection-end-line="464" selection-end-column="70" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="2783" max-vertical-offset="4097">
+              <caret line="454" column="35" selection-start-line="454" selection-start-column="35" selection-end-line="454" selection-end-column="35" />
               <folding>
                 <element signature="e#0#35#0" expanded="true" />
                 <element signature="e#631#724#0" expanded="false" />
@@ -57,7 +58,7 @@
                 <element signature="e#7856#8024#0" expanded="false" />
                 <element signature="e#9972#10436#0" expanded="false" />
                 <element signature="e#10494#10801#0" expanded="false" />
-                <element signature="e#14154#15555#0" expanded="false" />
+                <element signature="e#14159#15560#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -83,11 +84,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="teacher_account.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="teacher_account.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/teacher_account.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="833" max-vertical-offset="1326">
-              <caret line="49" column="0" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.42078364" vertical-offset="739" max-vertical-offset="1343">
+              <caret line="58" column="58" selection-start-line="58" selection-start-column="58" selection-end-line="58" selection-end-column="58" />
               <folding />
             </state>
           </provider>
@@ -194,11 +195,11 @@
         <option value="$PROJECT_DIR$/templates/event_sign_up_confirmed.html" />
         <option value="$PROJECT_DIR$/templates/event_booked.html" />
         <option value="$PROJECT_DIR$/extra_hands_app/urls.py" />
-        <option value="$PROJECT_DIR$/templates/teacher_account.html" />
         <option value="$PROJECT_DIR$/templates/base.html" />
         <option value="$PROJECT_DIR$/templates/client_account.html" />
         <option value="$PROJECT_DIR$/extra_hands_app/models.py" />
         <option value="$PROJECT_DIR$/extra_hands_app/views.py" />
+        <option value="$PROJECT_DIR$/templates/teacher_account.html" />
       </list>
     </option>
   </component>
@@ -581,12 +582,6 @@
       <option name="number" value="Default" />
       <updated>1424125891592</updated>
     </task>
-    <task id="LOCAL-00016" summary="I do believe the HttpResponseRedirect with the helper myaccount method is working. It is routing and grabbing the correct user that is logged in.  I have not tried to put the @login_required decorator on yet">
-      <created>1424460521127</created>
-      <option name="number" value="00016" />
-      <option name="project" value="LOCAL" />
-      <updated>1424460521127</updated>
-    </task>
     <task id="LOCAL-00017" summary="login_decorator working.">
       <created>1424460720592</created>
       <option name="number" value="00017" />
@@ -875,7 +870,13 @@
       <option name="project" value="LOCAL" />
       <updated>1425771970389</updated>
     </task>
-    <option name="localTasksCounter" value="65" />
+    <task id="LOCAL-00065" summary="changes and also, time delta has SECONDS not hours so that's that, needs conversions">
+      <created>1425772394848</created>
+      <option name="number" value="00065" />
+      <option name="project" value="LOCAL" />
+      <updated>1425772394848</updated>
+    </task>
+    <option name="localTasksCounter" value="66" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -905,7 +906,7 @@
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32953367" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32953367" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.34704113" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.35707122" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32746115" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32953367" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -963,7 +964,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="Edit form with all the formatting now working" />
     <MESSAGE value="what's next" />
     <MESSAGE value="Added an event class column to prepare to serialization to json on bootstrap calendar" />
     <MESSAGE value="Add available time now working" />
@@ -988,7 +988,8 @@
     <MESSAGE value="Click object and implementation&#10;" />
     <MESSAGE value="time logic and splitting" />
     <MESSAGE value="some syntax errors" />
-    <option name="LAST_COMMIT_MESSAGE" value="some syntax errors" />
+    <MESSAGE value="changes and also, time delta has SECONDS not hours so that's that, needs conversions" />
+    <option name="LAST_COMMIT_MESSAGE" value="changes and also, time delta has SECONDS not hours so that's that, needs conversions" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1308,14 +1309,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/teacher_account.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="833" max-vertical-offset="1326">
-          <caret line="49" column="0" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../../../Visual Studio 2013/Projects/obj/Debug/__main__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.08027923" vertical-offset="328" max-vertical-offset="901">
@@ -1391,8 +1384,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/extra_hands_app/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7866667" vertical-offset="3251" max-vertical-offset="4097">
-          <caret line="464" column="70" selection-start-line="464" selection-start-column="70" selection-end-line="464" selection-end-column="70" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="2783" max-vertical-offset="4097">
+          <caret line="454" column="35" selection-start-line="454" selection-start-column="35" selection-end-line="454" selection-end-column="35" />
           <folding>
             <element signature="e#0#35#0" expanded="true" />
             <element signature="e#631#724#0" expanded="false" />
@@ -1410,8 +1403,16 @@
             <element signature="e#7856#8024#0" expanded="false" />
             <element signature="e#9972#10436#0" expanded="false" />
             <element signature="e#10494#10801#0" expanded="false" />
-            <element signature="e#14154#15555#0" expanded="false" />
+            <element signature="e#14159#15560#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/teacher_account.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.42078364" vertical-offset="739" max-vertical-offset="1343">
+          <caret line="58" column="58" selection-start-line="58" selection-start-column="58" selection-end-line="58" selection-end-column="58" />
+          <folding />
         </state>
       </provider>
     </entry>
