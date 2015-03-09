@@ -265,7 +265,7 @@ def my_account(request):
     if Teacher.objects.filter(user=user).exists():
         is_teacher = True
         teacher = Teacher.objects.filter(user=user)
-        available_time = Available_Time.objects.filter(teacher=teacher).order_by('start_time')
+        available_time = Available_Time.objects.filter(teacher=teacher).filter(active=True).order_by('start_time')
         events = Event.objects.filter(teacher=teacher).order_by('start_time')
         context_dict['times'] = available_time
         context_dict['events'] = events
@@ -351,7 +351,7 @@ def get_times_to_deactivate(event, teacher):
             delta = event.start_time - time.start_time
             time.active = False
             time.save()
-            if(delta.hours > 1):
+            if(delta.seconds > 3600):
                 new_time = Available_Time()
                 new_time.start_time = time.start_time
                 new_time.end_time = event.start_time - datetime.timedelta(hours=1)
@@ -377,14 +377,14 @@ def get_times_to_deactivate(event, teacher):
             delta_start = event.start_time - time.start_time
             delta_end = time.end_time - event.end_time
 
-            if(delta_start.hours > 1):
+            if(delta_start.seconds > 3600):
                 new_time = Available_Time()
                 new_time.start_time = time.start_time
                 new_time.end_time = event.start_time - datetime.timedelta(hours=1)
                 new_time.teacher = teacher
                 new_time.save()
 
-            if(delta_end.hours > 1):
+            if(delta_end.seconds > 3600):
                 new_time = Available_Time()
                 new_time.start_time = event.end_time + datetime.timedelta(hours=1)
                 new_time.end_time = time.end_time
@@ -421,9 +421,10 @@ def confirm_teacher_part1(request, event_token, teacher_token):
 
     #if the event already has a teacher
     if event.teacher is not None:
-        #django won't do composite primary keys without fussing so I need to make sure that wrong doesn't exist
-        if Click.objects.get(teacher = teacher.token).exists() and Click.objects.get(event=event.token).exists():
-            return HttpResponseNotAllowed("You have already clicked on this event")
+        #django won't do composite primary keys without fussing so I need to make my own and make sure duplicates don't exist
+        if Click.objects.filter(teacher = teacher.token).filter(event=event.token).exists():
+            #probably should be a render so I can pass the message. It might be good to have a "/error/" page that takes a message and then displays it on a generic template
+            return HttpResponse("You have already clicked on this event!")
         else:
             #make a new click object
             click = Click()
@@ -452,7 +453,6 @@ def confirm_teacher_post(request, event_token, teacher_token):
         get_times_to_deactivate(event,teacher)
 
         #give the teacher a click
-        #IMPLEMENT NEW CLICK MODEL!
         click = Click()
         click.teacher = teacher.token
         click.event = event.token
