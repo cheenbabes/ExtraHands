@@ -324,7 +324,7 @@ def show_available_teachers(request, event_token):
 
 #no login_required here because it's basically a private helper method
 def get_all_times_available_for_event(event):
-    times = Available_Time.objects.all()
+    times = Available_Time.objects.filter(active=True)
     available_times = []
 
     #This is the logic to only grab the times that match the criteria for starting at or before the event time and ending at or after the event.
