@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+
+    <div class="alert {{ class_event }}">{{ message }}</div><br>
+    <a href="{% url 'myaccount' %}" class="btn btn-primary">Go Back to My Account</a>
+
+
+{% endblock %}

@@ -424,7 +424,8 @@ def confirm_teacher_part1(request, event_token, teacher_token):
         #django won't do composite primary keys without fussing so I need to make my own and make sure duplicates don't exist
         if Click.objects.filter(teacher = teacher.token).filter(event=event.token).exists():
             #probably should be a render so I can pass the message. It might be good to have a "/error/" page that takes a message and then displays it on a generic template
-            return HttpResponse("You have already clicked on this event!")
+            dict={'class_event': "alert-warning", 'message': "You have already clicked on this event!"}
+            return render(request, "generic_message.html", dict)
         else:
             #make a new click object
             click = Click()
@@ -472,7 +473,9 @@ def event_booked(request):
     context_dict = {'message': message}
     return render(request, 'event_booked.html', context_dict)
 
+def generic_message(request):
 
+    return render(request, "generic_message.html", {})
 
 
 

@@ -22,5 +22,6 @@ url(r'email-teachers/(?P<event_token>[\d]+)/$', views.send_emails_to_teachers, n
 url(r'confirm-event/(?P<event_token>[\d]+)/(?P<teacher_token>[\d]+)/$', views.confirm_teacher_part1, name='confirm_teacher1'),
 url(r'confirm-teacher/(?P<event_token>[\d]+)/(?P<teacher_token>[\d]+)/$', views.confirm_teacher_post, name='final_teacher_confirm'),
 url(r'event-booked/$', views.event_booked, name='event_booked'),
+url(r'generic/$', views.generic_message, name='generic'),
 
 )
