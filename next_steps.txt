@@ -1,19 +1,21 @@
-
+===CALENDAR===
 calendar solution
     -bootstrap calendar
         -convert event times to milliseconds unix time
         -create dict of events and then dump to json (or a list because they're ordered)
         -make sure the json is correct (eg success= {1} at the beginning)
 
+===TEACHERS===
 teacher should be able to view a list of all events that do not have a sub assigned to them yet and commit to it right then. It should prompt the teacher
-whether they really want to accept the event or not.
+whether they really want to accept the event or not. (maybe if there's been no teacher for more than 7 days, then it becomes open??)
 
+===BUSINESS LOGIC===
 core business logic
 --after creating an event, show a list of teachers who are available. submit another form to send out emails to the teachers.
     --create a view and url pattern that takes a list of teacher tokens and emails each of them with a unique link
     --another view and url pattern for the teachers to click on to confirm their participation in the event
 --first teacher who clicks will get the event, next teachers will just get click points.
---send confirmation email to client
+--send confirmation email to client - (I still need to make sure the emailing even works)
 
 --add if blocks to the views to check if request.user = teacher.user or event.teacher.user or event.client.user or client.user, that way they can only reach the correct pages
 but it doesnt require permissions

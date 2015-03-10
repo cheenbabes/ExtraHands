@@ -60,7 +60,6 @@ def get_all_clients(request):
     return render(request, 'clients.html', context_dict)
 
 #First step for creating an event. Shows the Event form and posts the initial event information.
-#TODO: add user check
 @login_required
 def add_event(request, client_slug):
     try:
@@ -68,27 +67,30 @@ def add_event(request, client_slug):
     except Client.DoesNotExist:
         client = None
 
-    if request.method == 'POST':
-        form = EventForm(request.POST)
+    if request.user == client.user:
+        if request.method == 'POST':
+            form = EventForm(request.POST)
 
-        if form.is_valid():
-            if client:
-                event = form.save(commit=False)
-                event.client = client
-                event.save()
-                url = 'event/' + str(event.token) +'/select-teacher/'
-                return HttpResponseRedirect(url)
+            if form.is_valid():
+                if client:
+                    event = form.save(commit=False)
+                    event.client = client
+                    event.save()
+                    url = 'event/' + str(event.token) +'/select-teacher/'
+                    return HttpResponseRedirect(url)
+            else:
+                print form.errors
         else:
-            print form.errors
+            form = EventForm()
+
+        context_dict = {'form': form, 'client': client}
+        return render(request, 'add_event.html', context_dict)
+
     else:
-        form = EventForm()
-
-    context_dict = {'form': form, 'client': client}
-
-    return render(request, 'add_event.html', context_dict)
+        dict ={'class_event': "alert-danger", 'message': "You don't have permission to perform this action.", 'url': 'myaccount', 'button_text': "My Account"}
+        return render(request, "generic_message.html", dict)
 
 #Creates available time for a specific teacher.
-#TODO: add user check
 @login_required
 def add_time(request, teacher_slug):
     try:
@@ -97,24 +99,27 @@ def add_time(request, teacher_slug):
         teacher = None
         return Http404("Teacher does not exist!")
 
-    if request.method == 'POST':
-        form = AvailableTimeForm(request.POST)
-        if form.is_valid():
-            if teacher:
-                time = form.save(commit=False)
-                time.teacher = teacher
-                time.save()
-                return HttpResponseRedirect("/myaccount/")
+    if request.user == teacher.user:
+        if request.method == 'POST':
+            form = AvailableTimeForm(request.POST)
+            if form.is_valid():
+                if teacher:
+                    time = form.save(commit=False)
+                    time.teacher = teacher
+                    time.save()
+                    return HttpResponseRedirect("/myaccount/")
+            else:
+                print form.errors
         else:
-            print form.errors
-    else:
-        form = AvailableTimeForm()
+            form = AvailableTimeForm()
 
-    context_dict = {'form': form, 'teacher': teacher}
-    return render(request, 'add_time.html', context_dict)
+        context_dict = {'form': form, 'teacher': teacher}
+        return render(request, 'add_time.html', context_dict)
+    else:
+        dict ={'class_event': "alert-danger", 'message': "You don't have permission to perform this action.", 'url': 'myaccount', 'button_text': "My Account"}
+        return render(request, "generic_message.html", dict)
 
 #Allows a teacher to edit time they previously submitted
-#TODO: add user check
 @login_required
 def edit_time(request, time_pk):
     try:
@@ -122,45 +127,50 @@ def edit_time(request, time_pk):
     except Available_Time.DoesNotExist:
         time = None
         return Http404("Your timed event does not exist!")
-
-    if request.method == 'POST':
-        form = AvailableTimeForm(request.POST)
-        if form.is_valid():
-            time.start_time = form.cleaned_data['start_time']
-            time.end_time = form.cleaned_data['end_time']
-            time.save()
-            return HttpResponseRedirect("/myaccount/")
+    if request.user == time.teacher.user:
+        if request.method == 'POST':
+            form = AvailableTimeForm(request.POST)
+            if form.is_valid():
+                time.start_time = form.cleaned_data['start_time']
+                time.end_time = form.cleaned_data['end_time']
+                time.save()
+                return HttpResponseRedirect("/myaccount/")
+            else:
+                print form.errors
         else:
-            print form.errors
+            form = AvailableTimeForm(instance=time)
+        context_dict = {'form': form, 'time':time}
+        return render(request, 'edit_time.html', context_dict)
     else:
-        form = AvailableTimeForm(instance=time)
-    context_dict = {'form': form, 'time':time}
-    return render(request, 'edit_time.html', context_dict)
+        dict ={'class_event': "alert-danger", 'message': "You don't have permission to perform this action.", 'url': 'myaccount', 'button_text': "My Account"}
+        return render(request, "generic_message.html", dict)
 
 #Allows a client to edit an event they have created
-#TODO: add user check
 @login_required
 def edit_event(request, event_token):
     event = Event.objects.get(token=event_token)
 
-    if request.method == 'POST':
-        form = EventForm(request.POST)
-        if form.is_valid():
-            event.start_time= form.cleaned_data['start_time']
-            event.end_time = form.cleaned_data['end_time']
-            event.comments = form.cleaned_data['comments']
-            event.is_on_call = form.cleaned_data['is_on_call']
-            # other editable fields go here
-            event.save()
-            return HttpResponseRedirect("/myaccount/")
+    if request.user == event.client.user:
+        if request.method == 'POST':
+            form = EventForm(request.POST)
+            if form.is_valid():
+                event.start_time= form.cleaned_data['start_time']
+                event.end_time = form.cleaned_data['end_time']
+                event.comments = form.cleaned_data['comments']
+                event.is_on_call = form.cleaned_data['is_on_call']
+                # other editable fields go here
+                event.save()
+                return HttpResponseRedirect("/myaccount/")
+            else:
+                print form.errors
         else:
-            print form.errors
+            form =EventForm(instance=event)
+        context_dict ={'form': form, 'event': event}
+        return render(request, 'edit_event.html', context_dict)
+
     else:
-        form =EventForm(instance=event)
-
-    context_dict ={'form': form, 'event': event}
-
-    return render(request, 'edit_event.html', context_dict)
+        dict ={'class_event': "alert-danger", 'message': "You don't have permission to perform this action.", 'url': 'myaccount', 'button_text': "My Account"}
+        return render(request, "generic_message.html", dict)
 
 #Renders the Registration form for a teacher if a GET and saves the teacher is a POST
 def register_teacher(request):
@@ -330,18 +340,20 @@ def go_on_call(request):
         return HttpResponseRedirect("/myaccount/")
 
 #Shows the available teachers for a particular event booking. Displays the teachers who have available times then and their profiles.
-#TODO: add user check, should check whether the user is the event.client
 def show_available_teachers(request, event_token):
     user = request.user
     context_dict={'user':user}
 
     event = Event.objects.get(token=event_token)
-
-    available_times = get_all_times_available_for_event(event)
-    context_dict['times'] = available_times
     context_dict['event'] = event
 
-    return render(request, 'select_teacher.html', context_dict)
+    if request.user == event.client.user:
+        available_times = get_all_times_available_for_event(event)
+        context_dict['times'] = available_times
+        return render(request, 'select_teacher.html', context_dict)
+    else:
+        dict ={'class_event': "alert-danger", 'message': "You don't have permission to perform this action.", 'url': 'myaccount', 'button_text': "My Account"}
+        return render(request, "generic_message.html", dict)
 
 #Returns a list of available time given an event.
 def get_all_times_available_for_event(event):
@@ -415,56 +427,63 @@ def get_times_to_deactivate(event, teacher):
                 new_time.save()
 
 #Sends emails to the teachers that were selected by the client in the second part of the event creating process.
-#TODO: This method should only be accessed by the owner of the event.
 @login_required
 def send_emails_to_teachers(request, event_token):
     event = Event.objects.get(token=event_token)
     subject = "{0} has just sent you an email about an event!".format(event.client.organization)
     return_address = "noreply@gmail.com"
-    if request.method == 'POST':
-        teacher_tokens = request.POST.getlist('teachers')
-        for token in teacher_tokens:
-            teacher = Teacher.objects.get(token = token)
-            link = "127.0.0.1/confirm-event/{0}/{1}/".format(event.token, teacher.token)
-            body = "Hi {0}! {1} has just created an event and they selected you as one of the candidates. Below is your individual link to confirm your participation in this event. " \
-                   "When you click on this link, it will take to a another page where you confirm. Please do not share this link with anyone else. If you do not want to participate," \
-                   "simply ignore this email." \
-                   "Your link is {2}".format(teacher.user.get_full_name, event.client.organization, link)
-            email = SendGridEmailMessage(subject, body, return_address, [teacher.user.email])
-            email.send()
-            print "This teacher's name is {0}, the token number is {1}, and their email is {2}".format(teacher.user.get_full_name(), teacher.token, teacher.user.email)
-            dict ={'class_event': "alert-success", 'message': "Your email was sent successfully", 'url': 'myaccount', 'button_text': "My Account"}
-        return render(request, "generic_message.html", dict)
+    if request.user == event.client.user:
+        if request.method == 'POST':
+            teacher_tokens = request.POST.getlist('teachers')
+            for token in teacher_tokens:
+                teacher = Teacher.objects.get(token = token)
+                link = "127.0.0.1/confirm-event/{0}/{1}/".format(event.token, teacher.token)
+                body = "Hi {0}! {1} has just created an event and they selected you as one of the candidates. Below is your individual link to confirm your participation in this event. " \
+                       "When you click on this link, it will take to a another page where you confirm. Please do not share this link with anyone else. If you do not want to participate," \
+                       "simply ignore this email." \
+                       "Your link is {2}".format(teacher.user.get_full_name, event.client.organization, link)
+                email = SendGridEmailMessage(subject, body, return_address, [teacher.user.email])
+                email.send()
+                print "This teacher's name is {0}, the token number is {1}, and their email is {2}".format(teacher.user.get_full_name(), teacher.token, teacher.user.email)
+                dict ={'class_event': "alert-success", 'message': "Your email was sent successfully", 'url': 'myaccount', 'button_text': "My Account"}
+            return render(request, "generic_message.html", dict)
 
+        else:
+            dict ={'class_event': "alert-danger", 'message': "Something went wrong because you're not using this like you're supposed to.", 'url': 'myaccount', 'button_text': "My Account"}
+            return render(request, "generic_message.html", dict)
     else:
-        dict ={'class_event': "alert-danger", 'message': "Something went wrong because you're not using this like you're supposed to.", 'url': 'myaccount', 'button_text': "My Account"}
+        dict ={'class_event': "alert-danger", 'message': "You don't have permission to perform this action.", 'url': 'myaccount', 'button_text': "My Account"}
         return render(request, "generic_message.html", dict)
 
 #Once a teacher clicks on their personal link, they are taken to this page to confirm that they want to commit to being in the event
-#TODO: the request.user should be equal to the teacher token
 @login_required
 def confirm_teacher_part1(request, event_token, teacher_token):
     event = Event.objects.get(token = event_token)
     teacher = Teacher.objects.get(token = teacher_token)
 
-    #if the event already has a teacher
-    if event.teacher is not None:
-        #django won't do composite primary keys without fussing so I need to make my own and make sure duplicates don't exist
-        if Click.objects.filter(teacher = teacher.token).filter(event=event.token).exists():
-            dict={'class_event': "alert-warning", 'message': "You have already clicked on this event!", 'url': "myaccount", "button_text": "My Account"}
-            return render(request, "generic_message.html", dict)
-        else:
-            #make a new click object
-            click = Click()
-            click.event = event.token
-            click.teacher = teacher.token
-            click.save()
-            dict ={'class_event': "alert-warning", 'message': "Sorry, but this event has already been taken!", 'url': 'myaccount', 'button_text': "My Account"}
-            return render(request, "generic_message.html", dict)
+    if request.user == teacher.user:
+        #if the event already has a teacher
+        if event.teacher is not None:
+            #django won't do composite primary keys without fussing so I need to make my own and make sure duplicates don't exist
+            if Click.objects.filter(teacher = teacher.token).filter(event=event.token).exists():
+                dict={'class_event': "alert-warning", 'message': "You have already clicked on this event!", 'url': "myaccount", "button_text": "My Account"}
+                return render(request, "generic_message.html", dict)
+            else:
+                #make a new click object
+                click = Click()
+                click.event = event.token
+                click.teacher = teacher.token
+                click.save()
+                dict ={'class_event': "alert-warning", 'message': "Sorry, but this event has already been taken!", 'url': 'myaccount', 'button_text': "My Account"}
+                return render(request, "generic_message.html", dict)
 
-    context_dict = {'teacher': teacher, 'event': event}
+        context_dict = {'teacher': teacher, 'event': event}
 
-    return render(request, 'teacher_event_confirm.html', context_dict)
+        return render(request, 'teacher_event_confirm.html', context_dict)
+
+    else:
+        dict ={'class_event': "alert-danger", 'message': "You don't have permission to perform this action.", 'url': 'myaccount', 'button_text': "My Account"}
+        return render(request, "generic_message.html", dict)
 
 #Posts the final request and commit the teacher to the event
 @login_required
@@ -472,26 +491,30 @@ def confirm_teacher_post(request, event_token, teacher_token):
     event = Event.objects.get(token = event_token)
     teacher = Teacher.objects.get(token = teacher_token)
 
-    if request.method == 'POST':
-        #assign the event teacher to the teacher who clicked it.
-        event.teacher=teacher
-        event.save()
+    if request.user == teacher.user:
+        if request.method == 'POST':
+            #assign the event teacher to the teacher who clicked it.
+            event.teacher=teacher
+            event.save()
 
-        #find all the times that the teacher has that will be marked inactive and mark them as inactive
-        #run the method for splitting the times into new times and setting to false
-        get_times_to_deactivate(event,teacher)
+            #find all the times that the teacher has that will be marked inactive and mark them as inactive
+            #run the method for splitting the times into new times and setting to false
+            get_times_to_deactivate(event,teacher)
 
-        #give the teacher a click
-        click = Click()
-        click.teacher = teacher.token
-        click.event = event.token
-        click.save()
+            #give the teacher a click
+            click = Click()
+            click.teacher = teacher.token
+            click.event = event.token
+            click.save()
 
-        context_dict = {'teacher': teacher, 'event': event}
-        return render(request, 'event_sign_up_confirmed.html', context_dict)
+            context_dict = {'teacher': teacher, 'event': event}
+            return render(request, 'event_sign_up_confirmed.html', context_dict)
 
+        else:
+            dict ={'class_event': "alert-danger", 'message': "Something went wrong because you're not using this like you're supposed to.", 'url': 'myaccount', 'button_text': "My Account"}
+            return render(request, "generic_message.html", dict)
     else:
-        dict ={'class_event': "alert-danger", 'message': "Something went wrong because you're not using this like you're supposed to.", 'url': 'myaccount', 'button_text': "My Account"}
+        dict ={'class_event': "alert-danger", 'message': "You don't have permission to perform this action.", 'url': 'myaccount', 'button_text': "My Account"}
         return render(request, "generic_message.html", dict)
 
 def generic_message(request):
