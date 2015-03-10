@@ -17,6 +17,7 @@ def index(request):
     response = render(request, 'base.html', context_dict)
     return response
 
+#Allows a logged-in user to view a specific teacher profile.
 @login_required
 def get_teacher(request, teacher_slug):
     context_dict ={}
@@ -28,6 +29,7 @@ def get_teacher(request, teacher_slug):
 
     return render(request, 'teacher.html', context_dict)
 
+#View a list of teachers with links to their individual profiles.
 @login_required
 def get_all_teachers(request):
     teachers = Teacher.objects.all()
@@ -35,6 +37,7 @@ def get_all_teachers(request):
     response = render(request, 'teachers.html', context_dict)
     return response
 
+#Allows a logged in user to view details about a client. This will likely be decommissioned in the final app
 @login_required
 def get_client(request, client_slug):
     context_dict = {}
@@ -49,12 +52,15 @@ def get_client(request, client_slug):
 
     return render(request, 'client.html', context_dict)
 
+#List of all clients with links to their individual profiles. Will likely be removed.
 @login_required
 def get_all_clients(request):
     clients = Client.objects.all()
     context_dict = {'clients': clients}
     return render(request, 'clients.html', context_dict)
 
+#First step for creating an event. Shows the Event form and posts the initial event information.
+#TODO: add user check
 @login_required
 def add_event(request, client_slug):
     try:
@@ -81,6 +87,8 @@ def add_event(request, client_slug):
 
     return render(request, 'add_event.html', context_dict)
 
+#Creates available time for a specific teacher.
+#TODO: add user check
 @login_required
 def add_time(request, teacher_slug):
     try:
@@ -105,6 +113,8 @@ def add_time(request, teacher_slug):
     context_dict = {'form': form, 'teacher': teacher}
     return render(request, 'add_time.html', context_dict)
 
+#Allows a teacher to edit time they previously submitted
+#TODO: add user check
 @login_required
 def edit_time(request, time_pk):
     try:
@@ -127,6 +137,8 @@ def edit_time(request, time_pk):
     context_dict = {'form': form, 'time':time}
     return render(request, 'edit_time.html', context_dict)
 
+#Allows a client to edit an event they have created
+#TODO: add user check
 @login_required
 def edit_event(request, event_token):
     event = Event.objects.get(token=event_token)
@@ -150,6 +162,7 @@ def edit_event(request, event_token):
 
     return render(request, 'edit_event.html', context_dict)
 
+#Renders the Registration form for a teacher if a GET and saves the teacher is a POST
 def register_teacher(request):
     registered = False
 
@@ -186,6 +199,7 @@ def register_teacher(request):
 
     return render(request, 'register_teacher.html', context_dict)
 
+#Renders the Client registration form for a GET and saves the client with a POST request
 def register_client(request):
     registered = False
 
@@ -219,6 +233,7 @@ def register_client(request):
 
     return render(request, 'register_client.html', context_dict)
 
+#Login page for the user
 def user_login(request):
 
     if request.method =='POST':
@@ -232,18 +247,18 @@ def user_login(request):
                 login(request, user)
                 return HttpResponseRedirect("/myaccount/")
             else:
-                #TODO make this another page with some kind of link to activate your account or something
-                return HttpResponse("Your account is disabled")
+                dict ={'class_event': "alert-danger", 'message': "Your account is inactive. Contact the site administrator.", 'url': 'index', 'button_text': "Home" }
+                return render(request, "generic_message.html", dict)
         else:
             print "Invalid login details: {0}, {1}".format(username, password)
-            #probably want something better than just a blank http response page
-            #TODO create an error page with another login box
-            return HttpResponse("Invalid login details supplied")
+            dict ={'class_event': "alert-warning", 'message': "You supplied incorrect login information. Please try again.", 'url': 'login', 'button_text': "Login"}
+            return render(request, "generic_message.html", dict)
 
     #GET Request, show the form
     else:
         return render(request, 'login.html', {})
 
+#Log out the user and redirect them to the index
 @login_required
 def user_logout(request):
     # Since we know the user is logged in, we can now just log them out.
@@ -252,7 +267,10 @@ def user_logout(request):
     # Take the user back to the homepage.
     return HttpResponseRedirect('/')
 
-
+#The main method for displaying the users information. The request is routed based on the type of user.
+#For clients, they see a page with their upcoming and pending events.
+#For teachers, they see a page with their confirmed events and available time calender
+#The superuser sees all the events, clients, and teacher. Can be customized to be a dashboard for things that Django Admin can't do.
 @login_required()
 def my_account(request):
     user = request.user
@@ -295,6 +313,8 @@ def my_account(request):
 
     return render(request, "myaccount.html", context_dict)
 
+#POST method for teachers to toggle their on-call status.
+#The lack of the teacher URL param prevents this method from being toggled by anyone else and is harmless, redirecting the user's account
 @login_required
 def go_on_call(request):
     if request.method == 'POST':
@@ -309,7 +329,8 @@ def go_on_call(request):
     else:
         return HttpResponseRedirect("/myaccount/")
 
-
+#Shows the available teachers for a particular event booking. Displays the teachers who have available times then and their profiles.
+#TODO: add user check, should check whether the user is the event.client
 def show_available_teachers(request, event_token):
     user = request.user
     context_dict={'user':user}
@@ -322,7 +343,7 @@ def show_available_teachers(request, event_token):
 
     return render(request, 'select_teacher.html', context_dict)
 
-#no login_required here because it's basically a private helper method
+#Returns a list of available time given an event.
 def get_all_times_available_for_event(event):
     times = Available_Time.objects.filter(active=True)
     available_times = []
@@ -336,6 +357,8 @@ def get_all_times_available_for_event(event):
 
     return available_times
 
+#Given an event and a teacher, this method analyzes what to do with the available time that was assigned to the event.
+#If there is more time left, the method creates new AvailableTime objects and assigns them to the teacher.
 def get_times_to_deactivate(event, teacher):
     #all this code needs serious testing
     times = Available_Time.objects.filter(teacher=teacher)
@@ -391,7 +414,8 @@ def get_times_to_deactivate(event, teacher):
                 new_time.teacher = teacher
                 new_time.save()
 
-
+#Sends emails to the teachers that were selected by the client in the second part of the event creating process.
+#TODO: This method should only be accessed by the owner of the event.
 @login_required
 def send_emails_to_teachers(request, event_token):
     event = Event.objects.get(token=event_token)
@@ -409,12 +433,16 @@ def send_emails_to_teachers(request, event_token):
             email = SendGridEmailMessage(subject, body, return_address, [teacher.user.email])
             email.send()
             print "This teacher's name is {0}, the token number is {1}, and their email is {2}".format(teacher.user.get_full_name(), teacher.token, teacher.user.email)
-        return HttpResponseRedirect("/myaccount/")
+            dict ={'class_event': "alert-success", 'message': "Your email was sent successfully", 'url': 'myaccount', 'button_text': "My Account"}
+        return render(request, "generic_message.html", dict)
 
     else:
-        return HttpResponseNotAllowed("This method only accepts POST")
+        dict ={'class_event': "alert-danger", 'message': "Something went wrong because you're not using this like you're supposed to.", 'url': 'myaccount', 'button_text': "My Account"}
+        return render(request, "generic_message.html", dict)
 
-
+#Once a teacher clicks on their personal link, they are taken to this page to confirm that they want to commit to being in the event
+#TODO: the request.user should be equal to the teacher token
+@login_required
 def confirm_teacher_part1(request, event_token, teacher_token):
     event = Event.objects.get(token = event_token)
     teacher = Teacher.objects.get(token = teacher_token)
@@ -423,8 +451,7 @@ def confirm_teacher_part1(request, event_token, teacher_token):
     if event.teacher is not None:
         #django won't do composite primary keys without fussing so I need to make my own and make sure duplicates don't exist
         if Click.objects.filter(teacher = teacher.token).filter(event=event.token).exists():
-            #probably should be a render so I can pass the message. It might be good to have a "/error/" page that takes a message and then displays it on a generic template
-            dict={'class_event': "alert-warning", 'message': "You have already clicked on this event!"}
+            dict={'class_event': "alert-warning", 'message': "You have already clicked on this event!", 'url': "myaccount", "button_text": "My Account"}
             return render(request, "generic_message.html", dict)
         else:
             #make a new click object
@@ -432,12 +459,14 @@ def confirm_teacher_part1(request, event_token, teacher_token):
             click.event = event.token
             click.teacher = teacher.token
             click.save()
-        return HttpResponseRedirect("/event-booked/")
+            dict ={'class_event': "alert-warning", 'message': "Sorry, but this event has already been taken!", 'url': 'myaccount', 'button_text': "My Account"}
+            return render(request, "generic_message.html", dict)
 
     context_dict = {'teacher': teacher, 'event': event}
 
     return render(request, 'teacher_event_confirm.html', context_dict)
 
+#Posts the final request and commit the teacher to the event
 @login_required
 def confirm_teacher_post(request, event_token, teacher_token):
     event = Event.objects.get(token = event_token)
@@ -447,7 +476,6 @@ def confirm_teacher_post(request, event_token, teacher_token):
         #assign the event teacher to the teacher who clicked it.
         event.teacher=teacher
         event.save()
-
 
         #find all the times that the teacher has that will be marked inactive and mark them as inactive
         #run the method for splitting the times into new times and setting to false
@@ -463,15 +491,8 @@ def confirm_teacher_post(request, event_token, teacher_token):
         return render(request, 'event_sign_up_confirmed.html', context_dict)
 
     else:
-        return HttpResponseNotAllowed("This method only accepts POST")
-
-
-
-@login_required
-def event_booked(request):
-    message = "Sorry, but this event has already been taken!"
-    context_dict = {'message': message}
-    return render(request, 'event_booked.html', context_dict)
+        dict ={'class_event': "alert-danger", 'message': "Something went wrong because you're not using this like you're supposed to.", 'url': 'myaccount', 'button_text': "My Account"}
+        return render(request, "generic_message.html", dict)
 
 def generic_message(request):
 

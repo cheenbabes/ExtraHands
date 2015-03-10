@@ -4,7 +4,7 @@
 {% block content %}
 
     <div class="alert {{ class_event }}">{{ message }}</div><br>
-    <a href="{% url 'myaccount' %}" class="btn btn-primary">Go Back to My Account</a>
+    <a href="{% url url %}" class="btn btn-primary">{{ button_text }}</a>
 
 
 {% endblock %}

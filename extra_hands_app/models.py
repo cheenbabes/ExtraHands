@@ -73,6 +73,7 @@ class Event(models.Model):
     is_on_call = models.BooleanField(default=False)
     event_class = models.CharField(max_length=100, default='event-info')
 
+
     def save(self, *args, **kwargs):
         # if statement required to not overwrite token on editing
         if self.token is None:
