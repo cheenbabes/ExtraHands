@@ -9,6 +9,9 @@ calendar solution
 teacher should be able to view a list of all events that do not have a sub assigned to them yet and commit to it right then. It should prompt the teacher
 whether they really want to accept the event or not. (maybe if there's been no teacher for more than 7 days, then it becomes open??)
 
+--allow teachers to modify some things on their account
+    --time in between events (in hours)
+
 ===BUSINESS LOGIC===
 core business logic
 --after creating an event, show a list of teachers who are available. submit another form to send out emails to the teachers.
@@ -17,8 +20,27 @@ core business logic
 --first teacher who clicks will get the event, next teachers will just get click points.
 --send confirmation email to client - (I still need to make sure the emailing even works)
 
---add if blocks to the views to check if request.user = teacher.user or event.teacher.user or event.client.user or client.user, that way they can only reach the correct pages
-but it doesnt require permissions
+--probably porting the project to VS is the next step and going through deployment to azure
+
+--some kind of billing/account tracking system??
+    --regular hourly rate
+    --on call hourly rate
+
+-clients should be able to see which teachers they already contacted and see a notification if more teachers have become available. Also, they should not be able to
+email any teacher twice. Add a field to Event that has a list of time tokens since available teachers are shown based on individual times.
+    -implementation
+        --for every event in pending events, get all the times available and store them as a list of available times on the event
+        --when a teacher is emailed, add that time to another list.
+        --get the diff between the two lists and retrieve that number.
+
+===Accounts===
+Each client has an account
+An account holds many receipts
+Each receipt has an event and all the details.
+
+A receipt is sent for payment processing. Account.balance keeps track of how much the client owes.
+
+
 
 
 

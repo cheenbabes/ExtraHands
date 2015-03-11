@@ -1,6 +1,8 @@
 from django.db import models
 from django.contrib.auth.models import User
 import random
+import moneyed
+from djmoney.models.fields import MoneyField
 import datetime
 
 # Create your models here.
@@ -101,6 +103,30 @@ class Email_List(models.Model):
 class Click(models.Model):
     event = models.IntegerField()
     teacher = models.IntegerField()
+
+class Account(models.Model):
+    client = models.ForeignKey(Client)
+    good_standing = models.BooleanField(default = True)
+    balance = MoneyField(max_digits=10, decimal_places=2, default_currency='USD')
+
+
+class Receipt(models.Model):
+    account = models.ForeignKey(Account)
+    event = models.ForeignKey(Event)
+    teacher = models.ForeignKey(Teacher)
+    hours = models.FloatField()
+    rate = MoneyField(max_digits=10, decimal_places=2, default_currency='USD')
+    admin_email = models.EmailField()
+    admin_percentage = models.FloatField()
+    tax_percentage = models.FloatField()
+    tax = MoneyField(max_digits=10, decimal_places=2, default_currency='USD')
+    total = MoneyField(max_digits=10, decimal_places=2, default_currency='USD')
+    teacher_part = MoneyField(max_digits=10, decimal_places=2, default_currency='USD')
+    admin_part = MoneyField(max_digits=10, decimal_places=2, default_currency='USD')
+    date_due = models.DateField()
+
+
+
 
 
 
