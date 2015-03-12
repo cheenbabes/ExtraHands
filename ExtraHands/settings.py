@@ -110,6 +110,11 @@ STATICFILES_FINDERS = (
     # django.contrib.staticfiles.finders.DefaultStorageFinder',
 )
 
-MANDRILL_API_KEY = "3lxuGYo51ENYy3UuYVfQzA"
-EMAIL_BACKEND = "djrill.mail.backends.djrill.DjrillBackend"
+# MANDRILL_API_KEY = "3lxuGYo51ENYy3UuYVfQzA"
+# EMAIL_BACKEND = "djrill.mail.backends.djrill.DjrillBackend"
 
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = 'laura.baibourine@gmail.com'
+EMAIL_HOST_PASSWORD = 'sezozwdivdqfojzl'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
