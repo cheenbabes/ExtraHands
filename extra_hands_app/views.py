@@ -6,7 +6,7 @@ from django.http import HttpResponseRedirect, HttpResponseNotAllowed, Http404, H
 from django.core.urlresolvers import reverse
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
-from sendgrid.message import SendGridEmailMessage
+from django.core.mail import send_mail
 import datetime
 
 
@@ -439,11 +439,11 @@ def send_emails_to_teachers(request, event_token):
                 teacher = Teacher.objects.get(token = token)
                 link = "127.0.0.1/confirm-event/{0}/{1}/".format(event.token, teacher.token)
                 body = "Hi {0}! {1} has just created an event and they selected you as one of the candidates. Below is your individual link to confirm your participation in this event. " \
-                       "When you click on this link, it will take to a another page where you confirm. Please do not share this link with anyone else. If you do not want to participate," \
+                       "When you click on this link, it will take to a another page where you will confirm your participation. Please do not share this link with anyone else. If you do not want to participate," \
                        "simply ignore this email." \
                        "Your link is {2}".format(teacher.user.get_full_name, event.client.organization, link)
-                email = SendGridEmailMessage(subject, body, return_address, [teacher.user.email])
-                email.send()
+                send_mail(subject, body, return_address, [teacher.user.email])
+
                 print "This teacher's name is {0}, the token number is {1}, and their email is {2}".format(teacher.user.get_full_name(), teacher.token, teacher.user.email)
                 dict ={'class_event': "alert-success", 'message': "Your email was sent successfully", 'url': 'myaccount', 'button_text': "My Account"}
             return render(request, "generic_message.html", dict)
