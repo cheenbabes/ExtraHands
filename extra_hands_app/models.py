@@ -123,7 +123,7 @@ class Receipt(models.Model):
     total = MoneyField(max_digits=10, decimal_places=2, default_currency='USD')
     teacher_part = MoneyField(max_digits=10, decimal_places=2, default_currency='USD')
     admin_part = MoneyField(max_digits=10, decimal_places=2, default_currency='USD')
-    date_due = models.DateField()
+    date_due = models.DateField(default= datetime.datetime.today())
 
 
 

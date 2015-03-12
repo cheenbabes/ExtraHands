@@ -42,7 +42,7 @@ INSTALLED_APPS = (
     'rolepermissions',
     'datetimewidget',
     'debug_toolbar',
-    'sendgrid'
+    'djrill'
 )
 
 MIDDLEWARE_CLASSES = (
@@ -110,8 +110,6 @@ STATICFILES_FINDERS = (
     # django.contrib.staticfiles.finders.DefaultStorageFinder',
 )
 
-SENDGRID_EMAIL_HOST = "smtp.sendgrid.net"
-SENDGRID_EMAIL_PORT = 587
-SENDGRID_EMAIL_USERNAME = "cheenbabes"
-SENDGRID_EMAIL_PASSWORD = "MCfhhPdJ2"
+MANDRILL_API_KEY = "3lxuGYo51ENYy3UuYVfQzA"
+EMAIL_BACKEND = "djrill.mail.backends.djrill.DjrillBackend"
 
