@@ -437,11 +437,12 @@ def send_emails_to_teachers(request, event_token):
             teacher_tokens = request.POST.getlist('teachers')
             for token in teacher_tokens:
                 teacher = Teacher.objects.get(token = token)
-                link = "127.0.0.1/confirm-event/{0}/{1}/".format(event.token, teacher.token)
+                name = teacher.user.get_full_name
+                link = "127.0.0.1:8000/confirm-event/{0}/{1}/".format(event.token, teacher.token)
                 body = "Hi {0}! {1} has just created an event and they selected you as one of the candidates. Below is your individual link to confirm your participation in this event. " \
                        "When you click on this link, it will take to a another page where you will confirm your participation. Please do not share this link with anyone else. If you do not want to participate," \
                        "simply ignore this email." \
-                       "Your link is {2}".format(teacher.user.get_full_name, event.client.organization, link)
+                       "Your link is {2}".format(name, event.client.organization, link)
                 send_mail(subject, body, return_address, [teacher.user.email])
 
                 print "This teacher's name is {0}, the token number is {1}, and their email is {2}".format(teacher.user.get_full_name(), teacher.token, teacher.user.email)
