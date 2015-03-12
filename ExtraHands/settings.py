@@ -97,8 +97,6 @@ TEMPLATE_DIRS = (
 )
 
 
-
-
 ROLEPERMISSIONS_MODULE = 'ExtraHands.roles'
 
 LOGON_REDIRECT_URL = '/myaccount/'
@@ -113,8 +111,17 @@ STATICFILES_FINDERS = (
 # MANDRILL_API_KEY = "3lxuGYo51ENYy3UuYVfQzA"
 # EMAIL_BACKEND = "djrill.mail.backends.djrill.DjrillBackend"
 
-EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_HOST_USER = 'laura.baibourine@gmail.com'
-EMAIL_HOST_PASSWORD = 'sezozwdivdqfojzl'
+EMAIL_HOST = 'smtp.mandrillapp.com'
+EMAIL_HOST_USER = 'eugene.baibourin@gmail.com'
+EMAIL_HOST_PASSWORD = '3lxuGYo51ENYy3UuYVfQzA'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
+
+
+
+# This works!
+# EMAIL_HOST = 'smtp.gmail.com'
+# EMAIL_HOST_USER = 'laura.baibourine@gmail.com'
+# EMAIL_HOST_PASSWORD = 'sezozwdivdqfojzl'
+# EMAIL_PORT = 587
+# EMAIL_USE_TLS = True
