@@ -6,10 +6,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c278ac50-8beb-47b3-8114-cdbe07f29a59" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db.sqlite3" afterPath="$PROJECT_DIR$/db.sqlite3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/add_event.html" afterPath="$PROJECT_DIR$/templates/add_event.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/add_time.html" afterPath="$PROJECT_DIR$/templates/add_time.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/extra_hands_app/forms.py" afterPath="$PROJECT_DIR$/extra_hands_app/forms.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="ExtraHands.iws" />
@@ -92,8 +88,8 @@
       <file leaf-file-name="forms.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/extra_hands_app/forms.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5022157" vertical-offset="255" max-vertical-offset="1649">
-              <caret line="37" column="0" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.70310193" vertical-offset="255" max-vertical-offset="1649">
+              <caret line="45" column="39" selection-start-line="45" selection-start-column="39" selection-end-line="45" selection-end-column="39" />
               <folding />
             </state>
           </provider>
@@ -589,12 +585,6 @@
       <option name="number" value="Default" />
       <updated>1424125891592</updated>
     </task>
-    <task id="LOCAL-00030" summary="story map for this week">
-      <created>1424658846248</created>
-      <option name="number" value="00030" />
-      <option name="project" value="LOCAL" />
-      <updated>1424658846248</updated>
-    </task>
     <task id="LOCAL-00031" summary="thoughts">
       <created>1424728759854</created>
       <option name="number" value="00031" />
@@ -883,7 +873,13 @@
       <option name="project" value="LOCAL" />
       <updated>1426283191055</updated>
     </task>
-    <option name="localTasksCounter" value="79" />
+    <task id="LOCAL-00079" summary="event form custom form validation">
+      <created>1426283594145</created>
+      <option name="number" value="00079" />
+      <option name="project" value="LOCAL" />
+      <updated>1426283594146</updated>
+    </task>
+    <option name="localTasksCounter" value="80" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -971,7 +967,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="confirm_part_1 is not working -- returning the home page for some reason.&#10;To be determined" />
     <MESSAGE value="lol...forgot to add block content. Confirm event part 1 template is now working" />
     <MESSAGE value="More changes with the event sign up flow" />
     <MESSAGE value="successfully signed up a teacher for an event" />
@@ -996,7 +991,8 @@
     <MESSAGE value="email finally works!" />
     <MESSAGE value="edited email sending." />
     <MESSAGE value="available time form custom form validation" />
-    <option name="LAST_COMMIT_MESSAGE" value="available time form custom form validation" />
+    <MESSAGE value="event form custom form validation" />
+    <option name="LAST_COMMIT_MESSAGE" value="event form custom form validation" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1418,8 +1414,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/extra_hands_app/forms.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5022157" vertical-offset="255" max-vertical-offset="1649">
-          <caret line="37" column="0" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.70310193" vertical-offset="255" max-vertical-offset="1649">
+          <caret line="45" column="39" selection-start-line="45" selection-start-column="39" selection-end-line="45" selection-end-column="39" />
           <folding />
         </state>
       </provider>
