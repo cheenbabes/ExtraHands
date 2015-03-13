@@ -7,8 +7,10 @@
 
     <h1>Add a time that you're available</h1>
     <form id="add_time" method="post" action="/teacher/{{ teacher.slug }}/add_time/">
-
+    {% if form.errors.invalid_entry %}
     <div class="alert alert-danger">{{ form.errors.invalid_entry}}</div>
+    {% else %}
+    {% endif %}
 
 
         {% csrf_token %}

@@ -26,6 +26,18 @@ class EventForm(forms.ModelForm):
     #     ('warning', 'event')
     # )
 
+    def is_valid(self):
+        valid = super(EventForm, self).is_valid()
+
+        if not valid:
+            return valid
+
+        if self.cleaned_data['end_time'] <= self.cleaned_data['start_time']:
+            self._errors['invalid_entry'] = 'The end time must be after the start time'
+            return False
+
+        return True
+
     class Meta:
         model = Event
         fields=('start_time', 'end_time', 'is_on_call', 'comments', 'token' )

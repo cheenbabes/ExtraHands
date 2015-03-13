@@ -5,6 +5,11 @@
 
     <h1>Add an event</h1>
     <form id="add_event" method="post" action="/client/{{ client.client_slug }}/add_event/">
+    {% if form.errors.invalid_entry %}
+    <div class="alert alert-danger">{{ form.errors.invalid_entry}}</div>
+    {% else %}
+    {% endif %}
+
 
         {% csrf_token %}
 {#        {% for hidden in form.hidden_fields %}#}
