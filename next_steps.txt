@@ -18,7 +18,7 @@ core business logic
     --create a view and url pattern that takes a list of teacher tokens and emails each of them with a unique link
     --another view and url pattern for the teachers to click on to confirm their participation in the event
 --first teacher who clicks will get the event, next teachers will just get click points.
---send confirmation email to client - (I still need to make sure the emailing even works)
+--send confirmation email to client
 
 --probably porting the project to VS is the next step and going through deployment to azure
 
@@ -26,12 +26,20 @@ core business logic
     --regular hourly rate
     --on call hourly rate
 
--clients should be able to see which teachers they already contacted and see a notification if more teachers have become available. Also, they should not be able to
-email any teacher twice. Add a field to Event that has a list of time tokens since available teachers are shown based on individual times.
-    -implementation
-        --for every event in pending events, get all the times available and store them as a list of available times on the event
-        --when a teacher is emailed, add that time to another list.
-        --get the diff between the two lists and retrieve that number.
+==STORY 3==
+    -clients should be able to see which teachers they already contacted and see a notification if more teachers have become available. Also, they should not be able to
+    email any teacher twice. Add a field to Event that has a list of time tokens since available teachers are shown based on individual times.
+        -implementation
+            --for every event in pending events, get all the times available and store them as a list of available times on the event
+            --when a teacher is emailed, add that time to another list.
+            --get the diff between the two lists and retrieve that number.
+
+==STORY 1==
+    -override form.is_valid() method on EventForm and AvailableTimeForm to make sure that the end time is always
+    greater than the start time
+
+==STORY 2==
+    -make it so clients cannot email the same "time" again. This ties in with story 3
 
 ===Accounts===
 Each client has an account
