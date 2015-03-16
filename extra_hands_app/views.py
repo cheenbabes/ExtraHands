@@ -7,6 +7,7 @@ from django.core.urlresolvers import reverse
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
 from django.core.mail import send_mail
+from django.contrib import messages
 import datetime
 
 
@@ -126,7 +127,8 @@ def edit_time(request, time_pk):
         time = Available_Time.objects.get(pk=time_pk)
     except Available_Time.DoesNotExist:
         time = None
-        return Http404("Your timed event does not exist!")
+        dict ={'class_event': "alert-danger", 'message': "This scheduled time does not exist!", 'url': 'myaccount', 'button_text': "My Account"}
+        return render(request, "generic_message.html", dict)
     if request.user == time.teacher.user:
         if request.method == 'POST':
             form = AvailableTimeForm(request.POST)
@@ -144,6 +146,25 @@ def edit_time(request, time_pk):
     else:
         dict ={'class_event': "alert-danger", 'message': "You don't have permission to perform this action.", 'url': 'myaccount', 'button_text': "My Account"}
         return render(request, "generic_message.html", dict)
+
+#Allows a teacher or user to delete their own scheduled time objects
+@login_required
+def delete_time(request, time_pk):
+    try:
+        time = Available_Time.objects.get(pk=time_pk)
+    except Available_Time.DoesNotExist:
+        time = None
+        dict ={'class_event': "alert-danger", 'message': "This scheduled time does not exist!", 'url': 'myaccount', 'button_text': "My Account"}
+        return render(request, "generic_message.html", dict)
+    if request.user == time.teacher.user:
+            time.delete()
+            messages.success(request, "You have successfully deleted this time")
+            return HttpResponseRedirect("/myaccount/")
+
+    else:
+        dict ={'class_event': "alert-danger", 'message': "You don't have permission to perform this action.", 'url': 'myaccount', 'button_text': "My Account"}
+        return render(request, "generic_message.html", dict)
+
 
 #Allows a client to edit an event they have created
 @login_required

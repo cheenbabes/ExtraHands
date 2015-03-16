@@ -34,14 +34,20 @@ core business logic
             --when a teacher is emailed, add that time to another list.
             --get the diff between the two lists and retrieve that number.
 
-==STORY 1==
+==STORY 1==DONE
     -override form.is_valid() method on EventForm and AvailableTimeForm to make sure that the end time is always
     greater than the start time
 
 ==STORY 2==
     -make it so clients cannot email the same "time" again. This ties in with story 3
 
+
+==STORY 4==
+    -make it possible for teachers to delete times and clients should be able to delete events IF they have not emailed any teachers yet.
+    -clients should see a prompt when they go to the select teacher page on whether they want to continue as they will not be able to edit or delete the event afterwards
+
 ===Accounts===
+===FEATURE===
 Each client has an account
 An account holds many receipts
 Each receipt has an event and all the details.
