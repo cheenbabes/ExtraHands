@@ -6,6 +6,7 @@ calendar solution
         -make sure the json is correct (eg success= {1} at the beginning)
 
 ===TEACHERS===
+--If an event has been submitted but no teacher has been assigned to it
 teacher should be able to view a list of all events that do not have a sub assigned to them yet and commit to it right then. It should prompt the teacher
 whether they really want to accept the event or not. (maybe if there's been no teacher for more than 7 days, then it becomes open??)
 
@@ -13,14 +14,8 @@ whether they really want to accept the event or not. (maybe if there's been no t
     --time in between events (in hours)
 
 ===BUSINESS LOGIC===
-core business logic
---after creating an event, show a list of teachers who are available. submit another form to send out emails to the teachers.
-    --create a view and url pattern that takes a list of teacher tokens and emails each of them with a unique link
-    --another view and url pattern for the teachers to click on to confirm their participation in the event
---first teacher who clicks will get the event, next teachers will just get click points.
---send confirmation email to client
-
---probably porting the project to VS is the next step and going through deployment to azure
+==STORY 6==
+    --Port the project to VS is the next step and going through deployment to azure
 
 --some kind of billing/account tracking system??
     --regular hourly rate
@@ -36,11 +31,6 @@ core business logic
 
 
 
-==STORY 2==
-    -make it so clients cannot email the same "time" again. This ties in with story 3
-
-
-
 ===Accounts===
 ===FEATURE===
 Each client has an account
@@ -48,6 +38,8 @@ An account holds many receipts
 Each receipt has an event and all the details.
 
 A receipt is sent for payment processing. Account.balance keeps track of how much the client owes.
+A daily job scans the account balance. There is a field called date overdue which tracks when the account went overdue.
+If the account becomes 7 days overdue, the user is suspended.
 
 ============================================================================================================================
 
@@ -62,6 +54,13 @@ FINISHED STORIES
     -make it possible for teachers to delete times and clients should be able to delete events IF they have not emailed any teachers yet.
     -clients should see a prompt when they go to the select teacher page on whether they want to continue as they will not be able to edit or delete the event afterwards
 
+==STORY 0== DONE
+core business logic
+--after creating an event, show a list of teachers who are available. submit another form to send out emails to the teachers.
+    --create a view and url pattern that takes a list of teacher tokens and emails each of them with a unique link
+    --another view and url pattern for the teachers to click on to confirm their participation in the event
+--first teacher who clicks will get the event, next teachers will just get click points.
+--send confirmation email to client
 
 
 

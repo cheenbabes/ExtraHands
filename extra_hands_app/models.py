@@ -74,13 +74,14 @@ class Event(models.Model):
     comments = models.CharField(max_length=500, blank=True, default ='')
     is_on_call = models.BooleanField(default=False)
     event_class = models.CharField(max_length=100, default='event-info')
+    # created_at = models.DateTimeField(auto_now_add=True, null=True)
+    # modified_at = models.DateTimeField(auto_now=True, null=True)
 
 
     def save(self, *args, **kwargs):
         # if statement required to not overwrite token on editing
         if self.token is None:
             self.token = random.randint(100000,999999)
-        super(Event, self).save(*args, **kwargs)
 
     def __unicode__(self):
         return str(self.start_time)
@@ -123,9 +124,7 @@ class Receipt(models.Model):
     total = MoneyField(max_digits=10, decimal_places=2, default_currency='USD')
     teacher_part = MoneyField(max_digits=10, decimal_places=2, default_currency='USD')
     admin_part = MoneyField(max_digits=10, decimal_places=2, default_currency='USD')
-    date_due = models.DateField(default= datetime.datetime.today())
-
-
+    date_due = models.DateField(default= None)
 
 
 

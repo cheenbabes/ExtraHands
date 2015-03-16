@@ -6,8 +6,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c278ac50-8beb-47b3-8114-cdbe07f29a59" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db.sqlite3" afterPath="$PROJECT_DIR$/db.sqlite3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/extra_hands_app/models.py" afterPath="$PROJECT_DIR$/extra_hands_app/models.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/next_steps.txt" afterPath="$PROJECT_DIR$/next_steps.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/extra_hands_app/views.py" afterPath="$PROJECT_DIR$/extra_hands_app/views.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="ExtraHands.iws" />
@@ -36,11 +37,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/extra_hands_app/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.4121715" vertical-offset="2830" max-vertical-offset="3553">
-              <caret line="558" column="56" selection-start-line="558" selection-start-column="56" selection-end-line="558" selection-end-column="56" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="2830" max-vertical-offset="3553">
+              <caret line="575" column="0" selection-start-line="575" selection-start-column="0" selection-end-line="575" selection-end-column="0" />
               <folding>
                 <element signature="e#656#749#0" expanded="false" />
                 <element signature="e#872#1100#0" expanded="false" />
@@ -82,16 +83,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="-13.076923" vertical-offset="0" max-vertical-offset="1020">
               <caret line="20" column="21" selection-start-line="20" selection-start-column="21" selection-end-line="20" selection-end-column="21" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="wsgi.py" pinned="false" current-in-tab="false">
-        <entry file="file://C:/Python27/Lib/site-packages/django/core/handlers/wsgi.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="1747" max-vertical-offset="4233">
-              <caret line="135" column="0" selection-start-line="135" selection-start-column="0" selection-end-line="135" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -142,8 +133,8 @@
       <file leaf-file-name="next_steps.txt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/next_steps.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-25.366667" vertical-offset="208" max-vertical-offset="1309">
-              <caret line="57" column="31" selection-start-line="57" selection-start-column="31" selection-end-line="57" selection-end-column="31" />
+            <state vertical-scroll-proportion="-4.5333333" vertical-offset="0" max-vertical-offset="1292">
+              <caret line="8" column="71" selection-start-line="8" selection-start-column="71" selection-end-line="8" selection-end-column="71" />
               <folding />
             </state>
           </provider>
@@ -152,11 +143,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="models.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/extra_hands_app/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="828" max-vertical-offset="2380">
-              <caret line="71" column="30" selection-start-line="71" selection-start-column="30" selection-end-line="71" selection-end-column="30" />
+            <state vertical-scroll-proportion="0.43085882" vertical-offset="1676" max-vertical-offset="2363">
+              <caret line="116" column="40" selection-start-line="116" selection-start-column="40" selection-end-line="116" selection-end-column="40" />
               <folding>
                 <element signature="e#0#28#0" expanded="true" />
               </folding>
@@ -196,7 +187,6 @@
         <option value="$PROJECT_DIR$/templates/event_booked.html" />
         <option value="$PROJECT_DIR$/templates/base.html" />
         <option value="$PROJECT_DIR$/templates/generic_message.html" />
-        <option value="$PROJECT_DIR$/extra_hands_app/models.py" />
         <option value="$PROJECT_DIR$/ExtraHands/settings.py" />
         <option value="$PROJECT_DIR$/templates/add_time.html" />
         <option value="$PROJECT_DIR$/templates/add_event.html" />
@@ -207,8 +197,9 @@
         <option value="$PROJECT_DIR$/templates/select_teacher.html" />
         <option value="$PROJECT_DIR$/extra_hands_app/urls.py" />
         <option value="$PROJECT_DIR$/templates/client_account.html" />
-        <option value="$PROJECT_DIR$/next_steps.txt" />
         <option value="$PROJECT_DIR$/extra_hands_app/views.py" />
+        <option value="$PROJECT_DIR$/next_steps.txt" />
+        <option value="$PROJECT_DIR$/extra_hands_app/models.py" />
       </list>
     </option>
   </component>
@@ -587,12 +578,6 @@
       <option name="number" value="Default" />
       <updated>1424125891592</updated>
     </task>
-    <task id="LOCAL-00034" summary="Dismissible alert messages working">
-      <created>1424890529087</created>
-      <option name="number" value="00034" />
-      <option name="project" value="LOCAL" />
-      <updated>1424890529087</updated>
-    </task>
     <task id="LOCAL-00035" summary="on-call functionality working">
       <created>1424896089223</created>
       <option name="number" value="00035" />
@@ -881,7 +866,13 @@
       <option name="project" value="LOCAL" />
       <updated>1426545098498</updated>
     </task>
-    <option name="localTasksCounter" value="83" />
+    <task id="LOCAL-00083" summary="confirmation email sent to client when event is confirmed.">
+      <created>1426545773207</created>
+      <option name="number" value="00083" />
+      <option name="project" value="LOCAL" />
+      <updated>1426545773208</updated>
+    </task>
+    <option name="localTasksCounter" value="84" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -915,8 +906,8 @@
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3326425" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32898697" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20829016" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25906736" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.20829016" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25906736" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24147122" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -969,7 +960,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="Booked event rejects a teacher trying to click on it. Also seeing added the events each teacher has coming up in the teacher_account page" />
     <MESSAGE value="events showing up with assigned teachers in client portal" />
     <MESSAGE value="for the client portal, split off the events into confirmed and pending(those still waiting for a teacher assignment)" />
     <MESSAGE value="Modifications to client portal" />
@@ -994,7 +984,8 @@
     <MESSAGE value="added delete time route and also got the message framework working&#10;" />
     <MESSAGE value="delete event working. Need to test with event that has already emailed teachers" />
     <MESSAGE value="logic change in delete event to make sure the event can't be deleted if a teacher is assigned or emails have been sent out already" />
-    <option name="LAST_COMMIT_MESSAGE" value="logic change in delete event to make sure the event can't be deleted if a teacher is assigned or emails have been sent out already" />
+    <MESSAGE value="confirmation email sent to client when event is confirmed." />
+    <option name="LAST_COMMIT_MESSAGE" value="confirmation email sent to client when event is confirmed." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1010,20 +1001,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/templates/clients.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.5384617" vertical-offset="0" max-vertical-offset="272">
-          <caret line="10" column="14" selection-start-line="10" selection-start-column="14" selection-end-line="10" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/teachers.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.6153846" vertical-offset="0" max-vertical-offset="272">
-          <caret line="4" column="106" selection-start-line="4" selection-start-column="8" selection-end-line="4" selection-end-column="106" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/register_teacher.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-9.807693" vertical-offset="0" max-vertical-offset="459">
@@ -1364,31 +1341,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/extra_hands_app/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="828" max-vertical-offset="2380">
-          <caret line="71" column="30" selection-start-line="71" selection-start-column="30" selection-end-line="71" selection-end-column="30" />
-          <folding>
-            <element signature="e#0#28#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/next_steps.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-25.366667" vertical-offset="208" max-vertical-offset="1309">
-          <caret line="57" column="31" selection-start-line="57" selection-start-column="31" selection-end-line="57" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="com.intellij.database.editor.CsvTableFileEditorProvider">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/extra_hands_app/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4121715" vertical-offset="2830" max-vertical-offset="3553">
-          <caret line="558" column="56" selection-start-line="558" selection-start-column="56" selection-end-line="558" selection-end-column="56" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="2830" max-vertical-offset="3553">
+          <caret line="575" column="0" selection-start-line="575" selection-start-column="0" selection-end-line="575" selection-end-column="0" />
           <folding>
             <element signature="e#656#749#0" expanded="false" />
             <element signature="e#872#1100#0" expanded="false" />
@@ -1410,6 +1366,35 @@
             <element signature="e#16309#16947#0" expanded="false" />
             <element signature="e#17224#19727#0" expanded="false" />
             <element signature="e#26076#26126#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/next_steps.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-4.5333333" vertical-offset="0" max-vertical-offset="1292">
+          <caret line="8" column="71" selection-start-line="8" selection-start-column="71" selection-end-line="8" selection-end-column="71" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="com.intellij.database.editor.CsvTableFileEditorProvider">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://C:/Python27/Lib/site-packages/django/db/models/base.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.19732937" vertical-offset="8684" max-vertical-offset="24701">
+          <caret line="532" column="8" selection-start-line="532" selection-start-column="8" selection-end-line="532" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/extra_hands_app/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.43085882" vertical-offset="1676" max-vertical-offset="2363">
+          <caret line="116" column="40" selection-start-line="116" selection-start-column="40" selection-end-line="116" selection-end-column="40" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
           </folding>
         </state>
       </provider>
