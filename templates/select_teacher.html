@@ -15,10 +15,22 @@
     <hr>
     </p>
 
+    <h3>Details of your event</h3>
+    <p>
+    Start Time: {{ event.start_time }} <br>
+    End Time: {{ event.end_time }}
+
+    </p>
+
     <p><strong>How This Works</strong></p>
-    <p>Select as many teachers as you would like to invite to your event. If you have a specific teacher in mind, only check their box. All the teachers that you select will
+    <p>
+        Select as many teachers as you would like to invite to your event. If you have a specific teacher in mind, only check their box. All the teachers that you select will
     receive an email with a unique link to register for your event. The first teacher that clicks on their link will be assigned to your event. We will notify you as
     soon as that happens through email.
+    </p>
+    <p>
+        If you have made any mistakes in setting up your event, it is not too late to go back and edit! After you email any of the teachers below, you will <strong>not</strong>
+        not be able to delete this event!
     </p>
     {% if times %}
         {#url for teacher logic goes in here#}
@@ -43,6 +55,7 @@
         </form>
 
     {% else %}
+        <br>
         <p>Sorry, no teachers available at this time. Click here to let us know you've encountered this!</p>
 
     {% endif %}

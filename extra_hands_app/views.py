@@ -165,7 +165,6 @@ def delete_time(request, time_pk):
         dict ={'class_event': "alert-danger", 'message': "You don't have permission to perform this action.", 'url': 'myaccount', 'button_text': "My Account"}
         return render(request, "generic_message.html", dict)
 
-
 #Allows a client to edit an event they have created
 @login_required
 def edit_event(request, event_token):
@@ -189,6 +188,26 @@ def edit_event(request, event_token):
         context_dict ={'form': form, 'event': event}
         return render(request, 'edit_event.html', context_dict)
 
+    else:
+        dict ={'class_event': "alert-danger", 'message': "You don't have permission to perform this action.", 'url': 'myaccount', 'button_text': "My Account"}
+        return render(request, "generic_message.html", dict)
+
+@login_required
+def delete_event(request, event_token):
+    try:
+        event = Event.objects.get(token= event_token)
+    except Event.DoesNotExist:
+        event = None
+        dict ={'class_event': "alert-danger", 'message': "This event does not exist!", 'url': 'myaccount', 'button_text': "My Account"}
+        return render(request, "generic_message.html", dict)
+    if request.user == event.client.user:
+        if event.in_progress:
+            dict ={'class_event': "alert-danger", 'message': "This event is in progress and cannot be modified!", 'url': 'myaccount', 'button_text': "My Account"}
+            return render(request, "generic_message.html", dict)
+        else:
+            event.delete()
+            messages.success(request, "You have successfully deleted this event")
+            return HttpResponseRedirect("/myaccount/")
     else:
         dict ={'class_event': "alert-danger", 'message': "You don't have permission to perform this action.", 'url': 'myaccount', 'button_text': "My Account"}
         return render(request, "generic_message.html", dict)
@@ -455,6 +474,9 @@ def send_emails_to_teachers(request, event_token):
     return_address = "noreply@gmail.com"
     if request.user == event.client.user:
         if request.method == 'POST':
+            #mark the event as in_progress and no longer available to be deleted
+            event.in_progress = True
+            #Loop through all available teachers and send out mail
             teacher_tokens = request.POST.getlist('teachers')
             for token in teacher_tokens:
                 teacher = Teacher.objects.get(token = token)

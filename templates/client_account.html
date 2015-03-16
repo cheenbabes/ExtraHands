@@ -21,7 +21,9 @@
             Teacher: No teacher yet!<br>
             Comments: {{ event.comments }}<br>
             Token: {{ event.token }} <br>
-            <a href="{% url 'edit_event' event.token %}" class="btn btn-info">Edit Event</a> <a href="{% url 'select_teacher' event.token %}" class='btn btn-success'>View Available Teachers</a> <br>
+            <a href="{% url 'edit_event' event.token %}" class="btn btn-info">Edit Event</a>
+            <a href="{% url 'select_teacher' event.token %}" class='btn btn-success'>View Available Teachers</a>
+            <a href="{% url 'delete_event' event.token %}" class="btn btn-danger" onclick="alert('Are you sure you want to delete this event?')">Delete Event</a> <br>
         </p>
 
     {% endfor %}
