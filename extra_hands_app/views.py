@@ -551,6 +551,14 @@ def confirm_teacher_post(request, event_token, teacher_token):
             click.event = event.token
             click.save()
 
+            # send a confirmation email to the client
+            # uncomment this when mail API is not blocked.
+            # subject = "Your event has been filled by {0}!".format(teacher.user.get_full_name)
+            # message = "{0} has successfully signed up for your event. You can find their details at {1}. If you have any questions, please reach out to them directly".format(teacher.user.get_full_name, "127.0.0.1:8000/teacher/{0}".format(teacher.slug))
+            # from_email = "noreply@gmail.com"
+            # recipient_list = [event.client.user.email]
+            # send_mail(subject, message, from_email, recipient_list)
+
             context_dict = {'teacher': teacher, 'event': event}
             return render(request, 'event_sign_up_confirmed.html', context_dict)
 

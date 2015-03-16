@@ -6,7 +6,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c278ac50-8beb-47b3-8114-cdbe07f29a59" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db.sqlite3" afterPath="$PROJECT_DIR$/db.sqlite3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/next_steps.txt" afterPath="$PROJECT_DIR$/next_steps.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/extra_hands_app/views.py" afterPath="$PROJECT_DIR$/extra_hands_app/views.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -39,9 +39,30 @@
       <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/extra_hands_app/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5878285" vertical-offset="2856" max-vertical-offset="9639">
-              <caret line="203" column="34" selection-start-line="203" selection-start-column="34" selection-end-line="203" selection-end-column="34" />
-              <folding />
+            <state vertical-scroll-proportion="0.4121715" vertical-offset="2830" max-vertical-offset="3553">
+              <caret line="558" column="56" selection-start-line="558" selection-start-column="56" selection-end-line="558" selection-end-column="56" />
+              <folding>
+                <element signature="e#656#749#0" expanded="false" />
+                <element signature="e#872#1100#0" expanded="false" />
+                <element signature="e#1219#1373#0" expanded="false" />
+                <element signature="e#1542#1873#0" expanded="false" />
+                <element signature="e#2011#2138#0" expanded="false" />
+                <element signature="e#2294#3294#0" expanded="false" />
+                <element signature="e#3399#4401#0" expanded="false" />
+                <element signature="e#4511#5676#0" expanded="false" />
+                <element signature="e#5800#6561#0" expanded="false" />
+                <element signature="e#6671#7723#0" expanded="false" />
+                <element signature="e#7785#8831#0" expanded="false" />
+                <element signature="e#8952#10045#0" expanded="false" />
+                <element signature="e#10170#11089#0" expanded="false" />
+                <element signature="e#11146#12142#0" expanded="false" />
+                <element signature="e#12237#12405#0" expanded="false" />
+                <element signature="e#12848#14719#0" expanded="false" />
+                <element signature="e#14962#15428#0" expanded="false" />
+                <element signature="e#16309#16947#0" expanded="false" />
+                <element signature="e#17224#19727#0" expanded="false" />
+                <element signature="e#26076#26126#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -121,8 +142,8 @@
       <file leaf-file-name="next_steps.txt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/next_steps.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-23.233334" vertical-offset="0" max-vertical-offset="1224">
-              <caret line="41" column="45" selection-start-line="41" selection-start-column="45" selection-end-line="41" selection-end-column="45" />
+            <state vertical-scroll-proportion="-25.366667" vertical-offset="208" max-vertical-offset="1309">
+              <caret line="57" column="31" selection-start-line="57" selection-start-column="31" selection-end-line="57" selection-end-column="31" />
               <folding />
             </state>
           </provider>
@@ -180,13 +201,13 @@
         <option value="$PROJECT_DIR$/templates/add_time.html" />
         <option value="$PROJECT_DIR$/templates/add_event.html" />
         <option value="$PROJECT_DIR$/extra_hands_app/forms.py" />
-        <option value="$PROJECT_DIR$/next_steps.txt" />
         <option value="$PROJECT_DIR$/assets/js/ajax.js" />
         <option value="$PROJECT_DIR$/templates/teacher_account.html" />
         <option value="$PROJECT_DIR$/templates/myaccount.html" />
         <option value="$PROJECT_DIR$/templates/select_teacher.html" />
         <option value="$PROJECT_DIR$/extra_hands_app/urls.py" />
         <option value="$PROJECT_DIR$/templates/client_account.html" />
+        <option value="$PROJECT_DIR$/next_steps.txt" />
         <option value="$PROJECT_DIR$/extra_hands_app/views.py" />
       </list>
     </option>
@@ -566,12 +587,6 @@
       <option name="number" value="Default" />
       <updated>1424125891592</updated>
     </task>
-    <task id="LOCAL-00033" summary="Fixed static file loading. The issue was bootstrap 3 plugin. Once I took that out, I was able to load the static files myself and then everything started working.">
-      <created>1424889841397</created>
-      <option name="number" value="00033" />
-      <option name="project" value="LOCAL" />
-      <updated>1424889841397</updated>
-    </task>
     <task id="LOCAL-00034" summary="Dismissible alert messages working">
       <created>1424890529087</created>
       <option name="number" value="00034" />
@@ -860,7 +875,13 @@
       <option name="project" value="LOCAL" />
       <updated>1426539382022</updated>
     </task>
-    <option name="localTasksCounter" value="82" />
+    <task id="LOCAL-00082" summary="logic change in delete event to make sure the event can't be deleted if a teacher is assigned or emails have been sent out already">
+      <created>1426545098498</created>
+      <option name="number" value="00082" />
+      <option name="project" value="LOCAL" />
+      <updated>1426545098498</updated>
+    </task>
+    <option name="localTasksCounter" value="83" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -948,7 +969,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="successfully signed up a teacher for an event" />
     <MESSAGE value="Booked event rejects a teacher trying to click on it. Also seeing added the events each teacher has coming up in the teacher_account page" />
     <MESSAGE value="events showing up with assigned teachers in client portal" />
     <MESSAGE value="for the client portal, split off the events into confirmed and pending(those still waiting for a teacher assignment)" />
@@ -973,7 +993,8 @@
     <MESSAGE value="event form custom form validation" />
     <MESSAGE value="added delete time route and also got the message framework working&#10;" />
     <MESSAGE value="delete event working. Need to test with event that has already emailed teachers" />
-    <option name="LAST_COMMIT_MESSAGE" value="delete event working. Need to test with event that has already emailed teachers" />
+    <MESSAGE value="logic change in delete event to make sure the event can't be deleted if a teacher is assigned or emails have been sent out already" />
+    <option name="LAST_COMMIT_MESSAGE" value="logic change in delete event to make sure the event can't be deleted if a teacher is assigned or emails have been sent out already" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1277,17 +1298,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/next_steps.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-23.233334" vertical-offset="0" max-vertical-offset="1224">
-          <caret line="41" column="45" selection-start-line="41" selection-start-column="45" selection-end-line="41" selection-end-column="45" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="com.intellij.database.editor.CsvTableFileEditorProvider">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/teacher_account.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-15.230769" vertical-offset="607" max-vertical-offset="1343">
@@ -1328,16 +1338,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/extra_hands_app/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="828" max-vertical-offset="2380">
-          <caret line="71" column="30" selection-start-line="71" selection-start-column="30" selection-end-line="71" selection-end-column="30" />
-          <folding>
-            <element signature="e#0#28#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/select_teacher.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-17.0" vertical-offset="102" max-vertical-offset="1224">
@@ -1364,11 +1364,53 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/extra_hands_app/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="828" max-vertical-offset="2380">
+          <caret line="71" column="30" selection-start-line="71" selection-start-column="30" selection-end-line="71" selection-end-column="30" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/next_steps.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-25.366667" vertical-offset="208" max-vertical-offset="1309">
+          <caret line="57" column="31" selection-start-line="57" selection-start-column="31" selection-end-line="57" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="com.intellij.database.editor.CsvTableFileEditorProvider">
+        <state />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/extra_hands_app/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5878285" vertical-offset="2856" max-vertical-offset="9639">
-          <caret line="203" column="34" selection-start-line="203" selection-start-column="34" selection-end-line="203" selection-end-column="34" />
-          <folding />
+        <state vertical-scroll-proportion="0.4121715" vertical-offset="2830" max-vertical-offset="3553">
+          <caret line="558" column="56" selection-start-line="558" selection-start-column="56" selection-end-line="558" selection-end-column="56" />
+          <folding>
+            <element signature="e#656#749#0" expanded="false" />
+            <element signature="e#872#1100#0" expanded="false" />
+            <element signature="e#1219#1373#0" expanded="false" />
+            <element signature="e#1542#1873#0" expanded="false" />
+            <element signature="e#2011#2138#0" expanded="false" />
+            <element signature="e#2294#3294#0" expanded="false" />
+            <element signature="e#3399#4401#0" expanded="false" />
+            <element signature="e#4511#5676#0" expanded="false" />
+            <element signature="e#5800#6561#0" expanded="false" />
+            <element signature="e#6671#7723#0" expanded="false" />
+            <element signature="e#7785#8831#0" expanded="false" />
+            <element signature="e#8952#10045#0" expanded="false" />
+            <element signature="e#10170#11089#0" expanded="false" />
+            <element signature="e#11146#12142#0" expanded="false" />
+            <element signature="e#12237#12405#0" expanded="false" />
+            <element signature="e#12848#14719#0" expanded="false" />
+            <element signature="e#14962#15428#0" expanded="false" />
+            <element signature="e#16309#16947#0" expanded="false" />
+            <element signature="e#17224#19727#0" expanded="false" />
+            <element signature="e#26076#26126#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
