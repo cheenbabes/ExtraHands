@@ -7,9 +7,6 @@
   <component name="ChangeListManager">
     <list default="true" id="c278ac50-8beb-47b3-8114-cdbe07f29a59" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db.sqlite3" afterPath="$PROJECT_DIR$/db.sqlite3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/client_account.html" afterPath="$PROJECT_DIR$/templates/client_account.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/select_teacher.html" afterPath="$PROJECT_DIR$/templates/select_teacher.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/extra_hands_app/urls.py" afterPath="$PROJECT_DIR$/extra_hands_app/urls.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/extra_hands_app/views.py" afterPath="$PROJECT_DIR$/extra_hands_app/views.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -39,34 +36,12 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/extra_hands_app/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="1195" max-vertical-offset="3094">
-              <caret line="209" column="54" selection-start-line="209" selection-start-column="54" selection-end-line="209" selection-end-column="54" />
-              <folding>
-                <element signature="e#0#35#0" expanded="true" />
-                <element signature="e#656#749#0" expanded="false" />
-                <element signature="e#872#1100#0" expanded="false" />
-                <element signature="e#1219#1373#0" expanded="false" />
-                <element signature="e#1542#1873#0" expanded="false" />
-                <element signature="e#2011#2138#0" expanded="false" />
-                <element signature="e#2294#3294#0" expanded="false" />
-                <element signature="e#3399#4401#0" expanded="false" />
-                <element signature="e#6671#7723#0" expanded="false" />
-                <element signature="e#8923#10016#0" expanded="false" />
-                <element signature="e#10141#11060#0" expanded="false" />
-                <element signature="e#11117#12113#0" expanded="false" />
-                <element signature="e#12208#12376#0" expanded="false" />
-                <element signature="e#12819#14690#0" expanded="false" />
-                <element signature="e#14933#15399#0" expanded="false" />
-                <element signature="e#16280#16918#0" expanded="false" />
-                <element signature="e#17195#19698#0" expanded="false" />
-                <element signature="e#19882#22152#0" expanded="false" />
-                <element signature="e#22369#23856#0" expanded="false" />
-                <element signature="e#24000#25371#0" expanded="false" />
-                <element signature="e#25408#25458#0" expanded="false" />
-              </folding>
+            <state vertical-scroll-proportion="0.5878285" vertical-offset="2856" max-vertical-offset="9639">
+              <caret line="203" column="34" selection-start-line="203" selection-start-column="34" selection-end-line="203" selection-end-column="34" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -123,11 +98,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="client_account.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="client_account.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/client_account.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.37876615" vertical-offset="161" max-vertical-offset="918">
-              <caret line="25" column="70" selection-start-line="25" selection-start-column="70" selection-end-line="25" selection-end-column="70" />
+            <state vertical-scroll-proportion="-21.26923" vertical-offset="161" max-vertical-offset="918">
+              <caret line="42" column="0" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -210,9 +185,9 @@
         <option value="$PROJECT_DIR$/templates/teacher_account.html" />
         <option value="$PROJECT_DIR$/templates/myaccount.html" />
         <option value="$PROJECT_DIR$/templates/select_teacher.html" />
-        <option value="$PROJECT_DIR$/extra_hands_app/views.py" />
         <option value="$PROJECT_DIR$/extra_hands_app/urls.py" />
         <option value="$PROJECT_DIR$/templates/client_account.html" />
+        <option value="$PROJECT_DIR$/extra_hands_app/views.py" />
       </list>
     </option>
   </component>
@@ -591,12 +566,6 @@
       <option name="number" value="Default" />
       <updated>1424125891592</updated>
     </task>
-    <task id="LOCAL-00032" summary="thoughts">
-      <created>1424733893291</created>
-      <option name="number" value="00032" />
-      <option name="project" value="LOCAL" />
-      <updated>1424733893291</updated>
-    </task>
     <task id="LOCAL-00033" summary="Fixed static file loading. The issue was bootstrap 3 plugin. Once I took that out, I was able to load the static files myself and then everything started working.">
       <created>1424889841397</created>
       <option name="number" value="00033" />
@@ -885,7 +854,13 @@
       <option name="project" value="LOCAL" />
       <updated>1426538287426</updated>
     </task>
-    <option name="localTasksCounter" value="81" />
+    <task id="LOCAL-00081" summary="delete event working. Need to test with event that has already emailed teachers">
+      <created>1426539382022</created>
+      <option name="number" value="00081" />
+      <option name="project" value="LOCAL" />
+      <updated>1426539382022</updated>
+    </task>
+    <option name="localTasksCounter" value="82" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -973,7 +948,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="More changes with the event sign up flow" />
     <MESSAGE value="successfully signed up a teacher for an event" />
     <MESSAGE value="Booked event rejects a teacher trying to click on it. Also seeing added the events each teacher has coming up in the teacher_account page" />
     <MESSAGE value="events showing up with assigned teachers in client portal" />
@@ -998,7 +972,8 @@
     <MESSAGE value="available time form custom form validation" />
     <MESSAGE value="event form custom form validation" />
     <MESSAGE value="added delete time route and also got the message framework working&#10;" />
-    <option name="LAST_COMMIT_MESSAGE" value="added delete time route and also got the message framework working&#10;" />
+    <MESSAGE value="delete event working. Need to test with event that has already emailed teachers" />
+    <option name="LAST_COMMIT_MESSAGE" value="delete event working. Need to test with event that has already emailed teachers" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1371,36 +1346,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/extra_hands_app/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1195" max-vertical-offset="3094">
-          <caret line="209" column="54" selection-start-line="209" selection-start-column="54" selection-end-line="209" selection-end-column="54" />
-          <folding>
-            <element signature="e#0#35#0" expanded="true" />
-            <element signature="e#656#749#0" expanded="false" />
-            <element signature="e#872#1100#0" expanded="false" />
-            <element signature="e#1219#1373#0" expanded="false" />
-            <element signature="e#1542#1873#0" expanded="false" />
-            <element signature="e#2011#2138#0" expanded="false" />
-            <element signature="e#2294#3294#0" expanded="false" />
-            <element signature="e#3399#4401#0" expanded="false" />
-            <element signature="e#6671#7723#0" expanded="false" />
-            <element signature="e#8923#10016#0" expanded="false" />
-            <element signature="e#10141#11060#0" expanded="false" />
-            <element signature="e#11117#12113#0" expanded="false" />
-            <element signature="e#12208#12376#0" expanded="false" />
-            <element signature="e#12819#14690#0" expanded="false" />
-            <element signature="e#14933#15399#0" expanded="false" />
-            <element signature="e#16280#16918#0" expanded="false" />
-            <element signature="e#17195#19698#0" expanded="false" />
-            <element signature="e#19882#22152#0" expanded="false" />
-            <element signature="e#22369#23856#0" expanded="false" />
-            <element signature="e#24000#25371#0" expanded="false" />
-            <element signature="e#25408#25458#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/extra_hands_app/urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="561">
@@ -1413,8 +1358,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/client_account.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.37876615" vertical-offset="161" max-vertical-offset="918">
-          <caret line="25" column="70" selection-start-line="25" selection-start-column="70" selection-end-line="25" selection-end-column="70" />
+        <state vertical-scroll-proportion="-21.26923" vertical-offset="161" max-vertical-offset="918">
+          <caret line="42" column="0" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/extra_hands_app/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5878285" vertical-offset="2856" max-vertical-offset="9639">
+          <caret line="203" column="34" selection-start-line="203" selection-start-column="34" selection-end-line="203" selection-end-column="34" />
           <folding />
         </state>
       </provider>

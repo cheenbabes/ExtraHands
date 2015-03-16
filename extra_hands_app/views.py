@@ -201,7 +201,7 @@ def delete_event(request, event_token):
         dict ={'class_event': "alert-danger", 'message': "This event does not exist!", 'url': 'myaccount', 'button_text': "My Account"}
         return render(request, "generic_message.html", dict)
     if request.user == event.client.user:
-        if event.in_progress:
+        if event.in_progress or event.teacher is not None:
             dict ={'class_event': "alert-danger", 'message': "This event is in progress and cannot be modified!", 'url': 'myaccount', 'button_text': "My Account"}
             return render(request, "generic_message.html", dict)
         else:
