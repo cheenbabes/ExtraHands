@@ -6,9 +6,8 @@ calendar solution
         -make sure the json is correct (eg success= {1} at the beginning)
 
 ===TEACHERS===
---If an event has been submitted but no teacher has been assigned to it
-teacher should be able to view a list of all events that do not have a sub assigned to them yet and commit to it right then. It should prompt the teacher
-whether they really want to accept the event or not. (maybe if there's been no teacher for more than 7 days, then it becomes open??)
+--If an event has been submitted but no teacher has been assigned to it and it has been X number of days (let the client pick this date), then teachers can view this
+    event and submit themselves to the client. Client has to approve the teacher before they are assigned to the event.
 
 --allow teachers to modify some things on their account
     --time in between events (in hours)
@@ -28,6 +27,7 @@ whether they really want to accept the event or not. (maybe if there's been no t
             --for every event in pending events, get all the times available and store them as a list of available times on the event
             --when a teacher is emailed, add that time to another list.
             --get the diff between the two lists and retrieve that number.
+            --only show those times which have not been emailed yet.
 
 
 
