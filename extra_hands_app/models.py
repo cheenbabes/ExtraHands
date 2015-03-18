@@ -1,13 +1,40 @@
 from django.db import models
 from django.contrib.auth.models import User
 import random
-import moneyed
 from djmoney.models.fields import MoneyField
 import datetime
-
+from django.template.defaultfilters import slugify
 # Create your models here.
 # User class contains username, password, email address, first name, last name
-from django.template.defaultfilters import slugify
+
+
+class ListField(models.TextField):
+    __metaclass__ = models.SubfieldBase
+    description = "Stores a python list"
+
+    def __init__(self, *args, **kwargs):
+        super(ListField, self).__init__(*args, **kwargs)
+
+    def to_python(self, value):
+        if not value:
+            value = []
+
+        if isinstance(value, list):
+            return value
+
+        return ast.literal_eval(value)
+
+    def get_prep_value(self, value):
+        if value is None:
+            return value
+
+        return unicode(value)
+
+    def value_to_string(self, obj):
+        value = self._get_val_from_obj(obj)
+        return self.get_db_prep_value(value)
+
+
 
 
 class Client(models.Model):
@@ -74,8 +101,10 @@ class Event(models.Model):
     comments = models.CharField(max_length=500, blank=True, default ='')
     is_on_call = models.BooleanField(default=False)
     event_class = models.CharField(max_length=100, default='event-info')
-    # created_at = models.DateTimeField(auto_now_add=True, null=True)
-    # modified_at = models.DateTimeField(auto_now=True, null=True)
+    teacher_list_available = ListField(default = [])
+    teacher_list_contacted = ListField(default = [])
+
+
 
 
     def save(self, *args, **kwargs):

@@ -390,6 +390,11 @@ def show_available_teachers(request, event_token):
     if request.user == event.client.user:
         available_times = get_all_times_available_for_event(event)
         context_dict['times'] = available_times
+
+        #logic to see which teachers have already been emailed
+        
+
+
         return render(request, 'select_teacher.html', context_dict)
     else:
         dict ={'class_event': "alert-danger", 'message': "You don't have permission to perform this action.", 'url': 'myaccount', 'button_text': "My Account"}
@@ -476,8 +481,11 @@ def send_emails_to_teachers(request, event_token):
         if request.method == 'POST':
             #mark the event as in_progress and no longer available to be deleted
             event.in_progress = True
-            #Loop through all available teachers and send out mail
+            #get all the teachers the user selected
             teacher_tokens = request.POST.getlist('teachers')
+            #add those teachers to the contacted list
+            event.teacher_list_contacted.extend(teacher_tokens)
+            #Loop through all available teachers and send out mail
             for token in teacher_tokens:
                 teacher = Teacher.objects.get(token = token)
                 name = teacher.user.get_full_name
