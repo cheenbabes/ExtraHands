@@ -1,6 +1,8 @@
 from django import forms
 from models import Event, Available_Time, User, Teacher, Client
 from datetimewidget.widgets import DateTimeWidget
+import datetime
+from django.utils import timezone
 
 class EventForm(forms.ModelForm):
     dateTimeOptions={
@@ -29,11 +31,16 @@ class EventForm(forms.ModelForm):
     def is_valid(self):
         valid = super(EventForm, self).is_valid()
 
+
         if not valid:
             return valid
 
         if self.cleaned_data['end_time'] <= self.cleaned_data['start_time']:
             self._errors['invalid_entry'] = 'The end time must be after the start time'
+            return False
+
+        if self.cleaned_data['start_time'] <= datetime.datetime.now():
+            self._errors['invalid_entry'] = 'The event cannot begin in the past'
             return False
 
         return True
