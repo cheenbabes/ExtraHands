@@ -39,7 +39,7 @@ class EventForm(forms.ModelForm):
             self._errors['invalid_entry'] = 'The end time must be after the start time'
             return False
 
-        if self.cleaned_data['start_time'] <= datetime.datetime.now():
+        if self.cleaned_data['start_time'] <= timezone.now():
             self._errors['invalid_entry'] = 'The event cannot begin in the past'
             return False
 
