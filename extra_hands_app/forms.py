@@ -70,6 +70,10 @@ class AvailableTimeForm(forms.ModelForm):
             self._errors['invalid_entry'] = 'The end time must be after the start time'
             return False
 
+        if self.cleaned_data['start_time'] <= timezone.now():
+            self._errors['invalid_entry'] = 'The scheduled time cannot begin in the past'
+            return False
+
         return True
 
     class Meta:
