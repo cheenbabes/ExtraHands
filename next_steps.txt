@@ -30,11 +30,12 @@ core business logic
     -clients should be able to see which teachers they already contacted and see a notification if more teachers have become available. Also, they should not be able to
     email any teacher twice. Add a field to Event that has a list of time tokens since available teachers are shown based on individual times.
         -implementation
-            --for every event in pending events, get all the times available and store them as a list of available times on the event
-            --when a teacher is emailed, add that time to another list.
-            --get the diff between the two lists and retrieve that number.
-
-
+            --in my_account() view function, get all the available times for all the events linked to the client.
+            --assign all the possible times to a list field on the event
+            --the event object should have a list field of all the times that have been emailed.
+            --compare all possible times with the ones that have been emailed.
+            --the count of available events can be put in the myaccount page on the "View Available Teachers" button as a bootstrap notification
+            --on the select-teacher page, just get the list of the all events that are available but not have yet been emailed.
 
 ==STORY 2==
     -make it so clients cannot email the same "time" again. This ties in with story 3

@@ -6,7 +6,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c278ac50-8beb-47b3-8114-cdbe07f29a59" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/extra_hands_app/forms.py" afterPath="$PROJECT_DIR$/extra_hands_app/forms.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/next_steps.txt" afterPath="$PROJECT_DIR$/next_steps.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="ExtraHands.iws" />
@@ -95,14 +95,27 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="forms.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="forms.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/extra_hands_app/forms.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.31578946" vertical-offset="901" max-vertical-offset="1870">
-              <caret line="71" column="8" selection-start-line="71" selection-start-column="8" selection-end-line="71" selection-end-column="8" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="901" max-vertical-offset="1870">
+              <caret line="100" column="21" selection-start-line="100" selection-start-column="21" selection-end-line="100" selection-end-column="21" />
               <folding>
                 <element signature="e#0#24#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="next_steps.txt" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/next_steps.txt">
+          <provider editor-type-id="com.intellij.database.editor.CsvTableFileEditorProvider">
+            <state />
+          </provider>
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.19914803" vertical-offset="0" max-vertical-offset="1326">
+              <caret line="11" column="55" selection-start-line="11" selection-start-column="55" selection-end-line="11" selection-end-column="55" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -124,16 +137,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0" vertical-offset="1023" max-vertical-offset="2244">
               <caret line="85" column="0" selection-start-line="85" selection-start-column="0" selection-end-line="85" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="tzinfo.py" pinned="false" current-in-tab="false">
-        <entry file="file://C:/Python27/Lib/site-packages/pytz/tzinfo.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="6728" max-vertical-offset="9673">
-              <caret line="410" column="0" selection-start-line="410" selection-start-column="0" selection-end-line="410" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -200,12 +203,12 @@
         <option value="$PROJECT_DIR$/templates/myaccount.html" />
         <option value="$PROJECT_DIR$/templates/select_teacher.html" />
         <option value="$PROJECT_DIR$/extra_hands_app/urls.py" />
-        <option value="$PROJECT_DIR$/next_steps.txt" />
         <option value="$PROJECT_DIR$/extra_hands_app/views.py" />
         <option value="$PROJECT_DIR$/templates/teacher_account.html" />
         <option value="$PROJECT_DIR$/templates/client_account.html" />
         <option value="$PROJECT_DIR$/ExtraHands/settings.py" />
         <option value="$PROJECT_DIR$/extra_hands_app/forms.py" />
+        <option value="$PROJECT_DIR$/next_steps.txt" />
       </list>
     </option>
   </component>
@@ -241,7 +244,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -304,6 +306,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -312,6 +315,9 @@
     <property name="DefaultHtmlFileTemplate" value="Html5" />
     <property name="FullScreen" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="options.lastSelected" value="reference.settingsdialog.IDE.editor.colors.Font" />
+    <property name="options.splitter.main.proportions" value="0.3" />
+    <property name="options.splitter.details.proportions" value="0.2" />
   </component>
   <component name="PyConsoleOptionsProvider">
     <option name="myPythonConsoleState">
@@ -583,12 +589,6 @@
       <created>1424125891592</created>
       <option name="number" value="Default" />
       <updated>1424125891592</updated>
-    </task>
-    <task id="LOCAL-00037" summary="edits to tokenization to make them unchangeable once the object is created">
-      <created>1424972835058</created>
-      <option name="number" value="00037" />
-      <option name="project" value="LOCAL" />
-      <updated>1424972835058</updated>
     </task>
     <task id="LOCAL-00038" summary="sorted events by ascending (nearest date first). Added on-call marker to event to differentiate which events were created as on-call and which are not.">
       <created>1424987602484</created>
@@ -878,7 +878,13 @@
       <option name="project" value="LOCAL" />
       <updated>1426734331687</updated>
     </task>
-    <option name="localTasksCounter" value="86" />
+    <task id="LOCAL-00086" summary="implemented date checking for available time">
+      <created>1426814879200</created>
+      <option name="number" value="00086" />
+      <option name="project" value="LOCAL" />
+      <updated>1426814879201</updated>
+    </task>
+    <option name="localTasksCounter" value="87" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -906,7 +912,7 @@
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32953367" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.08982036" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22305389" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32953367" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.35707122" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -966,7 +972,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="Modifications to client portal" />
     <MESSAGE value="start of available time implementation" />
     <MESSAGE value="Click object and implementation&#10;" />
     <MESSAGE value="time logic and splitting" />
@@ -991,7 +996,8 @@
     <MESSAGE value="finally got the confirm dialog working" />
     <MESSAGE value="prevent past events from being created through overrding is_valid() and setting USE_TZ to false." />
     <MESSAGE value="Use timezone.now() to provide timezone functionality while retaining form.is)valid() behavior. Implemented for event only." />
-    <option name="LAST_COMMIT_MESSAGE" value="Use timezone.now() to provide timezone functionality while retaining form.is)valid() behavior. Implemented for event only." />
+    <MESSAGE value="implemented date checking for available time" />
+    <option name="LAST_COMMIT_MESSAGE" value="implemented date checking for available time" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1267,16 +1273,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/next_steps.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="969" max-vertical-offset="1309">
-          <caret line="57" column="31" selection-start-line="57" selection-start-column="31" selection-end-line="57" selection-end-column="31" />
-        </state>
-      </provider>
-      <provider editor-type-id="com.intellij.database.editor.CsvTableFileEditorProvider">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/myaccount.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-1.1538461" vertical-offset="310" max-vertical-offset="1020">
@@ -1397,11 +1393,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/extra_hands_app/forms.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.31578946" vertical-offset="901" max-vertical-offset="1870">
-          <caret line="71" column="8" selection-start-line="71" selection-start-column="8" selection-end-line="71" selection-end-column="8" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="901" max-vertical-offset="1870">
+          <caret line="100" column="21" selection-start-line="100" selection-start-column="21" selection-end-line="100" selection-end-column="21" />
           <folding>
             <element signature="e#0#24#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/next_steps.txt">
+      <provider editor-type-id="com.intellij.database.editor.CsvTableFileEditorProvider">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.19914803" vertical-offset="0" max-vertical-offset="1326">
+          <caret line="11" column="55" selection-start-line="11" selection-start-column="55" selection-end-line="11" selection-end-column="55" />
+          <folding />
         </state>
       </provider>
     </entry>
