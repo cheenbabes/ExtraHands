@@ -21,6 +21,13 @@ core business logic
 --send confirmation email to client
 
 --probably porting the project to VS is the next step and going through deployment to azure
+    --this will have to be a file by file transfer. Very painful and not fun at all.
+    --Probably something like:
+        -models. migrate
+        -forms
+        -settings
+        -templates
+        -views
 
 --some kind of billing/account tracking system??
     --regular hourly rate
