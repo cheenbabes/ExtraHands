@@ -333,8 +333,8 @@ def my_account(request):
     if Teacher.objects.filter(user=user).exists():
         is_teacher = True
         teacher = Teacher.objects.filter(user=user)
-        available_time = Available_Time.objects.filter(teacher=teacher).filter(active=True).order_by('start_time')
-        events = Event.objects.filter(teacher=teacher).order_by('start_time')
+        available_time = Available_Time.objects.filter(teacher=teacher).filter(start_time__gte=datetime.datetime.today() - datetime.timedelta(days=1)).filter(active=True).order_by('start_time')
+        events = Event.objects.filter(teacher=teacher).filter(start_time__gte=datetime.datetime.today() - datetime.timedelta(days=1)).order_by('start_time')
         context_dict['times'] = available_time
         context_dict['events'] = events
 
