@@ -1,40 +1,54 @@
 
 <h1> This is the teacher portal</h1><br>
 
-<p>
-    <strong>{{ user.user.get_full_name }}</strong><br>
-    {{ user.teacher.street }}<br>
-    {{ user.teacher.city }}, {{ user.teacher.state }} <br>
-    {{ user.teacher.phone_number }}<br><br>
-    <i>Qualifications</i><br>
-    ECT Certified: {{ user.teacher.ect_qualified }}<br>
-    CPR & First Aid: {{ user.teacher.cpr_first_aid }}<br>
-    Universal Precautions: {{ user.teacher.universal_precautions }}<br><br>
-    <i>Background</i><br>
-    Education: {{ user.teacher.degree }}, {{ user.teacher.major }}<br>
+<div class="row">
+    <div class="col-md-6">
+        <p>
+            <strong>{{ user.user.get_full_name }}</strong><br>
+            {{ user.teacher.street }}<br>
+            {{ user.teacher.city }}, {{ user.teacher.state }} <br>
+            {{ user.teacher.phone_number }}<br><br>
+            <i>Qualifications</i><br>
+            ECT Certified: {{ user.teacher.ect_qualified }}<br>
+            CPR & First Aid: {{ user.teacher.cpr_first_aid }}<br>
+            Universal Precautions: {{ user.teacher.universal_precautions }}<br><br>
+            <i>Background</i><br>
+            Education: {{ user.teacher.degree }}, {{ user.teacher.major }}<br>
 
-    <hr>
-</p>
+            <hr>
+        </p>
 
-<p>
-    On call: {{ user.teacher.on_call }}<br>
-    Available: {{ user.teacher.is_available }}
-</p>
-    {% if user.teacher.on_call %}
-           <form method="post" action="/action/on-call/">
-        {% csrf_token %}
-        <button id="on-call" type="submit" class="btn btn-success">You're on Call!</button>
-    </form>
-    {% else %}
-        <form method="post" action="/action/on-call/">
-        {% csrf_token %}
-        <button id="on-call" type="submit" class="btn btn-danger">Go On Call</button>
-    </form>
+        <p>
+            On call: {{ user.teacher.on_call }}<br>
+            Available: {{ user.teacher.is_available }}
+        </p>
+            {% if user.teacher.on_call %}
+                   <form method="post" action="/action/on-call/">
+                {% csrf_token %}
+                <button id="on-call" type="submit" class="btn btn-success">You're on Call!</button>
+            </form>
+            {% else %}
+                <form method="post" action="/action/on-call/">
+                {% csrf_token %}
+                <button id="on-call" type="submit" class="btn btn-danger">Go On Call</button>
+            </form>
 
-    {% endif %}
-    <br>
+            {% endif %}
+            <br>
 
-    <a href="{% url 'add_time' user.teacher.slug  %}" class="btn btn-warning">Add time</a>
+            <a href="{% url 'add_time' user.teacher.slug  %}" class="btn btn-warning">Add time</a>
+    </div>
+    <div class="col-md-6">
+        <p><br>
+            <strong>Regular Rate: </strong> {{ user.teacher.regular_rate }}<br>
+            <strong>Extra Rate: </strong> {{ user.teacher.extra_rate }}
+        </p>
+        <form>
+
+        </form>
+    </div>
+</div>
+
 <hr>
     <h2>My Scheduled Events</h2>
     {% for event in events %}

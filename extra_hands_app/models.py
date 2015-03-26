@@ -52,6 +52,10 @@ class Teacher(models.Model):
     slug = models.SlugField(unique=True)
     clicks = models.IntegerField(default=0)
     token = models.IntegerField(default=0)
+    regular_rate = models.DecimalField(max_digits=6, decimal_places=2, default = 11.00)
+    extra_rate = models.DecimalField(max_digits=6, decimal_places=2, default = 13.00)
+
+
 
     def save(self, *args, **kwargs):
         self.slug = slugify(self.user.get_full_name())
@@ -123,7 +127,7 @@ class Receipt(models.Model):
     total = MoneyField(max_digits=10, decimal_places=2, default_currency='USD')
     teacher_part = MoneyField(max_digits=10, decimal_places=2, default_currency='USD')
     admin_part = MoneyField(max_digits=10, decimal_places=2, default_currency='USD')
-    date_due = models.DateField(default= datetime.datetime.today())
+    date_due = models.DateField()
 
 
 
