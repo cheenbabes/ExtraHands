@@ -426,10 +426,10 @@ def get_times_to_deactivate(event, teacher):
             delta = event.start_time - time.start_time
             time.active = False
             time.save()
-            if(delta.seconds > 3600):
+            if(delta.seconds > 3600*teacher.time_between_events):
                 new_time = Available_Time()
                 new_time.start_time = time.start_time
-                new_time.end_time = event.start_time - datetime.timedelta(hours=1)
+                new_time.end_time = event.start_time - datetime.timedelta(hours=teacher.time_between_events)
                 new_time.teacher = teacher
                 new_time.save()
         #available time start is the same as event start time and end is after
@@ -438,9 +438,9 @@ def get_times_to_deactivate(event, teacher):
             delta = time.end_time - event.end_time
             time.active = False
             time.save()
-            if(delta.seconds > 3600):
+            if(delta.seconds > 3600*teacher.time_between_events):
                 new_time = Available_Time()
-                new_time.start_time = event.end_time + datetime.timedelta(hours=1)
+                new_time.start_time = event.end_time + datetime.timedelta(hours=teacher.time_between_events)
                 new_time.end_time = time.end_time
                 new_time.teacher = teacher
                 new_time.save()
@@ -452,16 +452,16 @@ def get_times_to_deactivate(event, teacher):
             delta_start = event.start_time - time.start_time
             delta_end = time.end_time - event.end_time
 
-            if(delta_start.seconds > 3600):
+            if(delta_start.seconds > 3600*teacher.time_between_events):
                 new_time = Available_Time()
                 new_time.start_time = time.start_time
-                new_time.end_time = event.start_time - datetime.timedelta(hours=1)
+                new_time.end_time = event.start_time - datetime.timedelta(hours=teacher.time_between_events)
                 new_time.teacher = teacher
                 new_time.save()
 
-            if(delta_end.seconds > 3600):
+            if(delta_end.seconds > 3600*teacher.time_between_events):
                 new_time = Available_Time()
-                new_time.start_time = event.end_time + datetime.timedelta(hours=1)
+                new_time.start_time = event.end_time + datetime.timedelta(hours=teacher.time_between_events)
                 new_time.end_time = time.end_time
                 new_time.teacher = teacher
                 new_time.save()

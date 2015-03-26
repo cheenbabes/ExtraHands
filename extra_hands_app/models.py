@@ -54,6 +54,7 @@ class Teacher(models.Model):
     token = models.IntegerField(default=0)
     regular_rate = models.DecimalField(max_digits=6, decimal_places=2, default = 11.00)
     extra_rate = models.DecimalField(max_digits=6, decimal_places=2, default = 13.00)
+    time_between_events = models.DecimalField(max_digits = 6, decimal_places = 2, default = 1)
 
 
 

@@ -43,8 +43,10 @@
             <strong>Regular Rate: </strong> {{ user.teacher.regular_rate }}<br>
             <strong>Extra Rate: </strong> {{ user.teacher.extra_rate }}
         </p>
-        <form>
-
+        <form class="form-inline">
+            <label>Time between events (hours)</label>
+            <input id="timeBetweenEventsInput" type="text" placeholder="{{ user.teacher.time_between_events }}" class="form-control" disabled="disabled"><br>
+            <button class="btn btn-warning" id="editTeacherTimeDifference">Edit</button>
         </form>
     </div>
 </div>
