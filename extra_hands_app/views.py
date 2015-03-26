@@ -381,11 +381,13 @@ def go_on_call(request):
 
 @login_required()
 def change_time(request, teacher_token):
-    teacher = Teacher.objects.filter(token=teacher_token)
+    teacher = Teacher.objects.get(token=teacher_token)
     if request.user == teacher.user:
         if request.method =='POST':
-            hours = request.POST
-
+            hours = request.POST.get("hours")
+            if hours < 0.5 or hours > 3:
+                messages.error(request, "Please enter a decimal value for hours between 0.5 and 3")
+                return HttpResponseRedirect("/myaccount/")
 
     else:
         dict ={'class_event': "alert-danger", 'message': "You don't have permission to perform this action.", 'url': 'myaccount', 'button_text': "My Account"}

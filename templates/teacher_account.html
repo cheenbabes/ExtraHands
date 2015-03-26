@@ -46,7 +46,7 @@
         <form method="post" action="{% url 'change_time' user.teacher.token %}">
             {% csrf_token %}
             <label>Time between events (hours)</label>
-            <input id="timeBetweenEventsInput" type="text" placeholder="{{ user.teacher.time_between_events }}" class="form-control" disabled="disabled"><br>
+            <input id="timeBetweenEventsInput" type="text" name="hours" placeholder="{{ user.teacher.time_between_events }}" class="form-control" disabled="disabled"><br>
             <button class="btn btn-warning" id="editTeacherTimeDifference">Edit</button>  <input type="submit" name="Submit" value="Submit" class="btn btn-primary">
         </form>
     </div>

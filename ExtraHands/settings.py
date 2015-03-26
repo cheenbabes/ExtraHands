@@ -10,11 +10,14 @@ https://docs.djangoproject.com/en/1.7/ref/settings/
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 import os
+from django.contrib.messages import constants as messages
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 
 
 
-
+MESSAGE_TAGS = {
+    messages.ERROR: 'danger'
+}
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.7/howto/deployment/checklist/
 
@@ -116,6 +119,7 @@ EMAIL_HOST_USER = 'eugene.baibourin@gmail.com'
 EMAIL_HOST_PASSWORD = '3lxuGYo51ENYy3UuYVfQzA'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
+
 
 
 
