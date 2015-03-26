@@ -379,6 +379,19 @@ def go_on_call(request):
     else:
         return HttpResponseRedirect("/myaccount/")
 
+@login_required()
+def change_time(request, teacher_token):
+    teacher = Teacher.objects.filter(token=teacher_token)
+    if request.user == teacher.user:
+        if request.method =='POST':
+            hours = request.POST
+
+
+    else:
+        dict ={'class_event': "alert-danger", 'message': "You don't have permission to perform this action.", 'url': 'myaccount', 'button_text': "My Account"}
+        return render(request, "generic_message.html", dict)
+
+
 #Shows the available teachers for a particular event booking. Displays the teachers who have available times then and their profiles.
 def show_available_teachers(request, event_token):
     user = request.user

@@ -23,12 +23,12 @@
             Available: {{ user.teacher.is_available }}
         </p>
             {% if user.teacher.on_call %}
-                   <form method="post" action="/action/on-call/">
+                   <form method="post" action="{% url "go_on_call" %}">
                 {% csrf_token %}
                 <button id="on-call" type="submit" class="btn btn-success">You're on Call!</button>
             </form>
             {% else %}
-                <form method="post" action="/action/on-call/">
+                <form method="post" action="{% url "go_on_call" %}">
                 {% csrf_token %}
                 <button id="on-call" type="submit" class="btn btn-danger">Go On Call</button>
             </form>
@@ -43,10 +43,11 @@
             <strong>Regular Rate: </strong> {{ user.teacher.regular_rate }}<br>
             <strong>Extra Rate: </strong> {{ user.teacher.extra_rate }}
         </p>
-        <form class="form-inline">
+        <form method="post" action="{% url 'change_time' user.teacher.token %}">
+            {% csrf_token %}
             <label>Time between events (hours)</label>
             <input id="timeBetweenEventsInput" type="text" placeholder="{{ user.teacher.time_between_events }}" class="form-control" disabled="disabled"><br>
-            <button class="btn btn-warning" id="editTeacherTimeDifference">Edit</button>
+            <button class="btn btn-warning" id="editTeacherTimeDifference">Edit</button>  <input type="submit" name="Submit" value="Submit" class="btn btn-primary">
         </form>
     </div>
 </div>
