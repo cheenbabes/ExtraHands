@@ -390,6 +390,7 @@ def change_time(request, teacher_token):
                 return HttpResponseRedirect("/myaccount/")
             else:
                 teacher.time_between_events = hours
+                teacher.save()
                 messages.success(request, "Your time between events was successfully updated to %s hours" % hours)
                 return HttpResponseRedirect('/myaccount/')
 
@@ -448,7 +449,7 @@ def get_times_to_deactivate(event, teacher):
             if(delta.seconds > 3600*teacher.time_between_events):
                 new_time = Available_Time()
                 new_time.start_time = time.start_time
-                new_time.end_time = event.start_time - datetime.timedelta(hours=teacher.time_between_events)
+                new_time.end_time = event.start_time - datetime.timedelta(hours=float(teacher.time_between_events))
                 new_time.teacher = teacher
                 new_time.save()
         #available time start is the same as event start time and end is after
@@ -459,7 +460,7 @@ def get_times_to_deactivate(event, teacher):
             time.save()
             if(delta.seconds > 3600*teacher.time_between_events):
                 new_time = Available_Time()
-                new_time.start_time = event.end_time + datetime.timedelta(hours=teacher.time_between_events)
+                new_time.start_time = event.end_time + datetime.timedelta(hours=float(teacher.time_between_events))
                 new_time.end_time = time.end_time
                 new_time.teacher = teacher
                 new_time.save()
@@ -474,13 +475,13 @@ def get_times_to_deactivate(event, teacher):
             if(delta_start.seconds > 3600*teacher.time_between_events):
                 new_time = Available_Time()
                 new_time.start_time = time.start_time
-                new_time.end_time = event.start_time - datetime.timedelta(hours=teacher.time_between_events)
+                new_time.end_time = event.start_time - datetime.timedelta(hours=float(teacher.time_between_events))
                 new_time.teacher = teacher
                 new_time.save()
 
             if(delta_end.seconds > 3600*teacher.time_between_events):
                 new_time = Available_Time()
-                new_time.start_time = event.end_time + datetime.timedelta(hours=teacher.time_between_events)
+                new_time.start_time = event.end_time + datetime.timedelta(hours=float(teacher.time_between_events))
                 new_time.end_time = time.end_time
                 new_time.teacher = teacher
                 new_time.save()
@@ -508,8 +509,8 @@ def send_emails_to_teachers(request, event_token):
                 send_mail(subject, body, return_address, [teacher.user.email])
 
                 print "This teacher's name is {0}, the token number is {1}, and their email is {2}".format(teacher.user.get_full_name(), teacher.token, teacher.user.email)
-                dict ={'class_event': "alert-success", 'message': "Your email was sent successfully", 'url': 'myaccount', 'button_text': "My Account"}
-            return render(request, "generic_message.html", dict)
+            messages.success(request, "Your email was sent successfully")
+            return HttpResponseRedirect("/myaccount/")
 
         else:
             dict ={'class_event': "alert-danger", 'message': "Something went wrong because you're not using this like you're supposed to.", 'url': 'myaccount', 'button_text': "My Account"}
@@ -578,8 +579,8 @@ def confirm_teacher_post(request, event_token, teacher_token):
             # recipient_list = [event.client.user.email]
             # send_mail(subject, message, from_email, recipient_list)
 
-            context_dict = {'teacher': teacher, 'event': event}
-            return render(request, 'event_sign_up_confirmed.html', context_dict)
+            messages.success(request, "You successfully signed up for this event! The event starts at %s and ends at %s. Please make sure your availability was appropriately updated." % (event.start_time.strftime("%a, %b %d, %Y %H:%M"), event.end_time.strftime("%a, %b %d, %Y %H:%M")))
+            return HttpResponseRedirect("/myaccount/")
 
         else:
             dict ={'class_event': "alert-danger", 'message': "Something went wrong because you're not using this like you're supposed to.", 'url': 'myaccount', 'button_text': "My Account"}
