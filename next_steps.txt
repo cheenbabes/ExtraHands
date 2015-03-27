@@ -48,6 +48,15 @@ core business logic
     -make it so clients cannot email the same "time" again. This ties in with story 3
 
 
+==STORY 5==
+    -clean up all the generic_template logic and consolidate to messages framework where possible
+
+==STORY 6==
+    -make sure all the click() functionality works for tracking teacher clicks
+
+==STORY 7==
+    --sending confirmation emails to clients
+
 
 ===Accounts===
 ===FEATURE===
