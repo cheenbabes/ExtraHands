@@ -57,6 +57,12 @@ core business logic
 ==STORY 7==
     --sending confirmation emails to clients
 
+==STORY 8==
+    --creating html templates for emails sent out to teachers and clients
+
+==STORY 9==
+    --detokenize the application. Tokens are NOT guaranteed to be unique. Now that there is security in place, there is no need to obfuscate urls.
+
 
 ===Accounts===
 ===FEATURE===
