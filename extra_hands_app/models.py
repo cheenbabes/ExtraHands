@@ -21,12 +21,12 @@ class Client(models.Model):
     description = models.CharField(max_length=600)
     client_slug = models.SlugField(unique=True)
     campus = models.IntegerField(default=1)
-    token = models.IntegerField(default=0)
+    # token = models.IntegerField(default=0)
 
     def save(self, *args, **kwargs):
         self.client_slug = slugify(self.organization)
-        if self.token is None:
-            self.token = random.randint(100000,999999)
+        # if self.token is None:
+        #     self.token = random.randint(100000,999999)
         super(Client, self).save(*args, **kwargs)
 
 
@@ -51,7 +51,7 @@ class Teacher(models.Model):
     on_call = models.BooleanField(default=False)
     slug = models.SlugField(unique=True)
     clicks = models.IntegerField(default=0)
-    token = models.IntegerField(default=0)
+    # token = models.IntegerField(default=0)
     regular_rate = models.DecimalField(max_digits=6, decimal_places=2, default = 11.00)
     extra_rate = models.DecimalField(max_digits=6, decimal_places=2, default = 13.00)
     time_between_events = models.DecimalField(max_digits = 6, decimal_places = 2, default = 1)
@@ -75,7 +75,7 @@ class Event(models.Model):
     client = models.ForeignKey(Client)
     is_open = models.BooleanField(default=False)
     in_progress = models.BooleanField(default=False)
-    token = models.IntegerField(default=0)
+    # token = models.IntegerField(default=0)
     comments = models.CharField(max_length=500, blank=True, default ='')
     is_on_call = models.BooleanField(default=False)
     event_class = models.CharField(max_length=100, default='event-info')

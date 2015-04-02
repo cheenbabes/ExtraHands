@@ -77,7 +77,7 @@ def add_event(request, client_slug):
                     event = form.save(commit=False)
                     event.client = client
                     event.save()
-                    url = 'event/' + str(event.token) +'/select-teacher/'
+                    url = 'event/' + str(event.pk) +'/select-teacher/'
                     return HttpResponseRedirect(url)
             else:
                 print form.errors
@@ -167,8 +167,8 @@ def delete_time(request, time_pk):
 
 #Allows a client to edit an event they have created
 @login_required
-def edit_event(request, event_token):
-    event = Event.objects.get(token=event_token)
+def edit_event(request, event_pk):
+    event = Event.objects.get(pk=event_pk)
 
     if request.user == event.client.user:
         if request.method == 'POST':
@@ -400,11 +400,11 @@ def change_time(request, teacher_token):
 
 
 #Shows the available teachers for a particular event booking. Displays the teachers who have available times then and their profiles.
-def show_available_teachers(request, event_token):
+def show_available_teachers(request, event_pk):
     user = request.user
     context_dict={'user':user}
 
-    event = Event.objects.get(token=event_token)
+    event = Event.objects.get(pk=event_pk)
     context_dict['event'] = event
 
     if request.user == event.client.user:

@@ -43,7 +43,7 @@
             <strong>Regular Rate: </strong> {{ user.teacher.regular_rate }}<br>
             <strong>Extra Rate: </strong> {{ user.teacher.extra_rate }}
         </p>
-        <form method="post" action="{% url 'change_time' user.teacher.token %}">
+        <form method="post" action="{% url 'change_time' user.teacher.pk %}">
             {% csrf_token %}
             <label>Time between events (hours)</label>
             <input id="timeBetweenEventsInput" type="text" name="hours" placeholder="{{ user.teacher.time_between_events }}" class="form-control" disabled="disabled"><br>
@@ -60,7 +60,7 @@
             <strong>End Time:</strong> {{ event.end_time }}<br>
             On-call event: {{ event.is_on_call }}<br>
             Comments: {{ event.comments }}<br>
-            Token: {{ event.token }} <br>
+            Primary Key: {{ event.pk }} <br>
         </p>
 
     {% endfor %}
