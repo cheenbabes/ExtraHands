@@ -364,7 +364,7 @@ def my_account(request):
         for event in client_events_unconfirmed:
             times_available = get_all_times_available_for_event(event)
             for time in times_available:
-                if time.pk not in event.times_available or time.pk not in event.times_emailed:
+                if time.pk not in event.times_available or time.pk not in event.times_emailed: #THIS LOGIC IS WRONG WTF
                     event.times_available.extend([time.pk])
             event.save()
 
