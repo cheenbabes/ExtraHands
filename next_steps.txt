@@ -42,7 +42,7 @@ core business logic
             --the event object should have a list field of all the times that have been emailed.
             --compare all possible times with the ones that have been emailed.
             --the count of available events can be put in the myaccount page on the "View Available Teachers" button as a bootstrap notification
-            --on the select-teacher page, just get the list of the all events that are available but not have yet been emailed.
+            --on the select-teacher page, just get the list of the all times that are available but not have yet been emailed.
 
 ==STORY 2==
     -make it so clients cannot email the same "time" again. This ties in with story 3
@@ -72,8 +72,8 @@ core business logic
 
 
 ROADMAP
-    --detokenize
-    --clean up template logic and move to messages framework
+    --detokenize CHECK
+    --clean up template logic and move to messages framework CHECK
     --logic for not emailing teachers again
     --html templates
     --confirmation emails
