@@ -80,6 +80,13 @@ def add_event(request, client_slug):
                     event.save()
                     url = 'event/' + str(event.pk) +'/select-teacher/'
                     messages.success(request, "Initial creation of the event was successful. Please select teachers to email below.")
+
+                    times_available = get_all_times_available_for_event(event)
+                    for time in times_available:
+                        if time.pk not in event.times_available or time.pk not in event.times_emailed:
+                            event.times_available.extend([time.pk])
+                    event.save()
+
                     return HttpResponseRedirect(url)
             else:
                 print form.errors
@@ -357,8 +364,9 @@ def my_account(request):
         for event in client_events_unconfirmed:
             times_available = get_all_times_available_for_event(event)
             for time in times_available:
-                event.times_available.extend([time.pk])
-
+                if time.pk not in event.times_available or time.pk not in event.times_emailed:
+                    event.times_available.extend([time.pk])
+            event.save()
 
         context_dict['unconfirmed_events'] = client_events_unconfirmed
         context_dict['current_events'] = current_client_events
@@ -520,9 +528,10 @@ def send_emails_to_teachers(request, event_pk):
             #mark the event as in_progress and no longer available to be deleted
             event.in_progress = True
             #Loop through all available teachers and send out mail
-            teacher_pks = request.POST.getlist('teachers')
-            for pk in teacher_pks:
-                teacher = Teacher.objects.get(pk = pk)
+            time_pks = request.POST.getlist('times')
+            for pk in time_pks:
+                time = Available_Time.objects.get(pk = pk)
+                teacher = time.teacher
                 name = teacher.user.get_full_name()
                 link = "127.0.0.1:8000/confirm-event/{0}/{1}/".format(event.pk, teacher.pk)
                 body = "Hi {0}! {1} has just created an event and they selected you as one of the candidates. Below is your individual link to confirm your participation in this event. " \
@@ -530,6 +539,11 @@ def send_emails_to_teachers(request, event_pk):
                        "simply ignore this email." \
                        "Your link is {2}".format(name, event.client.organization, link)
                 send_mail(subject, body, return_address, [teacher.user.email])
+
+                #add this time to the emailed list so it cannot be emailed again.
+                event.times_available.remove(int(pk))
+                event.times_emailed.extend([int(pk)])
+                event.save()
 
                 print "This teacher's name is {0}, the primary key is {1}, and their email is {2}".format(teacher.user.get_full_name(), teacher.pk, teacher.user.email)
             messages.success(request, "Your email was sent successfully.")

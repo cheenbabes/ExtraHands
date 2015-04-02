@@ -7,7 +7,8 @@
     {{ user.client.city }}, {{ user.client.state }} <br>
     {{ user.client.phone_number }}<br><br>
     <i>Description</i><br>
-    {{ user.client.description }}
+    {{ user.client.description }}<br>
+    <a href="{% url 'add_event' user.client.client_slug  %}" class="btn btn-primary">Add event</a>
     <hr>
 </p>
 
@@ -21,7 +22,8 @@
             Teacher: No teacher yet!<br>
             Comments: {{ event.comments }}<br>
             Primary Key: {{ event.pk }} <br>
-            List Available Times: {{ event.times_available }}
+            List Available Times: {{ event.times_available }}<br>
+            List Emailed Time: {{ event.times_emailed }}<br>
             <a href="{% url 'edit_event' event.pk %}" class="btn btn-info">Edit Event</a>
             <a href="{% url 'select_teacher' event.pk %}" class='btn btn-success'>View Available Teachers</a>
             <a href="{% url 'delete_event' event.pk %}" class="btn btn-danger" onclick="return confirm('Are you sure you want to delete this event?')">Delete Event</a> <br>
@@ -45,5 +47,5 @@
     {% endfor %}
 
     <br>
-    <a href="{% url 'add_event' user.client.client_slug  %}" class="btn btn-primary">Add event</a>
+
 

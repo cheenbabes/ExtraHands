@@ -36,7 +36,7 @@
         {% csrf_token %}
         {% for time in times %}
             <div class="checkbox">
-                    <input type="checkbox" id="{{ time.teacher.pk }}" value="{{ time.teacher.pk}}" name="teachers">
+                    <input type="checkbox" id="{{ time.pk }}" value="{{ time.pk}}" name="times">
                     <p class="date-block">
                         Name: {{ time.teacher.user.get_full_name }}<br>
                         Start Time: {{ time.start_time }}<br>

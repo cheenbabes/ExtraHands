@@ -104,7 +104,8 @@ class Event(models.Model):
     comments = models.CharField(max_length=500, blank=True, default ='')
     is_on_call = models.BooleanField(default=False)
     event_class = models.CharField(max_length=100, default='event-info')
-    times_available = ListField(default =[])
+    times_available = ListField(default = [])
+    times_emailed = ListField(default = [])
 
 
     def save(self, *args, **kwargs):
