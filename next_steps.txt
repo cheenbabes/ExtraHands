@@ -63,6 +63,22 @@ core business logic
 ==STORY 9==
     --detokenize the application. Tokens are NOT guaranteed to be unique. Now that there is security in place, there is no need to obfuscate urls.
 
+==STORY 10==
+    --front end development
+
+==STORY 11==
+    --on call select-teacher view
+    --should only select on-call teachers, not search for times.
+
+
+ROADMAP
+    --detokenize
+    --clean up template logic and move to messages framework
+    --logic for not emailing teachers again
+    --html templates
+    --confirmation emails
+    --click() logic
+
 
 ===Accounts===
 ===FEATURE===
