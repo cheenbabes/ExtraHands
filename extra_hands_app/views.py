@@ -193,9 +193,9 @@ def edit_event(request, event_pk):
         return render(request, "generic_message.html", dict)
 
 @login_required
-def delete_event(request, event_token):
+def delete_event(request, event_pk):
     try:
-        event = Event.objects.get(token= event_token)
+        event = Event.objects.get(pk= event_pk)
     except Event.DoesNotExist:
         event = None
         dict ={'class_event': "alert-danger", 'message': "This event does not exist!", 'url': 'myaccount', 'button_text': "My Account"}
