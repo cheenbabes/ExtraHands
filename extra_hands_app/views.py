@@ -78,6 +78,7 @@ def add_event(request, client_slug):
                     event.client = client
                     event.save()
                     url = 'event/' + str(event.pk) +'/select-teacher/'
+                    messages.success(request, "Initial creation of the event was successful. Please select teachers to email below.")
                     return HttpResponseRedirect(url)
             else:
                 print form.errors
@@ -108,6 +109,7 @@ def add_time(request, teacher_slug):
                     time = form.save(commit=False)
                     time.teacher = teacher
                     time.save()
+                    messages.success(request, "Your availability was added successfully.")
                     return HttpResponseRedirect("/myaccount/")
             else:
                 print form.errors
@@ -136,6 +138,7 @@ def edit_time(request, time_pk):
                 time.start_time = form.cleaned_data['start_time']
                 time.end_time = form.cleaned_data['end_time']
                 time.save()
+                messages.success(request, "Your availability was updated successfully.")
                 return HttpResponseRedirect("/myaccount/")
             else:
                 print form.errors
@@ -180,6 +183,7 @@ def edit_event(request, event_pk):
                 event.is_on_call = form.cleaned_data['is_on_call']
                 # other editable fields go here
                 event.save()
+                messages.success(request, "Event was successfully edited.")
                 return HttpResponseRedirect("/myaccount/")
             else:
                 print form.errors
@@ -206,7 +210,7 @@ def delete_event(request, event_pk):
             return render(request, "generic_message.html", dict)
         else:
             event.delete()
-            messages.success(request, "You have successfully deleted this event")
+            messages.success(request, "You have successfully deleted this event.")
             return HttpResponseRedirect("/myaccount/")
     else:
         dict ={'class_event': "alert-danger", 'message': "You don't have permission to perform this action.", 'url': 'myaccount', 'button_text': "My Account"}
@@ -237,6 +241,8 @@ def register_teacher(request):
             user.save()
 
             registered = True
+            messages.success(request, "Thank you for registering! Welcome to your portal.")
+            return HttpResponseRedirect("/myaccount/")
         else:
             print user_form.errors, teacher_form.errors
 
@@ -271,6 +277,7 @@ def register_client(request):
             user.save()
 
             registered = True
+            messages.success(request, "Thank you for registering! Welcome to your portal.")
         else:
             print user_form.errors, client_form.errors
 
@@ -295,14 +302,15 @@ def user_login(request):
         if user:
             if user.is_active:
                 login(request, user)
+                messages.success(request, "You are logged in.")
                 return HttpResponseRedirect("/myaccount/")
             else:
                 dict ={'class_event': "alert-danger", 'message': "Your account is inactive. Contact the site administrator.", 'url': 'index', 'button_text': "Home" }
                 return render(request, "generic_message.html", dict)
         else:
-            print "Invalid login details: {0}, {1}".format(username, password)
-            dict ={'class_event': "alert-warning", 'message': "You supplied incorrect login information. Please try again.", 'url': 'login', 'button_text': "Login"}
-            return render(request, "generic_message.html", dict)
+            messages.error(request, "You supplied incorrect login details. Please try again.")
+            return HttpResponseRedirect("/login/")
+
 
     #GET Request, show the form
     else:
@@ -315,6 +323,7 @@ def user_logout(request):
     logout(request)
 
     # Take the user back to the homepage.
+    messages.success(request, "You are now logged out.")
     return HttpResponseRedirect('/')
 
 #The main method for displaying the users information. The request is routed based on the type of user.
@@ -373,6 +382,10 @@ def go_on_call(request):
             #reverse whatever it is
             teacher.on_call = not teacher.on_call
             teacher.save()
+            if teacher.on_call:
+                messages.success(request, "You are now on call!")
+            else:
+                messages.warning(request, "You are not on call anymore!")
             return HttpResponseRedirect("/myaccount/")
         else:
             return HttpResponse("I have no idea how you got here")
