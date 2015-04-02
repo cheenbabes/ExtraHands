@@ -23,7 +23,7 @@ url(r'event/(?P<event_pk>[\d]+)/select-teacher/$', views.show_available_teachers
 url(r'email-teachers/(?P<event_pk>[\d]+)/$', views.send_emails_to_teachers, name="email_teachers"),
 url(r'confirm-event/(?P<event_pk>[\d]+)/(?P<teacher_pk>[\d]+)/$', views.confirm_teacher_part1, name='confirm_teacher1'),
 url(r'confirm-teacher/(?P<event_pk>[\d]+)/(?P<teacher_pk>[\d]+)/$', views.confirm_teacher_post, name='final_teacher_confirm'),
-url(r'action/(?P<teacher_token>[\d]+)/change_time/$', views.change_time, name ='change_time'),
+url(r'action/(?P<teacher_pk>[\d]+)/change_time/$', views.change_time, name ='change_time'),
 url(r'generic/$', views.generic_message, name='generic'),
 
 )

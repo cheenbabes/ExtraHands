@@ -9,6 +9,7 @@ from django.contrib.auth.decorators import login_required
 from django.core.mail import send_mail
 from django.contrib import messages
 import datetime
+from decimal import Decimal
 
 
 # Create your views here.
@@ -393,11 +394,15 @@ def go_on_call(request):
         return HttpResponseRedirect("/myaccount/")
 
 @login_required()
-def change_time(request, teacher_token):
-    teacher = Teacher.objects.get(token=teacher_token)
+def change_time(request, teacher_pk):
+    teacher = Teacher.objects.get(pk=teacher_pk)
     if request.user == teacher.user:
         if request.method =='POST':
-            hours = int(request.POST.get("hours"))
+            try:
+                hours = Decimal(request.POST.get("hours"))
+            except ValueError:
+                messages.error(request, "Please enter a decimal value for hours between 0.5 and 3.")
+                return HttpResponseRedirect("/myaccount/")
             if hours < 0.5 or hours > 3:
                 messages.error(request, "Please enter a decimal value for hours between 0.5 and 3.")
                 return HttpResponseRedirect("/myaccount/")
@@ -548,8 +553,8 @@ def confirm_teacher_part1(request, event_pk, teacher_pk):
             else:
                 #make a new click object
                 click = Click()
-                click.event = event.token
-                click.teacher = teacher.token
+                click.event = event.pk
+                click.teacher = teacher.pk
                 click.save()
                 dict ={'class_event': "alert-warning", 'message': "Sorry, but this event has already been taken!", 'url': 'myaccount', 'button_text': "My Account"}
                 return render(request, "generic_message.html", dict)
@@ -586,7 +591,7 @@ def confirm_teacher_post(request, event_pk, teacher_pk):
 
             # send a confirmation email to the client
             # uncomment this when mail API is not blocked.
-            # subject = "Your event has been filled by {0}!".format(teacher.user.get_full_name)
+            # subject = "Your event has been filled by {0}!".format(teacher.user.get_full_name())
             # message = "{0} has successfully signed up for your event. You can find their details at {1}. If you have any questions, please reach out to them directly".format(teacher.user.get_full_name, "127.0.0.1:8000/teacher/{0}".format(teacher.slug))
             # from_email = "noreply@gmail.com"
             # recipient_list = [event.client.user.email]
