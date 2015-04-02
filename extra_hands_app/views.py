@@ -488,8 +488,8 @@ def get_times_to_deactivate(event, teacher):
 
 #Sends emails to the teachers that were selected by the client in the second part of the event creating process.
 @login_required
-def send_emails_to_teachers(request, event_token):
-    event = Event.objects.get(token=event_token)
+def send_emails_to_teachers(request, event_pk):
+    event = Event.objects.get(pk=event_pk)
     subject = "{0} has just sent you an email about an event!".format(event.client.organization)
     return_address = "noreply@gmail.com"
     if request.user == event.client.user:
@@ -497,19 +497,19 @@ def send_emails_to_teachers(request, event_token):
             #mark the event as in_progress and no longer available to be deleted
             event.in_progress = True
             #Loop through all available teachers and send out mail
-            teacher_tokens = request.POST.getlist('teachers')
-            for token in teacher_tokens:
-                teacher = Teacher.objects.get(token = token)
-                name = teacher.user.get_full_name
-                link = "127.0.0.1:8000/confirm-event/{0}/{1}/".format(event.token, teacher.token)
+            teacher_pks = request.POST.getlist('teachers')
+            for pk in teacher_pks:
+                teacher = Teacher.objects.get(pk = pk)
+                name = teacher.user.get_full_name()
+                link = "127.0.0.1:8000/confirm-event/{0}/{1}/".format(event.pk, teacher.pk)
                 body = "Hi {0}! {1} has just created an event and they selected you as one of the candidates. Below is your individual link to confirm your participation in this event. " \
                        "When you click on this link, it will take to a another page where you will confirm your participation. Please do not share this link with anyone else. If you do not want to participate," \
                        "simply ignore this email." \
                        "Your link is {2}".format(name, event.client.organization, link)
                 send_mail(subject, body, return_address, [teacher.user.email])
 
-                print "This teacher's name is {0}, the token number is {1}, and their email is {2}".format(teacher.user.get_full_name(), teacher.token, teacher.user.email)
-            messages.success(request, "Your email was sent successfully")
+                print "This teacher's name is {0}, the primary key is {1}, and their email is {2}".format(teacher.user.get_full_name(), teacher.pk, teacher.user.email)
+            messages.success(request, "Your email was sent successfully.")
             return HttpResponseRedirect("/myaccount/")
 
         else:
@@ -521,15 +521,15 @@ def send_emails_to_teachers(request, event_token):
 
 #Once a teacher clicks on their personal link, they are taken to this page to confirm that they want to commit to being in the event
 @login_required
-def confirm_teacher_part1(request, event_token, teacher_token):
-    event = Event.objects.get(token = event_token)
-    teacher = Teacher.objects.get(token = teacher_token)
+def confirm_teacher_part1(request, event_pk, teacher_pk):
+    event = Event.objects.get(pk = event_pk)
+    teacher = Teacher.objects.get(pk = teacher_pk)
 
     if request.user == teacher.user:
         #if the event already has a teacher
         if event.teacher is not None:
             #django won't do composite primary keys without fussing so I need to make my own and make sure duplicates don't exist
-            if Click.objects.filter(teacher = teacher.token).filter(event=event.token).exists():
+            if Click.objects.filter(teacher = teacher.pk).filter(event=event.pk).exists():
                 dict={'class_event': "alert-warning", 'message': "You have already clicked on this event!", 'url': "myaccount", "button_text": "My Account"}
                 return render(request, "generic_message.html", dict)
             else:
@@ -551,9 +551,9 @@ def confirm_teacher_part1(request, event_token, teacher_token):
 
 #Posts the final request and commit the teacher to the event
 @login_required
-def confirm_teacher_post(request, event_token, teacher_token):
-    event = Event.objects.get(token = event_token)
-    teacher = Teacher.objects.get(token = teacher_token)
+def confirm_teacher_post(request, event_pk, teacher_pk):
+    event = Event.objects.get(pk = event_pk)
+    teacher = Teacher.objects.get(pk = teacher_pk)
 
     if request.user == teacher.user:
         if request.method == 'POST':
@@ -567,8 +567,8 @@ def confirm_teacher_post(request, event_token, teacher_token):
 
             #give the teacher a click
             click = Click()
-            click.teacher = teacher.token
-            click.event = event.token
+            click.teacher = teacher.pk
+            click.event = event.pk
             click.save()
 
             # send a confirmation email to the client
@@ -579,7 +579,7 @@ def confirm_teacher_post(request, event_token, teacher_token):
             # recipient_list = [event.client.user.email]
             # send_mail(subject, message, from_email, recipient_list)
 
-            messages.success(request, "You successfully signed up for this event! The event starts at %s and ends at %s. Please make sure your availability was appropriately updated." % (event.start_time.strftime("%a, %b %d, %Y %H:%M"), event.end_time.strftime("%a, %b %d, %Y %H:%M")))
+            messages.success(request, "You successfully signed up for this event! Please make sure your availability was appropriately updated.")
             return HttpResponseRedirect("/myaccount/")
 
         else:
