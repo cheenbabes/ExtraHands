@@ -70,6 +70,9 @@ core business logic
     --on call select-teacher view
     --should only select on-call teachers, not search for times.
 
+==STORY 12==
+    --teachers should not be able to book double times - as in, book the same thing over again.
+
 
 ROADMAP
     --detokenize CHECK
