@@ -439,7 +439,18 @@ def show_available_teachers(request, event_pk):
     context_dict['event'] = event
 
     if request.user == event.client.user:
-        available_times = get_all_times_available_for_event(event)
+        available_times =[]
+        emailed_times =[]
+
+        for time_pk in event.times_available:
+            time = Available_Time.objects.get(pk=time_pk)
+            available_times.append(time)
+
+        for time_pk in event.times_emailed:
+            time = Available_Time.objects.get(pk=time_pk)
+            emailed_times.append(time)
+
+        context_dict['emailed_times'] = emailed_times
         context_dict['times'] = available_times
         return render(request, 'select_teacher.html', context_dict)
     else:

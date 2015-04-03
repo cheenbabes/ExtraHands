@@ -58,6 +58,14 @@
 
     {% endif %}
 
+    {% if emailed_times %}
+    <h3>Teachers you have already emailed</h3>
+    {% for time in emailed_times %}
+    <li><a href="{% url 'get_teacher' time.teacher.slug %}">{{ time.teacher.user.get_full_name }}</a></li>
+    {% endfor %}
+    {% endif %}
+
+
 
 
 
