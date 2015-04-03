@@ -32,24 +32,7 @@ core business logic
 --some kind of billing/account tracking system??
     --regular hourly rate
     --on call hourly rate
-
-==STORY 3==
-    -clients should be able to see which teachers they already contacted and see a notification if more teachers have become available. Also, they should not be able to
-    email any teacher twice. Add a field to Event that has a list of time tokens since available teachers are shown based on individual times.
-        -implementation
-            --in my_account() view function, get all the available times for all the events linked to the client.
-            --assign all the possible times to a list field on the event
-            --the event object should have a list field of all the times that have been emailed.
-            --compare all possible times with the ones that have been emailed.
-            --the count of available events can be put in the myaccount page on the "View Available Teachers" button as a bootstrap notification
-            --on the select-teacher page, just get the list of the all times that are available but not have yet been emailed.
-
-==STORY 2==
-    -make it so clients cannot email the same "time" again. This ties in with story 3
-
-
-==STORY 5==
-    -clean up all the generic_template logic and consolidate to messages framework where possible
+=============================================================================================
 
 ==STORY 6==
     -make sure all the click() functionality works for tracking teacher clicks
@@ -59,9 +42,6 @@ core business logic
 
 ==STORY 8==
     --creating html templates for emails sent out to teachers and clients
-
-==STORY 9==
-    --detokenize the application. Tokens are NOT guaranteed to be unique. Now that there is security in place, there is no need to obfuscate urls.
 
 ==STORY 10==
     --front end development
@@ -77,10 +57,12 @@ core business logic
 ROADMAP
     --detokenize CHECK
     --clean up template logic and move to messages framework CHECK
-    --logic for not emailing teachers again
+    --logic for not emailing teachers again DONE
+    --make sure teachers can't rebook the same time.
     --html templates
     --confirmation emails
     --click() logic
+    --front end dev
 
 
 ===Accounts===
@@ -104,8 +86,26 @@ FINISHED STORIES
     -make it possible for teachers to delete times and clients should be able to delete events IF they have not emailed any teachers yet.
     -clients should see a prompt when they go to the select teacher page on whether they want to continue as they will not be able to edit or delete the event afterwards
 
+==STORY 3==
+    -clients should be able to see which teachers they already contacted and see a notification if more teachers have become available. Also, they should not be able to
+    email any teacher twice. Add a field to Event that has a list of time tokens since available teachers are shown based on individual times.
+        -implementation
+            --in my_account() view function, get all the available times for all the events linked to the client.
+            --assign all the possible times to a list field on the event
+            --the event object should have a list field of all the times that have been emailed.
+            --compare all possible times with the ones that have been emailed.
+            --the count of available events can be put in the myaccount page on the "View Available Teachers" button as a bootstrap notification
+            --on the select-teacher page, just get the list of the all times that are available but not have yet been emailed.
+
+==STORY 2==
+    -make it so clients cannot email the same "time" again. This ties in with story 3
 
 
+==STORY 5==
+    -clean up all the generic_template logic and consolidate to messages framework where possible
+
+==STORY 9==
+    --detokenize the application. Tokens are NOT guaranteed to be unique. Now that there is security in place, there is no need to obfuscate urls.
 
 
 
