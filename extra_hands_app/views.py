@@ -83,7 +83,7 @@ def add_event(request, client_slug):
 
                     times_available = get_all_times_available_for_event(event)
                     for time in times_available:
-                        if time.pk not in event.times_available or time.pk not in event.times_emailed:
+                        if time.pk not in event.times_available and time.pk not in event.times_emailed:
                             event.times_available.extend([time.pk])
                     event.save()
 
@@ -214,8 +214,8 @@ def delete_event(request, event_pk):
         return render(request, "generic_message.html", dict)
     if request.user == event.client.user:
         if event.in_progress or event.teacher is not None:
-            dict ={'class_event': "alert-danger", 'message': "This event is in progress and cannot be modified!", 'url': 'myaccount', 'button_text': "My Account"}
-            return render(request, "generic_message.html", dict)
+            messages.error(request, "This event is in progress and cannot be modified!")
+            return HttpResponseRedirect("/myaccount/")
         else:
             event.delete()
             messages.success(request, "You have successfully deleted this event.")
@@ -364,7 +364,7 @@ def my_account(request):
         for event in client_events_unconfirmed:
             times_available = get_all_times_available_for_event(event)
             for time in times_available:
-                if time.pk not in event.times_available or time.pk not in event.times_emailed: #THIS LOGIC IS WRONG WTF
+                if time.pk not in event.times_available and time.pk not in event.times_emailed: #THIS LOGIC IS WRONG WTF
                     event.times_available.extend([time.pk])
             event.save()
 
