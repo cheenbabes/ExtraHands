@@ -361,15 +361,16 @@ def my_account(request):
         client_events_unconfirmed = Event.objects.filter(client=client).filter(teacher=None).filter(start_time__gte=datetime.datetime.today() - datetime.timedelta(days=1)).order_by('start_time')
         current_client_events = Event.objects.filter(start_time__gte=datetime.datetime.today() - datetime.timedelta(days=1)).exclude(teacher__isnull=True)
 
-        sum = 0
-
         for event in client_events_unconfirmed:
-            sum += len(event.times_available)
             times_available = get_all_times_available_for_event(event)
             for time in times_available:
-                if time.pk not in event.times_available and time.pk not in event.times_emailed: #THIS LOGIC IS WRONG WTF
+                if time.pk not in event.times_available and time.pk not in event.times_emailed:
                     event.times_available.extend([time.pk])
             event.save()
+
+        sum = 0
+        for event in client_events_unconfirmed:
+            sum += len(event.times_available)
 
         context_dict['notification_sum'] = sum
         context_dict['unconfirmed_events'] = client_events_unconfirmed

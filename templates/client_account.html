@@ -1,17 +1,19 @@
 
 <h1> This is the client portal</h1><br>
-<p>Total number of notifications: {{ notification_sum }}</p>
+    <p>Total number of notifications: {{ notification_sum }}</p>
 
-<p> <strong>{{user.client.organization }}</strong><br>
-    Contact: {{ user.client.user.get_full_name }}<br>
-    {{ user.client.street }}<br>
-    {{ user.client.city }}, {{ user.client.state }} <br>
-    {{ user.client.phone_number }}<br><br>
-    <i>Description</i><br>
-    {{ user.client.description }}<br>
-    <a href="{% url 'add_event' user.client.client_slug  %}" class="btn btn-primary">Add event</a>
-    <hr>
-</p>
+    <p> <strong>{{user.client.organization }}</strong><br>
+        Contact: {{ user.client.user.get_full_name }}<br>
+        {{ user.client.street }}<br>
+        {{ user.client.city }}, {{ user.client.state }} <br>
+        {{ user.client.phone_number }}<br><br>
+        <i>Description</i><br>
+        {{ user.client.description }}<br>
+        <a href="{% url 'add_event' user.client.client_slug  %}" class="btn btn-primary">Add event</a>
+        <hr>
+    </p>
+
+
 
 
     <h2>Pending Events</h2>
