@@ -7,7 +7,7 @@
     <strong>Thank you for registering!</strong><a href="{% url 'myaccount' %}">View your profile here</a>
     {% else %}
         <strong>Register as a teacher with Extra Hands</strong>
-        <form id="user_form" method="post" action="{% url 'register_teacher' %}/">
+        <form id="user_form" method="post" action="/register/teacher/">
             {% csrf_token %}
             {{ user_form.as_p }}
             {{ teacher_form.as_p }}

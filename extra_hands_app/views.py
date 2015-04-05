@@ -10,6 +10,9 @@ from django.core.mail import send_mail
 from django.contrib import messages
 import datetime
 from decimal import Decimal
+from dateutil.parser import parse as parse_date
+import pytz
+
 
 
 # Create your views here.
@@ -111,6 +114,11 @@ def add_time(request, teacher_slug):
 
     if request.user == teacher.user:
         if request.method == 'POST':
+            #Check for double bookings
+            if check_double_booked_time(teacher, request.POST.get('start_time'), request.POST.get('end_time')):
+                messages.error(request, "This time is already booked or your times overlap! Please correct your entry and try again.")
+                return HttpResponseRedirect("/teacher/" + teacher.slug + "/add_time/")
+            #Create the form, validate, and save
             form = AvailableTimeForm(request.POST)
             if form.is_valid():
                 if teacher:
@@ -646,6 +654,19 @@ def generic_message(request):
 
     return render(request, "generic_message.html", {})
 
+
+def check_double_booked_time(teacher, start_time, end_time):
+    timezone = pytz.timezone('America/Denver')
+    start_time_parse = timezone.localize(parse_date(start_time))
+    end_time_parse = timezone.localize(parse_date(end_time))
+    double_booked = False
+    teacher_times = Available_Time.objects.filter(teacher = teacher)
+    for time in teacher_times:
+        if time.start_time <= start_time_parse <= time.end_time or time.start_time <= end_time_parse <= time.end_time:
+            double_booked = True
+            break
+
+    return double_booked
 
 
 
