@@ -6,13 +6,13 @@ from django.http import HttpResponseRedirect, HttpResponseNotAllowed, Http404, H
 from django.core.urlresolvers import reverse
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
-from django.core.mail import send_mail
 from django.contrib import messages
 import datetime
 from decimal import Decimal
 from dateutil.parser import parse as parse_date
 import pytz
-from templated_email import send_templated_mail
+# from templated_email import send_templated_mail
+from mail_templated import send_mail
 
 
 
@@ -557,13 +557,7 @@ def send_emails_to_teachers(request, event_pk):
             for pk in time_pks:
                 time = Available_Time.objects.get(pk = pk)
                 teacher = time.teacher
-                name = teacher.user.get_full_name()
-                link = "127.0.0.1:8000/confirm-event/{0}/{1}/".format(event.pk, teacher.pk)
-                body = "Hi {0}! {1} has just created an event and they selected you as one of the candidates. Below is your individual link to confirm your participation in this event. " \
-                       "When you click on this link, it will take to a another page where you will confirm your participation. Please do not share this link with anyone else. If you do not want to participate," \
-                       "simply ignore this email." \
-                       "Your link is {2}".format(name, event.client.organization, link)
-                send_mail(subject, body, return_address, [teacher.user.email])
+                send_email_teacher(event, teacher)
 
                 #add this time to the emailed list so it cannot be emailed again.
                 event.times_available.remove(int(pk))
@@ -571,7 +565,7 @@ def send_emails_to_teachers(request, event_pk):
                 event.save()
 
                 print "This teacher's name is {0}, the primary key is {1}, and their email is {2}".format(teacher.user.get_full_name(), teacher.pk, teacher.user.email)
-            messages.success(request, "Your email was sent successfully.")
+            messages.success(request, "Your email(s) was sent successfully.")
             return HttpResponseRedirect("/myaccount/")
 
         else:
@@ -655,7 +649,6 @@ def generic_message(request):
 
     return render(request, "generic_message.html", {})
 
-
 def check_double_booked_time(teacher, start_time, end_time):
     timezone = pytz.timezone('America/Denver')
     start_time_parse = timezone.localize(parse_date(start_time))
@@ -669,11 +662,9 @@ def check_double_booked_time(teacher, start_time, end_time):
 
     return double_booked
 
-def send_email_teacher(request, event_pk, teacher_pk):
-    event = Event.objects.get(pk = event_pk)
-    teacher = Teacher.objects.get(pk = teacher_pk)
-    send_templated_mail(
-        template_name='email_teacher',
+def send_email_teacher(event, teacher):
+    send_mail(
+        template_name='templated_email/email_teacher.html',
         from_email='eugene.baibourin@gmail.com',
         recipient_list=[teacher.user.email],
         context={
@@ -682,8 +673,7 @@ def send_email_teacher(request, event_pk, teacher_pk):
         },
     )
 
-    messages.success(request, "Your email has been sent successfully to %s" % teacher.user.get_full_name())
-    return HttpResponseRedirect("/myaccount/")
+
 
 
 

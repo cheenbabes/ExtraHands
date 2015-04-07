@@ -45,6 +45,7 @@ INSTALLED_APPS = (
     'rolepermissions',
     'datetimewidget',
     'debug_toolbar',
+    'mail_templated',
 
 )
 
