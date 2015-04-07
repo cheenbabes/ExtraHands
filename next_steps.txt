@@ -37,12 +37,6 @@ core business logic
 ==STORY 6==
     -make sure all the click() functionality works for tracking teacher clicks
 
-==STORY 7==
-    --sending confirmation emails to clients
-
-==STORY 8==
-    --creating html templates for emails sent out to teachers and clients
-
 ==STORY 10==
     --front end development
 
@@ -61,8 +55,9 @@ ROADMAP
     --clean up template logic and move to messages framework CHECK
     --logic for not emailing teachers again DONE
     --make sure teachers can't rebook the same time. DONE
-    --html templates
-    --confirmation emails
+    --html templates DONE
+    --confirmation emails DONE
+    --on-call functionality and teacher selection
     --click() logic
     --front end dev
 
@@ -111,6 +106,12 @@ FINISHED STORIES
 
 ==STORY 12==
     --teachers should not be able to book double times - as in, book the same thing over again.
+
+==STORY 7==
+    --sending confirmation emails to clients
+
+==STORY 8==
+    --creating html templates for emails sent out to teachers and clients
 
 
 
