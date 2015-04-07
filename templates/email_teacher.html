@@ -1,0 +1,23 @@
+{%  block subject %}You received a message from {{ event.client.organization }}{% endblock %}
+
+{% block html %}
+
+    <p>Hi, {{ teacher.user.get_full_name }}</p>
+
+    <p>
+        {{ event.client.organization }} has just created an event and they selected you as one of the candidates. Below is your individual link to confirm your participation in this event.
+        When you click on this link, it will take to a another page where you will confirm your participation. There will also be more details on the event. If you do not want to participate,
+        simply ignore this email.
+    </p>
+
+    <p>
+        <a href="127.0.0.1:8000/{{ event.pk }}/{{ teacher.pk }}" class="btn btn-primary">Click here to view the event!</a>
+    </p>
+
+    <p>
+    Thank you!<br>
+
+    <i>The team at Extra Hands</i>
+    </p>
+
+{% endblock %}
