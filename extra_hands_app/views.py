@@ -671,7 +671,7 @@ def check_double_booked_time(teacher, start_time, end_time):
 
 def send_email_teacher(request, event_pk, teacher_pk):
     event = Event.objects.get(pk = event_pk)
-    teacher = Event.objects.get(pk = teacher_pk)
+    teacher = Teacher.objects.get(pk = teacher_pk)
     send_templated_mail(
         template_name='email_teacher',
         from_email='eugene.baibourin@gmail.com',
@@ -682,6 +682,8 @@ def send_email_teacher(request, event_pk, teacher_pk):
         },
     )
 
+    messages.success(request, "Your email has been sent successfully to %s" % teacher.user.get_full_name())
+    return HttpResponseRedirect("/myaccount/")
 
 
 

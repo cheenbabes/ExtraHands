@@ -25,5 +25,6 @@ url(r'confirm-event/(?P<event_pk>[\d]+)/(?P<teacher_pk>[\d]+)/$', views.confirm_
 url(r'confirm-teacher/(?P<event_pk>[\d]+)/(?P<teacher_pk>[\d]+)/$', views.confirm_teacher_post, name='final_teacher_confirm'),
 url(r'action/(?P<teacher_pk>[\d]+)/change_time/$', views.change_time, name ='change_time'),
 url(r'generic/$', views.generic_message, name='generic'),
+url(r'email/(?P<event_pk>[\d]+)/(?P<teacher_pk>[\d]+)/$', views.send_email_teacher, name="send_teacher_email"),
 
 )
