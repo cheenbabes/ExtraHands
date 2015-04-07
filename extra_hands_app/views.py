@@ -12,6 +12,7 @@ import datetime
 from decimal import Decimal
 from dateutil.parser import parse as parse_date
 import pytz
+from templated_email import send_templated_mail
 
 
 
@@ -667,6 +668,19 @@ def check_double_booked_time(teacher, start_time, end_time):
             break
 
     return double_booked
+
+def send_email_teacher(request, event_pk, teacher_pk):
+    event = Event.objects.get(pk = event_pk)
+    teacher = Event.objects.get(pk = teacher_pk)
+    send_templated_mail(
+        template_name='email_teacher',
+        from_email='eugene.baibourin@gmail.com',
+        recipient_list=[teacher.user.email],
+        context={
+            'event': event,
+            'teacher': teacher
+        },
+    )
 
 
 

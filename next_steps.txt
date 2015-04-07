@@ -50,15 +50,17 @@ core business logic
     --on call select-teacher view
     --should only select on-call teachers, not search for times.
 
-==STORY 12==
-    --teachers should not be able to book double times - as in, book the same thing over again.
+==STORY 13==
+    --register views and templates for teachers and clients seem to have a bug
+
+
 
 
 ROADMAP
     --detokenize CHECK
     --clean up template logic and move to messages framework CHECK
     --logic for not emailing teachers again DONE
-    --make sure teachers can't rebook the same time.
+    --make sure teachers can't rebook the same time. DONE
     --html templates
     --confirmation emails
     --click() logic
@@ -106,6 +108,9 @@ FINISHED STORIES
 
 ==STORY 9==
     --detokenize the application. Tokens are NOT guaranteed to be unique. Now that there is security in place, there is no need to obfuscate urls.
+
+==STORY 12==
+    --teachers should not be able to book double times - as in, book the same thing over again.
 
 
 

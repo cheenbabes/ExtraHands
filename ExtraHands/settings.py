@@ -45,7 +45,7 @@ INSTALLED_APPS = (
     'rolepermissions',
     'datetimewidget',
     'debug_toolbar',
-    'djrill'
+
 )
 
 MIDDLEWARE_CLASSES = (
@@ -111,16 +111,11 @@ STATICFILES_FINDERS = (
     # django.contrib.staticfiles.finders.DefaultStorageFinder',
 )
 
-# MANDRILL_API_KEY = "3lxuGYo51ENYy3UuYVfQzA"
-# EMAIL_BACKEND = "djrill.mail.backends.djrill.DjrillBackend"
-
 EMAIL_HOST = 'smtp.mandrillapp.com'
 EMAIL_HOST_USER = 'eugene.baibourin@gmail.com'
 EMAIL_HOST_PASSWORD = '3lxuGYo51ENYy3UuYVfQzA'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
-
-
 
 
 # This works!
