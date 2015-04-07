@@ -628,12 +628,7 @@ def confirm_teacher_post(request, event_pk, teacher_pk):
             click.save()
 
             # send a confirmation email to the client
-            # uncomment this when mail API is not blocked.
-            # subject = "Your event has been filled by {0}!".format(teacher.user.get_full_name())
-            # message = "{0} has successfully signed up for your event. You can find their details at {1}. If you have any questions, please reach out to them directly".format(teacher.user.get_full_name, "127.0.0.1:8000/teacher/{0}".format(teacher.slug))
-            # from_email = "noreply@gmail.com"
-            # recipient_list = [event.client.user.email]
-            # send_mail(subject, message, from_email, recipient_list)
+            send_email_client(event)
 
             messages.success(request, "You successfully signed up for this event! Please make sure your availability was appropriately updated.")
             return HttpResponseRedirect("/myaccount/")
@@ -673,7 +668,15 @@ def send_email_teacher(event, teacher):
         },
     )
 
-
+def send_email_client(event):
+    send_mail(
+        template_name='templated_email/email_client.html',
+        from_email='eugene.baibourin@gmail.com',
+        recipient_list=[event.client.user.email],
+        context={
+            'event': event,
+        },
+    )
 
 
 

@@ -1,0 +1,19 @@
+{%  block subject %}Your event has been filled!{% endblock %}
+
+{% block html %}
+
+    <p>Hi {{ event.client.user.get_full_name }},</p>
+
+    <p>
+       Great news! {{ event.teacher.user.get_full_name }} has just accepted your invite and will be attending your event at {{ event.start_time }}.<br>
+    If you need to get in touch with them or change the event for any reason, please find their contact info on http://127.0.0.1:8000/teacher/{{ event.teacher.slug }}.
+
+    </p>
+
+    <p>
+    Thank you!<br>
+
+    <i>The Team at Extra Hands</i>
+    </p>
+
+{% endblock %}

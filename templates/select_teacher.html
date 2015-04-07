@@ -46,8 +46,6 @@
                        CPR & First Aid: {{ time.teacher.cpr_first_aid }} <br>
                        Universal Precautions: {{ time.teacher.universal_precautions }} <br>
                         Time PK: {{ time.pk }}
-                        TESTING<br>
-                        <a href="{% url 'send_teacher_email' event.pk time.teacher.pk %}" class="btn btn-primary">Email This Teacher About This Event</a>
                     </p>
                 </div>
         {% endfor %}
