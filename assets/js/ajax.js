@@ -14,5 +14,9 @@ $(document).ready(function(){
         event.preventDefault();
        $('#timeBetweenEventsInput').removeAttr("disabled").attr("placeholder","Enter a value (hours)");
     });
+
+    $('#teacher_submit').click(function(){
+        $('#teacher_submit').attr('disabled', disabled);
+    })
 });
 
