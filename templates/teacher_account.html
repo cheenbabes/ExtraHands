@@ -54,34 +54,40 @@
 
 <hr>
     <h2>My Scheduled Events</h2>
-    {% for event in events %}
-        <p class="date-block">
-            <strong>Start Time:</strong> {{ event.start_time }}<br>
-            <strong>End Time:</strong> {{ event.end_time }}<br>
-            On-call event: {{ event.is_on_call }}<br>
-            Comments: {{ event.comments }}<br>
-            Primary Key: {{ event.pk }} <br>
-        </p>
+    {% if events %}
+        {% for event in events %}
+            <p class="date-block">
+                <strong>Start Time:</strong> {{ event.start_time }}<br>
+                <strong>End Time:</strong> {{ event.end_time }}<br>
+                On-call event: {{ event.is_on_call }}<br>
+                Client: <a href="{% url 'get_client' event.client.client_slug %}"> {{ event.client.organization }}</a><br>
+                Comments: {{ event.comments }}<br>
+                Primary Key: {{ event.pk }} <br>
+            </p>
 
-    {% endfor %}
+        {% endfor %}
+    {% else %}
+        <p>Doesn't look like you have any scheduled events coming up.
+        </p>
+    {% endif %}
 
 
 <hr>
 <h2>Times I am available</h2>
-    {% for time in times %}
-        <p class="date-block">
-            <strong>Start Time:</strong> {{ time.start_time }}<br>
-            <strong>End Time:</strong> {{ time.end_time }}<br>
-            <strong>Primary key:</strong> {{ time.pk }}<br>
-            <strong>Active</strong>: {{ time.active }}<br>
-            <a href="{% url 'edit_time' time.pk %}" class="btn btn-info">Edit</a>  <a href="{% url 'delete_time' time.pk %}" class="btn btn-danger" onclick="return confirm('Are you sure you want to delete this scheduled time?')">Delete</a>
-        </p>
+    {%  if times %}
+        {% for time in times %}
+            <p class="date-block">
+                <strong>Start Time:</strong> {{ time.start_time }}<br>
+                <strong>End Time:</strong> {{ time.end_time }}<br>
+                <strong>Primary key:</strong> {{ time.pk }}<br>
+                <strong>Active</strong>: {{ time.active }}<br>
+                <a href="{% url 'edit_time' time.pk %}" class="btn btn-info">Edit</a>  <a href="{% url 'delete_time' time.pk %}" class="btn btn-danger" onclick="return confirm('Are you sure you want to delete this scheduled time?')">Delete</a>
+            </p>
 
-
-
-
-
-    {% endfor %}
+        {% endfor %}
+    {% else %}
+        <p>Doesn't look like you're available! <a href="{% url 'add_time' user.teacher.slug  %}" class="btn btn-warning">Add a time you're available</a></p>
+    {% endif %}
 
 
 
