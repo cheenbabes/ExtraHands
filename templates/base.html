@@ -183,9 +183,26 @@
                 <!--  notification end -->
             </div>
             <div class="top-menu">
-            	<ul class="nav pull-right top-menu">
-                    <li><a class="logout" href="login.html">Logout</a></li>
-            	</ul>
+                <ul class="nav pull-right top-menu">
+                    {% if user.is_authenticated %}
+                        <p class="navbar-text">Signed in as <a href="{% url 'myaccount' %}"><strong>{{ user.get_full_name }}</strong></a>&nbsp;
+                        <a href="{% url 'logout' %}"><kbd>Logout</kbd></a></p>
+                    {% else %}
+                        <form class="navbar-form navbar-right" method="post" action="/login/">
+                            {% csrf_token %}
+                            <div class="form-group">
+                                <label class="sr-only" for="username">Username</label>
+                                <input type="text" class="form-control" id="username" placeholder="Enter email" name="username">
+                            </div>
+                            <div class="form-group">
+                                <label class="sr-only" for="password">Password</label>
+                                <input type="password" class="form-control" id="password" placeholder="Password" name="password">
+                            </div>
+                            <button type="submit" class="btn btn-info">Sign in</button>
+                        </form>
+
+                {% endif %}
+                </ul>
             </div>
         </header>
       <!--header end-->
@@ -285,10 +302,26 @@
       <!--main content start-->
       <section id="main-content">
           <section class="wrapper site-min-height">
-          	<h3><i class="fa fa-angle-right"></i> Blank Page</h3>
+          <br>
+          	{% if messages %}
+                {% for message in messages %}
+                    <div class="alert alert-{{ message.tags }} alert-dismissible" role="alert">
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                         {{ message }}
+                    </div>
+                {% endfor %}
+            {% else %}
+            {% endif %}
           	<div class="row mt">
           		<div class="col-lg-12">
-          		<p>Place your content here.</p>
+                    {% block content %}
+                        <p>
+                            This is the home page<br>
+
+                            Current User:
+                            {{ user.get_full_name }}
+                        </p>
+                    {% endblock %}
           		</div>
           	</div>
 
@@ -299,7 +332,7 @@
       <!--footer start-->
       <footer class="site-footer">
           <div class="text-center">
-              2014 - Alvarez.is
+              2015 Extra Hands
               <a href="blank.html#" class="go-top">
                   <i class="fa fa-angle-up"></i>
               </a>
