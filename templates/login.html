@@ -1,114 +1,16 @@
-<!DOCTYPE html>
+{% extends 'base.html' %}
 
-{% load staticfiles %}
+{% block content %}
 
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <meta name="author" content="Dashboard">
-    <meta name="keyword" content="Dashboard, Bootstrap, Admin, Template, Theme, Responsive, Fluid, Retina">
-
-    <title>{% block title %}Extra Hands | Login{% endblock %}</title>
-
-    <!-- Bootstrap core CSS -->
-    <link href="{% static 'css/bootstrap.css' %}" rel="stylesheet">
-    <!--external css-->
-    <link href="{% static 'font-awesome/css/font-awesome.css' %}" rel="stylesheet">
-
-    <!-- Custom styles for this template -->
-    <link href="{% static 'css/style.css' %}" rel="stylesheet">
-    <link href="{% static 'css/style-responsive.css' %}" rel="stylesheet">
-
-    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
-  </head>
-
-  <body>
-
-      <!-- **********************************************************************************************************************************************************
-      MAIN CONTENT
-      *********************************************************************************************************************************************************** -->
-
-	  <div id="login-page">
-	  	<div class="container">
-
-		      <form class="form-login" action="{% url 'login' %}" method="post">
-                  {% csrf_token %}
-		        <div class="login-wrap">
-		            <input type="text" class="form-control" placeholder="Username" autofocus name="username">
-		            <br>
-		            <input type="password" class="form-control" placeholder="Password" name="password"><br>
-		            <button class="btn btn-theme btn-block" href="index.html" type="submit"><i class="fa fa-lock"></i> SIGN IN</button>
-		            <hr>
-
-		            <div class="registration">
-		                Don't have an account yet?<br/>
-		                <a class="" href="#">
-		                    Create an account
-		                </a>
-		            </div>
-
-		        </div>
-
-		      </form>
-
-	  	</div>
-	  </div>
-
-    <!-- js placed at the end of the document so the pages load faster -->
-    <script src="{% static 'js/jquery.js' %}"></script>
-    <script src="{% static 'js/bootstrap.min.js' %}"></script>
-
-    <!--BACKSTRETCH-->
-    <!-- You can use an image of whatever size. This script will stretch to fit in any screen size.-->
-    <script src="{% static 'js/jquery.backstretch.min.js'  %}"></script>
-    <script>
-        $.backstretch("{% static 'img/login-bg-extra-hands.jpg' %}", {speed: 500});
-    </script>
+    <h1>Login</h1>
+        <form id="login_form" method="post" action="{% url 'login' %}">
+        {% csrf_token %}
+        Username: <input type="text" name="username" value="" size="50" />
+        <br />
+        Password: <input type="password" name="password" value="" size="50" />
+        <br />
+        <input type="submit" value="submit" />
+        </form>
 
 
-  </body>
-</html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-{##}
-{#{% extends 'base.html' %}#}
-{##}
-{#{% block content %}#}
-{##}
-{#    <h1>Login</h1>#}
-{#        <form id="login_form" method="post" action="{% url 'login' %}">#}
-{#        {% csrf_token %}#}
-{#        Username: <input type="text" name="username" value="" size="50" />#}
-{#        <br />#}
-{#        Password: <input type="password" name="password" value="" size="50" />#}
-{#        <br />#}
-{#        <input type="submit" value="submit" />#}
-{#        </form>#}
-{##}
-{##}
-{#{% endblock %}#}
+{% endblock %}

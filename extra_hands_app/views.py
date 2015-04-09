@@ -368,7 +368,7 @@ def my_account(request):
         is_client=True
         client = Client.objects.filter(user=user)
         client_events_unconfirmed = Event.objects.filter(client=client).filter(teacher=None).filter(start_time__gte=datetime.datetime.today() - datetime.timedelta(days=1)).order_by('start_time')
-        current_client_events = Event.objects.filter(client=client).filter(start_time__gte=datetime.datetime.today() - datetime.timedelta(days=1)).exclude(teacher__isnull=True)
+        current_client_events = Event.objects.filter(start_time__gte=datetime.datetime.today() - datetime.timedelta(days=1)).exclude(teacher__isnull=True)
 
         for event in client_events_unconfirmed:
             times_available = get_all_times_available_for_event(event)

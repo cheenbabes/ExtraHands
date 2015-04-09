@@ -2,119 +2,95 @@
 
 {% load staticfiles %}
 
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <meta name="author" content="Dashboard">
-    <meta name="keyword" content="Dashboard, Bootstrap, Admin, Template, Theme, Responsive, Fluid, Retina">
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Extra Hands Service | {% block title %}Qualified Teachers & Substitutes{% endblock %}</title>
+    {#    CSS#}
+    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+    <link href="{% static 'css/custom.css' %}" rel="stylesheet">
 
-    <title>Extra Hands Service | {% block title %}Qualified Teachers and Substitutes{% endblock %}</title>
 
-    <!-- Bootstrap core CSS -->
-    <link href="{% static 'css/bootstrap.css' %}" rel="stylesheet">
-    <!--external css-->
-    <link href="{% static 'font-awesome/css/font-awesome.css' %}" rel="stylesheet">
+    {#Javascript#}
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'js/ajax.js' %}"></script>
 
-    <!-- Custom styles for this template -->
-{#    <link href="{% static 'css/style.css' %}" rel="stylesheet">#}
-{#    <link href="{% static 'css/style-responsive.css' %}" rel="stylesheet">#}
-{#    <link href="{% static 'css/bootstrap-datepicker.css' %}" rel="stylesheet">#}
+    <script>
+        $(function (){
+            $('[data-toggle="tooltip"]').tooltip()
+        })
+    </script>
 
-    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
-  </head>
 
-  <body>
+</head>
+<body>
 
-  <section id="container" >
-      <!-- **********************************************************************************************************************************************************
-      TOP BAR CONTENT & NOTIFICATIONS
-      *********************************************************************************************************************************************************** -->
-      <!--header start-->
-      <header class="header black-bg">
-              <div class="sidebar-toggle-box">
-                  <div class="fa fa-bars tooltips" data-placement="right" data-original-title="Toggle Navigation"></div>
-              </div>
-            <!--logo start-->
-            <a href="{% url 'index' %}" class="logo"><b>EXTRA HANDS</b></a>
-            <!--logo end-->
-            <div class="nav notify-row" id="top_menu">
-                <!--  notification start -->
-{#                see blank.html to see how notifications work#}
+    <nav class="navbar navbar-default">
+        <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="/">Extra Hands</a>
             </div>
-            <div class="top-menu">
-                <ul class="nav pull-right top-menu">
-                    {% if user.is_authenticated %}
-                        <p class="navbar-text">Signed in as <a href="{% url 'myaccount' %}"><strong>{{ user.get_full_name }}</strong></a>&nbsp;
-                        <a href="{% url 'logout' %}"><kbd>Logout</kbd></a></p>
-                    {% else %}
-                        <form class="navbar-form navbar-right" method="post" action="/login/">
-                            {% csrf_token %}
-                            <div class="form-group">
-                                <label class="sr-only" for="username">Username</label>
-                                <input type="text" class="form-control" id="username" placeholder="Enter email" name="username">
-                            </div>
-                            <div class="form-group">
-                                <label class="sr-only" for="password">Password</label>
-                                <input type="password" class="form-control" id="password" placeholder="Password" name="password">
-                            </div>
-                            <button type="submit" class="btn btn-info">Sign in</button>
-                        </form>
 
-                {% endif %}
-                </ul>
-            </div>
-        </header>
-      <!--header end-->
-
-      <!-- **********************************************************************************************************************************************************
-      MAIN SIDEBAR MENU
-      *********************************************************************************************************************************************************** -->
-      <!--sidebar start-->
-      <aside>
-          <div id="sidebar"  class="nav-collapse ">
-              <!-- sidebar menu start-->
-              <ul class="sidebar-menu" id="nav-accordion">
-
-              	  <h5 class="centered">{{ user.get_full_name }}</h5>
-
-                  <li class="mt">
-                      <a href="{% url 'myaccount' %}">
-                          <i class="fa fa-dashboard"></i>
-                          <span>My Account</span>
-                      </a>
-                  </li>
-
-                  <li class="sub-menu">
-                      <a href="javascript:;" >
-                          <i class="fa fa-desktop"></i>
-                          <span>UI Elements</span>
-                      </a>
-                      <ul class="sub">
-                          <li><a  href="general.html">General</a></li>
-                          <li><a  href="buttons.html">Buttons</a></li>
-                          <li><a  href="panels.html">Panels</a></li>
-                      </ul>
-                  </li>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+              <ul class="nav navbar-nav">
+                <li><a href="{% url 'get_all_teachers' %}">Teachers</a></li>
+                <li><a href="{% url 'get_all_clients' %}">Clients</a></li>
               </ul>
-              <!-- sidebar menu end-->
-          </div>
-      </aside>
-      <!--sidebar end-->
+              <ul class="nav navbar-nav navbar-right">
+                  {% if user.is_authenticated %}
+                      <p class="navbar-text">Signed in as <a href="{% url 'myaccount' %}">{{ user.get_full_name }}</a></p>
+                <li><a href="{% url 'logout' %}">Logout</a></li>
+                  {% else %}
+                      <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Register <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li role="presentation"><a role="menuitem" tabindex="-1" href="{% url 'register_teacher' %}">Teacher</a> </li>
+                            <li role="presentation"><a role="menuitem" tabindex="-1" href="{% url 'register_client' %}">Client</a> </li>
+                        </ul>
+                    </li>
+                    <form class="navbar-form navbar-right" method="post" action="/login/">
+                    {% csrf_token %}
+                        <div class="form-group">
+                            <label class="sr-only" for="username">Username</label>
+                            <input type="text" class="form-control" id="username" placeholder="Enter email" name="username">
+                        </div>
+                        <div class="form-group">
+                            <label class="sr-only" for="password">Password</label>
+                            <input type="password" class="form-control" id="password" placeholder="Password" name="password">
+                        </div>
+                        <button type="submit" class="btn btn-primary">Sign in</button>
+                    </form>
 
-      <!-- **********************************************************************************************************************************************************
-      MAIN CONTENT
-      *********************************************************************************************************************************************************** -->
-      <!--main content start-->
-      <section id="main-content">
-          <section class="wrapper site-min-height">
-          <br>
-          	{% if messages %}
+                  {% endif %}
+
+              </ul>
+            </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+    </nav>
+
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="container">
+        <div class="row">
+            {% if messages %}
                 {% for message in messages %}
                     <div class="alert alert-{{ message.tags }} alert-dismissible" role="alert">
                     <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
@@ -123,62 +99,18 @@
                 {% endfor %}
             {% else %}
             {% endif %}
-          	<div class="row mt">
-          		<div class="col-lg-12">
-                    {% block content %}
-                        <p>
-                            This is the home page<br>
+            {% block content %}
+                <p>
+                This is the home page
+                    <br>
 
-                            Current User:
-                            {{ user.get_full_name }}
-                        </p>
-                    {% endblock %}
-          		</div>
-          	</div>
-
-		</section><! --/wrapper -->
-      </section><!-- /MAIN CONTENT -->
-
-      <!--main content end-->
-      <!--footer start-->
-      <footer class="site-footer">
-          <div class="text-center">
-              2015 Extra Hands
-              <a href="blank.html#" class="go-top">
-                  <i class="fa fa-angle-up"></i>
-              </a>
-          </div>
-      </footer>
-      <!--footer end-->
-  </section>
-
-    <!-- js placed at the end of the document so the pages load faster -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <script src="{% static 'js/moment.js' %}"></script>
-    <script src="{% static 'js/bootstrap.min.js' %}"></script>
-    <script src="{% static 'js/bootstrap-datepicker.min.js' %}"></script>
-    <script src="{% static 'js/jquery-ui-1.9.2.custom.min.js' %}"></script>
-    <script src="{% static 'js/jquery.ui.touch-punch.min.js' %}"></script>
-    <script src="{% static 'js/jquery.dcjqaccordion.2.7.js' %}"></script>
-    <script src="{% static 'js/jquery.scrollTo.min.js' %}"></script>
-    <script src="{% static 'js/jquery.nicescroll.js' %}"></script>
+                Current User:
+                {{ user.get_full_name }}
+                </p>
+            {% endblock %}
+        </div>
+    </div>
 
 
-
-
-    <!--common script for all pages-->
-{#    <script src="{% static 'js/common-scripts.js' %}"></script>#}
-
-    <!--script for this page-->
-
-{#  <script>#}
-{#      //custom select box#}
-{##}
-{#      $(function(){#}
-{#          $('select.styled').customSelect();#}
-{#      });#}
-{##}
-{#  </script>#}
-
-  </body>
+</body>
 </html>
