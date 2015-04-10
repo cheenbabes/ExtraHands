@@ -44,7 +44,7 @@ INSTALLED_APPS = (
     'extra_hands_app',
     'rolepermissions',
     'datetimewidget',
-    'debug_toolbar',
+    # 'debug_toolbar',
     'mail_templated',
 
 )
