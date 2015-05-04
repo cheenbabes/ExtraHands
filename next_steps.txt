@@ -44,8 +44,6 @@ core business logic
     --on call select-teacher view
     --should only select on-call teachers, not search for times.
 
-==STORY 13==
-    --register views and templates for teachers and clients seem to have a bug
 
 
 

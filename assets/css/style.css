@@ -765,7 +765,7 @@ ul.top-menu > li > a:hover, ul.top-menu > li > a:focus {
 /* Dash Side */
 
 .ds {
-	background: #ffffff;
+	background: #f2f2f2;
 	padding-top: 20px;
 }
 
@@ -775,7 +775,7 @@ ul.top-menu > li > a:hover, ul.top-menu > li > a:focus {
 }
 
 .ds h3 {
-	color: #ffffff;
+	color: #f2f2f2;
 	font-size: 16px;
 	padding: 0 10px;
 	line-height: 60px;
@@ -862,7 +862,7 @@ ul.top-menu > li > a:hover, ul.top-menu > li > a:focus {
 }
 
 .box0:hover p {
-	color: #ff865c;
+	color: #000000;
 }
 
 .box0:hover {

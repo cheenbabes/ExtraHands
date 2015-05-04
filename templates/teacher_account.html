@@ -1,5 +1,41 @@
+<h3>Teacher Portal</h3>
 
-<h1> This is the teacher portal</h1><br>
+    <div class="row mtbox">
+        <div class="col-md-3 box0">
+            <div class="box1">
+                <span class="glyphicon glyphicon-calendar" style="color:#00c5de"></span>
+                <h3>{{ events.count }}</h3>
+            </div>
+            <p>You have {{ events.count }} {% if events.count == 1 %}event{% else %}events{% endif %}</p>
+        </div>
+        <div class="col-md-3 box0">
+            <div class="box1">
+                <span class="glyphicon glyphicon-time" style="color:paleturquoise"></span>
+                <h3>{{ times.count }}</h3>
+            </div>
+            <p>You have {{ times.count }} {% if times.count == 1 %}time{% else %}times{% endif %} scheduled</p>
+        </div>
+      <div class="col-md-3 box0">
+            <div class="box1">
+                {% if user.teacher.on_call %}
+                    <span class="glyphicon glyphicon-ok-circle" style="color:darkgreen"></span>
+                    <h3>You're on call!</h3>
+                {% else %}
+                    <span class="glyphicon glyphicon-remove-circle" style="color:darkred"></span>
+                    <h3>You're <i>not</i> on call!</h3>
+                {% endif %}
+            </div>
+            <p><a href="#toggleoncall">Toggle this here</a></p>
+        </div>
+        <div class="col-md-3 box0">
+            <div class="box1">
+                <span class="glyphicon glyphicon-hand-up" style="color:slateblue"></span>
+                <h3>{{ user.teacher.clicks }}</h3>
+            </div>
+            <p>You have clicked on {{ user.teacher.clicks }} {% if user.teacher.clicks == 1 %}event{% else %}events{% endif %}</p>
+        </div>
+    </div>
+
 
 <div class="row">
     <div class="col-md-6">
@@ -19,21 +55,24 @@
         </p>
 
         <p>
+                {% if user.teacher.on_call %}
+                   <form method="post" action="{% url "go_on_call" %}">
+                        {% csrf_token %}
+                        <button id="on-call" type="submit" class="btn btn-success">You're on Call!</button>
+                    </form>
+            {% else %}
+                <form method="post" action="{% url "go_on_call" %}">
+                    {% csrf_token %}
+                    <button id="on-call" type="submit" class="btn btn-danger">Go On Call</button>
+                </form>
+            {% endif %}
+          </p>
+
+        <p>
             On call: {{ user.teacher.on_call }}<br>
             Available: {{ user.teacher.is_available }}
         </p>
-            {% if user.teacher.on_call %}
-                   <form method="post" action="{% url "go_on_call" %}">
-                {% csrf_token %}
-                <button id="on-call" type="submit" class="btn btn-success">You're on Call!</button>
-            </form>
-            {% else %}
-                <form method="post" action="{% url "go_on_call" %}">
-                {% csrf_token %}
-                <button id="on-call" type="submit" class="btn btn-danger">Go On Call</button>
-            </form>
 
-            {% endif %}
             <br>
 
             <a href="{% url 'add_time' user.teacher.slug  %}" class="btn btn-warning">Add time</a>
