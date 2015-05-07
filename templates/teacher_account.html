@@ -26,7 +26,11 @@
                     <h3>You're <i>not</i> on call!</h3>
                 {% endif %}
             </div>
-
+        {% if user.teacher.on_call %}
+        <p>You will be shown in all current searches. Nice work.</p>
+        {% else %}
+        <p>Try going on call to increase your chances of picking up an event.</p>
+        {% endif %}
         </div>
         <div class="col-md-3 box0">
             <div class="box1">
